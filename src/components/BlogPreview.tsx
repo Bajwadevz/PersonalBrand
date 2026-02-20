@@ -7,11 +7,11 @@ type Props = {
 
 export default function BlogPreview({ posts }: Props) {
     return (
-        <section className="py-12 w-full border-t border-muted">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <section className="py-32 w-full border-t border-gray-200/50">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
                 <div>
-                    <h3 className="text-2xl font-semibold tracking-tight">Latest Writing on AI & Vibe Coding</h3>
-                    <p className="text-muted-foreground mt-2">Breakdowns, experiments, and practical lessons from building with AI in public.</p>
+                    <h3 className="text-3xl font-semibold tracking-tight text-[#0F172A]">Latest Field Notes</h3>
+                    <p className="text-gray-500 mt-2 text-lg">Breakdowns, experiments, and practical lessons from building with AI in public.</p>
                 </div>
                 <Link
                     href="/blog"
@@ -29,10 +29,10 @@ export default function BlogPreview({ posts }: Props) {
                         <Link
                             key={post.slug}
                             href={`/blog/${post.slug}`}
-                            className="group block p-6 -mx-6 rounded-2xl hover:bg-muted/50 transition-colors"
+                            className="group block p-8 rounded-3xl border border-transparent hover:border-gray-200/60 hover:bg-white hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                         >
                             <article>
-                                <time className="text-sm text-muted-foreground mb-2 block">
+                                <time className="text-sm text-gray-400 mb-3 block font-medium">
                                     {new Date(post.date).toLocaleDateString('en-US', {
                                         year: 'numeric',
                                         month: 'long',

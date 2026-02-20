@@ -1,8 +1,8 @@
 export default function About() {
     return (
-        <section className="py-20 flex flex-col items-start w-full border-t border-[var(--color-border)]">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">About Bajwa Dev</h2>
-            <div className="space-y-4 text-base leading-relaxed text-foreground max-w-[720px]">
+        <section className="py-32 flex flex-col items-start w-full border-t border-gray-200/50">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8">About Bajwa Dev</h2>
+            <div className="space-y-4 text-lg leading-relaxed text-gray-600 max-w-[720px]">
                 <p>
                     I&apos;m Shahzaib (Bajwa Dev) — a computer science student and SaaS operator building toward AI-first engineering.
                 </p>

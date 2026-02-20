@@ -12,9 +12,9 @@ export default function BlogPage() {
     const posts = getAllPosts().slice(0, 3);
 
     return (
-        <div className="py-20 flex flex-col w-full max-w-[720px] mx-auto px-6">
+        <div className="py-32 flex flex-col w-full max-w-[720px] mx-auto px-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8">Blog</h1>
-            <p className="text-muted-foreground mb-12 text-base">
+            <p className="text-gray-500 mb-12 text-lg">
                 Thoughts, experiments, and practical breakdowns on architecting autonomous AI systems for the enterprise.
             </p>
 

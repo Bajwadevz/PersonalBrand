@@ -87,12 +87,12 @@ export default function AboutPage() {
             </div>
 
             {/* Hero Positioning Section */}
-            <section className="py-24 flex flex-col items-center text-center w-full max-w-6xl mx-auto px-6 relative z-10">
+            <section className="py-32 flex flex-col items-center text-center w-full max-w-6xl mx-auto px-6 relative z-10">
                 <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden">
                     <FloatingChip className="top-12 left-[8%]" animationClass="animate-[float_9s_ease-in-out_infinite]">AI Systems Builder</FloatingChip>
-                    <FloatingChip className="top-40 right-[10%]" animationClass="animate-[float_11s_ease-in-out_infinite_1s]">Practical Automation</FloatingChip>
-                    <FloatingChip className="top-[60%] left-[5%]" animationClass="animate-[float_10s_ease-in-out_infinite_2s]">Implementation Strategy</FloatingChip>
-                    <FloatingChip className="top-[75%] right-[12%]" animationClass="animate-[float_12s_ease-in-out_infinite_0.5s]">Global Execute</FloatingChip>
+                    <FloatingChip className="top-40 right-[10%] rotate-2" animationClass="animate-[float_11s_ease-in-out_infinite_1s]">Practical Automation</FloatingChip>
+                    <FloatingChip className="top-[60%] left-[5%] -rotate-2" animationClass="animate-[float_10s_ease-in-out_infinite_2s]">Implementation Strategy</FloatingChip>
+                    <FloatingChip className="top-[75%] right-[12%] rotate-1" animationClass="animate-[float_12s_ease-in-out_infinite_0.5s]">Global Execute</FloatingChip>
                 </div>
 
                 <div className="mb-8 inline-flex items-center rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50 relative z-20">

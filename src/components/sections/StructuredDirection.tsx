@@ -19,7 +19,7 @@ export default function StructuredDirection() {
     ];
 
     return (
-        <section className="py-24 bg-white w-full">
+        <section className="py-32 bg-white w-full">
             <div className="max-w-5xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl font-semibold text-[#0F172A]">
                     The Implementation Pillars
@@ -32,7 +32,7 @@ export default function StructuredDirection() {
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="border border-[#E5E7EB] rounded-xl p-8 hover:shadow-md transition-shadow duration-200"
+                            className="bg-white border border-[#E5E7EB]/50 rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                         >
                             <div className="w-10 h-10 bg-[#F3F4F6] rounded-full flex items-center justify-center mb-4">
                                 <div className="w-3 h-3 bg-[#0B2545] rounded-full" />

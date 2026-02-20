@@ -1,8 +1,8 @@
 export default function CredibilityMicrosection() {
     return (
-        <section className="py-24 bg-[#F9FAFB] w-full border-t border-[#E5E7EB]">
+        <section className="py-32 bg-[#F9FAFB] w-full border-t border-[#E5E7EB]">
             <div className="max-w-6xl mx-auto px-6 w-full">
-                <div className="text-center mb-16">
+                <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A] mb-4">
                         Professionals & Operators Following Bajwaa Dev
                     </h2>
@@ -11,9 +11,9 @@ export default function CredibilityMicrosection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Card 1 */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+                    <div className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
                         <div className="mb-6">
                             <div className="flex gap-1 mb-4 text-[#0B2545]">
                                 {[...Array(5)].map((_, i) => (
@@ -36,7 +36,7 @@ export default function CredibilityMicrosection() {
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+                    <div className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
                         <div className="mb-6">
                             <div className="flex gap-1 mb-4 text-[#0B2545]">
                                 {[...Array(5)].map((_, i) => (
@@ -59,7 +59,7 @@ export default function CredibilityMicrosection() {
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+                    <div className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col justify-between hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300">
                         <div className="mb-6">
                             <div className="flex gap-1 mb-4 text-[#0B2545]">
                                 {[...Array(5)].map((_, i) => (

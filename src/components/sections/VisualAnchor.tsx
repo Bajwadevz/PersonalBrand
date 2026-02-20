@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function VisualAnchor() {
     return (
-        <section className="py-24 bg-[#F9FAFB] w-full">
+        <section className="py-32 bg-[#F9FAFB] w-full">
             <div className="max-w-6xl mx-auto px-6">
-                <div className="bg-white rounded-2xl shadow-xl p-10 grid md:grid-cols-2 gap-10 items-center">
+                <div className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Left Side Content */}
                     <div>

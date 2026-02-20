@@ -2,10 +2,10 @@ import WaitlistForm from "./WaitlistForm";
 
 export default function DigitalProduct() {
     return (
-        <section className="py-16 flex flex-col items-start w-full border-t border-muted">
-            <div className="w-full bg-muted/30 border border-muted p-8 sm:p-12 rounded-2xl flex flex-col items-center sm:items-start text-center sm:text-left">
-                <h3 className="text-2xl font-semibold tracking-tight mb-2">Join the AI Operators List</h3>
-                <p className="text-muted-foreground mb-8 text-base">
+        <section className="py-32 flex flex-col items-start w-full border-t border-gray-200/50">
+            <div className="w-full bg-white border border-gray-100 p-10 sm:p-14 rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.06)] flex flex-col items-center sm:items-start text-center sm:text-left">
+                <h3 className="text-3xl font-semibold tracking-tight text-[#0F172A] mb-3">Join the AI Operators List</h3>
+                <p className="text-gray-500 mb-10 text-lg">
                     A playbook and system for execution-focused professionals. Launching soon.
                 </p>
 

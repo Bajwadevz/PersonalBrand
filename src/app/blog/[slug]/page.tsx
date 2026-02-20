@@ -93,13 +93,13 @@ export default async function BlogPost(props: Props) {
     };
 
     return (
-        <article className="py-20 w-full max-w-[720px] mx-auto px-6">
+        <article className="py-32 w-full max-w-[720px] mx-auto px-6">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <header className="mb-12">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+            <header className="mb-16">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-[#0F172A]">
                     {post.title}
                 </h1>
                 <time className="text-muted-foreground text-base">
