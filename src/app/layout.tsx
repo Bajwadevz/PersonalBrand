@@ -70,7 +70,7 @@ export default function RootLayout({
       "@type": "Organization",
       name: "Bajwaa Dev",
       url: "https://bajwaa.dev",
-      logo: "https://bajwaa.dev/icon.png",
+      logo: "https://bajwaa.dev/wave-logo.png",
       sameAs: [
         "https://github.com/Bajwadevz",
         "https://www.linkedin.com/in/shahzebbajwa/",
