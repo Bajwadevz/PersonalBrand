@@ -11,19 +11,19 @@ export default function Hero() {
             {/* Floating Tags (Subtle Desktop Only) */}
             <div className="absolute inset-0 pointer-events-none hidden md:block overflow-hidden">
                 <FloatingChip className="top-24 left-[10%]" animationClass="animate-[float_8s_ease-in-out_infinite]">
-                    Prompt Engineering
+                    AI Strategy
                 </FloatingChip>
                 <FloatingChip className="top-48 right-[15%]" animationClass="animate-[float_10s_ease-in-out_infinite_1s]">
-                    Vibe Coding
+                    Enterprise Automation
                 </FloatingChip>
                 <FloatingChip className="top-[35%] left-[5%]" animationClass="animate-[float_9s_ease-in-out_infinite_2s]">
-                    AI Workflows
+                    Practical Implementations
                 </FloatingChip>
                 <FloatingChip className="top-[45%] right-[8%]" animationClass="animate-[float_11s_ease-in-out_infinite_1.5s]">
-                    Cloud Scaling
+                    System Architecture
                 </FloatingChip>
                 <FloatingChip className="top-16 right-[30%]" animationClass="animate-[float_12s_ease-in-out_infinite_0.5s]">
-                    System Design
+                    Modern Workflows
                 </FloatingChip>
             </div>
 
@@ -32,17 +32,17 @@ export default function Hero() {
                 {/* 1. Small Badge */}
                 <div className="mb-8 inline-flex items-center rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50">
                     <span className="flex h-2 w-2 rounded-full bg-[#0B2545] mr-2 opacity-80"></span>
-                    AI-First Systems
+                    Practical AI & Systems Thinking
                 </div>
 
                 {/* 2. Large H1 */}
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#0F172A] leading-[1.1]">
-                    Build & Scale Intelligent Infrastructure
+                    Master AI to Scale<br />Your Life & Business
                 </h1>
 
                 {/* 3. Supporting Paragraph */}
                 <p className="text-lg sm:text-xl max-w-2xl leading-relaxed mt-8 text-gray-600 mx-auto font-medium">
-                    I teach builders how to use AI as leverage — not a shortcut. Exploring AI-first workflows, vibe coding, and practical systems that turn ideas into working software.
+                    I help professionals, entrepreneurs, and builders leverage AI-first systems. No hype—just practical frameworks, strategic automations, and deep technical execution to multiply your output.
                 </p>
 
                 {/* 4. CTA Buttons */}
@@ -51,13 +51,13 @@ export default function Hero() {
                         href="/blog"
                         className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-all duration-200 hover:scale-[1.02] inline-flex items-center justify-center shadow-lg shadow-black/10"
                     >
-                        Explore the Blog
+                        Read the Field Notes
                     </Link>
                     <Link
                         href="/product"
                         className="bg-white border text-gray-700 px-8 py-3.5 rounded-full hover:bg-gray-50 hover:text-gray-900 transition-all duration-200 font-medium inline-flex items-center justify-center shadow-sm"
                     >
-                        Join the AI Builder List
+                        Get the Playbooks
                     </Link>
                 </div>
             </div>

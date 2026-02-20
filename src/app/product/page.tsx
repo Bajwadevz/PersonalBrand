@@ -25,19 +25,18 @@ export default function ProductPage() {
                 </div>
 
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#0F172A] leading-[1.1] mb-6 max-w-4xl mx-auto">
-                    The Complete Playbook for Build-Fast AI Engineers
+                    The Complete Playbook for AI-First Professionals
                 </h1>
 
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-                    A comprehensive system, mental models, and step-by-step code paths to execute faster,
-                    build better architectures, and scale your impact without shipping garbage.
+                    A comprehensive system, mental models, and step-by-step implementation paths to automate workflows, build better architectures, and scale your impact without the hype.
                 </p>
 
                 {/* Conversion Zone */}
                 <div className="w-full max-w-md mx-auto flex flex-col gap-3 relative z-20">
                     <WaitlistForm />
                     <p className="mt-4 text-xs font-medium text-gray-500/80">
-                        Join 1,000+ engineers waiting. No spam. Unsubscribe anytime.
+                        Join 1,000+ top operators waiting. No spam. Unsubscribe anytime.
                     </p>
                 </div>
 
