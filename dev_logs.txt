@@ -186,3 +186,269 @@ Persisting failed: Unable to write SST file 00000368.sst
 
 Caused by:
     No such file or directory (os error 2)
+⨯ Error: ENOENT: no such file or directory, open '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+    at ignore-listed frames {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+}
+
+thread 'tokio-runtime-worker' (11258997) panicked at /Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Caused by:
+    0: Looking up data for TaskId 141285 from database failed
+    1: Unable to open static sorted file referenced from 00000360.meta
+    2: Unable to open static sorted file 00000356.sst
+    3: No such file or directory (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (11258997) panicked at /Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for NextRootParamsMapper::new (TaskId 141287))
+
+Caused by:
+    0: Looking up data for TaskId 141287 from database failed
+    1: Unable to open static sorted file referenced from 00000336.meta
+    2: Unable to open static sorted file 00000332.sst
+    3: No such file or directory (os error 2)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/_j/b9d7x20939g_jnsgmvbr9c_40000gn/T/next-panic-766a5263b3ed1ffdc0933d3c046e118e.log.
+
+To help make Turbopack better, report this error by ]8;;https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20page%20endpoint%20%2F_app&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0AFailed%20to%20write%20page%20endpoint%20%2F_app%0A%0ACaused%20by%3A%0A-%20content%20is%20not%20available%20as%20task%20execution%20failed%0A-%20content%20is%20not%20available%20as%20task%20execution%20failed%0A-%20Failed%20to%20restore%20task%20data%20%28corrupted%20database%20or%20bug%29%3A%20Meta%20for%20get_next_client_import_map%20%28TaskId%20141285%29%29%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_written_endpoint_with_issues_operation%20failed%0A-%20Execution%20of%20endpoint_write_to_disk%20failed%0A-%20Execution%20of%20%3CPageEndpoint%20as%20Endpoint%3E%3A%3Aoutput%20failed%0A-%20Failed%20to%20write%20page%20endpoint%20%2F_app%0A-%20Execution%20of%20PageEndpoint%3A%3Aoutput%20failed%0A-%20Execution%20of%20%2AChunkGroupResult%3A%3Aall_assets%20failed%0A-%20Execution%20of%20PageEndpoint%3A%3Aclient_chunk_group%20failed%0A-%20Execution%20of%20PageEndpoint%3A%3Aclient_evaluatable_assets%20failed%0A-%20content%20is%20not%20available%20as%20task%20execution%20failed%0A-%20Execution%20of%20PageEndpoint%3A%3Aclient_module%20failed%0A-%20content%20is%20not%20available%20as%20task%20execution%20failed%0A-%20Execution%20of%20%2Acreate_page_loader_entry_module%20failed%0A-%20Execution%20of%20PagesProject%3A%3Aclient_module_context%20failed%0A-%20Execution%20of%20%2AModuleAssetContext%3A%3Anew%20failed%0A-%20Execution%20of%20get_client_module_options_context%20failed%0A-%20Execution%20of%20%2Aget_jsx_transform_options%20failed%0A-%20Execution%20of%20get_client_resolve_options_context%20failed%0A-%20Failed%20to%20restore%20task%20data%20%28corrupted%20database%20or%20bug%29%3A%20Meta%20for%20get_next_client_import_map%20%28TaskId%20141285%29%29%0A%20%20%0A%20%20Caused%20by%3A%0A%20%20%20%20%20%200%3A%20Looking%20up%20data%20for%20TaskId%20141285%20from%20database%20failed%0A%20%20%20%20%20%201%3A%20Unable%20to%20open%20static%20sorted%20file%20referenced%20from%2000000360.meta%0A%20%20%20%20%20%202%3A%20Unable%20to%20open%20static%20sorted%20file%2000000356.sst%0A%20%20%20%20%20%203%3A%20No%20such%20file%20or%20directory%20%28os%20error%202%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace\clicking here.]8;;\
+-----
+
+⨯ Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+Error: ENOENT: no such file or directory, open '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+    at ignore-listed frames {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+}
+⨯ Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+⨯ Error: ENOENT: no such file or directory, open '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+    at ignore-listed frames {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+}
+⨯ Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+Error: ENOENT: no such file or directory, open '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+    at ignore-listed frames {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shahzebbajwa/Documents/bajwadev/.next/dev/server/app/page/build-manifest.json'
+}
+⨯ Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+Error [TurbopackInternalError]: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 141285))
+  
+  Caused by:
+      0: Looking up data for TaskId 141285 from database failed
+      1: Unable to open static sorted file referenced from 00000360.meta
+      2: Unable to open static sorted file 00000356.sst
+      3: No such file or directory (os error 2)
+    at <unknown> (TurbopackInternalError: Failed to write page endpoint /_app) {
+  location: '/Users/geist/dev/actions-runner/_work/next.js/next.js/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17'
+}
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+[?25h

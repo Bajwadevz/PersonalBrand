@@ -5,13 +5,18 @@ export default function Logo() {
     return (
         <Link
             href="/"
-            className="flex items-center gap-2.5 group transition-opacity hover:opacity-80"
+            className="flex items-center gap-2 group transition-opacity hover:opacity-80"
             aria-label="Bajwaa Dev Home"
         >
-            <div className="relative w-7 h-7 flex items-center justify-center pt-0.5">
-                <Image src="/wave-icon.svg" alt="Wave Icon" fill className="object-contain" priority />
-            </div>
-            <span className="font-extrabold text-xl tracking-tighter text-gray-900 leading-none">
+            <Image
+                src="/wave-icon.svg"
+                alt="Wave Icon"
+                width={24}
+                height={24}
+                className="object-contain"
+                priority
+            />
+            <span className="font-extrabold text-lg tracking-tight text-gray-900 leading-none">
                 bajwaa dev.
             </span>
         </Link>

@@ -5,27 +5,10 @@ import FloatingChip from "./FloatingChip";
 
 export default function Hero() {
     return (
-        <section className="relative pt-32 lg:pt-40 pb-24 flex flex-col items-center justify-center w-full text-center max-w-6xl mx-auto px-6 overflow-hidden">
+        <section className="relative pt-40 lg:pt-48 pb-24 flex flex-col items-center justify-center w-full text-center max-w-6xl mx-auto px-6 overflow-hidden">
             <BackgroundGrid />
 
-            {/* Floating Tags (Subtle Desktop Only) */}
-            <div className="absolute inset-0 pointer-events-none hidden md:block overflow-hidden">
-                <FloatingChip className="top-24 left-[10%]" animationClass="animate-[float_8s_ease-in-out_infinite]">
-                    AI Strategy
-                </FloatingChip>
-                <FloatingChip className="top-48 right-[15%]" animationClass="animate-[float_10s_ease-in-out_infinite_1s]">
-                    Enterprise Automation
-                </FloatingChip>
-                <FloatingChip className="top-[35%] left-[5%]" animationClass="animate-[float_9s_ease-in-out_infinite_2s]">
-                    Practical Implementations
-                </FloatingChip>
-                <FloatingChip className="top-[45%] right-[8%]" animationClass="animate-[float_11s_ease-in-out_infinite_1.5s]">
-                    System Architecture
-                </FloatingChip>
-                <FloatingChip className="top-16 right-[30%]" animationClass="animate-[float_12s_ease-in-out_infinite_0.5s]">
-                    Modern Workflows
-                </FloatingChip>
-            </div>
+
 
             <div className="max-w-4xl mx-auto w-full px-4 sm:px-0 relative z-10 flex flex-col items-center">
 
@@ -42,22 +25,22 @@ export default function Hero() {
 
                 {/* 3. Supporting Paragraph */}
                 <p className="text-lg sm:text-xl max-w-2xl leading-relaxed mt-8 text-gray-600 mx-auto font-medium">
-                    I architect and implement autonomous AI workflows for professionals, businesses, and modern builders. No hype—just practical systems and deep execution to scale your operational output globally.
+                    I build AI systems, create digital products, and teach practical implementations to help professionals and businesses scale their operational output. No hype—just strategic execution.
                 </p>
 
                 {/* 4. CTA Buttons */}
                 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                     <Link
-                        href="/blog"
+                        href="/work-with-me"
                         className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-all duration-200 hover:scale-[1.02] inline-flex items-center justify-center shadow-lg shadow-black/10"
                     >
-                        Read the Field Notes
+                        Work With Me
                     </Link>
                     <Link
-                        href="/product"
+                        href="/blog"
                         className="bg-white border text-gray-700 px-8 py-3.5 rounded-full hover:bg-gray-50 hover:text-gray-900 transition-all duration-200 font-medium inline-flex items-center justify-center shadow-sm"
                     >
-                        Get the Playbooks
+                        Explore My Systems
                     </Link>
                 </div>
             </div>

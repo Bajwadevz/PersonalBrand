@@ -1,28 +1,18 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import BlogPreview from "@/components/BlogPreview";
 import DigitalProduct from "@/components/DigitalProduct";
-import VisualAnchor from "@/components/sections/VisualAnchor";
-import StructuredDirection from "@/components/sections/StructuredDirection";
+import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import CredibilityMicrosection from "@/components/sections/CredibilityMicrosection";
-import { getAllPosts } from "@/lib/api";
+import WhatIBuild from "@/components/sections/WhatIBuild";
 
 export default function Home() {
-  const allPosts = getAllPosts();
-  const recentPosts = allPosts.slice(0, 3);
-
   return (
     <div className="flex flex-col w-full bg-white">
       <Hero />
-      <VisualAnchor />
       <div className="max-w-6xl mx-auto w-full px-6">
-        <About />
-        <BlogPreview posts={recentPosts} />
+        <WhatIBuild />
       </div>
-      <StructuredDirection />
-      <div className="max-w-6xl mx-auto w-full px-6 pb-16">
-        <DigitalProduct />
-      </div>
+      <PortfolioGrid />
+      <DigitalProduct />
       <CredibilityMicrosection />
     </div>
   );
