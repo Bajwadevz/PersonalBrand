@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://bajwadev.com/sitemap.xml",
+        sitemap: "https://bajwaa.dev/sitemap.xml",
     };
 }

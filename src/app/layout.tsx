@@ -42,24 +42,43 @@ export const metadata: Metadata = {
   }
 };
 
+export const viewport = {
+  themeColor: "#0F172A",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Shahzeb Bajwa",
-    url: "https://bajwaa.dev",
-    jobTitle: "Software Engineer",
-    sameAs: [
-      "https://github.com/Bajwadevz",
-      "https://www.linkedin.com/in/shahzebbajwa/",
-      "https://x.com/shahzo_12",
-      "https://www.instagram.com/bajwaa.dev/"
-    ]
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Shahzeb Bajwa",
+      url: "https://bajwaa.dev",
+      jobTitle: "Software Engineer",
+      sameAs: [
+        "https://github.com/Bajwadevz",
+        "https://www.linkedin.com/in/shahzebbajwa/",
+        "https://x.com/shahzo_12",
+        "https://www.instagram.com/bajwaa.dev/"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Bajwaa Dev",
+      url: "https://bajwaa.dev",
+      logo: "https://bajwaa.dev/icon.png",
+      sameAs: [
+        "https://github.com/Bajwadevz",
+        "https://www.linkedin.com/in/shahzebbajwa/",
+        "https://x.com/shahzo_12",
+        "https://www.instagram.com/bajwaa.dev/"
+      ]
+    }
+  ];
 
   return (
     <html lang="en">

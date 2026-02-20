@@ -1,0 +1,183 @@
+
+> bajwadev@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.18.36:3000
+
+✓ Starting...
+✓ Ready in 711ms
+ GET / 200 in 2.3s (compile: 2.1s, render: 225ms)
+ GET / 200 in 457ms (compile: 233ms, render: 225ms)
+ GET /manifest.webmanifest 200 in 1241ms (compile: 1201ms, render: 39ms)
+ GET /icon?c179691b342aae59 200 in 954ms
+ GET /icon.png 404 in 419ms (compile: 375ms, render: 44ms)
+ GET /product 200 in 616ms (compile: 564ms, render: 52ms)
+ GET /manifest.webmanifest 200 in 11ms (compile: 4ms, render: 6ms)
+ GET /icon.png 404 in 41ms (compile: 5ms, render: 36ms)
+ GET /about 200 in 482ms (compile: 455ms, render: 27ms)
+ GET /manifest.webmanifest 200 in 12ms (compile: 4ms, render: 9ms)
+ GET /icon.png 404 in 36ms (compile: 3ms, render: 33ms)
+ GET /blog 200 in 314ms (compile: 279ms, render: 35ms)
+ GET /manifest.webmanifest 200 in 7ms (compile: 3ms, render: 4ms)
+ GET /icon.png 404 in 41ms (compile: 8ms, render: 33ms)
+ GET / 200 in 44ms (compile: 4ms, render: 40ms)
+ GET /manifest.webmanifest 200 in 5ms (compile: 3ms, render: 3ms)
+ GET /icon.png 404 in 23ms (compile: 2ms, render: 21ms)
+ GET /product 200 in 35ms (compile: 13ms, render: 21ms)
+ GET /manifest.webmanifest 200 in 6ms (compile: 3ms, render: 3ms)
+ GET /icon.png 404 in 42ms (compile: 1748µs, render: 40ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 685ms (compile: 415ms, render: 270ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 55ms (compile: 12ms, render: 43ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 16ms (compile: 3ms, render: 13ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 16ms (compile: 4ms, render: 11ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 8ms (compile: 1476µs, render: 7ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 20ms (compile: 3ms, render: 17ms)
+ GET / 200 in 62ms (compile: 8ms, render: 54ms)
+ GET /manifest.webmanifest 200 in 4ms (compile: 2ms, render: 2ms)
+ GET /icon.png 404 in 32ms (compile: 3ms, render: 29ms)
+ GET /product 200 in 31ms (compile: 13ms, render: 18ms)
+ GET /manifest.webmanifest 200 in 8ms (compile: 4ms, render: 4ms)
+ GET /icon.png 404 in 28ms (compile: 10ms, render: 19ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 20ms (compile: 4ms, render: 16ms)
+ GET / 200 in 54ms (compile: 9ms, render: 44ms)
+ GET /manifest.webmanifest 200 in 7ms (compile: 4ms, render: 3ms)
+ GET /icon.png 404 in 28ms (compile: 1740µs, render: 26ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 83ms (compile: 28ms, render: 56ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 40ms (compile: 14ms, render: 26ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 18ms (compile: 5ms, render: 13ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 14ms (compile: 3ms, render: 11ms)
+Supabase error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '\n' +
+    'Caused by: Error: getaddrinfo ENOTFOUND placeholder.supabase.co (ENOTFOUND)\n' +
+    'Error: getaddrinfo ENOTFOUND placeholder.supabase.co\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)\n' +
+    '    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)',
+  hint: '',
+  code: ''
+}
+ POST /api/subscribe 500 in 21ms (compile: 14ms, render: 8ms)

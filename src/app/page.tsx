@@ -15,12 +15,12 @@ export default function Home() {
     <div className="flex flex-col w-full bg-white">
       <Hero />
       <VisualAnchor />
-      <div className="max-w-5xl mx-auto w-full px-6">
+      <div className="max-w-6xl mx-auto w-full px-6">
         <About />
         <BlogPreview posts={recentPosts} />
       </div>
       <StructuredDirection />
-      <div className="max-w-4xl mx-auto w-full px-6 pb-16">
+      <div className="max-w-6xl mx-auto w-full px-6 pb-16">
         <DigitalProduct />
       </div>
       <CredibilityMicrosection />

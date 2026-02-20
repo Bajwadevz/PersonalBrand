@@ -1,38 +1,77 @@
 import Link from "next/link";
+import Image from "next/image";
 import BackgroundGrid from "./BackgroundGrid";
 
 export default function Hero() {
     return (
-        <section className="relative py-32 md:py-40 flex flex-col items-center justify-center w-full text-center">
+        <section className="relative pt-32 lg:pt-40 pb-24 flex flex-col items-center justify-center w-full text-center max-w-6xl mx-auto px-6 overflow-hidden">
             <BackgroundGrid />
-            <div className="max-w-4xl mx-auto w-full px-4 sm:px-0">
-                <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#0F172A]">
-                    Bajwaa Dev
+
+            {/* Floating Tags (Subtle Desktop Only) */}
+            <div className="absolute inset-0 pointer-events-none hidden md:block overflow-hidden">
+                <div className="absolute top-24 left-[10%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-60 animate-[float_8s_ease-in-out_infinite]">
+                    Prompt Engineering
+                </div>
+                <div className="absolute top-48 right-[15%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-60 animate-[float_10s_ease-in-out_infinite_1s]">
+                    Vibe Coding
+                </div>
+                <div className="absolute top-[35%] left-[5%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-50 animate-[float_9s_ease-in-out_infinite_2s]">
+                    AI Workflows
+                </div>
+                <div className="absolute top-[45%] right-[8%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-50 animate-[float_11s_ease-in-out_infinite_1.5s]">
+                    Cloud Scaling
+                </div>
+                <div className="absolute top-16 right-[30%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-40 animate-[float_12s_ease-in-out_infinite_0.5s]">
+                    System Design
+                </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto w-full px-4 sm:px-0 relative z-10 flex flex-col items-center">
+
+                {/* 1. Small Badge */}
+                <div className="mb-8 inline-flex items-center rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50">
+                    <span className="flex h-2 w-2 rounded-full bg-[#0B2545] mr-2 opacity-80"></span>
+                    AI-First Systems
+                </div>
+
+                {/* 2. Large H1 */}
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#0F172A] leading-[1.1]">
+                    Build & Scale Intelligent Infrastructure
                 </h1>
-                <h2 className="text-xl text-[#6B7280] mt-6 max-w-2xl mx-auto font-medium">
-                    AI. Education. Vibe Coding.
-                </h2>
-                <p className="text-base sm:text-lg max-w-2xl leading-relaxed mt-6 text-[#374151] mx-auto">
+
+                {/* 3. Supporting Paragraph */}
+                <p className="text-lg sm:text-xl max-w-2xl leading-relaxed mt-8 text-gray-600 mx-auto font-medium">
                     I teach builders how to use AI as leverage — not a shortcut. Exploring AI-first workflows, vibe coding, and practical systems that turn ideas into working software.
                 </p>
-                <p className="text-sm text-[#6B7280] mt-4">
-                    For developers, builders, and curious operators learning to build with AI intentionally.
-                </p>
 
+                {/* 4. CTA Buttons */}
                 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                     <Link
                         href="/blog"
-                        className="bg-[#0B2545] text-white px-6 py-3 rounded-full font-medium hover:bg-[#133B6C] transition-all duration-200 hover:scale-[1.02] inline-flex items-center justify-center"
+                        className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-all duration-200 hover:scale-[1.02] inline-flex items-center justify-center shadow-lg shadow-black/10"
                     >
                         Explore the Blog
                     </Link>
                     <Link
                         href="/product"
-                        className="border border-[#D1D5DB] text-[#0F172A] px-6 py-3 rounded-full hover:bg-[#F3F4F6] transition-all duration-200 font-medium inline-flex items-center justify-center"
+                        className="bg-white border text-gray-700 px-8 py-3.5 rounded-full hover:bg-gray-50 hover:text-gray-900 transition-all duration-200 font-medium inline-flex items-center justify-center shadow-sm"
                     >
                         Join the AI Builder List
                     </Link>
                 </div>
+            </div>
+
+            {/* 5. Hero Visual Card */}
+            <div className="mt-20 w-full flex justify-center relative z-10">
+                <Image
+                    src="/ai-first-systems-hero-v2.png"
+                    alt="AI-First Systems Infrastructure Visual"
+                    width={1200}
+                    height={750}
+                    priority={true}
+                    quality={95}
+                    className="max-w-full h-auto rounded-xl shadow-2xl hover:-translate-y-[2px] transition-transform duration-500 border border-gray-200/50"
+                />
             </div>
         </section>
     );

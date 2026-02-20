@@ -17,7 +17,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         return notFound();
     }
 
-    const defaultOgImage = "https://bajwadev.com/opengraph-image";
+    const defaultOgImage = "https://bajwaa.dev/opengraph-image";
 
     return {
         title: post.title,
@@ -26,7 +26,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            url: `https://bajwadev.com/blog/${post.slug}`,
+            url: `https://bajwaa.dev/blog/${post.slug}`,
             type: "article",
             publishedTime: post.date,
             images: [
@@ -45,7 +45,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
             images: [post.og_image || defaultOgImage],
         },
         alternates: {
-            canonical: `https://bajwadev.com/blog/${post.slug}`,
+            canonical: `https://bajwaa.dev/blog/${post.slug}`,
         }
     };
 }
@@ -71,24 +71,24 @@ export default async function BlogPost(props: Props) {
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
-        image: post.og_image || "https://bajwadev.com/opengraph-image",
+        image: post.og_image || "https://bajwaa.dev/opengraph-image",
         datePublished: post.date,
         author: {
             "@type": "Person",
             name: "Shahzaib Bajwa",
-            url: "https://bajwadev.com"
+            url: "https://bajwaa.dev"
         },
         publisher: {
             "@type": "Organization",
             name: "Bajwa Dev",
             logo: {
                 "@type": "ImageObject",
-                url: "https://bajwadev.com/favicon.ico"
+                url: "https://bajwaa.dev/icon.png"
             }
         },
         mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `https://bajwadev.com/blog/${post.slug}`
+            "@id": `https://bajwaa.dev/blog/${post.slug}`
         }
     };
 

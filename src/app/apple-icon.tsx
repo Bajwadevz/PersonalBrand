@@ -1,38 +1,39 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-
-export const alt = "Bajwaa Dev - AI. Education. Vibe Coding.";
-export const size = {
-    width: 1200,
-    height: 630,
-};
-
+export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-export default async function Image() {
+export default function AppleIcon() {
     return new ImageResponse(
         (
             <div
                 style={{
-                    background: "linear-gradient(to bottom right, #fdf2f8, #f3e8ff, #e0f2fe)", // Pink to purple to blue pastel gradient
                     width: "100%",
                     height: "100%",
                     display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
+                    alignItems: "center",
                     justifyContent: "center",
-                    padding: "120px",
+                    backgroundColor: "white",
+                    borderRadius: "40px",
                 }}
             >
-                <div style={{ display: "flex", alignItems: "center", marginBottom: "24px" }}>
+                <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#0f172a",
+                    borderRadius: "24px",
+                    width: "140px",
+                    height: "140px",
+                    color: "white"
+                }}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 100 100"
                         fill="none"
-                        width="100"
-                        height="100"
-                        style={{ marginRight: "32px", display: "flex" }}
+                        width="80"
+                        height="80"
                     >
                         <path d="M 10 75 L 90 75 C 75 70 65 60 60 45 C 55 30 65 20 65 20 C 65 20 45 15 30 35 C 15 55 10 75 10 75 Z" fill="#2b6388" />
                         <path d="M 10 55 C 20 35 40 15 65 20 C 70 21 75 25 75 30 C 75 35 70 37 65 35 C 60 33 55 38 58 42 C 61 46 65 47 70 45 C 61 60 45 60 35 50 C 25 40 15 50 10 55 Z" fill="#ffffff" stroke="#2b6388" strokeWidth="2.5" strokeLinejoin="round" />
@@ -45,34 +46,9 @@ export default async function Image() {
                         <circle cx="75" cy="38" r="1.5" fill="#2b6388" />
                         <circle cx="45" cy="38" r="1.5" fill="#ffffff" />
                     </svg>
-                    <div
-                        style={{
-                            fontSize: 96,
-                            fontWeight: 800,
-                            letterSpacing: "-0.05em",
-                            color: "#0f172a", // slate-900 
-                            lineHeight: 1,
-                            fontFamily: "system-ui, sans-serif"
-                        }}
-                    >
-                        Bajwaa Dev
-                    </div>
-                </div>
-                <div
-                    style={{
-                        fontSize: 48,
-                        fontWeight: 500,
-                        color: "#475569", // slate-600
-                        letterSpacing: "-0.02em",
-                        fontFamily: "system-ui, sans-serif"
-                    }}
-                >
-                    AI. Education. Vibe Coding.
                 </div>
             </div>
         ),
-        {
-            ...size,
-        }
+        { ...size }
     );
 }

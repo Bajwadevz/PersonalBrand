@@ -1,13 +1,17 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Footer() {
     return (
-        <footer className="w-full flex flex-col md:flex-row items-center justify-between p-6 sm:px-12 lg:px-24 mt-auto border-t border-muted">
-            <div className="flex flex-col mb-4 md:mb-0">
-                <a href="mailto:hello@bajwaa.dev" className="text-sm font-medium hover:text-muted-foreground transition-colors">
-                    hello@bajwaa.dev
-                </a>
-                <p className="text-xs text-muted-foreground mt-1">© {new Date().getFullYear()} Shahzeb Bajwa</p>
+        <footer className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 py-8 mt-auto border-t border-muted">
+            <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 gap-2">
+                <Logo />
+                <div className="flex flex-col items-center md:items-start mt-2">
+                    <a href="mailto:hello@bajwaa.dev" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+                        hello@bajwaa.dev
+                    </a>
+                    <p className="text-xs text-muted-foreground mt-1">© {new Date().getFullYear()} Shahzeb Bajwa</p>
+                </div>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">

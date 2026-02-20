@@ -38,7 +38,8 @@ export default function VisualAnchor() {
                                 fill
                                 className="rounded-xl shadow-lg border border-[#E5E7EB] object-cover"
                                 sizes="(max-w-768px) 100vw, 50vw"
-                                priority
+                                quality={85}
+                                loading="lazy"
                             />
                         </div>
                     </div>

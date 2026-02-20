@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/api";
 
-const BASE_URL = "https://bajwadev.com";
+const BASE_URL = "https://bajwaa.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Static Routes
