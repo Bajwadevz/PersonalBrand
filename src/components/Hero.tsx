@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import BackgroundGrid from "./BackgroundGrid";
+import FloatingChip from "./FloatingChip";
 
 export default function Hero() {
     return (
@@ -9,21 +10,21 @@ export default function Hero() {
 
             {/* Floating Tags (Subtle Desktop Only) */}
             <div className="absolute inset-0 pointer-events-none hidden md:block overflow-hidden">
-                <div className="absolute top-24 left-[10%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-60 animate-[float_8s_ease-in-out_infinite]">
+                <FloatingChip className="top-24 left-[10%]" animationClass="animate-[float_8s_ease-in-out_infinite]">
                     Prompt Engineering
-                </div>
-                <div className="absolute top-48 right-[15%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-60 animate-[float_10s_ease-in-out_infinite_1s]">
+                </FloatingChip>
+                <FloatingChip className="top-48 right-[15%]" animationClass="animate-[float_10s_ease-in-out_infinite_1s]">
                     Vibe Coding
-                </div>
-                <div className="absolute top-[35%] left-[5%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-50 animate-[float_9s_ease-in-out_infinite_2s]">
+                </FloatingChip>
+                <FloatingChip className="top-[35%] left-[5%]" animationClass="animate-[float_9s_ease-in-out_infinite_2s]">
                     AI Workflows
-                </div>
-                <div className="absolute top-[45%] right-[8%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-50 animate-[float_11s_ease-in-out_infinite_1.5s]">
+                </FloatingChip>
+                <FloatingChip className="top-[45%] right-[8%]" animationClass="animate-[float_11s_ease-in-out_infinite_1.5s]">
                     Cloud Scaling
-                </div>
-                <div className="absolute top-16 right-[30%] bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 rounded-full px-4 py-2 text-sm shadow-sm opacity-40 animate-[float_12s_ease-in-out_infinite_0.5s]">
+                </FloatingChip>
+                <FloatingChip className="top-16 right-[30%]" animationClass="animate-[float_12s_ease-in-out_infinite_0.5s]">
                     System Design
-                </div>
+                </FloatingChip>
             </div>
 
             <div className="max-w-4xl mx-auto w-full px-4 sm:px-0 relative z-10 flex flex-col items-center">

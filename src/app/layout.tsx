@@ -93,7 +93,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-grow flex flex-col w-full">
+        <main className="flex-grow flex flex-col w-full animate-fade-in-up">
           {children}
         </main>
         <Footer />

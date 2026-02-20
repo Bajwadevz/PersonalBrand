@@ -1,5 +1,5 @@
 import Link from "next/link";
-import WaveIcon from "./WaveIcon";
+import Image from "next/image";
 
 export default function Logo() {
     return (
@@ -8,9 +8,9 @@ export default function Logo() {
             className="flex items-center gap-2.5 group transition-opacity hover:opacity-80"
             aria-label="Bajwaa Dev Home"
         >
-            <WaveIcon className="w-6 h-6 text-foreground" />
-            <span className="font-semibold text-lg tracking-tight text-foreground" style={{ letterSpacing: "-0.01em" }}>
-                Bajwaa Dev
+            <Image src="/icon.png" alt="Bajwaa Dev Logo" width={24} height={24} className="rounded-sm" />
+            <span className="font-extrabold text-xl tracking-tighter text-gray-900 leading-none">
+                bajwaa dev.
             </span>
         </Link>
     );
