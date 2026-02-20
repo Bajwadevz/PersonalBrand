@@ -1,26 +1,85 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #FFFFFF;
+  --color-foreground: #374151;
+  /* Body text color */
+  --color-muted: #F9FAFB;
+  /* Subtle section background */
+  --color-muted-foreground: #6B7280;
+  --color-border: #E5E7EB;
+  /* Divider lines */
+  --color-heading: #0F172A;
+  /* Primary heading color */
+  --color-link: #0B3A6F;
+  /* Link color */
+  --color-link-hover: #0F172A;
+  /* Link hover */
+
+  --color-primary: #0B2545;
+  /* Primary button background */
+  --color-primary-hover: #133B6C;
+  /* Primary button hover */
+  --color-primary-foreground: #FFFFFF;
+  /* Primary button text */
+  --color-secondary-border: #D1D5DB;
+  /* Secondary button border */
+  --color-secondary-foreground: #0F172A;
+  /* Secondary button text */
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #FFFFFF;
+  --foreground: #374151;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Forcing light mode explicitly for rosewell.dev aesthetic */
+    --background: #FFFFFF;
+    --foreground: #374151;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  letter-spacing: -0.025em;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
 }

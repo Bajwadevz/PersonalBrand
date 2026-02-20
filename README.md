@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bajwa Dev - Personal Website
 
-## Getting Started
+A minimal, text-focused personal brand website matching the structure and layout of rosewell.dev. Built with Next.js 15 (App Router), Tailwind CSS v4, and Markdown static site generation.
 
-First, run the development server:
+## Features
+
+- **Minimal Typography**: Uses Geist fonts with a clean, whitespace-heavy aesthetic.
+- **Static Blog**: Powered by Markdown with static generation (SSG) for high performance and SEO.
+- **Responsive**: Fully responsive design for desktop and mobile.
+- **Product Placeholder**: Ready for future digital product and Stripe integration.
+- **SEO Optimized**: Metadata is configured out-of-the-box for each page.
+
+## Local Development
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+For the email waitlist feature to work locally or in production, you must set up a Supabase project and provide the following variables in a `.env.local` file at the root of the project:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Make sure your Supabase project has a table named `subscribers` with an `email` column (type: text or varchar) that has a UNIQUE constraint.
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Writing Blog Posts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To add a new blog post, simply create a new markdown file (`.md`) inside the `_posts` directory in the root of the project.
 
-## Learn More
+```markdown
+---
+title: 'Your Post Title'
+excerpt: 'A short summary of your post.'
+date: '2026-02-20T12:00:00Z'
+---
 
-To learn more about Next.js, take a look at the following resources:
+Your content goes here...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site will automatically parse this and generate a statically optimal page at `/blog/your-file-name`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying to Vercel
 
-## Deploy on Vercel
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new). 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to a GitHub repository.
+2. Sign in to Vercel and create a "New Project".
+3. Import your GitHub repository.
+4. Leave all build settings as default (Framework Preset: Next.js).
+5. Click **Deploy**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel will build the site statically (`next build`) and serve your markdown posts lightning-fast globally. Future pushes to your `main` branch will automatically deploy.
