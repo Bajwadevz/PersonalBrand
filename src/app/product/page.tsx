@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
     title: "Product | Bajwa Dev",
@@ -22,17 +23,7 @@ export default function ProductPage() {
             </p>
 
             <div className="w-full max-w-sm mx-auto flex flex-col gap-3">
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 rounded-md border border-muted bg-background focus:outline-none focus:ring-2 focus:ring-foreground/20 transition-all text-sm"
-                />
-                <button
-                    type="button"
-                    className="w-full px-6 py-3 border border-transparent text-sm font-medium rounded-md text-background bg-foreground hover:bg-foreground/90 transition-colors"
-                >
-                    Join the Waitlist
-                </button>
+                <WaitlistForm />
             </div>
 
             <p className="mt-4 text-xs text-muted-foreground/70">
