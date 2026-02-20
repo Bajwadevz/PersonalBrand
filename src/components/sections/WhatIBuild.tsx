@@ -6,7 +6,7 @@ export default function WhatIBuild() {
                     What I Build
                 </h2>
                 <p className="text-lg text-gray-500 max-w-2xl">
-                    Architecting deterministic workflows to eliminate operational bottlenecks.
+                    Building practical tools and automating workflows to eliminate operational bottlenecks.
                 </p>
             </div>
 
@@ -22,9 +22,9 @@ export default function WhatIBuild() {
                         AI Architecture
                     </h3>
                     <ul className="space-y-4">
-                        <li className="text-gray-600 font-medium">LLM-powered reasoning engines</li>
-                        <li className="text-gray-600 font-medium">Retrieval logic and RAG systems</li>
-                        <li className="text-gray-600 font-medium">Deterministic multi-agent routing</li>
+                        <li className="text-gray-600 font-medium">Custom LLM-powered internal tools</li>
+                        <li className="text-gray-600 font-medium">AI-powered dashboards</li>
+                        <li className="text-gray-600 font-medium">Workflow automation systems</li>
                     </ul>
                 </div>
 
@@ -36,12 +36,12 @@ export default function WhatIBuild() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
                             </svg>
                         </div>
-                        Infrastructure
+                        Process Automation
                     </h3>
                     <ul className="space-y-4">
-                        <li className="text-gray-600 font-medium">API integration mapping</li>
-                        <li className="text-gray-600 font-medium">CRM and database automation</li>
-                        <li className="text-gray-600 font-medium">Self-healing process loops</li>
+                        <li className="text-gray-600 font-medium">CRM + AI integrations</li>
+                        <li className="text-gray-600 font-medium">Operational process automation</li>
+                        <li className="text-gray-600 font-medium">Tool integration & syncing</li>
                     </ul>
                 </div>
 
@@ -56,9 +56,9 @@ export default function WhatIBuild() {
                         Implementation
                     </h3>
                     <ul className="space-y-4">
-                        <li className="text-gray-600 font-medium">Practical stack roadmapping</li>
-                        <li className="text-gray-600 font-medium">Team execution planning</li>
-                        <li className="text-gray-600 font-medium">Continuous operational scaling</li>
+                        <li className="text-gray-600 font-medium">Lightweight scalable setups</li>
+                        <li className="text-gray-600 font-medium">Practical API routing</li>
+                        <li className="text-gray-600 font-medium">Direct execution support</li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import BackgroundGrid from "./BackgroundGrid";
-import FloatingChip from "./FloatingChip";
 
 export default function Hero() {
     return (

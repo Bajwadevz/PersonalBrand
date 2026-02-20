@@ -16,14 +16,49 @@ export default function ContactPage() {
                     </svg>
                 </div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#0F172A] leading-[1.1] mb-6">
-                    Let's Build Something Intelligent.
+                    Let&apos;s Build a Practical AI System.
                 </h1>
                 <p className="text-lg sm:text-xl max-w-2xl mx-auto text-gray-500 font-medium leading-relaxed">
-                    Tell me about your project. I'll personally review it.
+                    Tell me what you&apos;re trying to automate, optimize, or build.<br className="hidden sm:block" />
+                    I&apos;ll review your project personally and respond within 24–48 hours.
                 </p>
             </section>
 
             <section className="pb-32 px-6 max-w-3xl mx-auto w-full">
+                {/* Deliverable Framing */}
+                <div className="mb-10 p-8 rounded-2xl bg-white border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] flex flex-col md:flex-row gap-6 md:items-center justify-between">
+                    <div>
+                        <h3 className="font-bold text-[#0F172A] mb-2">What You Can Expect</h3>
+                        <p className="text-sm text-gray-500">I prioritize execution over long consulting cycles.</p>
+                    </div>
+                    <ul className="space-y-2">
+                        <li className="flex items-center text-sm font-medium text-gray-700">
+                            <svg className="w-4 h-4 text-emerald-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Clear system scope
+                        </li>
+                        <li className="flex items-center text-sm font-medium text-gray-700">
+                            <svg className="w-4 h-4 text-emerald-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Implementation roadmap
+                        </li>
+                        <li className="flex items-center text-sm font-medium text-gray-700">
+                            <svg className="w-4 h-4 text-emerald-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Direct execution
+                        </li>
+                        <li className="flex items-center text-sm font-medium text-gray-700">
+                            <svg className="w-4 h-4 text-emerald-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            No unnecessary complexity
+                        </li>
+                    </ul>
+                </div>
+
                 <ContactForm />
             </section>
         </div>

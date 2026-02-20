@@ -12,7 +12,7 @@ export default function CredibilityMicrosection() {
                     {/* Card 1 */}
                     <div className="flex flex-col">
                         <p className="text-gray-600 font-medium leading-relaxed italic mb-6">
-                            "Shahzaib's insights on AI-first systems completely reshaped how we structure our internal workflows. It's not just theory; it's pure execution."
+                            &quot;Shahzaib&apos;s insights on AI-first systems completely reshaped how we structure our internal workflows. It&apos;s not just theory; it&apos;s pure execution.&quot;
                         </p>
                         <div className="mt-auto">
                             <h4 className="font-semibold text-gray-900 text-sm">James S.</h4>
@@ -23,7 +23,7 @@ export default function CredibilityMicrosection() {
                     {/* Card 2 */}
                     <div className="flex flex-col border-t md:border-t-0 md:border-l border-gray-100 pt-8 md:pt-0 md:pl-12">
                         <p className="text-gray-600 font-medium leading-relaxed italic mb-6">
-                            "Agentic orchestration sounded like a buzzword until I read the breakdowns here. This is the playbook for actually moving fast without shipping garbage."
+                            &quot;Agentic orchestration sounded like a buzzword until I read the breakdowns here. This is the playbook for actually moving fast without shipping garbage.&quot;
                         </p>
                         <div className="mt-auto">
                             <h4 className="font-semibold text-gray-900 text-sm">Elena L.</h4>
@@ -34,7 +34,7 @@ export default function CredibilityMicrosection() {
                     {/* Card 3 */}
                     <div className="flex flex-col border-t md:border-t-0 md:border-l border-gray-100 pt-8 md:pt-0 md:pl-12">
                         <p className="text-gray-600 font-medium leading-relaxed italic mb-6">
-                            "The exact right balance of high-level architecture mapped down to deep technical implementation syntax. Phenomenal resource."
+                            &quot;The exact right balance of high-level architecture mapped down to deep technical implementation syntax. Phenomenal resource.&quot;
                         </p>
                         <div className="mt-auto">
                             <h4 className="font-semibold text-gray-900 text-sm">Marcus T.</h4>

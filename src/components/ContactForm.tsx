@@ -122,12 +122,27 @@ export default function ContactForm() {
                         className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all text-gray-700 bg-gray-50/50 cursor-pointer appearance-none"
                     >
                         <option value="" disabled selected>Select a range...</option>
-                        <option value="$5k - $10k">$5k - $10k</option>
-                        <option value="$10k - $25k">$10k - $25k</option>
-                        <option value="$25k - $50k">$25k - $50k</option>
-                        <option value="$50k+">$50k+</option>
+                        <option value="$1k - $3k">$1,000 - $3,000 (AI Automation / MVP)</option>
+                        <option value="$3k - $5k">$3,000 - $5,000 (Custom AI System Build)</option>
+                        <option value="$5k+">$5,000+ (Advanced Systems / Long-Term)</option>
                     </select>
                 </div>
+            </div>
+
+            <div className="flex flex-col gap-2 mb-6">
+                <label htmlFor="timeline" className="text-sm font-semibold text-gray-700">Timeline</label>
+                <select
+                    required
+                    name="timeline"
+                    id="timeline"
+                    className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all text-gray-700 bg-gray-50/50 cursor-pointer appearance-none"
+                >
+                    <option value="" disabled selected>Select a timeline...</option>
+                    <option value="ASAP">ASAP</option>
+                    <option value="1-2 Months">1–2 Months</option>
+                    <option value="3+ Months">3+ Months</option>
+                    <option value="Exploring Options">Exploring Options</option>
+                </select>
             </div>
 
             <div className="flex flex-col gap-2 mb-8">
@@ -159,6 +174,6 @@ export default function ContactForm() {
                     "Send Project Details"
                 )}
             </button>
-        </form>
+        </form >
     );
 }
