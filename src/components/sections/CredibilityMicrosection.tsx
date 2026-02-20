@@ -4,10 +4,10 @@ export default function CredibilityMicrosection() {
             <div className="max-w-6xl mx-auto px-6 w-full">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A] mb-4">
-                        Builders & Operators Following Bajwaa Dev
+                        Professionals & Operators Following Bajwaa Dev
                     </h2>
                     <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
-                        Join an elite network of engineers scaling intelligent systems, automating workflows, and building leverage.
+                        Join an elite network of operators scaling intelligent systems, automating workflows, and building leverage.
                     </p>
                 </div>
 
@@ -46,7 +46,7 @@ export default function CredibilityMicrosection() {
                                 ))}
                             </div>
                             <p className="text-gray-700 font-medium leading-relaxed">
-                                "Vibe coding sounded like a buzzword until I read the breakdowns here. This is the playbook for actually moving fast without shipping garbage."
+                                "Agentic orchestration sounded like a buzzword until I read the breakdowns here. This is the playbook for actually moving fast without shipping garbage."
                             </p>
                         </div>
                         <div className="flex items-center gap-3">

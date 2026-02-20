@@ -9,17 +9,17 @@ export default function VisualAnchor() {
                     {/* Left Side Content */}
                     <div>
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0F172A]">
-                            Building with AI Is a Skill.
+                            The Automation Advantage.
                         </h2>
                         <p className="mt-4 text-[#4B5563] leading-relaxed">
-                            AI doesn’t replace engineers — it amplifies them. The difference is structure. I focus on teaching how to build with AI intentionally: faster iteration, clearer thinking, and smarter execution.
+                            AI doesn’t replace professionals — it amplifies them. The true differentiator is structure. I build and document the frameworks required to orchestrate Large Language Models into reliable, self-healing execution pipelines.
                         </p>
                         <ul className="mt-6 space-y-3">
                             {[
-                                "AI-first development workflows",
-                                "Vibe coding methodologies",
-                                "Prompt engineering for builders",
-                                "Turning AI ideas into shipped products"
+                                "Building deterministic AI workflows",
+                                "Zero-Inbox & operational automation",
+                                "Deploying custom RAG architectures",
+                                "Scaling human output via agentic systems"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <div className="w-5 h-5 rounded-full bg-[#0B2545] flex-shrink-0" />

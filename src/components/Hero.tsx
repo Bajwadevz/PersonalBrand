@@ -42,7 +42,7 @@ export default function Hero() {
 
                 {/* 3. Supporting Paragraph */}
                 <p className="text-lg sm:text-xl max-w-2xl leading-relaxed mt-8 text-gray-600 mx-auto font-medium">
-                    I help professionals, entrepreneurs, and builders leverage AI-first systems. No hype—just practical frameworks, strategic automations, and deep technical execution to multiply your output.
+                    I help professionals, entrepreneurs, and operators leverage AI-first systems. No hype—just practical frameworks, strategic automations, and deep technical execution to multiply your output.
                 </p>
 
                 {/* 4. CTA Buttons */}

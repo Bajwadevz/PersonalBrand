@@ -1,20 +1,20 @@
 export default function StructuredDirection() {
     const cards = [
         {
-            title: "AI-First Thinking",
-            description: "Design workflows where AI assists reasoning and execution instead of replacing it.",
+            title: "Systems Architecture",
+            description: "Designing workflows where generative AI acts as a reliable logic engine, not an unpredictable novelty.",
         },
         {
-            title: "Vibe Coding",
-            description: "Build fluidly with AI tools while maintaining structure and clarity.",
+            title: "Deterministic Execution",
+            description: "Forcing strict outputs and structured data from LLMs to ensure enterprise-grade reliability in production.",
         },
         {
-            title: "Shipping Fast",
-            description: "Move from idea to working product using AI-accelerated development.",
+            title: "Autonomous Workflows",
+            description: "Building self-healing loops that reduce manual administrative overhead and scale human output.",
         },
         {
-            title: "Teaching in Public",
-            description: "Real experiments, real results, documented transparently.",
+            title: "Radical Transparency",
+            description: "Documenting exact implementation playbooks, architectures, and cost-analyses from real-world deployments.",
         },
     ];
 
@@ -22,10 +22,10 @@ export default function StructuredDirection() {
         <section className="py-24 bg-white w-full">
             <div className="max-w-5xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl font-semibold text-[#0F172A]">
-                    What I Teach
+                    The Implementation Pillars
                 </h2>
                 <p className="mt-4 text-[#6B7280] max-w-2xl mx-auto text-base sm:text-lg">
-                    Core pillars of my engineering philosophy.
+                    Core principles separating hype from practical enterprise execution.
                 </p>
 
                 <div className="mt-12 grid md:grid-cols-2 gap-8 text-left">

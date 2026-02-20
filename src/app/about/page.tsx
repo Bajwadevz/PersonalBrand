@@ -5,12 +5,12 @@ import FloatingChip from "@/components/FloatingChip";
 
 export const metadata: Metadata = {
     title: "About Shahzeb Bajwa | AI Expert & Systems Consultant",
-    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and builders leverage practical AI automation and implement scalable AI strategies.",
+    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
     keywords: ["AI expert", "AI consultant", "AI systems", "AI automation", "AI for business", "AI for professionals", "AI implementation", "Practical AI workflows", "AI strategy", "AI transformation"],
 };
 
 export default function AboutPage() {
-    
+
     // Injecting FAQ Schema for SEO Dominance
     const faqSchema = {
         "@context": "https://schema.org",
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
             {/* Hero Positioning Section */}
             <section className="py-24 flex flex-col items-center text-center w-full max-w-6xl mx-auto px-6 relative z-10">
-                
+
                 {/* Floating Taxonomy Tags */}
                 <div className="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden">
                     <FloatingChip className="top-12 left-[8%]" animationClass="animate-[float_9s_ease-in-out_infinite]">AI Systems</FloatingChip>
@@ -68,13 +68,13 @@ export default function AboutPage() {
                 </h1>
 
                 <p className="text-xl max-w-2xl leading-relaxed text-gray-600 font-medium mb-12 relative z-20">
-                    I am Shahzeb Bajwa. I help U.S. professionals, builders, and corporate leaders integrate practical AI automation into their daily execution to drive unparalleled leverage.
+                    I am Shahzeb Bajwa. I help U.S. professionals, operators, and corporate leaders integrate practical AI automation into their daily execution to drive unparalleled leverage.
                 </p>
             </section>
 
             {/* Long-Form SEO Content Architecture */}
             <section className="max-w-4xl mx-auto px-6 w-full relative z-10">
-                
+
                 {/* Mission & Philosophy */}
                 <div className="mb-16">
                     <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] mb-6">The AI Philosophy</h2>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 {/* Categorical Messaging */}
                 <div className="mb-20">
                     <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] mb-8">Who I Help Build</h2>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                         <GlassPanel className="p-8">
                             <h3 className="text-xl font-bold text-gray-900 mb-3">For U.S. Professionals</h3>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                         </GlassPanel>
 
                         <GlassPanel className="p-8 md:col-span-2">
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">For Builders & Engineers</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">For Systems Integrators & Engineers</h3>
                             <p className="text-gray-600 text-sm leading-relaxed">
                                 The era of the &quot;AI Wrapper&quot; is dead. I construct deep technical architectures and playbooks teaching developers how to utilize <em className="text-gray-900 not-italic font-semibold">vibe coding</em>, deterministic LLM routing, and autonomous agent orchestration to ship actual, un-breakable products.
                             </p>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     <p className="text-gray-600 leading-relaxed mb-8">
                         Transforming your operations requires a disciplined, systems-first methodology. We do not chase the latest models; we build infrastructure that survives them.
                     </p>
-                    
+
                     <div className="space-y-6">
                         <div className="flex gap-4 items-start">
                             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white font-bold text-sm shrink-0 mt-1 shadow-md">1</div>
@@ -163,7 +163,7 @@ export default function AboutPage() {
                                 AI-first systems engineering is the architectural approach of designing software, workflows, and business processes where Large Language Models (LLMs) and intelligent agents are treated as core routing and logic components, rather than aftermarket wrappers.
                             </p>
                         </details>
-                        
+
                         <details className="group border border-gray-200 bg-white rounded-lg [&_summary::-webkit-details-marker]:hidden">
                             <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 font-medium">
                                 How can AI automation help my business?

@@ -35,7 +35,7 @@ export default function WaitlistForm() {
             }
 
             setStatus("success");
-            setMessage("You're on the AI Builder List.");
+            setMessage("You're on the AI Operator List.");
             setEmail("");
         } catch (err) {
             setStatus("error");
