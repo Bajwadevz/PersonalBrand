@@ -4,8 +4,8 @@ import GlassPanel from "@/components/GlassPanel";
 import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
-    title: "Product | Bajwaa Dev",
-    description: "A playbook and system for developers. Launching soon.",
+    title: "AI Systems Playbook | Bajwaa Dev",
+    description: "A comprehensive playbook and system for execution-focused professionals and operators. Launching soon.",
 };
 
 export default function ProductPage() {

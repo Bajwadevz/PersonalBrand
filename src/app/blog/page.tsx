@@ -3,8 +3,8 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/api";
 
 export const metadata: Metadata = {
-    title: "Blog | Bajwaa Dev — AI Education & Vibe Coding",
-    description: "Thoughts, experiments, and practical breakdowns on building with AI.",
+    title: "Field Notes & Blog | Bajwaa Dev",
+    description: "Thoughts, experiments, and practical breakdowns on architecting autonomous AI systems for the enterprise.",
 };
 
 export default function BlogPage() {
@@ -15,7 +15,7 @@ export default function BlogPage() {
         <div className="py-20 flex flex-col w-full max-w-[720px] mx-auto px-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8">Blog</h1>
             <p className="text-muted-foreground mb-12 text-base">
-                Thoughts, experiments, and practical breakdowns on building with AI.
+                Thoughts, experiments, and practical breakdowns on architecting autonomous AI systems for the enterprise.
             </p>
 
             <div className="flex flex-col gap-8">

@@ -23,13 +23,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bajwaa.dev"),
   title: {
-    default: "Bajwaa Dev | AI Education & Vibe Coding",
+    default: "Bajwaa Dev | AI Systems Consultant & Educator",
     template: "%s | Bajwaa Dev",
   },
-  description: "Bajwaa Dev is an AI education platform focused on vibe coding, AI-first development, and building real software with AI as leverage.",
+  description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
   openGraph: {
-    title: "Bajwaa Dev | AI Education & Vibe Coding",
-    description: "Bajwaa Dev is an AI education platform focused on vibe coding, AI-first development, and building real software with AI as leverage.",
+    title: "Bajwaa Dev | AI Systems Consultant & Educator",
+    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
     url: "https://bajwaa.dev",
     siteName: "Bajwaa Dev",
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bajwaa Dev | AI Education & Vibe Coding",
-    description: "Bajwaa Dev is an AI education platform focused on vibe coding, AI-first development, and building real software with AI as leverage.",
+    title: "Bajwaa Dev | AI Systems Consultant & Educator",
+    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
   }
 };
 
@@ -57,7 +57,7 @@ export default function RootLayout({
       "@type": "Person",
       name: "Shahzeb Bajwa",
       url: "https://bajwaa.dev",
-      jobTitle: "Software Engineer",
+      jobTitle: "AI Systems Consultant",
       sameAs: [
         "https://github.com/Bajwadevz",
         "https://www.linkedin.com/in/shahzebbajwa/",
@@ -70,7 +70,7 @@ export default function RootLayout({
       "@type": "Organization",
       name: "Bajwaa Dev",
       url: "https://bajwaa.dev",
-      logo: "https://bajwaa.dev/wave-logo.png",
+      logo: "https://bajwaa.dev/wave-icon.svg",
       sameAs: [
         "https://github.com/Bajwadevz",
         "https://www.linkedin.com/in/shahzebbajwa/",
