@@ -6,14 +6,20 @@ import WhatIBuild from "@/components/sections/WhatIBuild";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full bg-white">
+    <div className="flex flex-col w-full bg-transparent">
       <Hero />
-      <div className="max-w-6xl mx-auto w-full px-6">
+      <div className="max-w-6xl mx-auto w-full px-6 py-24">
         <WhatIBuild />
       </div>
-      <PortfolioGrid />
-      <DigitalProduct />
-      <CredibilityMicrosection />
+      <div className="py-24">
+        <PortfolioGrid />
+      </div>
+      <div className="py-24">
+        <DigitalProduct />
+      </div>
+      <div className="py-24">
+        <CredibilityMicrosection />
+      </div>
     </div>
   );
 }

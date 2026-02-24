@@ -7,11 +7,11 @@ type Props = {
 
 export default function BlogPreview({ posts }: Props) {
     return (
-        <section className="py-32 w-full border-t border-gray-200/50">
+        <section className="py-32 w-full">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
                 <div>
                     <h3 className="text-3xl font-semibold tracking-tight text-[#0F172A]">Latest Field Notes</h3>
-                    <p className="text-gray-500 mt-2 text-lg">Breakdowns, experiments, and practical lessons from building with AI in public.</p>
+                    <p className="text-gray-500 mt-2 text-lg leading-relaxed">Practical breakdowns on AI workflows, automation, and systems for operators.</p>
                 </div>
                 <Link
                     href="/blog"
@@ -29,7 +29,7 @@ export default function BlogPreview({ posts }: Props) {
                         <Link
                             key={post.slug}
                             href={`/blog/${post.slug}`}
-                            className="group block p-8 rounded-3xl border border-transparent hover:border-gray-200/60 hover:bg-white hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                            className="group block p-8 rounded-3xl border border-transparent hover:border-gray-200/60 hover:bg-white hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-200 ease-out"
                         >
                             <article>
                                 <time className="text-sm text-gray-400 mb-3 block font-medium">

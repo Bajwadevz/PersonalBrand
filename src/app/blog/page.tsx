@@ -4,18 +4,17 @@ import { getAllPosts } from "@/lib/api";
 
 export const metadata: Metadata = {
     title: "Field Notes & Blog | Bajwaa Dev",
-    description: "Thoughts, experiments, and practical breakdowns on architecting autonomous AI systems for the enterprise.",
+    description: "Practical breakdowns on AI workflows, automation, and systems for operators. Tactical, no fluff.",
 };
 
 export default function BlogPage() {
-    // Only show the 3 latest posts as per the user's requirement for the blog index
-    const posts = getAllPosts().slice(0, 3);
+    const posts = getAllPosts();
 
     return (
-        <div className="py-32 flex flex-col w-full max-w-[720px] mx-auto px-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8">Blog</h1>
-            <p className="text-gray-500 mb-12 text-lg">
-                Thoughts, experiments, and practical breakdowns on architecting autonomous AI systems for the enterprise.
+        <div className="py-32 flex flex-col w-full max-w-[720px] mx-auto px-6 relative">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 relative z-10">Blog</h1>
+            <p className="text-gray-500 mb-10 text-lg leading-relaxed">
+                Practical breakdowns on AI workflows, automation, and systems for operators.
             </p>
 
             <div className="flex flex-col gap-8">
@@ -26,7 +25,7 @@ export default function BlogPage() {
                         <Link
                             key={post.slug}
                             href={`/blog/${post.slug}`}
-                            className="group block p-6 -mx-6 rounded-2xl hover:bg-[var(--color-muted)] transition-colors border border-transparent hover:border-[var(--color-border)]"
+                            className="group block p-6 -mx-6 rounded-2xl hover:bg-[var(--color-muted)] transition-colors duration-200 ease-out border border-transparent hover:border-[var(--color-border)]"
                         >
                             <article>
                                 <time className="text-sm text-muted-foreground mb-3 block">

@@ -57,7 +57,7 @@ export default function WaitlistForm() {
             <button
                 type="submit"
                 disabled={status === "loading" || status === "success"}
-                className="w-full px-6 py-3 rounded-full font-medium transition duration-200 ease-in-out hover:scale-[1.02] bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary-hover)] disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 min-h-[44px] rounded-full font-medium transition-colors duration-200 ease-out bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary-hover)] disabled:opacity-50 flex items-center justify-center gap-2"
             >
                 {status === "loading" ? "Joining..." : status === "success" ? "Subscribed ✓" : "Join the Waitlist"}
             </button>

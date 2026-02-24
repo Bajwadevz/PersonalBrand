@@ -1,28 +1,31 @@
 export default function PortfolioGrid() {
     const caseStudies = [
         {
-            title: "Autonomous RAG Customer Support",
-            description: "Self-healing retrieval pipeline that resolves Tier-1 tickets with zero human intervention.",
-            outcome: "-85% Response Time"
+            title: "Automated Research",
+            description: "Instant company dossiers, public data scraping, and executive summaries pushed directly into your CRM before every sales call.",
+            outcome: "Saving 5+ hours per week per rep."
         },
         {
-            title: "Deterministic LLM Data Routing",
-            description: "Logic-based switching framework that routes incoming leads and triggers customized workflows.",
-            outcome: "Automated Lead Funnel"
+            title: "Intelligent Routing",
+            description: "Inbound leads are analyzed for intent and automatically escalated or nurtured without human triage via Make and OpenAI.",
+            outcome: "Zero-friction response times."
         },
         {
-            title: "Dynamic Sales Playbook Generation",
-            description: "AI module scraping prospect intelligence to generate bespoke outreach on enterprise outbound tools.",
-            outcome: "Instant Prospecting"
+            title: "Data Synthesis",
+            description: "Weekly reports generated automatically from Notion, Airtable, or internal dashboards, summarized and formatted without manual compilation.",
+            outcome: "Fully automated operations."
         }
     ];
 
     return (
-        <section className="py-32 bg-white w-full border-t border-gray-200/50">
-            <div className="max-w-6xl mx-auto px-6 w-full">
-                <div className="mb-16">
+        <section className="bg-white relative z-10 py-24">
+            <div className="max-w-6xl mx-auto px-6">
+                <div className="mb-12">
+                    <div className="mb-6 inline-flex items-center rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50">
+                        WHAT THIS LOOKS LIKE IN PRACTICE
+                    </div>
                     <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] mb-4">
-                        Selected Systems
+                        Real workflows. Real leverage.
                     </h2>
                 </div>
 
@@ -32,13 +35,10 @@ export default function PortfolioGrid() {
                             <h3 className="text-xl font-bold text-[#0F172A] mb-3">
                                 {study.title}
                             </h3>
-                            <p className="text-gray-500 leading-relaxed text-sm mb-6 flex-grow">
+                            <p className="text-gray-600 leading-relaxed text-base mb-6 flex-grow">
                                 {study.description}
                             </p>
-                            <div className="pt-4 border-t border-gray-100 flex items-center text-sm font-medium text-[#0F172A]">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-2">
-                                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                                </svg>
+                            <div className="pt-4 border-t border-gray-100 flex text-sm text-gray-400">
                                 {study.outcome}
                             </div>
                         </div>

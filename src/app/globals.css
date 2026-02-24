@@ -4,33 +4,30 @@
 @theme {
   --color-background: #FFFFFF;
   --color-foreground: #374151;
-  /* Body text color */
   --color-muted: #F9FAFB;
-  /* Subtle section background */
   --color-muted-foreground: #6B7280;
   --color-border: #E5E7EB;
-  /* Divider lines */
   --color-heading: #0F172A;
-  /* Primary heading color */
   --color-link: #0B3A6F;
-  /* Link color */
   --color-link-hover: #0F172A;
-  /* Link hover */
-
   --color-primary: #0B2545;
-  /* Primary button background */
   --color-primary-hover: #133B6C;
-  /* Primary button hover */
   --color-primary-foreground: #FFFFFF;
-  /* Primary button text */
   --color-secondary-border: #D1D5DB;
-  /* Secondary button border */
   --color-secondary-foreground: #0F172A;
-  /* Secondary button text */
-
+  --color-divider: rgba(15, 23, 42, 0.08);
+  --color-divider-subtle: rgba(15, 23, 42, 0.06);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --radius-button: 9999px;
+  --radius-card: 1rem;
+  --radius-card-lg: 1.5rem;
+  --shadow-button: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 8px 30px -4px rgba(0, 0, 0, 0.08);
+  --section-padding-y: 6rem;
+  --section-padding-y-lg: 8rem;
 }
 
 :root {
@@ -40,11 +37,11 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Forcing light mode explicitly for rosewell.dev aesthetic */
     --background: #FFFFFF;
     --foreground: #374151;
   }
@@ -56,7 +53,8 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.65;
+  min-height: 100%;
 }
 
 h1,
@@ -67,10 +65,13 @@ h5,
 h6 {
   font-family: var(--font-heading);
   color: var(--color-heading);
-  letter-spacing: -0.025em;
 }
 
-/* Custom minimal scrollbar */
+h1 {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -88,49 +89,18 @@ h6 {
   background: var(--color-muted-foreground);
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+/* Interaction polish: focus and link consistency */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
 }
 
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+a:focus-visible {
+  outline: 2px solid rgba(15, 23, 42, 0.35);
+  outline-offset: 2px;
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
-}
-
-.delay-100 {
-  animation-delay: 100ms;
-}
-
-.delay-200 {
-  animation-delay: 200ms;
-}
-
-.delay-300 {
-  animation-delay: 300ms;
-}
-
-.delay-500 {
-  animation-delay: 500ms;
+button:focus-visible {
+  outline: 2px solid rgba(15, 23, 42, 0.35);
+  outline-offset: 2px;
 }

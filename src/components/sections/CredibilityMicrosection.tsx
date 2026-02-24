@@ -1,6 +1,6 @@
 export default function CredibilityMicrosection() {
     return (
-        <section className="py-32 bg-white w-full border-t border-gray-200/50">
+        <section className="bg-white relative z-10 py-32 w-full">
             <div className="max-w-6xl mx-auto px-6 w-full">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-2">

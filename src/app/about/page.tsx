@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BackgroundGrid from "@/components/BackgroundGrid";
 import GlassPanel from "@/components/GlassPanel";
 import FloatingChip from "@/components/FloatingChip";
 
@@ -17,11 +16,11 @@ export default function AboutPage() {
         },
         {
             q: "How can professionals use AI?",
-            a: "Professionals across all knowledge-work sectors can drastically multiply their productivity by treating AI as an eager, highly capable junior analyst rather than a simple search engine. Instead of manually drafting initial reports, analyzing long transcripts, or sorting complex spreadsheet data, modern professionals can design bespoke AI workflows to automate these tasks. By mastering prompt architecture and understanding how to chain together multiple AI commands, operators can effectively reduce their daily administrative burden by hours. Furthermore, adopting AI allows professionals to rapidly skill up in tertiary domains—such as generating VBA scripts, drafting legal summaries, or compiling technical documentation—without needing formal backgrounds in those subjects. The ultimate goal for any professional is to utilize AI to automate mundane execution, thereby freeing up mental bandwidth to focus entirely on high-level strategy, relationship building, and deeply creative problem-solving."
+            a: "Professionals across all knowledge-work sectors can drastically multiply their productivity by treating AI as an eager, highly capable junior analyst rather than a simple search engine. Instead of manually drafting initial reports, analyzing long transcripts, or sorting complex spreadsheet data, modern professionals can design bespoke AI workflows to automate these tasks. By mastering prompt architecture and understanding how to chain together multiple AI commands, operators can effectively reduce their daily administrative burden by hours. Furthermore, adopting AI allows professionals to rapidly skill up in tertiary domains, such as generating VBA scripts, drafting legal summaries, or compiling technical documentation without needing formal backgrounds in those subjects. The ultimate goal for any professional is to utilize AI to automate mundane execution, thereby freeing up mental bandwidth to focus entirely on high-level strategy, relationship building, and deeply creative problem-solving."
         },
         {
             q: "How do I implement AI in my business?",
-            a: "Implementing AI in a business environment requires a methodical, systems-first approach, starting with a rigorous audit of current operational bottlenecks. Business owners must avoid the temptation to adopt \"AI\" broadly, as this usually results in team confusion and abandoned software subscriptions. Instead, the implementation process should begin by identifying one specific, high-frequency, low-variance task—such as customer support triage, invoice processing, or initial lead qualification. Once a target is selected, operators can build a deterministic pipeline using automation tools connected to an LLM API to handle that specific edge case. By successfully automating a single micro-workflow, the business gains immediate operational leverage and the confidence to scale the architecture. True implementation is about incremental, un-breakable compounding systems that securely integrate into existing enterprise infrastructure without requiring a massive overhaul."
+            a: "Implementing AI in a business environment requires a methodical, systems-first approach, starting with a rigorous audit of current operational bottlenecks. Business owners must avoid the temptation to adopt \"AI\" broadly, as this usually results in team confusion and abandoned software subscriptions. Instead, the implementation process should begin by identifying one specific, high-frequency, low-variance task, such as customer support triage, invoice processing, or initial lead qualification. Once a target is selected, operators can build a deterministic pipeline using automation tools connected to an LLM API to handle that specific edge case. By successfully automating a single micro-workflow, the business gains immediate operational leverage and the confidence to scale the architecture. True implementation is about incremental, un-breakable compounding systems that securely integrate into existing enterprise infrastructure without requiring a massive overhaul."
         },
         {
             q: "Is AI only for developers?",
@@ -29,7 +28,7 @@ export default function AboutPage() {
         },
         {
             q: "What are AI systems?",
-            a: "AI systems represent the architectural evolution from single-prompt interactions to multi-agent, autonomous workflows. A standard AI interaction involves a user typing a prompt and reading a response. An AI system, however, removes the human from the center of the execution loop. It is a structured environment where specific triggers—such as receiving an email, updating a database row, or a scheduled daily cron job—automatically initiate an LLM to perform a task. The model evaluates the incoming data, applies predefined logic, and dynamically routes the output to another software application via API. These systems are designed with deterministic constraints, error-handling fallbacks, and strict operating parameters to ensure enterprise-grade reliability. By interlinking these logic chains, individuals and businesses can construct a network of digital employees that operate continuously, compounding productivity and executing complex operations with near-zero latency."
+            a: "AI systems represent the architectural evolution from single-prompt interactions to multi-agent, autonomous workflows. A standard AI interaction involves a user typing a prompt and reading a response. An AI system, however, removes the human from the center of the execution loop. It is a structured environment where specific triggers, such as receiving an email, updating a database row, or a scheduled daily cron job, automatically initiate an LLM to perform a task. The model evaluates the incoming data, applies predefined logic, and dynamically routes the output to another software application via API. These systems are designed with deterministic constraints, error-handling fallbacks, and strict operating parameters to ensure enterprise-grade reliability. By interlinking these logic chains, individuals and businesses can construct a network of digital employees that operate continuously, compounding productivity and executing complex operations with near-zero latency."
         },
         {
             q: "How do I learn AI without coding?",
@@ -49,11 +48,11 @@ export default function AboutPage() {
         },
         {
             q: "What is AI automation?",
-            a: "AI automation is the strategic fusion of generative artificial intelligence with traditional robotic process automation (RPA). Historically, automation was strictly rules-based. However, legacy automation systems would instantly break if the input data was slightly unstructured or unexpected. AI automation introduces a layer of cognitive flexibility into the workflow. By utilizing a Large Language Model as a reasoning engine within the automation sequence, the system can parse unstructured data—such as a poorly formatted email, an image of a receipt, or a complex PDF contract—extract the necessary JSON variables, and route them correctly to the subsequent software pipeline. This means workflows are no longer rigid; they become dynamic, self-healing, and capable of understanding human context. From a practical standpoint, this allows businesses to fully automate complex human tasks that previously required manual interpretation and reading."
+            a: "AI automation is the strategic fusion of generative artificial intelligence with traditional robotic process automation (RPA). Historically, automation was strictly rules-based. However, legacy automation systems would instantly break if the input data was slightly unstructured or unexpected. AI automation introduces a layer of cognitive flexibility into the workflow. By utilizing a Large Language Model as a reasoning engine within the automation sequence, the system can parse unstructured data, such as a poorly formatted email, an image of a receipt, or a complex PDF contract, extract the necessary JSON variables, and route them correctly to the subsequent software pipeline. This means workflows are no longer rigid; they become dynamic, self-healing, and capable of understanding human context. From a practical standpoint, this allows businesses to fully automate complex human tasks that previously required manual interpretation and reading."
         },
         {
             q: "How can students use AI effectively?",
-            a: "Students who wield AI effectively treat it as a boundless, personalized academic tutor rather than an outsourced essay writer. The lowest-value use case for AI in academia is simply having it generate answers—this bypasses the cognitive struggle realistically required for actual learning. Instead, students should utilize LLMs to break down wildly complex topics into digestible analogies, quiz them on historical timelines, or translate dense, poorly written academic papers into standard prose. Furthermore, students can leverage AI to selectively audit their own writing, asking the model to critique their thesis strength, identify logical fallacies, or suggest structural improvements. By utilizing voice-to-text AI tools during lengthy lectures, students can automatically generate perfectly organized study guides and flashcards. Ultimately, the students who will dominate the future economy view AI as a rapid acceleration engine for their own deep skill acquisition."
+            a: "Students who wield AI effectively treat it as a boundless, personalized academic tutor rather than an outsourced essay writer. The lowest-value use case for AI in academia is simply having it generate answers, this bypasses the cognitive struggle realistically required for actual learning. Instead, students should utilize LLMs to break down wildly complex topics into digestible analogies, quiz them on historical timelines, or translate dense, poorly written academic papers into standard prose. Furthermore, students can leverage AI to selectively audit their own writing, asking the model to critique their thesis strength, identify logical fallacies, or suggest structural improvements. By utilizing voice-to-text AI tools during lengthy lectures, students can automatically generate perfectly organized study guides and flashcards. Ultimately, the students who will dominate the future economy view AI as a rapid acceleration engine for their own deep skill acquisition."
         },
         {
             q: "How do I avoid AI hype?",
@@ -80,11 +79,6 @@ export default function AboutPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-
-            {/* Global Grid Context */}
-            <div className="absolute inset-0 z-[-1] flex items-start justify-center pt-20">
-                <BackgroundGrid />
-            </div>
 
             {/* Hero Positioning Section */}
             <section className="py-32 flex flex-col items-center text-center w-full max-w-6xl mx-auto px-6 relative z-10">
@@ -169,7 +163,7 @@ export default function AboutPage() {
                         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F8FAFC] text-[#0F172A] font-bold text-base shrink-0 mt-1 shadow-sm border border-gray-200">3</div>
                         <div>
                             <h4 className="text-xl font-bold text-[#0F172A] m-0">AI for Students</h4>
-                            <p className="text-gray-600 text-base mt-2 leading-relaxed">The global future economy heavily rewards those who command intelligence systems. I break down elite implementation strategies so dedicated students can transform LLMs from simple shortcut generators into highly personalized, infinitely patient academic tutors—accelerating their holistic velocity of deep skill acquisition.</p>
+                            <p className="text-gray-600 text-base mt-2 leading-relaxed">The global future economy heavily rewards those who command intelligence systems. I break down elite implementation strategies so dedicated students can transform LLMs from simple shortcut generators into highly personalized, infinitely patient academic tutors, accelerating their holistic velocity of deep skill acquisition.</p>
                         </div>
                     </div>
 
@@ -206,7 +200,7 @@ export default function AboutPage() {
             </section>
 
             {/* Connection Grid */}
-            <div className="mt-10 w-full max-w-4xl border-t border-gray-200/60 pt-16 mx-auto px-6 relative z-10">
+            <div className="mt-10 w-full max-w-4xl border-t border-[rgba(15,23,42,0.06)] pt-16 mx-auto px-6 relative z-10">
                 <h2 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-8 text-center">Execute the Transition</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     <a href="mailto:hello@bajwaa.dev" className="flex items-center justify-center bg-white shadow-sm border border-gray-200 hover:border-gray-300 transition-colors rounded-xl py-4 text-sm font-medium text-gray-800">

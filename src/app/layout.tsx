@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -10,26 +10,20 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://bajwaa.dev"),
   title: {
-    default: "Bajwaa Dev | AI Systems Consultant & Educator",
+    default: "Shahzeb Bajwa | AI Workflow Automation for Operators",
     template: "%s | Bajwaa Dev",
   },
-  description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
+  description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
+  keywords: "AI workflow automation, practical AI for operators, no-code AI systems, AI productivity systems, build AI without coding, AI tools for sales professionals",
+  alternates: {
+    canonical: "https://bajwaa.dev",
+  },
   openGraph: {
-    title: "Bajwaa Dev | AI Systems Consultant & Educator",
-    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
+    title: "Shahzeb Bajwa | AI Workflow Automation for Operators",
+    description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
     url: "https://bajwaa.dev",
     siteName: "Bajwaa Dev",
     locale: "en_US",
@@ -37,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bajwaa Dev | AI Systems Consultant & Educator",
-    description: "Shahzeb Bajwa is an AI systems expert helping U.S. professionals, entrepreneurs, and operators leverage practical AI automation and implement scalable AI strategies.",
+    title: "Shahzeb Bajwa | AI Workflow Automation for Operators",
+    description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
   }
 };
 
@@ -46,54 +40,17 @@ export const viewport = {
   themeColor: "#0F172A",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Shahzeb Bajwa",
-      url: "https://bajwaa.dev",
-      jobTitle: "AI Systems Consultant",
-      sameAs: [
-        "https://github.com/Bajwadevz",
-        "https://www.linkedin.com/in/shahzebbajwa/",
-        "https://x.com/shahzo_12",
-        "https://www.instagram.com/bajwaa.dev/"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Bajwaa Dev",
-      url: "https://bajwaa.dev",
-      logo: "https://bajwaa.dev/wave-icon.svg",
-      sameAs: [
-        "https://github.com/Bajwadevz",
-        "https://www.linkedin.com/in/shahzebbajwa/",
-        "https://x.com/shahzo_12",
-        "https://www.instagram.com/bajwaa.dev/"
-      ]
-    }
-  ];
+import GlobalGridBackground from "@/components/GlobalGridBackground";
+import FloatingSocialBar from "@/components/FloatingSocialBar";
 
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
-      >
+      <body className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col bg-white relative overflow-x-hidden`}>
+        <GlobalGridBackground />
+        <FloatingSocialBar />
         <Header />
-        <main className="flex-grow flex flex-col w-full animate-fade-in-up">
+        <main className="flex-grow flex flex-col w-full relative z-10">
           {children}
         </main>
         <Footer />

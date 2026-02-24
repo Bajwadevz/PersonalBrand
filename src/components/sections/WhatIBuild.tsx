@@ -1,16 +1,7 @@
 export default function WhatIBuild() {
     return (
-        <section className="py-32 w-full border-t border-gray-200/50">
-            <div className="mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A] mb-4">
-                    What I Build
-                </h2>
-                <p className="text-lg text-gray-500 max-w-2xl">
-                    Building practical tools and automating workflows to eliminate operational bottlenecks.
-                </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <section className="py-10 bg-transparent">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto w-full">
                 {/* Column 1 */}
                 <div className="flex flex-col">
                     <h3 className="text-xl font-bold text-[#0F172A] mb-6 flex items-center gap-3">
@@ -19,12 +10,12 @@ export default function WhatIBuild() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
                             </svg>
                         </div>
-                        AI Architecture
+                        AI Systems
                     </h3>
                     <ul className="space-y-4">
-                        <li className="text-gray-600 font-medium">Custom LLM-powered internal tools</li>
-                        <li className="text-gray-600 font-medium">AI-powered dashboards</li>
-                        <li className="text-gray-600 font-medium">Workflow automation systems</li>
+                        <li className="text-gray-600 font-medium">Custom AI productivity systems</li>
+                        <li className="text-gray-600 font-medium">No-code automation logic</li>
+                        <li className="text-gray-600 font-medium">Time saving backends</li>
                     </ul>
                 </div>
 
@@ -39,8 +30,8 @@ export default function WhatIBuild() {
                         Process Automation
                     </h3>
                     <ul className="space-y-4">
-                        <li className="text-gray-600 font-medium">CRM + AI integrations</li>
-                        <li className="text-gray-600 font-medium">Operational process automation</li>
+                        <li className="text-gray-600 font-medium">Automated workflows</li>
+                        <li className="text-gray-600 font-medium">Operational efficiency</li>
                         <li className="text-gray-600 font-medium">Tool integration & syncing</li>
                     </ul>
                 </div>
@@ -57,7 +48,7 @@ export default function WhatIBuild() {
                     </h3>
                     <ul className="space-y-4">
                         <li className="text-gray-600 font-medium">Lightweight scalable setups</li>
-                        <li className="text-gray-600 font-medium">Practical API routing</li>
+                        <li className="text-gray-600 font-medium">Operator leverage focus</li>
                         <li className="text-gray-600 font-medium">Direct execution support</li>
                     </ul>
                 </div>

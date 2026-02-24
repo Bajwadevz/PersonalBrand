@@ -41,7 +41,7 @@ const services = [
 
 export default function WorkWithMe() {
     return (
-        <div className="flex flex-col w-full bg-[#F9FAFB] min-h-screen">
+        <div className="flex flex-col w-full min-h-screen">
             {/* Hero Section */}
             <section className="pt-32 lg:pt-40 pb-20 px-6 max-w-4xl mx-auto w-full text-center">
                 <div className="mb-8 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50 shadow-sm">
@@ -62,7 +62,7 @@ export default function WorkWithMe() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                            className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-200 ease-out"
                         >
                             <div className="w-12 h-12 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#0B2545] border border-gray-200/50 mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -98,7 +98,7 @@ export default function WorkWithMe() {
                     </p>
                     <Link
                         href="/contact"
-                        className="bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-900 transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-black/10 text-lg"
+                        className="bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-900 transition-colors duration-200 ease-out min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)] text-lg inline-flex items-center justify-center"
                     >
                         Book a Consultation
                     </Link>

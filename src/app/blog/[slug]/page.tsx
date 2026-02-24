@@ -93,16 +93,17 @@ export default async function BlogPost(props: Props) {
     };
 
     return (
-        <article className="py-32 w-full max-w-[720px] mx-auto px-6">
+        <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <header className="mb-16">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-[#0F172A]">
+            {/* Top of blog post (allows grid to show) */}
+            <header className="pt-32 pb-12 w-full max-w-[720px] mx-auto px-6 relative z-10">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-5 text-[#0F172A]">
                     {post.title}
                 </h1>
-                <time className="text-muted-foreground text-base">
+                <time className="text-muted-foreground text-base" dateTime={post.date}>
                     {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
@@ -111,9 +112,21 @@ export default async function BlogPost(props: Props) {
                 </time>
             </header>
 
-            <div className="prose prose-neutral prose-lg prose-headings:font-semibold prose-a:text-[var(--color-link)] prose-a:underline-offset-4 hover:prose-a:text-[var(--color-link-hover)] max-w-none w-full text-foreground">
-                <ReactMarkdown>{post.content}</ReactMarkdown>
-            </div>
-        </article>
+            <article className="bg-white relative z-10 w-full">
+                <div className="py-12 w-full max-w-[720px] mx-auto px-6">
+                    <div className="prose prose-neutral prose-lg max-w-[65ch] prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl prose-p:mb-5 prose-a:text-[var(--color-link)] prose-a:underline-offset-4 hover:prose-a:text-[var(--color-link-hover)] prose-a:transition-colors prose-a:duration-200 w-full text-foreground leading-relaxed">
+                        <ReactMarkdown
+                            components={{
+                                h1: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
+                                h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
+                                h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mt-8 mb-3 tracking-tight" {...props} />,
+                            }}
+                        >
+                            {post.content}
+                        </ReactMarkdown>
+                    </div>
+                </div>
+            </article>
+        </>
     );
 }

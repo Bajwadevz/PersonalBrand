@@ -15,14 +15,15 @@ export type Post = {
     og_image?: string;
 };
 
-export function getPostSlugs() {
+export function getPostSlugs(): string[] {
     if (!fs.existsSync(postsDirectory)) return [];
-    return fs.readdirSync(postsDirectory);
+    return fs.readdirSync(postsDirectory).filter((name) => name.endsWith(".md"));
 }
 
-export function getPostBySlug(slug: string): Post {
+export function getPostBySlug(slug: string): Post | null {
     const realSlug = slug.replace(/\.md$/, "");
     const fullPath = join(postsDirectory, `${realSlug}.md`);
+    if (!fs.existsSync(fullPath)) return null;
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
 
@@ -32,10 +33,20 @@ export function getPostBySlug(slug: string): Post {
         ? rawDescription.substring(0, 157) + "..."
         : rawDescription;
 
+    const dateStr = data.date;
+    const date = dateStr ? (() => {
+        try {
+            const d = new Date(dateStr);
+            return isNaN(d.getTime()) ? "" : d.toISOString();
+        } catch {
+            return "";
+        }
+    })() : "";
+
     return {
         slug: realSlug,
         title: data.title || "Untitled",
-        date: data.date ? new Date(data.date).toISOString() : "",
+        date,
         description: data.description || "",
         excerpt,
         content,
@@ -47,8 +58,8 @@ export function getPostBySlug(slug: string): Post {
 export function getAllPosts(): Post[] {
     const slugs = getPostSlugs();
     const posts = slugs
-        .map((slug) => getPostBySlug(slug))
-        // sort posts by date in descending order
-        .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+        .map((filename) => getPostBySlug(filename.replace(/\.md$/, "")))
+        .filter((post): post is Post => post !== null)
+        .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
     return posts;
 }

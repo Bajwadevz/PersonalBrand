@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <div className="flex flex-col w-full bg-[#F9FAFB] min-h-screen">
+        <div className="flex flex-col w-full min-h-screen">
             <section className="pt-32 lg:pt-40 pb-20 px-6 max-w-3xl mx-auto w-full text-center">
                 <div className="mb-8 w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#0B2545] border border-gray-200/50 shadow-sm mx-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
