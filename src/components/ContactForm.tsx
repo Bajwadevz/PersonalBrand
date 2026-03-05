@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgprbwd";
+
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -16,16 +18,7 @@ export default function ContactForm() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            // Replace with actual Formspree endpoint ID mapped to shahzebahmed1000@gmail.com
-            const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/YOUR_FORM_ID_HERE";
-
-            if (endpoint.includes("YOUR_FORM_ID_HERE")) {
-                setErrorMsg("Configuration Required: Please add your Formspree endpoint ID to the .env.local file to activate submissions.");
-                setIsSubmitting(false);
-                return;
-            }
-
-            const response = await fetch(endpoint, {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
@@ -40,13 +33,12 @@ export default function ContactForm() {
             } else {
                 const result = await response.json();
                 if (Object.hasOwn(result, "errors")) {
-                    setErrorMsg(result["errors"].map((err: any) => err.message).join(", "));
+                    setErrorMsg(result["errors"].map((err: { message?: string }) => err.message).join(", "));
                 } else {
                     setErrorMsg("Oops! There was a problem submitting your form.");
                 }
             }
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (error) {
+        } catch {
             setErrorMsg("Oops! There was a problem submitting your form. Please check your network connection.");
         } finally {
             setIsSubmitting(false);
@@ -61,16 +53,21 @@ export default function ContactForm() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0F172A] mb-4">Transmission Successful</h3>
+                <h3 className="text-2xl font-bold text-[#0F172A] mb-4">Message Sent</h3>
                 <p className="text-emerald-700 font-medium text-lg">
-                    Thank you. I'll review your project and respond within 24–48 hours.
+                    Thanks! Your project details have been sent. I will get back to you shortly.
                 </p>
             </div>
         );
     }
 
     return (
-        <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.06)] border border-gray-100 p-8 md:p-12 w-full">
+        <form
+            method="POST"
+            action={FORMSPREE_ENDPOINT}
+            onSubmit={handleSubmit}
+            className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.06)] border border-gray-100 p-8 md:p-12 w-full"
+        >
             {errorMsg && (
                 <div className="mb-8 p-4 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm font-medium">
                     {errorMsg}
@@ -79,12 +76,12 @@ export default function ContactForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-sm font-semibold text-gray-700">Full Name</label>
+                    <label htmlFor="fullName" className="text-sm font-semibold text-gray-700">Full Name</label>
                     <input
                         required
                         type="text"
-                        name="name"
-                        id="name"
+                        name="fullName"
+                        id="fullName"
                         placeholder="John Doe"
                         className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50"
                     />
@@ -146,11 +143,11 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col gap-2 mb-8">
-                <label htmlFor="description" className="text-sm font-semibold text-gray-700">Project Description</label>
+                <label htmlFor="projectDescription" className="text-sm font-semibold text-gray-700">Project Description</label>
                 <textarea
                     required
-                    name="description"
-                    id="description"
+                    name="projectDescription"
+                    id="projectDescription"
                     rows={5}
                     placeholder="Briefly describe your current bottlenecks and what you're looking to build..."
                     className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50 resize-none"
