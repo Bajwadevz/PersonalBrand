@@ -117,9 +117,9 @@ export default async function BlogPost(props: Props) {
                     <div className="prose prose-neutral prose-lg max-w-[65ch] prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl prose-p:mb-5 prose-a:text-[var(--color-link)] prose-a:underline-offset-4 hover:prose-a:text-[var(--color-link-hover)] prose-a:transition-colors prose-a:duration-200 w-full text-foreground leading-relaxed">
                         <ReactMarkdown
                             components={{
-                                h1: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
-                                h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
-                                h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mt-8 mb-3 tracking-tight" {...props} />,
+                                h1: (props) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
+                                h2: (props) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
+                                h3: (props) => <h3 className="text-xl font-semibold mt-8 mb-3 tracking-tight" {...props} />,
                             }}
                         >
                             {post.content}

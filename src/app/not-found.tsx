@@ -10,13 +10,13 @@ export default function NotFound() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                     href="/"
-                    className="inline-flex items-center justify-center rounded-full bg-[#0F172A] text-white px-6 py-3 text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+                    className="inline-flex items-center justify-center rounded-full bg-[#0F172A] text-white px-6 py-3 min-h-[44px] text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
                 >
                     Home
                 </Link>
                 <Link
                     href="/blog"
-                    className="inline-flex items-center justify-center rounded-full border border-gray-200 text-gray-700 px-6 py-3 text-sm font-medium hover:bg-gray-50 transition-colors duration-200"
+                    className="inline-flex items-center justify-center rounded-full border border-gray-200 text-gray-700 px-6 py-3 min-h-[44px] text-sm font-medium hover:bg-gray-50 transition-colors duration-200"
                 >
                     Blog
                 </Link>

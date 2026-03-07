@@ -18,8 +18,8 @@ export default function PortfolioGrid() {
     ];
 
     return (
-        <section className="bg-white relative z-10 py-24">
-            <div className="max-w-6xl mx-auto px-6">
+        <section className="bg-white relative z-10 py-24 md:py-32 w-full">
+            <div className="max-w-6xl mx-auto px-6 w-full">
                 <div className="mb-12">
                     <div className="mb-6 inline-flex items-center rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50">
                         WHAT THIS LOOKS LIKE IN PRACTICE

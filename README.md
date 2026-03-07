@@ -35,6 +35,14 @@ Start the development server:
 npm run dev
 ```
 
+**If you see "Page not found" at localhost:** The app router and `src/app/page.tsx` are correct; the production build serves the homepage. For a reliable local preview, run:
+
+```bash
+npm run serve
+```
+
+Then open the URL shown (e.g. [http://localhost:3000](http://localhost:3000)). For dev mode, try clearing the build cache and restarting: `rm -rf .next && npm run dev`, and use the port printed in the terminal (e.g. 3001 or 3002 if 3000 is in use).
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Writing Blog Posts

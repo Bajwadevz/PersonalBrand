@@ -1,7 +1,7 @@
 export default function WhatIBuild() {
     return (
-        <section className="py-10 bg-transparent">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto w-full">
+        <section className="py-24 md:py-32 bg-transparent relative z-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto w-full px-6">
                 {/* Column 1 */}
                 <div className="flex flex-col">
                     <h3 className="text-xl font-bold text-[#0F172A] mb-6 flex items-center gap-3">

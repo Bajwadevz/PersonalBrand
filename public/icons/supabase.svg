@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 113" fill="none" aria-hidden="true">
+  <path d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0622L99.1935 40.0622C105.384 40.0622 108.428 47.0868 104.485 52.0923L63.7076 110.284Z" fill="url(#supabase-grad0)"/>
+  <path d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L54.9813 40.0622L53.9738 40.0622L53.9738 107.314C53.9738 111.912 58.7717 113.885 61.6312 110.284L63.7076 110.284Z" fill="url(#supabase-grad1)"/>
+  <path d="M45.317 2.07106C48.1765 -1.53037 53.9744 0.442937 54.0433 5.04074L54.9813 72.2922H9.76154C3.57056 72.2922 0.526453 65.2676 4.46942 60.2621L45.317 2.07106Z" fill="url(#supabase-grad2)"/>
+  <defs>
+    <linearGradient id="supabase-grad0" x1="53.9738" y1="54.974" x2="94.5445" y2="71.8295" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#249361"/>
+      <stop offset="1" stop-color="#3ECF8E"/>
+    </linearGradient>
+    <linearGradient id="supabase-grad1" x1="36.1558" y1="30.578" x2="54.9813" y2="65.0806" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3ECF8E"/>
+      <stop offset="1" stop-color="#249361"/>
+    </linearGradient>
+    <linearGradient id="supabase-grad2" x1="4.46942" y1="58.2922" x2="45.0402" y2="41.4367" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#249361"/>
+      <stop offset="1" stop-color="#3ECF8E"/>
+    </linearGradient>
+  </defs>
+</svg>

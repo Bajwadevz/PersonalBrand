@@ -13,6 +13,9 @@ export type Post = {
     content: string;
     keywords?: string;
     og_image?: string;
+    tags?: string[];
+    readingTime?: string;
+    author?: string;
 };
 
 export function getPostSlugs(): string[] {
@@ -43,6 +46,13 @@ export function getPostBySlug(slug: string): Post | null {
         }
     })() : "";
 
+    const tagsRaw = data.tags;
+    const tags = Array.isArray(tagsRaw)
+        ? tagsRaw
+        : typeof tagsRaw === "string"
+          ? tagsRaw.split(",").map((t: string) => t.trim()).filter(Boolean)
+          : undefined;
+
     return {
         slug: realSlug,
         title: data.title || "Untitled",
@@ -51,7 +61,10 @@ export function getPostBySlug(slug: string): Post | null {
         excerpt,
         content,
         keywords: data.keywords || "",
-        og_image: data.og_image || "",
+        og_image: data.ogImage ?? data.og_image ?? "",
+        tags,
+        readingTime: data.readingTime ?? "",
+        author: data.author ?? "",
     };
 }
 

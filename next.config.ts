@@ -6,6 +6,15 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
     qualities: [75, 85, 95, 100],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'randomuser.me', pathname: '/**' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org', pathname: '/**' },
+      { protocol: 'https', hostname: 'avatars.githubusercontent.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'www.gstatic.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'github.githubassets.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'assets.vercel.com', pathname: '/**' },
+    ],
   },
   async headers() {
     return [

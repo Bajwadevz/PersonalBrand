@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import GlassPanel from "@/components/GlassPanel";
 import FloatingChip from "@/components/FloatingChip";
+import { AnimatedCard } from "@/components/ui/feature-block-animated-card";
+import MagneticDock from "@/components/ui/magnetic-dock";
 
 export const metadata: Metadata = {
     title: "About Shahzeb Bajwa | AI Systems Builder & Educator",
@@ -35,8 +36,8 @@ export default function AboutPage() {
             a: "Learning AI without a traditional computer science background requires a fundamental shift in how you view technology: you must transition from seeing yourself as a passive software user to an active systems architect. The optimal starting point is to deeply study prompt engineering, not as a collection of \"hacks,\" but as the structural science of providing rich context, clear constraints, and distinct operating directives to an LLM. Once you have mastered communicating with the model, the next phase is mastering visual automation platforms like Zapier, Make, or n8n. These tools allow you to visually design logic flows, connecting the cognitive power of AI models to your daily applications like Gmail, Notion, or Stripe. By combining strong natural language directives with visual API routing, non-technical individuals can single-handedly deploy complex software architectures, fully bypassing the traditional requirement of knowing Python or JavaScript."
         },
         {
-            q: "What are the best AI tools for productivity?",
-            a: "While the ecosystem expands daily, the most effective AI tools for productivity are those that seamlessly integrate into existing workflows rather than requiring entirely new platforms. For foundational generative tasks, models like OpenAI's ChatGPT Plus, Anthropic's Claude, and Google's Gemini Advanced provide the core conversational and reasoning engines. Claude, in particular, excels at coding, deep analytical writing, and maintaining strict adherence to complex instructions. For workflow automation, Make.com and Zapier are indispensable, acting as the nervous system that connects these AI brains to your operational endpoints. When it comes to developers and technical builders, AI-integrated IDEs such as Cursor and GitHub Copilot are mandatory tools that exponentially accelerate code generation. Alternatively, for completely non-technical enterprise deployment, platforms like MindOS or custom integrations provide encapsulated environments to execute specific, predefined productivity routines securely."
+            q: "What are the best AI systems and platforms for productivity?",
+            a: "The most effective AI systems for productivity are those that integrate into existing workflows rather than requiring entirely new platforms. For foundational generative tasks, models like OpenAI's ChatGPT Plus, Anthropic's Claude, and Google's Gemini Advanced provide the core conversational and reasoning engines. For workflow automation, Make.com and Zapier act as the nervous system that connects these AI systems to your operational endpoints. For developers and technical builders, AI-integrated IDEs such as Cursor and GitHub Copilot accelerate code generation. For non-technical enterprise deployment, platforms like MindOS or custom integrations provide encapsulated environments to execute specific, predefined productivity routines securely."
         },
         {
             q: "How does AI improve business operations?",
@@ -126,22 +127,39 @@ export default function AboutPage() {
             <section className="max-w-4xl mx-auto px-6 w-full relative z-10 mb-20 scroll-mt-20">
                 <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] mb-8">My Approach to AI Implementation</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <GlassPanel className="p-8 border-l-4 border-l-[#0B2545]">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">Practical Systems Over Prompts</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            Prompt engineering is merely a prerequisite, never the final destination. My focus is exclusively on systems architecture: linking disparate APIs, commanding deterministic data extractions, and orchestrating entirely autonomous agent logic loops that survive in production environments.
-                        </p>
-                    </GlassPanel>
-                    <GlassPanel className="p-8 border-l-4 border-l-[#0F172A]">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">AI as Leverage, Not a Shortcut</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            True execution requires immense discipline. AI doesn&apos;t replace the underlying necessity for deep structural thought; it amplifies clear human directives. I advocate for an implementation strategy that demands extreme focus on workflow auditing, precise delegation, and compounding operational gains.
-                        </p>
-                    </GlassPanel>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <AnimatedCard
+                        title="AI Agents"
+                        description="Autonomous AI agents designed to reason, retrieve information, and execute tasks across tools and APIs. Built for operators who want systems that act, not just respond."
+                        icons={[
+                            { key: "openai", size: "sm" },
+                            { key: "claude", size: "md" },
+                            { key: "gemini", size: "lg" },
+                            { key: "copilot", size: "md" },
+                        ]}
+                    />
+                    <AnimatedCard
+                        title="Prompt Systems"
+                        description="Structured prompt architectures designed for reliability, chaining, and production workflows. Not one-off prompts — engineered systems that power real AI operations."
+                        icons={[
+                            { key: "openai", size: "md" },
+                            { key: "claude", size: "lg" },
+                            { key: "gemini", size: "sm" },
+                        ]}
+                    />
+                    <AnimatedCard
+                        title="AI Workflow Automation"
+                        description="AI-powered automation systems connecting APIs, models, and operational tools to eliminate manual work and accelerate execution."
+                        icons={[
+                            { key: "openai", size: "md" },
+                            { key: "meta", size: "sm" },
+                            { key: "copilot", size: "lg" },
+                            { key: "gemini", size: "sm" },
+                        ]}
+                    />
                 </div>
 
-                <h3 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-8 border-b border-gray-200 pb-4">Who I Build For</h3>
+                <h3 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-8 border-b border-gray-200 pb-4 mt-16">Who I Build For</h3>
                 <div className="space-y-10">
                     <div className="flex gap-5 items-start">
                         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F8FAFC] text-[#0F172A] font-bold text-base shrink-0 mt-1 shadow-sm border border-gray-200">1</div>
@@ -202,19 +220,8 @@ export default function AboutPage() {
             {/* Connection Grid */}
             <div className="mt-10 w-full max-w-4xl border-t border-[rgba(15,23,42,0.06)] pt-16 mx-auto px-6 relative z-10">
                 <h2 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-8 text-center">Execute the Transition</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <a href="mailto:hello@bajwaa.dev" className="flex items-center justify-center bg-white shadow-sm border border-gray-200 hover:border-gray-300 transition-colors rounded-xl py-4 text-sm font-medium text-gray-800">
-                        Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/shahzebbajwa/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white shadow-sm border border-gray-200 hover:border-gray-300 transition-colors rounded-xl py-4 text-sm font-medium text-gray-800">
-                        LinkedIn
-                    </a>
-                    <a href="https://x.com/shahzo_12" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white shadow-sm border border-gray-200 hover:border-gray-300 transition-colors rounded-xl py-4 text-sm font-medium text-gray-800">
-                        Twitter
-                    </a>
-                    <a href="https://github.com/Bajwadevz" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white shadow-sm border border-gray-200 hover:border-gray-300 transition-colors rounded-xl py-4 text-sm font-medium text-gray-800">
-                        GitHub
-                    </a>
+                <div className="flex w-full justify-center">
+                    <MagneticDock />
                 </div>
             </div>
         </div>
