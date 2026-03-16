@@ -7,7 +7,7 @@ export default function WaitlistForm() {
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!email) return;
@@ -57,7 +57,7 @@ export default function WaitlistForm() {
             <button
                 type="submit"
                 disabled={status === "loading" || status === "success"}
-                className="w-full px-6 py-3 min-h-[44px] rounded-full font-medium transition-colors duration-200 ease-out bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary-hover)] disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 min-h-[44px] rounded-full font-medium hover:-translate-y-[1px] hover:shadow-[0_4px_14px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)_inset] active:translate-y-[0px] active:shadow-none transition-all duration-300 ease-out bg-[var(--color-primary)] text-[var(--color-primary-foreground)] disabled:opacity-50 flex items-center justify-center gap-2 tracking-[-0.01em]"
             >
                 {status === "loading" ? "Joining..." : status === "success" ? "Subscribed ✓" : "Join the Waitlist"}
             </button>

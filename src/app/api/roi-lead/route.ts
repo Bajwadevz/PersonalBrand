@@ -36,20 +36,20 @@ export async function POST(request: Request) {
 
         if (!ckRes.ok) {
             const errorData = await ckRes.json().catch(() => ({}));
-            console.error('ConvertKit subscription error:', errorData);
+            console.error('ConvertKit ROI lead error:', errorData);
             return NextResponse.json(
-                { error: 'Failed to subscribe. Please try again later.' },
+                { error: 'Failed to submit. Please try again later.' },
                 { status: 500 }
             );
         }
 
         return NextResponse.json(
-            { message: 'Successfully joined the list!' },
+            { message: 'Successfully subscribed to ROI Report!' },
             { status: 200 }
         );
 
     } catch (err) {
-        console.error('Subscription error:', err);
+        console.error('ROI lead capture error:', err);
         return NextResponse.json(
             { error: 'Internal server error' },
             { status: 500 }

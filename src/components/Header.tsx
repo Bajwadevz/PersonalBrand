@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
     { href: "/blog", label: "Blog" },
+    { href: "/tools", label: "Free Tools" },
     { href: "/about", label: "About" },
     { href: "/work-with-me", label: "Work With Me" },
 ] as const;
@@ -47,7 +48,7 @@ export default function Header() {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`text-sm font-medium transition-colors hover:text-zinc-900 ${isActive ? "text-zinc-900" : "text-zinc-500"
+                                className={`text-sm font-medium transition-all duration-300 hover:opacity-70 ${isActive ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
                                     }`}
                             >
                                 {label}
@@ -59,7 +60,7 @@ export default function Header() {
                 <div className="flex items-center gap-4">
                     <Link
                         href="/product"
-                        className="hidden md:flex items-center justify-center bg-zinc-900 text-white px-5 min-h-[40px] rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors shadow-sm"
+                        className="hidden md:flex items-center justify-center bg-zinc-900 text-white px-5 min-h-[40px] rounded-full text-sm font-medium hover:-translate-y-[1px] hover:shadow-[0_4px_14px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)_inset] active:translate-y-[0px] active:shadow-none transition-all duration-300 shadow-sm tracking-[-0.01em]"
                     >
                         Get the Playbook
                     </Link>
@@ -94,7 +95,7 @@ export default function Header() {
                                         key={href}
                                         href={href}
                                         onClick={() => setMobileOpen(false)}
-                                        className={`text-sm font-medium transition-colors ${isActive ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
+                                        className={`text-sm font-medium transition-all duration-300 ${isActive ? "text-zinc-900" : "text-zinc-500 hover:opacity-70 hover:text-zinc-900"
                                             }`}
                                     >
                                         {label}
@@ -105,7 +106,7 @@ export default function Header() {
                                 <Link
                                     href="/product"
                                     onClick={() => setMobileOpen(false)}
-                                    className="flex items-center justify-center w-full bg-zinc-900 text-white px-5 min-h-[44px] rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors shadow-sm"
+                                    className="flex items-center justify-center w-full bg-zinc-900 text-white px-5 min-h-[44px] rounded-full text-sm font-medium hover:-translate-y-[1px] hover:shadow-[0_4px_14px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)_inset] active:translate-y-[0px] active:shadow-none transition-all duration-300 shadow-sm tracking-[-0.01em]"
                                 >
                                     Get the Playbook
                                 </Link>

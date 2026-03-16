@@ -18,20 +18,20 @@ export default function Hero() {
 
                     <HeroText text="AUTOMATE EVERYTHING" className="mb-0" />
 
-                    <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed mt-8 text-gray-600 mx-auto font-medium">
+                    <p className="text-base sm:text-lg md:text-xl max-w-3xl leading-[1.7] mt-8 text-gray-600 mx-auto font-medium">
                         I teach operators, founders, and sales professionals how to build AI systems that reduce manual tasks and scale output without writing a single line of code.
                     </p>
 
                     <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
                         <Link
                             href="/product"
-                            className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-colors duration-200 ease-out inline-flex items-center justify-center min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)]"
+                            className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:-translate-y-[1px] hover:shadow-[0_4px_14px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)_inset] active:translate-y-[0px] active:shadow-none transition-all duration-300 ease-out inline-flex items-center justify-center min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)] tracking-[-0.01em]"
                         >
                             Get the Playbook
                         </Link>
                         <Link
                             href="/blog"
-                            className="text-gray-600 font-medium hover:text-gray-900 underline-offset-4 hover:underline transition-colors duration-200 ease-out min-h-[44px] inline-flex items-center"
+                            className="text-gray-600 font-medium hover:text-gray-900 hover:opacity-80 transition-all duration-300 ease-out underline-offset-4 hover:underline min-h-[44px] inline-flex items-center"
                         >
                             Read the Blog
                         </Link>
@@ -43,10 +43,10 @@ export default function Hero() {
                     <p className="text-sm uppercase tracking-wide text-[var(--color-muted-foreground)] mb-4">
                         Systems, Not Prompts
                     </p>
-                    <p className="max-w-4xl mx-auto text-center text-xl md:text-2xl leading-relaxed text-[var(--color-muted-foreground)] px-4">
+                    <p className="max-w-4xl mx-auto text-center text-xl md:text-2xl leading-[1.7] text-[var(--color-muted-foreground)] px-4">
                         I design AI workflows and automation systems that help teams scale output without scaling headcount.
                     </p>
-                    <p className="max-w-4xl mx-auto text-center text-xl md:text-2xl leading-relaxed text-[var(--color-muted-foreground)] px-4 mt-4">
+                    <p className="max-w-4xl mx-auto text-center text-xl md:text-2xl leading-[1.7] text-[var(--color-muted-foreground)] px-4 mt-4">
                         Instead of chasing prompts or tools, I build systems that compound leverage across sales, operations, and product.
                     </p>
                 </section>

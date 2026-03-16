@@ -8,7 +8,7 @@ const DOCK_ITEMS = [
   { href: "https://github.com/shahzo", label: "GitHub", icon: Github },
   { href: "https://linkedin.com/in/shahzaibahmad", label: "LinkedIn", icon: Linkedin },
   { href: "https://twitter.com/shahzo", label: "Twitter", icon: MessageCircle },
-  { href: "mailto:shahzaibahmad@gmail.com", label: "Email", icon: Mail },
+  { href: "mailto:shahzo@bajwaa.dev", label: "Email", icon: Mail },
 ] as const;
 
 const MAGNETIC_STRENGTH = 0.35;
