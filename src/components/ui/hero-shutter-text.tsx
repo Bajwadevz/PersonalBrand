@@ -1,97 +1,88 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface HeroTextProps {
+interface HeroShutterTextProps {
   text?: string;
   className?: string;
 }
 
-export default function HeroText({
-  text = "AUTOMATION",
+export default function HeroShutterText({
+  text = "PRACTICAL AI FOR OPERATORS",
   className = "",
-}: HeroTextProps) {
-  const characters = text.split("");
+}: HeroShutterTextProps) {
+  // Split by word so words never break across lines
+  const words = text.split(" ");
+  let globalCharIndex = 0;
 
   return (
-    <div
-      className={cn(
-        "relative flex w-full flex-col items-center justify-center whitespace-nowrap",
-        className
-      )}
-    >
+    <div className={cn("relative flex flex-col items-center justify-center w-full", className)}>
       <AnimatePresence mode="wait">
         <motion.div
           key={text}
-          className="flex justify-center items-center w-full min-w-max whitespace-nowrap"
+          className="flex flex-wrap justify-center items-center w-full gap-x-[clamp(0.65rem,1.875vw,1.75rem)] gap-y-0"
         >
-          {characters.map((char, i) => (
-            <div
-              key={`${char}-${i}`}
-              className="relative px-[0.1vw] overflow-hidden group"
-            >
-              {/* Main Character - Responsive sizing using clamp */}
-              <motion.span
-                initial={{ opacity: 0, filter: "blur(10px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ delay: i * 0.02 + 0.3, duration: 0.8 }}
-                className="text-[clamp(1.5rem,5.5vw,4.5rem)] leading-none font-black text-zinc-900 tracking-tighter sm:tracking-normal whitespace-pre"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
+          {words.map((word, wi) => {
+            const wordChars = word.split("");
+            const wordStartIndex = globalCharIndex;
+            globalCharIndex += word.length + 1; // +1 for the space
 
-              {/* Top Slice Layer - light theme accent */}
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: "100%", opacity: [0, 1, 0] }}
-                transition={{
-                  duration: 0.7,
-                  delay: i * 0.02,
-                  ease: "easeInOut",
-                }}
-                className="absolute inset-0 text-[clamp(1.5rem,5.5vw,4.5rem)] leading-none font-black text-indigo-600 z-10 pointer-events-none tracking-tighter sm:tracking-normal whitespace-pre"
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% 35%, 0 35%)" }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
+            return (
+              /* Each word is non-breaking — wrap happens between words only */
+              <span key={`word-${wi}`} className="inline-flex items-center whitespace-nowrap">
+                {wordChars.map((char, ci) => {
+                  const i = wordStartIndex + ci;
+                  return (
+                    <div key={`${char}-${i}`} className="relative px-[0.05em] overflow-hidden">
+                      {/* Main character */}
+                      <motion.span
+                        initial={{ opacity: 0, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        transition={{ delay: i * 0.03 + 0.3, duration: 0.8 }}
+                        className="text-[clamp(2.6rem,7.5vw,7rem)] leading-[1.05] font-extrabold text-zinc-900 dark:text-white tracking-tighter block"
+                      >
+                        {char}
+                      </motion.span>
 
-              {/* Middle Slice Layer */}
-              <motion.span
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: "-100%", opacity: [0, 1, 0] }}
-                transition={{
-                  duration: 0.7,
-                  delay: i * 0.02 + 0.1,
-                  ease: "easeInOut",
-                }}
-                className="absolute inset-0 text-[clamp(1.5rem,5.5vw,4.5rem)] leading-none font-black text-zinc-800 z-10 pointer-events-none tracking-tighter sm:tracking-normal whitespace-pre"
-                style={{
-                  clipPath: "polygon(0 35%, 100% 35%, 100% 65%, 0 65%)",
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
+                      {/* Top slice — Ocean accent */}
+                      <motion.span
+                        initial={{ x: "-100%", opacity: 0 }}
+                        animate={{ x: "100%", opacity: [0, 1, 0] }}
+                        transition={{ duration: 0.7, delay: i * 0.03, ease: "easeInOut" }}
+                        className="absolute inset-0 text-[clamp(2.6rem,7.5vw,7rem)] leading-[1.05] font-extrabold text-[#2D6A8F] z-10 pointer-events-none block"
+                        style={{ clipPath: "polygon(0 0, 100% 0, 100% 35%, 0 35%)" }}
+                      >
+                        {char}
+                      </motion.span>
 
-              {/* Bottom Slice Layer - light theme accent */}
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: "100%", opacity: [0, 1, 0] }}
-                transition={{
-                  duration: 0.7,
-                  delay: i * 0.02 + 0.2,
-                  ease: "easeInOut",
-                }}
-                className="absolute inset-0 text-[clamp(1.5rem,5.5vw,4.5rem)] leading-none font-black text-indigo-600 z-10 pointer-events-none tracking-tighter sm:tracking-normal whitespace-pre"
-                style={{
-                  clipPath: "polygon(0 65%, 100% 65%, 100% 100%, 0 100%)",
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            </div>
-          ))}
+                      {/* Middle slice */}
+                      <motion.span
+                        initial={{ x: "100%", opacity: 0 }}
+                        animate={{ x: "-100%", opacity: [0, 1, 0] }}
+                        transition={{ duration: 0.7, delay: i * 0.03 + 0.1, ease: "easeInOut" }}
+                        className="absolute inset-0 text-[clamp(2.6rem,7.5vw,7rem)] leading-[1.05] font-extrabold text-zinc-700 dark:text-zinc-200 z-10 pointer-events-none block"
+                        style={{ clipPath: "polygon(0 35%, 100% 35%, 100% 65%, 0 65%)" }}
+                      >
+                        {char}
+                      </motion.span>
+
+                      {/* Bottom slice — Ocean accent */}
+                      <motion.span
+                        initial={{ x: "-100%", opacity: 0 }}
+                        animate={{ x: "100%", opacity: [0, 1, 0] }}
+                        transition={{ duration: 0.7, delay: i * 0.03 + 0.2, ease: "easeInOut" }}
+                        className="absolute inset-0 text-[clamp(2.6rem,7.5vw,7rem)] leading-[1.05] font-extrabold text-[#2D6A8F] z-10 pointer-events-none block"
+                        style={{ clipPath: "polygon(0 65%, 100% 65%, 100% 100%, 0 100%)" }}
+                      >
+                        {char}
+                      </motion.span>
+                    </div>
+                  );
+                })}
+              </span>
+            );
+          })}
         </motion.div>
       </AnimatePresence>
     </div>

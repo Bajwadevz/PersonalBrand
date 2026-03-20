@@ -41,41 +41,33 @@ const services = [
 
 export default function WorkWithMe() {
     return (
-        <div className="flex flex-col w-full min-h-screen">
-            {/* Hero Section */}
-            <section className="pt-32 lg:pt-40 pb-20 px-6 max-w-4xl mx-auto w-full text-center">
-                <div className="mb-8 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-medium text-gray-600 border border-gray-200/50 shadow-sm">
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2 opacity-80 animate-pulse"></span>
-                    Accepting New Projects
-                </div>
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#0F172A] leading-[1.1] mb-8">
-                    Work With Me
-                </h1>
-                <p className="text-lg sm:text-xl max-w-2xl mx-auto text-gray-600 font-medium leading-relaxed">
-                    I build practical AI systems, custom internal tools, and workflow automations for professionals and growing businesses.
+        <div className="section-shell flex flex-col w-full">
+            <section className="container-shell max-w-5xl text-center">
+                <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">Work With Me</h1>
+                <p className="mx-auto mt-4 max-w-3xl text-lg muted-copy">
+                    I build practical AI systems and workflow automations for growing businesses.
                 </p>
             </section>
 
-            {/* Service Categories Section */}
-            <section className="py-20 max-w-6xl mx-auto px-6 w-full">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section className="container-shell mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-8 flex flex-col hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-200 ease-out"
+                            className="glass-card card-hover rounded-2xl p-8 flex flex-col"
                         >
-                            <div className="w-12 h-12 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#0B2545] border border-gray-200/50 mb-6">
+                            <div className="w-12 h-12 rounded-full bg-[rgba(45,106,143,0.12)] flex items-center justify-center text-[#2D6A8F] border border-[rgba(45,106,143,0.25)] mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d={service.iconPath} />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-[#0F172A] mb-6">
+                            <h3 className="text-xl font-bold mb-6">
                                 {service.title}
                             </h3>
                             <ul className="space-y-4 mt-auto">
                                 {service.features.map((feature, i) => (
-                                    <li key={i} className="flex items-start text-sm text-gray-600 font-medium leading-relaxed">
-                                        <svg className="w-5 h-5 text-[#0F172A] mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <li key={i} className="flex items-start text-sm muted-copy font-medium leading-relaxed">
+                                        <svg className="w-5 h-5 text-[#2D6A8F] mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span>{feature}</span>
@@ -87,19 +79,10 @@ export default function WorkWithMe() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-32 px-6 max-w-4xl mx-auto w-full text-center">
-                <div className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.06)] border border-gray-100 p-12 md:p-16 flex flex-col items-center">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A] mb-6">
-                        Ready to automate your workflows?
-                    </h2>
-                    <p className="text-lg text-gray-500 mb-10 max-w-xl">
-                        Let&apos;s discuss your current bottlenecks and map out a practical system built for your needs.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-900 transition-colors duration-200 ease-out min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)] text-lg inline-flex items-center justify-center"
-                    >
+            <section className="container-shell mt-20 text-center">
+                <div className="glass-card rounded-3xl p-12 md:p-16 flex flex-col items-center">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to automate?</h2>
+                    <Link href="/contact" className="btn-primary mt-8 min-h-[52px] text-lg inline-flex items-center justify-center">
                         Book a Consultation
                     </Link>
                 </div>

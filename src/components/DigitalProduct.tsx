@@ -2,19 +2,17 @@ import Link from "next/link";
 
 export default function DigitalProduct() {
     return (
-        <section className="bg-white relative z-10 py-24 md:py-32 flex flex-col items-center w-full">
-            <div className="w-full max-w-4xl flex flex-col items-center text-center px-6">
-                <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] mb-4">Learn How I Build</h3>
-                <p className="text-gray-500 mb-10 text-lg">
-                    The exact frameworks, system prompts, and architectures I use to execute in production.
-                </p>
-
-                <Link
-                    href="/product"
-                    className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-colors duration-200 ease-out min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)] inline-flex items-center justify-center"
-                >
-                    View the Playbooks
-                </Link>
+        <section className="section-shell relative z-10 w-full">
+            <div className="container-shell">
+                <div className="mx-auto flex w-full max-w-5xl flex-col items-center rounded-3xl border border-[var(--color-site-border)] bg-zinc-50 dark:bg-zinc-900 px-6 py-14 text-center md:px-10">
+                    <h3 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">Learn How I Build</h3>
+                    <p className="mt-3 mb-8 text-base muted-copy">
+                        The exact frameworks and architectures I use in production.
+                    </p>
+                    <Link href="/product" className="btn-primary min-h-[52px] px-10 text-base pulse-glow">
+                        Get the Playbook →
+                    </Link>
+                </div>
             </div>
         </section>
     );

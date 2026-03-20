@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="22" fill="#1a1a2e"/>
+  <!-- Geometric diamond/faceted shape like Make.com icon -->
+  <polygon points="50,15 78,38 78,62 50,85 22,62 22,38" fill="none" stroke="#5B6EF8" stroke-width="1.5"/>
+  <!-- Inner facets -->
+  <polygon points="50,15 78,38 50,50" fill="#3D4FD4" opacity="0.9"/>
+  <polygon points="78,38 78,62 50,50" fill="#6B7BFF" opacity="0.9"/>
+  <polygon points="50,85 78,62 50,50" fill="#4A5CE8" opacity="0.9"/>
+  <polygon points="22,62 50,85 50,50" fill="#8B9BFF" opacity="0.9"/>
+  <polygon points="22,38 22,62 50,50" fill="#5B6EF8" opacity="0.9"/>
+  <polygon points="50,15 22,38 50,50" fill="#2D3DC4" opacity="0.9"/>
+</svg>

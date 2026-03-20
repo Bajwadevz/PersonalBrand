@@ -151,8 +151,8 @@ function getResult(score: number): Result {
         "Read the guide on designing AI workflows that actually ship — most operator automations break at deployment, not design.",
         "Book a discovery call. At your stage, a second set of eyes on your architecture will unlock the next level faster than more solo building.",
       ],
-      ctaLabel: "Work with me →",
-      ctaHref: "/work-with-me",
+      ctaLabel: "Get the Playbook →",
+      ctaHref: "/product",
     };
   }
   return {
@@ -287,7 +287,7 @@ export default function ReadinessQuizClient() {
               <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
                 <Link
                   href={result.ctaHref}
-                  className="bg-black text-white px-8 py-3.5 rounded-full font-medium hover:bg-gray-900 transition-colors duration-200 ease-out min-h-[44px] shadow-[0_1px_2px_rgba(0,0,0,0.05)] inline-flex items-center justify-center text-sm"
+                  className="bg-[#2D6A8F] text-white px-8 py-3.5 rounded-full font-medium hover:bg-[#245A7A] transition-colors duration-200 ease-out min-h-[44px] shadow-[0_4px_14px_rgba(45,106,143,0.25)] inline-flex items-center justify-center text-sm"
                 >
                   {result.ctaLabel}
                 </Link>

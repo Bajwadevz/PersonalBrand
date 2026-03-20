@@ -10,14 +10,14 @@ export default function Logo() {
         >
             <Image
                 src="/wave-icon.svg"
-                alt="Wave Icon"
-                width={20}
-                height={20}
-                className="object-contain"
+                alt="Bajwaa Dev wave logo"
+                width={24}
+                height={24}
+                className="flex-shrink-0"
                 priority
             />
-            <span className="font-semibold text-base tracking-tight text-zinc-900 leading-none">
-                bajwaa dev.
+            <span className="font-bold text-base md:text-lg tracking-tight text-zinc-900 dark:text-white leading-none">
+                bajwaa.dev
             </span>
         </Link>
     );

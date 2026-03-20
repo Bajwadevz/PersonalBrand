@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="12" fill="white"/>
+  <!-- n8n nodes connection diagram -->
+  <!-- Left nodes -->
+  <circle cx="18" cy="40" r="9" fill="none" stroke="#EA4B71" stroke-width="3.5"/>
+  <circle cx="42" cy="40" r="9" fill="none" stroke="#EA4B71" stroke-width="3.5"/>
+  <!-- Connection line left to middle -->
+  <line x1="27" y1="40" x2="33" y2="40" stroke="#EA4B71" stroke-width="3"/>
+  <!-- Branch connector -->
+  <path d="M51 40 C60 40 60 25 70 25 M51 40 C60 40 60 55 70 55" stroke="#EA4B71" stroke-width="3" fill="none"/>
+  <!-- Top right node -->
+  <circle cx="79" cy="25" r="9" fill="none" stroke="#EA4B71" stroke-width="3.5"/>
+  <!-- Bottom right node -->
+  <circle cx="79" cy="55" r="9" fill="none" stroke="#EA4B71" stroke-width="3.5"/>
+  <!-- n8n text -->
+  <text x="96" y="46" fill="#1A1D3B" font-family="Arial, sans-serif" font-weight="900" font-size="16">n8n</text>
+</svg>

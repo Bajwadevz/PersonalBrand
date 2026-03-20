@@ -21,10 +21,13 @@ export function InfiniteSlider({
   duration = 30,
 }: InfiniteSliderProps) {
   return (
-    <div className={cn("overflow-hidden", className)} aria-hidden>
+    <div className={cn("group overflow-hidden", className)} aria-hidden>
       <div
-        className="flex w-max items-center gap-16 md:gap-24 animate-infinite-slide"
+        className="marquee-track flex w-max items-center gap-16 md:gap-24 group-hover:[animation-play-state:paused]"
         style={{
+          animationName: "infinite-slide",
+          animationTimingFunction: "linear",
+          animationIterationCount: "infinite",
           animationDuration: `${duration}s`,
           width: "max-content",
         }}

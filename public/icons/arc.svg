@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="25%" style="stop-color:#FF6B6B"/>
+      <stop offset="60%" style="stop-color:#4ECDC4"/>
+      <stop offset="100%" style="stop-color:#45B7D1"/>
+    </linearGradient>
+  </defs>
+  <!-- Arc "A" shape - arch with gap at bottom -->
+  <path d="M50 8 C32 8 18 22 18 40 L18 80 C18 85 23 85 26 82 L26 50 C26 30 37 18 50 18 C63 18 74 30 74 50 L74 82 C77 85 82 85 82 80 L82 40 C82 22 68 8 50 8 Z" fill="url(#arcGrad)"/>
+</svg>

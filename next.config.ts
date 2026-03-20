@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'www.gstatic.com', pathname: '/**' },
       { protocol: 'https', hostname: 'github.githubassets.com', pathname: '/**' },
       { protocol: 'https', hostname: 'assets.vercel.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'cdn.simpleicons.org', pathname: '/**' },
+      { protocol: 'https', hostname: 'img.logo.dev', pathname: '/**' },
     ],
   },
   async headers() {

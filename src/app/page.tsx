@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import { StackSlider } from "@/components/stack-slider";
 import DigitalProduct from "@/components/DigitalProduct";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
-import WhatIBuild from "@/components/sections/WhatIBuild";
 import { Testimonials } from "@/components/ui/testimonials";
 import type { TestimonialItem } from "@/components/ui/testimonials";
 
@@ -28,27 +27,6 @@ const testimonials: TestimonialItem[] = [
     text: "The rare thing about Shahzaib's work is the balance between architecture and execution. It's not hype — it's real systems thinking applied to AI workflows.",
     social: "https://twitter.com",
   },
-  {
-    image: "https://randomuser.me/api/portraits/women/63.jpg",
-    name: "Priya S.",
-    username: "Product Lead",
-    text: "The way Shahzaib explains AI orchestration finally made it click for our team. We rebuilt multiple internal processes using his system-first approach.",
-    social: "https://twitter.com",
-  },
-  {
-    image: "https://randomuser.me/api/portraits/men/73.jpg",
-    name: "Kevin M.",
-    username: "Technical Founder",
-    text: "The content here isn't surface level. It connects AI tooling with real architecture decisions — which is exactly what builders actually need.",
-    social: "https://twitter.com",
-  },
-  {
-    image: "https://randomuser.me/api/portraits/women/29.jpg",
-    name: "Laura D.",
-    username: "Growth Operator",
-    text: "Following Shahzaib's frameworks helped us automate large parts of our outbound and research workflows. The leverage from these systems is huge.",
-    social: "https://twitter.com",
-  },
 ];
 
 export default function Home() {
@@ -56,7 +34,6 @@ export default function Home() {
     <div className="flex flex-col w-full bg-transparent overflow-hidden">
       <Hero />
       <StackSlider />
-      <WhatIBuild />
       <PortfolioGrid />
       <DigitalProduct />
       <Testimonials

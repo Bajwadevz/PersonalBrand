@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import GlassPanel from "@/components/GlassPanel";
-import WaitlistForm from "@/components/WaitlistForm";
+import KitEmbedForm from "@/components/KitEmbedForm";
 
 export const metadata: Metadata = {
     title: "AI Systems Playbook | Bajwaa Dev",
@@ -9,27 +9,21 @@ export const metadata: Metadata = {
 
 export default function ProductPage() {
     return (
-        <div className="relative w-full overflow-hidden pb-32">
-            <section className="bg-white relative z-10 block pt-24 lg:pt-32 pb-32 flex-col items-center w-full text-center px-6">
-                <div className="max-w-6xl mx-auto w-full flex flex-col items-center">
+        <div className="relative section-shell w-full overflow-hidden">
+            <section className="relative z-10 block w-full px-6">
+                <div className="container-shell w-full flex flex-col items-center">
 
-                    {/* Animated Badge */}
-                    <div className="mb-8 inline-flex items-center rounded-full bg-white/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-gray-700 border border-gray-200/60 shadow-sm">
-                        <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                        Update: Chapter 4 Architecture Added
-                    </div>
-
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#0F172A] leading-[1.1] mb-6 max-w-4xl mx-auto">
+                    <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
                         The Complete Playbook for AI-First Professionals
                     </h1>
 
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-                        A comprehensive system, mental models, and step-by-step implementation paths to automate workflows, build better architectures, and scale your impact without the hype.
+                    <p className="text-lg muted-copy max-w-2xl mx-auto mb-12 leading-relaxed">
+                        Systems, mental models, and step-by-step implementation paths.
                     </p>
 
                     {/* Conversion Zone */}
                     <div className="w-full max-w-md mx-auto flex flex-col gap-3 relative z-20">
-                        <WaitlistForm />
+                        <KitEmbedForm />
                         <p className="mt-4 text-xs font-medium text-gray-500/80">
                             Join 1,000+ top operators waiting. No spam. Unsubscribe anytime.
                         </p>

@@ -29,6 +29,15 @@ export default function ContactForm() {
 
             if (response.ok) {
                 setIsSuccess(true);
+                // Fire-and-forget Kit subscription — failure must not affect form UX
+                const emailVal = formData.get("email");
+                if (typeof emailVal === "string" && emailVal) {
+                    fetch("/api/subscribe", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email: emailVal }),
+                    }).catch(() => {});
+                }
                 (e.target as HTMLFormElement).reset();
             } else {
                 const result = await response.json();
@@ -47,14 +56,14 @@ export default function ContactForm() {
 
     if (isSuccess) {
         return (
-            <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-10 text-center animate-fade-in-up">
-                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="glass-card border rounded-2xl p-10 text-center animate-fade-in-up">
+                <div className="w-16 h-16 bg-[rgba(45,106,143,0.12)] text-[#2D6A8F] rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0F172A] mb-4">Message Sent</h3>
-                <p className="text-emerald-700 font-medium text-lg">
+                <h3 className="text-2xl font-bold mb-4">Message Sent</h3>
+                <p className="text-[#2D6A8F] font-medium text-lg">
                     Thanks! Your project details have been sent. I will get back to you shortly.
                 </p>
             </div>
@@ -66,7 +75,7 @@ export default function ContactForm() {
             method="POST"
             action={FORMSPREE_ENDPOINT}
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.06)] border border-gray-100 p-8 md:p-12 w-full"
+            className="glass-card rounded-3xl border p-8 md:p-12 w-full"
         >
             {errorMsg && (
                 <div className="mb-8 p-4 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm font-medium">
@@ -76,47 +85,47 @@ export default function ContactForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="fullName" className="text-sm font-semibold text-gray-700">Full Name</label>
+                    <label htmlFor="fullName" className="text-sm font-semibold muted-copy">Full Name</label>
                     <input
                         required
                         type="text"
                         name="fullName"
                         id="fullName"
                         placeholder="John Doe"
-                        className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50"
+                        className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all placeholder:text-gray-400 bg-transparent"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-sm font-semibold text-gray-700">Email Address</label>
+                    <label htmlFor="email" className="text-sm font-semibold muted-copy">Email Address</label>
                     <input
                         required
                         type="email"
                         name="email"
                         id="email"
                         placeholder="john@company.com"
-                        className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50"
+                        className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all placeholder:text-gray-400 bg-transparent"
                     />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="company" className="text-sm font-semibold text-gray-700">Company (Optional)</label>
+                    <label htmlFor="company" className="text-sm font-semibold muted-copy">Company (Optional)</label>
                     <input
                         type="text"
                         name="company"
                         id="company"
                         placeholder="Acme Corp"
-                        className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50"
+                        className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all placeholder:text-gray-400 bg-transparent"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="budget" className="text-sm font-semibold text-gray-700">Budget Range</label>
+                    <label htmlFor="budget" className="text-sm font-semibold muted-copy">Budget Range</label>
                     <select
                         required
                         name="budget"
                         id="budget"
-                        className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all text-gray-700 bg-gray-50/50 cursor-pointer appearance-none"
+                        className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all text-[var(--color-site-text)] bg-transparent cursor-pointer appearance-none"
                     >
                         <option value="" disabled selected>Select a range...</option>
                         <option value="$1k - $3k">$1,000 - $3,000 (AI Automation / MVP)</option>
@@ -127,12 +136,12 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col gap-2 mb-6">
-                <label htmlFor="timeline" className="text-sm font-semibold text-gray-700">Timeline</label>
+                    <label htmlFor="timeline" className="text-sm font-semibold muted-copy">Timeline</label>
                 <select
                     required
                     name="timeline"
                     id="timeline"
-                    className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all text-gray-700 bg-gray-50/50 cursor-pointer appearance-none"
+                    className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all text-[var(--color-site-text)] bg-transparent cursor-pointer appearance-none"
                 >
                     <option value="" disabled selected>Select a timeline...</option>
                     <option value="ASAP">ASAP</option>
@@ -143,21 +152,21 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col gap-2 mb-8">
-                <label htmlFor="projectDescription" className="text-sm font-semibold text-gray-700">Project Description</label>
+                <label htmlFor="projectDescription" className="text-sm font-semibold muted-copy">Project Description</label>
                 <textarea
                     required
                     name="projectDescription"
                     id="projectDescription"
                     rows={5}
                     placeholder="Briefly describe your current bottlenecks and what you're looking to build..."
-                    className="px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 outline-none transition-all placeholder:text-gray-400 bg-gray-50/50 resize-none"
+                    className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all placeholder:text-gray-400 bg-transparent resize-none"
                 ></textarea>
             </div>
 
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-black text-white px-8 py-4 min-h-[44px] rounded-full font-medium hover:-translate-y-[1px] hover:shadow-[0_4px_14px_0_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)_inset] active:translate-y-[0px] active:shadow-none transition-all duration-300 ease-out shadow-[0_1px_2px_rgba(0,0,0,0.05)] text-lg flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed tracking-[-0.01em]"
+                className="w-full bg-[#2D6A8F] text-white px-8 py-4 min-h-[44px] rounded-xl font-medium hover:-translate-y-[1px] hover:shadow-[0_8px_24px_rgba(45,106,143,0.35)] active:translate-y-[0px] active:shadow-none transition-all duration-300 ease-out shadow-[0_4px_14px_rgba(45,106,143,0.25)] text-lg flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed tracking-[-0.01em]"
             >
                 {isSubmitting ? (
                     <span className="flex items-center gap-2">
