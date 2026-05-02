@@ -2,32 +2,7 @@ import Hero from "@/components/Hero";
 import { StackSlider } from "@/components/stack-slider";
 import DigitalProduct from "@/components/DigitalProduct";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
-import { Testimonials } from "@/components/ui/testimonials";
-import type { TestimonialItem } from "@/components/ui/testimonials";
-
-const testimonials: TestimonialItem[] = [
-  {
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Daniel K.",
-    username: "Startup Operator",
-    text: "Shahzaib's breakdowns on AI systems completely changed how we approach automation. Instead of random tools and prompts, we now build structured workflows that actually scale.",
-    social: "https://twitter.com",
-  },
-  {
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    name: "Elena R.",
-    username: "SaaS Founder",
-    text: "Most people talk about AI. Shahzaib actually explains how to build systems with it. His frameworks helped us automate research, content production, and lead qualification.",
-    social: "https://twitter.com",
-  },
-  {
-    image: "https://randomuser.me/api/portraits/men/51.jpg",
-    name: "Marcus T.",
-    username: "Cloud Architect",
-    text: "The rare thing about Shahzaib's work is the balance between architecture and execution. It's not hype — it's real systems thinking applied to AI workflows.",
-    social: "https://twitter.com",
-  },
-];
+import WorkWithMe from "@/components/sections/WorkWithMe";
 
 export default function Home() {
   return (
@@ -35,13 +10,8 @@ export default function Home() {
       <Hero />
       <StackSlider />
       <PortfolioGrid />
+      <WorkWithMe />
       <DigitalProduct />
-      <Testimonials
-        testimonials={testimonials}
-        title="Trusted by Operators"
-        description="Builders, founders, and operators using system-first AI workflows."
-        className="py-24 md:py-32"
-      />
     </div>
   );
 }
