@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
     title: "Contact | Bajwa Dev",
-    description: "Tell me about your project. I design and implement practical AI systems and automation workflows.",
+    description: "Book a HubSpot + AI discovery call. Fixed price, fixed timeline, 5-day delivery for B2B SaaS teams.",
 };
 
 export default function ContactPage() {
@@ -16,10 +16,10 @@ export default function ContactPage() {
                     </svg>
                 </div>
                 <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.1] mb-6">
-                    Let&apos;s Build Something.
+                    Book Your HubSpot + AI Discovery Call
                 </h1>
                 <p className="text-lg sm:text-xl max-w-2xl mx-auto muted-copy font-medium leading-relaxed">
-                    Tell me what you&apos;re automating. I&apos;ll respond within 48 hours.
+                    Tell me about your pipeline, team size, and what you want automated. I&apos;ll respond within 24 hours with a clear scope.
                 </p>
             </section>
 
@@ -28,33 +28,22 @@ export default function ContactPage() {
                 <div className="glass-card p-8 rounded-2xl h-fit">
                     <div>
                         <h3 className="font-bold mb-2">What You Can Expect</h3>
-                        <p className="text-sm muted-copy">I prioritize execution over long consulting cycles.</p>
+                        <p className="text-sm muted-copy">Fixed scope, fixed price, no surprises.</p>
                     </div>
                     <ul className="space-y-2 mt-6">
-                        <li className="flex items-center text-sm font-medium muted-copy">
-                            <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Clear system scope
-                        </li>
-                        <li className="flex items-center text-sm font-medium muted-copy">
-                            <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Implementation roadmap
-                        </li>
-                        <li className="flex items-center text-sm font-medium muted-copy">
-                            <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Direct execution
-                        </li>
-                        <li className="flex items-center text-sm font-medium muted-copy">
-                            <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            No unnecessary complexity
-                        </li>
+                        {[
+                            "20-minute scoping call",
+                            "Written scope + fixed price quote",
+                            "5-day build timeline",
+                            "Loom walkthrough on delivery",
+                        ].map((item) => (
+                            <li key={item} className="flex items-center text-sm font-medium muted-copy">
+                                <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                 </div>
 

@@ -5,23 +5,14 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
 
-/**
- * High-fidelity official brand icons for the "Tools I Build With" strip.
- * Full-color, premium card treatment — colorful in this section, translucent elsewhere.
- */
 const STACK_LOGOS = [
-  { name: "ChatGPT",   src: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg", w: 40, h: 40, square: true,  inv: false },
-  { name: "Claude AI", src: "/icons/claude.svg",   w: 40, h: 40, square: true,  inv: false },
-  { name: "Cursor AI", src: "/icons/cursor.svg",   w: 40, h: 40, square: true,  inv: false },
+  { name: "HubSpot",   src: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png", w: 40, h: 40, square: true,  inv: false },
   { name: "n8n",       src: "/icons/n8n.svg",      w: 72, h: 32, square: false, inv: false },
   { name: "Make",      src: "/icons/make.svg",      w: 40, h: 40, square: true,  inv: false },
-  { name: "Notion",    src: "/icons/notion.svg",   w: 40, h: 40, square: true,  inv: false },
+  { name: "Claude AI", src: "/icons/claude.svg",   w: 40, h: 40, square: true,  inv: false },
+  { name: "ChatGPT",   src: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg", w: 40, h: 40, square: true,  inv: false },
   { name: "Supabase",  src: "/icons/supabase.svg", w: 40, h: 40, square: true,  inv: false },
-  { name: "Vercel",    src: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png", w: 40, h: 40, square: true, inv: true },
-  { name: "Arc",       src: "/icons/arc.svg",      w: 40, h: 40, square: true,  inv: false },
-  { name: "AWS",       src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", w: 56, h: 32, square: false, inv: false },
-  { name: "Lovable",   src: "/icons/lovable.svg",  w: 40, h: 40, square: true,  inv: false },
-  { name: "Clay",      src: "/icons/clay.svg",     w: 40, h: 40, square: true,  inv: false },
+  { name: "Notion",    src: "/icons/notion.svg",   w: 40, h: 40, square: true,  inv: false },
 ];
 
 function LogoItem({ name, src, w, h, square, inv }: {

@@ -26,17 +26,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bajwaa.dev"),
   title: {
-    default: "Shahzeb Bajwa | AI Workflow Automation for Operators",
+    default: "Shahzeb Bajwa | HubSpot + AI Sales Workflow Builder",
     template: "%s | Bajwaa Dev",
   },
-  description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
-  keywords: "AI workflow automation, practical AI for operators, no-code AI systems, AI productivity systems, build AI without coding, AI systems for sales professionals",
+  description: "Shahzeb Bajwa builds HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams. Fixed price, 5-day delivery.",
+  keywords: "HubSpot automation, HubSpot AI workflow, B2B SaaS sales automation, HubSpot setup service, AI sales workflow builder, sales automation consultant, n8n HubSpot integration, AI outreach sequences",
   alternates: {
     canonical: "https://bajwaa.dev",
   },
   openGraph: {
-    title: "Shahzeb Bajwa | AI Workflow Automation for Operators",
-    description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
+    title: "Shahzeb Bajwa | HubSpot + AI Sales Workflow Builder",
+    description: "Shahzeb Bajwa builds HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams. Fixed price, 5-day delivery.",
     url: "https://bajwaa.dev",
     siteName: "Bajwaa Dev",
     locale: "en_US",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shahzeb Bajwa | AI Workflow Automation for Operators",
-    description: "Shahzeb Bajwa teaches operators, founders, and sales professionals how to automate workflows with AI and build no-code AI systems that scale output.",
+    title: "Shahzeb Bajwa | HubSpot + AI Sales Workflow Builder",
+    description: "Shahzeb Bajwa builds HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams. Fixed price, 5-day delivery.",
   }
 };
 
@@ -55,9 +55,29 @@ export const viewport = {
   initialScale: 1,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shahzeb Bajwa",
+  "url": "https://bajwaa.dev",
+  "jobTitle": "HubSpot + AI Sales Workflow Builder",
+  "description": "Builds HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams.",
+  "sameAs": [
+    "https://www.linkedin.com/in/shahzeb-bajwa/",
+    "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",
+    "https://github.com/Bajwadevz"
+  ]
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden`}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0F172A] focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0F172A]">
           Skip to main content

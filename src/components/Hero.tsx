@@ -1,21 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import HeroShutterText from "@/components/ui/hero-shutter-text";
-import { Cpu, Workflow, Rocket } from "lucide-react";
+import { MessageSquare, Hammer, Rocket } from "lucide-react";
 
 /** Floating text-chip labels — decorative, desktop only */
 const FLOAT_CHIPS = [
-    { text: "AI Systems Builder & Educator", top: "12%", left: "3%", delay: "0s", dot: true },
-    { text: "Practical Automation", top: "10%", right: "4%", delay: "1.2s", dot: false },
-    { text: "No-Code First", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
-    { text: "Implementation Strategy", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
-    { text: "Systems, Not Prompts", top: "55%", right: "2%", delay: "0.8s", dot: false },
+    { text: "HubSpot Pipeline Builder", top: "12%", left: "3%", delay: "0s", dot: true },
+    { text: "5-Day Fixed Delivery", top: "10%", right: "4%", delay: "1.2s", dot: false },
+    { text: "B2B SaaS Focused", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
+    { text: "AI-Assisted Sequences", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
+    { text: "Fixed Price. No Surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
 ] as const;
 
 /** Ghost brand icons floating in the background */
 const FLOAT_ICONS = [
     { src: "/icons/claude.svg",   size: 52, top: "16%",  right: "10%", delay: "0s",   rotate: "8deg"  },
-    { src: "/icons/cursor.svg",   size: 44, top: "68%",  right: "7%",  delay: "2.5s", rotate: "-5deg" },
     { src: "/icons/n8n.svg",      size: 56, top: "28%",  left: "6%",   delay: "1.8s", rotate: "4deg"  },
     { src: "/icons/make.svg",     size: 40, bottom: "22%", left: "8%", delay: "4s",   rotate: "-7deg" },
     { src: "/icons/supabase.svg", size: 38, top: "20%",  left: "13%",  delay: "1s",   rotate: "10deg" },
@@ -68,37 +67,45 @@ export default function Hero() {
 
             {/* ── Main hero content ── */}
             <div className="container-shell relative z-10 flex min-h-[70vh] flex-col items-center justify-center text-center">
-                <HeroShutterText text="PRACTICAL AI FOR OPERATORS" />
+                <HeroShutterText text="HUBSPOT + AI. DONE IN 5 DAYS." />
                 <p className="mt-8 max-w-2xl text-center text-base md:text-lg muted-copy">
-                    I build AI systems that reduce manual tasks and scale output — no code required.
+                    I build HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams. Fixed price. Fixed timeline.
                 </p>
                 <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Link href="/product" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
-                        Get the Playbook
+                    <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
+                        Book a Discovery Call
                     </Link>
-                    <Link href="/blog" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
-                        Read the Blog
+                    <Link href="/#work-with-me" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
+                        See How It Works
                     </Link>
                 </div>
             </div>
 
-            {/* ── Systems Not Prompts section ── */}
+            {/* ── How It Works section ── */}
             <section className="container-shell relative z-10 pb-8 pt-10">
                 <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-start">
                     <div className="space-y-4">
-                        <p className="text-xs font-semibold uppercase tracking-[0.25em] muted-copy">Systems, Not Prompts</p>
-                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">Systems, Not Prompts</h2>
-                        <p className="max-w-xl muted-copy">I design AI workflows that help teams scale output without scaling headcount.</p>
-                        <p className="max-w-xl muted-copy">Instead of chasing prompts, I build systems that compound leverage.</p>
-                        <Link href="/product" className="btn-primary inline-flex min-h-[46px] items-center px-8">
-                            Get the Playbook
-                        </Link>
+                        <p className="text-xs font-semibold uppercase tracking-[0.25em] muted-copy">How It Works</p>
+                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">How It Works</h2>
+                        <p className="max-w-xl muted-copy">From scoping call to live pipeline in five days — fixed price, no ambiguity.</p>
                     </div>
                     <div className="grid gap-4">
                         {[
-                            { title: "AI Systems", desc: "Custom AI productivity systems", Icon: Cpu },
-                            { title: "Process Automation", desc: "Automated workflows and tool integration", Icon: Workflow },
-                            { title: "Implementation", desc: "Lightweight scalable setups", Icon: Rocket }
+                            {
+                                title: "Discovery Call",
+                                desc: "20 minutes. I scope your HubSpot setup and automation needs.",
+                                Icon: MessageSquare,
+                            },
+                            {
+                                title: "5-Day Build",
+                                desc: "I build your pipeline, sequences, and automation layer. You get daily updates.",
+                                Icon: Hammer,
+                            },
+                            {
+                                title: "Review & Launch",
+                                desc: "Loom walkthrough, 30-day async support, and full documentation.",
+                                Icon: Rocket,
+                            },
                         ].map((item) => (
                             <div key={item.title} className="glass-card card-hover rounded-2xl p-6 md:p-7 relative overflow-hidden">
                                 <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl bg-gradient-to-r from-transparent via-[#2D6A8F] to-transparent opacity-50" />

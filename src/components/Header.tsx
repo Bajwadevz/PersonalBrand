@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
     { href: "/", label: "Home" },
+    { href: "/work-with-me", label: "Work With Me" },
     { href: "/blog", label: "Blog" },
     { href: "/tools", label: "Tools" },
     { href: "/workflows", label: "Workflows" },
@@ -90,7 +91,7 @@ export default function Header() {
                         >
                             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                         </button>
-                        <Link href="/product" className="hidden md:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A]">Get the Playbook</Link>
+                        <Link href="/contact" className="hidden md:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A]">Book a Call</Link>
 
                         <button
                             type="button"
@@ -142,7 +143,7 @@ export default function Header() {
                             >
                                 {isDark ? "Switch to Light" : "Switch to Dark"}
                             </button>
-                            <Link href="/product" onClick={() => setMobileOpen(false)} className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#2D6A8F] px-6 text-base font-semibold text-white">Get the Playbook</Link>
+                            <Link href="/contact" onClick={() => setMobileOpen(false)} className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#2D6A8F] px-6 text-base font-semibold text-white">Book a Call</Link>
                         </nav>
                     </motion.div>
                 )}

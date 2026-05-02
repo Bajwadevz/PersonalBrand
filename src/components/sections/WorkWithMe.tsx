@@ -77,7 +77,7 @@ const offers: Offer[] = [
 
 export default function WorkWithMe() {
     return (
-        <section className="section-shell relative z-10 w-full">
+        <section id="work-with-me" className="section-shell relative z-10 w-full">
             <div className="container-shell w-full">
                 <div className="mb-12">
                     <div className="mb-6 inline-flex items-center rounded-full border border-[var(--color-site-border)] px-4 py-1.5 text-xs font-medium uppercase tracking-widest muted-copy">
