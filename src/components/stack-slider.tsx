@@ -1,43 +1,38 @@
 "use client";
 
-import Image from "next/image";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
 
 const STACK_LOGOS = [
-  { name: "HubSpot",   src: "https://cdn.simpleicons.org/hubspot/FF7A59",    w: 40, h: 40, square: true,  inv: false },
-  { name: "Pipedrive", src: "https://cdn.simpleicons.org/pipedrive/000000",   w: 40, h: 40, square: true,  inv: true  },
-  { name: "n8n",       src: "/icons/n8n.svg",                                 w: 72, h: 32, square: false, inv: false },
-  { name: "Make",      src: "/icons/make.svg",                                w: 40, h: 40, square: true,  inv: false },
-  { name: "Zapier",    src: "https://cdn.simpleicons.org/zapier/FF4A00",       w: 40, h: 40, square: true,  inv: false },
-  { name: "Claude AI", src: "/icons/claude.svg",                              w: 40, h: 40, square: true,  inv: false },
-  { name: "ChatGPT",   src: "https://cdn.simpleicons.org/openai/000000",       w: 40, h: 40, square: true,  inv: true  },
-  { name: "Airtable",  src: "https://cdn.simpleicons.org/airtable/18BFFF",    w: 40, h: 40, square: true,  inv: false },
-  { name: "Notion",    src: "/icons/notion.svg",                              w: 40, h: 40, square: true,  inv: false },
+  { name: "HubSpot",   src: "https://img.logo.dev/hubspot.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ&size=80&format=png",   invert: false },
+  { name: "Pipedrive", src: "https://img.logo.dev/pipedrive.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ&size=80&format=png", invert: false },
+  { name: "n8n",       src: "/icons/n8n.svg",                                                                         invert: false },
+  { name: "Make",      src: "/icons/make.svg",                                                                         invert: false },
+  { name: "Zapier",    src: "https://img.logo.dev/zapier.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ&size=80&format=png",    invert: false },
+  { name: "Claude AI", src: "/icons/claude.svg",                                                                      invert: false },
+  { name: "ChatGPT",   src: "https://img.logo.dev/openai.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ&size=80&format=png",   invert: false },
+  { name: "Airtable",  src: "https://img.logo.dev/airtable.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ&size=80&format=png", invert: false },
+  { name: "Notion",    src: "/icons/notion.svg",                                                                      invert: false },
 ];
 
-function LogoItem({ name, src, w, h, square, inv }: {
-  name: string; src: string; w: number; h: number; square: boolean; inv: boolean;
-}) {
+function LogoItem({ name, src, invert }: { name: string; src: string; invert: boolean }) {
   return (
     <div className="group flex flex-shrink-0 flex-col items-center gap-2.5 cursor-default" title={name}>
       <div className={cn(
-        "flex items-center justify-center rounded-2xl border border-[var(--color-card-border)] bg-white dark:bg-zinc-800/60 shadow-sm transition-all duration-300",
-        "group-hover:-translate-y-1 group-hover:shadow-md group-hover:border-[rgba(45,106,143,0.35)]",
-        square ? "h-14 w-14 p-2.5" : "h-14 px-3 py-2.5"
+        "flex items-center justify-center rounded-2xl border border-[var(--color-card-border)] bg-white dark:bg-zinc-800/60 shadow-sm transition-all duration-300 h-14 w-14 p-2.5",
+        "group-hover:-translate-y-1 group-hover:shadow-md group-hover:border-[rgba(45,106,143,0.35)]"
       )}>
-        <Image
+        <img
           src={src}
           alt={name}
-          width={w}
-          height={h}
+          width={40}
+          height={40}
           loading="lazy"
           decoding="async"
           className={cn(
-            "object-contain transition-all duration-300",
-            square ? "h-8 w-8" : "h-7 w-auto max-w-[72px]",
-            inv && "dark:invert"
+            "h-9 w-9 object-contain transition-all duration-300",
+            invert && "dark:invert"
           )}
         />
       </div>
