@@ -7,11 +7,13 @@ import { cn } from "@/lib/utils";
 
 const STACK_LOGOS = [
   { name: "HubSpot",   src: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png", w: 40, h: 40, square: true,  inv: false },
+  { name: "Pipedrive", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pipedrive_logo.png/320px-Pipedrive_logo.png", w: 64, h: 32, square: false, inv: false },
   { name: "n8n",       src: "/icons/n8n.svg",      w: 72, h: 32, square: false, inv: false },
   { name: "Make",      src: "/icons/make.svg",      w: 40, h: 40, square: true,  inv: false },
+  { name: "Zapier",    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zapier_logo.svg/320px-Zapier_logo.svg.png", w: 64, h: 32, square: false, inv: false },
   { name: "Claude AI", src: "/icons/claude.svg",   w: 40, h: 40, square: true,  inv: false },
   { name: "ChatGPT",   src: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg", w: 40, h: 40, square: true,  inv: false },
-  { name: "Supabase",  src: "/icons/supabase.svg", w: 40, h: 40, square: true,  inv: false },
+  { name: "Airtable",  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/320px-Airtable_Logo.svg.png", w: 64, h: 32, square: false, inv: false },
   { name: "Notion",    src: "/icons/notion.svg",   w: 40, h: 40, square: true,  inv: false },
 ];
 

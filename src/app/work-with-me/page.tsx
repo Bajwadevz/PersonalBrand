@@ -1,61 +1,61 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { Sparkles, Workflow, BookOpen, Check, MessageSquare, Hammer, Rocket } from "lucide-react";
+import { TrendingUp, Zap, BookOpen, Check, MessageSquare, Hammer, Rocket } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Work With Me | Bajwa Dev",
-    description: "Book a HubSpot + AI workflow build. Fixed price, fixed timeline, 5-day delivery for B2B SaaS teams.",
+    description: "Work with Shahzeb Bajwa to automate your revenue pipeline, operations workflows, or get the DIY playbook. Fixed price, tool-agnostic, 5–7 day delivery.",
 };
 
 const offers = [
     {
-        title: "HubSpot + AI Sales Workflow Build",
-        tagline: "Your revenue stack, fully wired in 5 days.",
+        title: "Revenue Pipeline Automation",
+        tagline: "Leads in. Revenue out. Nothing manual in between.",
         description:
-            "I design and build your HubSpot pipeline, AI-assisted sequences, and automation layer — from scratch or on top of what you have. Fixed price, fixed timeline, no ambiguity.",
+            "I map your sales process and build the automation layer on top of whatever CRM or outreach stack you use. Lead intake, qualification, follow-up sequences, routing — all running without manual work.",
         deliverables: [
-            "HubSpot pipeline architecture & configuration",
-            "AI-powered outreach sequences",
-            "Lead routing & automation workflows",
+            "CRM pipeline setup & architecture",
+            "AI-powered follow-up sequences",
+            "Lead routing & qualification logic",
             "Loom walkthrough + 30-day async support",
         ],
         price: "Starting at $500",
         priceNote: "Testimonial rate — limited spots",
-        ctaLabel: "Book a Discovery Call",
+        ctaLabel: "Book a Workflow Audit",
         ctaHref: "/contact",
         ctaStyle: "primary" as const,
         badge: "Most Popular",
         flagship: true,
-        Icon: Sparkles,
+        Icon: TrendingUp,
     },
     {
-        title: "Custom AI Workflow Build",
-        tagline: "Beyond HubSpot. Any workflow, any stack.",
+        title: "Operations Workflow Build",
+        tagline: "Eliminate your biggest manual bottleneck.",
         description:
-            "For teams that need more than CRM automation — n8n pipelines, AI agents, Make integrations, or full sales infrastructure. Scoped per project.",
+            "For teams drowning in repetitive ops — reporting, data routing, onboarding, internal alerts. I design and build the n8n or Make workflow that makes it disappear. Scoped per project.",
         deliverables: [
-            "n8n / Make workflow architecture",
-            "AI agent design & implementation",
-            "Multi-tool integration & data routing",
+            "Process mapping & bottleneck audit",
+            "n8n / Make / Zapier workflow build",
+            "Multi-tool integration & data sync",
             "Full documentation + handoff",
         ],
         price: "From $1,500",
         priceNote: "Custom scope, fixed quote",
-        ctaLabel: "Let's Scope It",
+        ctaLabel: "Scope My Workflow",
         ctaHref: "/contact",
         ctaStyle: "secondary" as const,
-        Icon: Workflow,
+        Icon: Zap,
     },
     {
-        title: "The AI Sales Playbook",
+        title: "The AI Automation Playbook",
         tagline: "Build it yourself. With the exact framework I use.",
         description:
-            "A practical playbook for operators and founders who want to build AI-assisted sales systems without hiring anyone. Templates, workflows, and step-by-step guides included.",
+            "A step-by-step playbook for founders and operators who want to automate their own workflows without hiring anyone. Templates, n8n blueprints, and AI prompt systems included.",
         deliverables: [
-            "HubSpot setup templates",
-            "Proven outreach frameworks",
-            "AI prompt library for sales",
             "Workflow automation blueprints",
+            "AI prompt systems for sales & ops",
+            "CRM setup templates",
+            "Step-by-step implementation guides",
         ],
         price: "Self-paced",
         priceNote: "No budget required",
@@ -68,18 +68,18 @@ const offers = [
 
 const steps = [
     {
-        title: "Discovery Call",
-        desc: "20 minutes. I scope your HubSpot setup and automation needs.",
+        title: "Workflow Audit Call",
+        desc: "30 minutes. I map your biggest manual bottleneck and scope a system to eliminate it.",
         Icon: MessageSquare,
     },
     {
-        title: "5-Day Build",
-        desc: "I build your pipeline, sequences, and automation layer. You get daily updates.",
+        title: "Rapid Build",
+        desc: "I build your automation in 5–7 days on your existing stack. Daily updates. No disappearing.",
         Icon: Hammer,
     },
     {
-        title: "Review & Launch",
-        desc: "Loom walkthrough, 30-day async support, and full documentation.",
+        title: "Handoff & Support",
+        desc: "Full Loom walkthrough, documentation, and 30 days of async support so it actually sticks.",
         Icon: Rocket,
     },
 ];
@@ -94,10 +94,10 @@ export default function WorkWithMePage() {
                         WORK WITH ME
                     </div>
                     <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">
-                        Three Ways to Work Together
+                        Work With Me
                     </h1>
                     <p className="mx-auto mt-4 max-w-2xl text-lg muted-copy">
-                        Done-for-you, custom-scoped, or self-serve — pick the path that fits where you are right now.
+                        Tool-agnostic AI automation for growing businesses. Pick the path that fits where you are.
                     </p>
                 </div>
             </section>
@@ -162,7 +162,7 @@ export default function WorkWithMePage() {
                             HOW IT WORKS
                         </div>
                         <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight">
-                            From Call to Live in 5 Days
+                            From bottleneck to automated in days
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -186,10 +186,10 @@ export default function WorkWithMePage() {
             {/* CTA */}
             <section className="container-shell pb-20 text-center">
                 <div className="glass-card rounded-3xl p-12 md:p-16 flex flex-col items-center">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to build?</h2>
-                    <p className="mt-3 mb-8 muted-copy">Tell me about your pipeline and I&apos;ll respond within 24 hours.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to eliminate manual work?</h2>
+                    <p className="mt-3 mb-8 muted-copy">Tell me about your workflow and I&apos;ll respond within 24 hours.</p>
                     <Link href="/contact" className="btn-primary min-h-[52px] px-10 text-base pulse-glow inline-flex items-center justify-center">
-                        Book a Discovery Call
+                        Book a Workflow Audit Call
                     </Link>
                 </div>
             </section>

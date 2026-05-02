@@ -5,11 +5,11 @@ import { MessageSquare, Hammer, Rocket } from "lucide-react";
 
 /** Floating text-chip labels — decorative, desktop only */
 const FLOAT_CHIPS = [
-    { text: "HubSpot Pipeline Builder", top: "12%", left: "3%", delay: "0s", dot: true },
-    { text: "5-Day Fixed Delivery", top: "10%", right: "4%", delay: "1.2s", dot: false },
-    { text: "B2B SaaS Focused", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
-    { text: "AI-Assisted Sequences", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
-    { text: "Fixed Price. No Surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
+    { text: "Manual work eliminated", top: "12%", left: "3%", delay: "0s", dot: true },
+    { text: "Any CRM. Any stack.", top: "10%", right: "4%", delay: "1.2s", dot: false },
+    { text: "5–7 day delivery", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
+    { text: "Former B2B AE — I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
+    { text: "Fixed price. No surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
 ] as const;
 
 /** Ghost brand icons floating in the background */
@@ -67,9 +67,9 @@ export default function Hero() {
 
             {/* ── Main hero content ── */}
             <div className="container-shell relative z-10 flex min-h-[70vh] flex-col items-center justify-center text-center">
-                <HeroShutterText text="HUBSPOT + AI. DONE IN 5 DAYS." />
+                <HeroShutterText text="YOUR BUSINESS. AUTOMATED." />
                 <p className="mt-8 max-w-2xl text-center text-base md:text-lg muted-copy">
-                    I build HubSpot pipelines, AI-assisted outreach sequences, and sales automation for B2B SaaS teams. Fixed price. Fixed timeline.
+                    I build AI-powered workflows that eliminate manual work, connect your tools, and help growing teams operate like a company twice their size.
                 </p>
                 <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
                     <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
@@ -86,24 +86,24 @@ export default function Hero() {
                 <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-start">
                     <div className="space-y-4">
                         <p className="text-xs font-semibold uppercase tracking-[0.25em] muted-copy">How It Works</p>
-                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">How It Works</h2>
-                        <p className="max-w-xl muted-copy">From scoping call to live pipeline in five days — fixed price, no ambiguity.</p>
+                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">From bottleneck to automated in days</h2>
+                        <p className="max-w-xl muted-copy">I scope it, build it, and hand it off — with documentation so it keeps running.</p>
                     </div>
                     <div className="grid gap-4">
                         {[
                             {
-                                title: "Discovery Call",
-                                desc: "20 minutes. I scope your HubSpot setup and automation needs.",
+                                title: "Workflow Audit Call",
+                                desc: "30 minutes. I map your biggest manual bottleneck and scope a system to eliminate it.",
                                 Icon: MessageSquare,
                             },
                             {
-                                title: "5-Day Build",
-                                desc: "I build your pipeline, sequences, and automation layer. You get daily updates.",
+                                title: "Rapid Build",
+                                desc: "I build your automation in 5–7 days on your existing stack. Daily updates. No disappearing.",
                                 Icon: Hammer,
                             },
                             {
-                                title: "Review & Launch",
-                                desc: "Loom walkthrough, 30-day async support, and full documentation.",
+                                title: "Handoff & Support",
+                                desc: "Full Loom walkthrough, documentation, and 30 days of async support so it actually sticks.",
                                 Icon: Rocket,
                             },
                         ].map((item) => (

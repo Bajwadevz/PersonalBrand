@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-    title: "Contact | Bajwa Dev",
-    description: "Book a HubSpot + AI discovery call. Fixed price, fixed timeline, 5-day delivery for B2B SaaS teams.",
+    title: "Book a Workflow Audit Call | Bajwaa Dev",
+    description: "Tell me about your workflow, stack, and biggest manual bottleneck. I'll scope a solution and get back to you within 24 hours.",
 };
 
 export default function ContactPage() {
@@ -16,26 +16,25 @@ export default function ContactPage() {
                     </svg>
                 </div>
                 <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.1] mb-6">
-                    Book Your HubSpot + AI Discovery Call
+                    Book a Workflow Audit Call
                 </h1>
                 <p className="text-lg sm:text-xl max-w-2xl mx-auto muted-copy font-medium leading-relaxed">
-                    Tell me about your pipeline, team size, and what you want automated. I&apos;ll respond within 24 hours with a clear scope.
+                    Tell me what your team does manually that shouldn&apos;t be. I&apos;ll map it, scope it, and quote it — within 24 hours.
                 </p>
             </section>
 
             <section className="container-shell pb-20 max-w-5xl w-full grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-                {/* Deliverable Framing */}
                 <div className="glass-card p-8 rounded-2xl h-fit">
                     <div>
-                        <h3 className="font-bold mb-2">What You Can Expect</h3>
+                        <h3 className="font-bold mb-2">What Happens Next</h3>
                         <p className="text-sm muted-copy">Fixed scope, fixed price, no surprises.</p>
                     </div>
                     <ul className="space-y-2 mt-6">
                         {[
-                            "20-minute scoping call",
-                            "Written scope + fixed price quote",
-                            "5-day build timeline",
-                            "Loom walkthrough on delivery",
+                            "30-minute scoping call — I learn your stack and bottlenecks",
+                            "Written scope + fixed price quote within 24hrs",
+                            "5–7 day build on your existing tools",
+                            "Loom handoff + 30 days of async support",
                         ].map((item) => (
                             <li key={item} className="flex items-center text-sm font-medium muted-copy">
                                 <svg className="w-4 h-4 text-[#2D6A8F] mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

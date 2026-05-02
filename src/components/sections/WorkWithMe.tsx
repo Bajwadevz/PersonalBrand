@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles, Workflow, BookOpen, Check } from "lucide-react";
+import { TrendingUp, Zap, BookOpen, Check } from "lucide-react";
 
 type Offer = {
     title: string;
@@ -13,58 +13,58 @@ type Offer = {
     ctaStyle: "primary" | "secondary";
     badge?: string;
     flagship?: boolean;
-    Icon: typeof Sparkles;
+    Icon: typeof TrendingUp;
 };
 
 const offers: Offer[] = [
     {
-        title: "HubSpot + AI Sales Workflow Build",
-        tagline: "Your revenue stack, fully wired in 5 days.",
+        title: "Revenue Pipeline Automation",
+        tagline: "Leads in. Revenue out. Nothing manual in between.",
         description:
-            "I design and build your HubSpot pipeline, AI-assisted sequences, and automation layer — from scratch or on top of what you have. Fixed price, fixed timeline, no ambiguity.",
+            "I map your sales process and build the automation layer on top of whatever CRM or outreach stack you use. Lead intake, qualification, follow-up sequences, routing — all running without manual work.",
         deliverables: [
-            "HubSpot pipeline architecture & configuration",
-            "AI-powered outreach sequences",
-            "Lead routing & automation workflows",
+            "CRM pipeline setup & architecture",
+            "AI-powered follow-up sequences",
+            "Lead routing & qualification logic",
             "Loom walkthrough + 30-day async support",
         ],
         price: "Starting at $500",
         priceNote: "Testimonial rate — limited spots",
-        ctaLabel: "Book a Discovery Call",
+        ctaLabel: "Book a Workflow Audit",
         ctaHref: "/contact",
         ctaStyle: "primary",
         badge: "Most Popular",
         flagship: true,
-        Icon: Sparkles,
+        Icon: TrendingUp,
     },
     {
-        title: "Custom AI Workflow Build",
-        tagline: "Beyond HubSpot. Any workflow, any stack.",
+        title: "Operations Workflow Build",
+        tagline: "Eliminate your biggest manual bottleneck.",
         description:
-            "For teams that need more than CRM automation — n8n pipelines, AI agents, Make integrations, or full sales infrastructure. Scoped per project.",
+            "For teams drowning in repetitive ops — reporting, data routing, onboarding, internal alerts. I design and build the n8n or Make workflow that makes it disappear. Scoped per project.",
         deliverables: [
-            "n8n / Make workflow architecture",
-            "AI agent design & implementation",
-            "Multi-tool integration & data routing",
+            "Process mapping & bottleneck audit",
+            "n8n / Make / Zapier workflow build",
+            "Multi-tool integration & data sync",
             "Full documentation + handoff",
         ],
         price: "From $1,500",
         priceNote: "Custom scope, fixed quote",
-        ctaLabel: "Let's Scope It",
+        ctaLabel: "Scope My Workflow",
         ctaHref: "/contact",
         ctaStyle: "secondary",
-        Icon: Workflow,
+        Icon: Zap,
     },
     {
-        title: "The AI Sales Playbook",
+        title: "The AI Automation Playbook",
         tagline: "Build it yourself. With the exact framework I use.",
         description:
-            "A practical playbook for operators and founders who want to build AI-assisted sales systems without hiring anyone. Templates, workflows, and step-by-step guides included.",
+            "A step-by-step playbook for founders and operators who want to automate their own workflows without hiring anyone. Templates, n8n blueprints, and AI prompt systems included.",
         deliverables: [
-            "HubSpot setup templates",
-            "Proven outreach frameworks",
-            "AI prompt library for sales",
             "Workflow automation blueprints",
+            "AI prompt systems for sales & ops",
+            "CRM setup templates",
+            "Step-by-step implementation guides",
         ],
         price: "Self-paced",
         priceNote: "No budget required",

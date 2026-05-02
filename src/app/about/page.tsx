@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Briefcase, GraduationCap, Target, Wrench, Cpu, Workflow, Zap } from "lucide-react";
-
+import { Briefcase, Target, Workflow, Zap, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "About Shahzeb Bajwa | AI Systems Builder & Educator",
-    description: "Shahzeb Bajwa is an AI systems builder and practical AI educator helping professionals, business owners, and builders leverage AI for real-world impact.",
-    keywords: ["AI systems builder", "Practical AI educator", "AI implementation thinker", "AI expert", "AI consultant", "AI automation", "AI for business", "AI for professionals", "AI learning without coding"],
+    title: "About Shahzeb Bajwa | AI Workflow Automation Specialist",
+    description: "Shahzeb Bajwa is an AI workflow automation specialist and former B2B AE with 6 years of quota-carrying sales experience. He builds the systems he wished existed when he was selling.",
+    keywords: ["AI workflow automation", "business process automation", "n8n freelancer", "Make automation", "sales automation", "CRM automation", "AI automation specialist"],
 };
 
 export default function AboutPage() {
@@ -15,17 +14,16 @@ export default function AboutPage() {
         <div className="section-shell relative w-full overflow-hidden">
             <section className="container-shell max-w-5xl text-center">
                 <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">Shahzeb Bajwa</h1>
-                <p className="mt-2 text-lg muted-copy">AI Systems Builder & Educator</p>
+                <p className="mt-2 text-lg muted-copy">AI Workflow Automation Specialist</p>
                 <p className="mx-auto mt-8 max-w-3xl muted-copy">
-                    I help professionals, builders, and business owners integrate practical AI systems into their workflows.
-                    My focus: systems thinking over prompt hacking. Build once, compound forever.
+                    I build AI-powered workflows for small and mid-sized businesses. Before this, I spent 6 years as a quota-carrying B2B sales rep — which means I understand the business problem behind every automation request, not just the technical workflow. I don&apos;t just connect APIs. I build systems that actually change how a team operates.
                 </p>
             </section>
             <section className="container-shell mt-16 grid gap-6 md:grid-cols-3">
                 {[
-                    ["AI Agents", "Autonomous systems that execute reliable tasks."],
-                    ["Prompt Systems", "Production-ready prompt structures for teams."],
-                    ["Workflow Automation", "Connected tools, APIs, and AI for execution."]
+                    ["Revenue Automation", "Sales pipelines, lead routing, and follow-up sequences that run without manual work."],
+                    ["Ops Workflow Builds", "Reporting, onboarding, data sync, internal alerts — automated on your existing stack."],
+                    ["AI Integration", "Claude, ChatGPT, and AI agents wired into your tools to eliminate repetitive decision-making."]
                 ].map(([title, copy]) => (
                     <article key={title} className="glass-card card-hover rounded-2xl p-6">
                         <h2 className="text-xl font-bold">{title}</h2>
@@ -37,10 +35,10 @@ export default function AboutPage() {
                 <h3 className="mb-6 text-2xl font-bold">Who I Build For</h3>
                 <div className="grid gap-6 sm:grid-cols-2">
                     {[
-                        { title: "Professionals", icon: Briefcase, copy: "Automate repetitive work and recover strategic time." },
-                        { title: "Builders", icon: Wrench, copy: "Ship systems faster with practical AI architecture." },
-                        { title: "Students", icon: GraduationCap, copy: "Learn execution-focused AI skills that compound." },
-                        { title: "Business Owners", icon: Target, copy: "Scale operations without scaling headcount linearly." }
+                        { title: "Founders", icon: Target, copy: "You're wearing too many hats. Let's automate the ones that don't need you." },
+                        { title: "Heads of Sales", icon: Briefcase, copy: "Your reps should be selling, not updating CRMs. Let's fix that." },
+                        { title: "Ops Leads", icon: Workflow, copy: "You know exactly what's broken. I build the fix." },
+                        { title: "Bootstrapped Teams", icon: Zap, copy: "No budget for a 10-person ops team? Build the systems instead." }
                     ].map(({ title, icon: Icon, copy }) => (
                         <article key={title} className="glass-card card-hover rounded-2xl p-6">
                             <Icon className="h-5 w-5 text-[var(--color-ocean)]" />
@@ -50,7 +48,7 @@ export default function AboutPage() {
                     ))}
                 </div>
                 <div className="mt-10">
-                    <Link href="/product" className="btn-primary inline-flex min-h-[48px] items-center px-8">Get the Playbook</Link>
+                    <Link href="/contact" className="btn-primary inline-flex min-h-[48px] items-center px-8">Book a Workflow Audit</Link>
                 </div>
             </section>
 
@@ -75,7 +73,7 @@ export default function AboutPage() {
                 <Image src="/icons/claude.svg" alt="" width={52} height={52} className="object-contain" />
             </div>
             <div aria-hidden="true" className="pointer-events-none select-none absolute bottom-32 left-24 opacity-[0.10] subtle-float hidden lg:block" style={{ animationDelay: "2.4s", transform: "rotate(5deg)" }}>
-                <Image src="/icons/cursor.svg" alt="" width={44} height={44} className="object-contain" />
+                <Image src="/icons/n8n.svg" alt="" width={44} height={44} className="object-contain" />
             </div>
         </div>
     );

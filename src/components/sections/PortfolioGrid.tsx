@@ -1,23 +1,23 @@
-import { Search, GitBranch, BarChart3 } from "lucide-react";
+import { Zap, GitBranch, BarChart3 } from "lucide-react";
 
 export default function PortfolioGrid() {
     const caseStudies = [
         {
-            title: "Automated Research",
-            description: "Automated company research lands in CRM before every sales call.",
-            outcome: "5+ hours saved per rep per week",
-            Icon: Search,
+            title: "Sales Follow-Up on Autopilot",
+            description: "A 12-person SaaS team was manually following up on every inbound lead. Reps spent 2+ hours a day on tasks that didn't need a human. We built an AI-assisted sequence that routes, scores, and follows up automatically.",
+            outcome: "14 hours/week recovered",
+            Icon: Zap,
         },
         {
-            title: "Intelligent Routing",
-            description: "Inbound leads are scored and routed instantly across teams.",
-            outcome: "87% faster first response",
+            title: "CRM That Updates Itself",
+            description: "Deals were falling through because reps weren't logging calls. We connected their call tool to their CRM with an AI layer that extracts key info and updates the pipeline — no manual entry.",
+            outcome: "Zero missed pipeline updates",
             Icon: GitBranch,
         },
         {
-            title: "Data Synthesis",
-            description: "Weekly KPI summaries generate from your stack without manual work.",
-            outcome: "10+ reporting hours recovered weekly",
+            title: "Weekly Reports in 4 Minutes",
+            description: "An ops lead was spending Friday afternoons pulling numbers from 4 different tools and formatting a report. We automated the entire pipeline — data pulled, formatted, and sent on a schedule.",
+            outcome: "3 hours saved every week",
             Icon: BarChart3,
         }
     ];
