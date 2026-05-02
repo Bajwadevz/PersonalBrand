@@ -8,7 +8,7 @@ const FLOAT_CHIPS = [
     { text: "Manual work eliminated", top: "12%", left: "3%", delay: "0s", dot: true },
     { text: "Any CRM. Any stack.", top: "10%", right: "4%", delay: "1.2s", dot: false },
     { text: "5–7 day delivery", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
-    { text: "Former B2B AE — I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
+    { text: "6 years selling B2B — I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
     { text: "Fixed price. No surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
 ] as const;
 
@@ -78,6 +78,11 @@ export default function Hero() {
                     <Link href="/#work-with-me" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
                         See How It Works
                     </Link>
+                </div>
+                <div className="mt-6">
+                    <a href="#portfolio" className="text-xs muted-copy hover:underline transition-colors">
+                        ↓ See real workflows I&apos;ve built
+                    </a>
                 </div>
             </div>
 

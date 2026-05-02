@@ -1,10 +1,23 @@
 import Link from "next/link";
 import { Github, Twitter } from "lucide-react";
 import Logo from "./Logo";
+import FooterNewsletter from "./FooterNewsletter";
 
 export default function Footer() {
     return (
         <footer className="relative z-10 mt-24 border-t border-[var(--color-site-border)]">
+            {/* Newsletter strip */}
+            <div className="container-shell py-8 border-b border-[var(--color-site-border)]">
+                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <p className="text-sm font-semibold">Get one practical AI automation idea every Sunday.</p>
+                        <p className="text-xs muted-copy mt-0.5">No fluff. Unsubscribe anytime.</p>
+                    </div>
+                    <FooterNewsletter />
+                </div>
+            </div>
+
+            {/* Nav + social row */}
             <div className="container-shell flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
                 <div className="flex flex-col items-center gap-2 md:items-start">
                     <Logo />

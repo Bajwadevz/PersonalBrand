@@ -41,12 +41,21 @@ export const metadata: Metadata = {
     siteName: "Bajwaa Dev",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Shahzeb Bajwa — AI Workflow Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shahzeb Bajwa | AI Workflow Automation for Growing Businesses",
     description: "Shahzeb Bajwa builds AI-powered workflows that eliminate manual work for small and mid-sized businesses. Tool-agnostic. Fixed price. 5–7 day delivery.",
-  }
+    images: ["/og-image.png"],
+  },
 };
 
 export const viewport = {
@@ -82,6 +91,20 @@ const jsonLd = [
     "areaServed": "United States",
     "priceRange": "$500–$2000",
     "url": "https://bajwaa.dev/work-with-me"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bajwaa Dev",
+    "url": "https://bajwaa.dev",
+    "logo": "https://bajwaa.dev/icons/wave-icon.png",
+    "founder": { "@type": "Person", "name": "Shahzeb Bajwa" },
+    "description": "AI workflow automation for small and mid-sized businesses.",
+    "sameAs": [
+      "https://www.linkedin.com/in/shahzeb-bajwa/",
+      "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",
+      "https://github.com/Bajwadevz"
+    ]
   }
 ];
 

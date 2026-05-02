@@ -3,6 +3,7 @@ import { StackSlider } from "@/components/stack-slider";
 import DigitalProduct from "@/components/DigitalProduct";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import WorkWithMe from "@/components/sections/WorkWithMe";
+import InlineOptIn from "@/components/InlineOptIn";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <PortfolioGrid />
       <WorkWithMe />
       <DigitalProduct />
+      <InlineOptIn />
     </div>
   );
 }
