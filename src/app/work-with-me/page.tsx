@@ -19,7 +19,7 @@ const offers = [
             "Lead routing & qualification logic",
             "Loom walkthrough + 30-day async support",
         ],
-        price: "Starting at $500",
+        price: "$750 — Founding client rate",
         priceNote: "Testimonial rate — limited spots",
         ctaLabel: "Book a Workflow Audit",
         ctaHref: "/contact",
@@ -99,6 +99,20 @@ export default function WorkWithMePage() {
                     <p className="mx-auto mt-4 max-w-2xl text-lg muted-copy">
                         Tool-agnostic AI automation for growing businesses. Pick the path that fits where you are.
                     </p>
+
+                    {/* LOOM EMBED PLACEHOLDER — replace REPLACE_WITH_LOOM_ID with real ID */}
+                    <div
+                        className="relative mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl glass-card"
+                        style={{ aspectRatio: "16 / 9" }}
+                    >
+                        <iframe
+                            src="https://www.loom.com/embed/REPLACE_WITH_LOOM_ID"
+                            allow="fullscreen"
+                            allowFullScreen
+                            className="absolute inset-0 h-full w-full"
+                            title="Work With Me — 90 second overview"
+                        />
+                    </div>
                 </div>
             </section>
 

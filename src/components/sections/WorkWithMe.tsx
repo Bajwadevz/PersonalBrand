@@ -28,7 +28,7 @@ const offers: Offer[] = [
             "Lead routing & qualification logic",
             "Loom walkthrough + 30-day async support",
         ],
-        price: "Starting at $500",
+        price: "$750 — Founding client rate",
         priceNote: "Testimonial rate — limited spots",
         ctaLabel: "Book a Workflow Audit",
         ctaHref: "/contact",

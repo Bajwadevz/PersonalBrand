@@ -89,7 +89,7 @@ const jsonLd = [
     },
     "description": "Custom AI-powered workflow automation for growing businesses. Revenue pipeline automation, operations workflow builds, and CRM automation. Fixed price, 5–7 day delivery.",
     "areaServed": "United States",
-    "priceRange": "$500–$2000",
+    "priceRange": "$750–$2000",
     "url": "https://bajwaa.dev/work-with-me"
   },
   {
