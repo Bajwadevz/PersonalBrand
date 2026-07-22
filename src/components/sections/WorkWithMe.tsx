@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { TrendingUp, Zap, BookOpen, Check } from "lucide-react";
+import { TrendingUp, Zap, BookOpen } from "lucide-react";
 
 type Offer = {
     title: string;
     tagline: string;
-    description: string;
-    deliverables: string[];
     price: string;
     priceNote: string;
     ctaLabel: string;
@@ -18,37 +16,21 @@ type Offer = {
 
 const offers: Offer[] = [
     {
-        title: "Revenue Pipeline Automation",
-        tagline: "Leads in. Revenue out. Nothing manual in between.",
-        description:
-            "I map your sales process and build the automation layer on top of whatever CRM or outreach stack you use. Lead intake, qualification, follow-up sequences, routing — all running without manual work.",
-        deliverables: [
-            "CRM pipeline setup & architecture",
-            "AI-powered follow-up sequences",
-            "Lead routing & qualification logic",
-            "Loom walkthrough + 30-day async support",
-        ],
-        price: "$750 — Founding client rate",
-        priceNote: "Testimonial rate — limited spots",
-        ctaLabel: "Book a Workflow Audit",
+        title: "AI Lead Response & Pipeline Automation",
+        tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
+        price: "From $1,500",
+        priceNote: "Founding client rate — 2 spots",
+        ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary",
-        badge: "Most Popular",
+        badge: "Start Here",
         flagship: true,
         Icon: TrendingUp,
     },
     {
         title: "Operations Workflow Build",
         tagline: "Eliminate your biggest manual bottleneck.",
-        description:
-            "For teams drowning in repetitive ops — reporting, data routing, onboarding, internal alerts. I design and build the n8n or Make workflow that makes it disappear. Scoped per project.",
-        deliverables: [
-            "Process mapping & bottleneck audit",
-            "n8n / Make / Zapier workflow build",
-            "Multi-tool integration & data sync",
-            "Full documentation + handoff",
-        ],
-        price: "From $1,500",
+        price: "From $3,000",
         priceNote: "Custom scope, fixed quote",
         ctaLabel: "Scope My Workflow",
         ctaHref: "/contact",
@@ -57,18 +39,10 @@ const offers: Offer[] = [
     },
     {
         title: "The AI Automation Playbook",
-        tagline: "Build it yourself. With the exact framework I use.",
-        description:
-            "A step-by-step playbook for founders and operators who want to automate their own workflows without hiring anyone. Templates, n8n blueprints, and AI prompt systems included.",
-        deliverables: [
-            "Workflow automation blueprints",
-            "AI prompt systems for sales & ops",
-            "CRM setup templates",
-            "Step-by-step implementation guides",
-        ],
-        price: "Self-paced",
-        priceNote: "No budget required",
-        ctaLabel: "Get the Playbook",
+        tagline: "Build it yourself, with the frameworks I use.",
+        price: "Free",
+        priceNote: "Waitlist open",
+        ctaLabel: "Join the Waitlist",
         ctaHref: "/product",
         ctaStyle: "secondary",
         Icon: BookOpen,
@@ -76,6 +50,8 @@ const offers: Offer[] = [
 ];
 
 export default function WorkWithMe() {
+    const [flagship, ...secondary] = offers;
+
     return (
         <section id="work-with-me" className="section-shell relative z-10 w-full">
             <div className="container-shell w-full">
@@ -87,78 +63,60 @@ export default function WorkWithMe() {
                         Three Ways to Work Together
                     </h2>
                     <p className="max-w-2xl text-base muted-copy">
-                        Done-for-you, custom-scoped, or self-serve — pick the path that fits where you are right now.
+                        One flagship build, plus two other ways in.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch">
-                    {offers.map((offer) => {
-                        const ringClass = offer.flagship
-                            ? "ring-2 ring-[var(--color-ocean)] md:scale-[1.02]"
-                            : "";
-                        return (
-                            <div
-                                key={offer.title}
-                                className={`glass-card card-hover relative flex flex-col rounded-2xl p-6 md:p-8 overflow-hidden ${ringClass}`}
-                            >
-                                <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl bg-gradient-to-r from-transparent via-[#2D6A8F] to-transparent opacity-60" />
+                {/* Flagship — visually dominant, first position */}
+                <div className="glass-card card-hover relative flex flex-col rounded-2xl p-8 md:p-10 overflow-hidden border-2 border-[var(--color-ocean)] bg-[rgba(45,106,143,0.04)]">
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-[var(--color-ocean)]" />
+                    {flagship.badge && (
+                        <span className="absolute right-6 top-6 inline-flex items-center rounded-full bg-[var(--color-ocean)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm">
+                            {flagship.badge}
+                        </span>
+                    )}
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[rgba(45,106,143,0.12)] mb-4">
+                        <flagship.Icon className="h-5 w-5 text-[var(--color-ocean)]" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 pr-24">{flagship.title}</h3>
+                    <p className="text-sm font-semibold text-[var(--color-ocean)] mb-6">{flagship.tagline}</p>
+                    <div className="mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pt-5 border-t border-[var(--color-site-border)]">
+                        <div>
+                            <p className="text-xl font-bold">{flagship.price}</p>
+                            <p className="text-xs muted-copy mt-1">{flagship.priceNote}</p>
+                        </div>
+                        <Link
+                            href={flagship.ctaHref}
+                            className="btn-primary pulse-glow min-h-[48px] px-8 text-sm inline-flex items-center justify-center w-full sm:w-auto"
+                        >
+                            {flagship.ctaLabel}
+                        </Link>
+                    </div>
+                </div>
 
-                                {offer.badge && (
-                                    <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-[var(--color-ocean)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm">
-                                        {offer.badge}
-                                    </span>
-                                )}
-
-                                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[rgba(45,106,143,0.1)] mb-4">
-                                    <offer.Icon className="h-5 w-5 text-[var(--color-ocean)]" />
-                                </div>
-
-                                <h3 className="text-xl font-bold mb-2 pr-24">
-                                    {offer.title}
-                                </h3>
-                                <p className="text-sm font-semibold text-[var(--color-ocean)] mb-3">
-                                    {offer.tagline}
-                                </p>
-                                <p className="text-sm leading-relaxed muted-copy mb-6">
-                                    {offer.description}
-                                </p>
-
-                                <ul className="space-y-3 mb-6">
-                                    {offer.deliverables.map((item) => (
-                                        <li
-                                            key={item}
-                                            className="flex items-start text-sm muted-copy leading-relaxed"
-                                        >
-                                            <Check className="h-4 w-4 text-[var(--color-ocean)] mr-2 mt-0.5 shrink-0" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="mt-auto">
-                                    <div className="pt-4 mb-5 border-t border-[var(--color-site-border)]">
-                                        <p className="text-base font-bold">
-                                            {offer.price}
-                                        </p>
-                                        <p className="text-xs muted-copy mt-1">
-                                            {offer.priceNote}
-                                        </p>
-                                    </div>
-
-                                    <Link
-                                        href={offer.ctaHref}
-                                        className={`${
-                                            offer.ctaStyle === "primary"
-                                                ? "btn-primary pulse-glow"
-                                                : "btn-secondary"
-                                        } w-full min-h-[48px] text-sm inline-flex items-center justify-center`}
-                                    >
-                                        {offer.ctaLabel}
-                                    </Link>
-                                </div>
+                {/* Secondary offers — lighter, smaller */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 items-stretch">
+                    {secondary.map((offer) => (
+                        <div key={offer.title} className="glass-card relative flex flex-col rounded-2xl p-5 overflow-hidden">
+                            <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[rgba(45,106,143,0.08)] mb-3">
+                                <offer.Icon className="h-4 w-4 text-[var(--color-ocean)]" />
                             </div>
-                        );
-                    })}
+                            <h3 className="text-base font-bold mb-1">{offer.title}</h3>
+                            <p className="text-xs font-semibold text-[var(--color-ocean)] mb-4">{offer.tagline}</p>
+                            <div className="mt-auto">
+                                <div className="pt-3 mb-4 border-t border-[var(--color-site-border)]">
+                                    <p className="text-sm font-bold">{offer.price}</p>
+                                    <p className="text-[11px] muted-copy mt-0.5">{offer.priceNote}</p>
+                                </div>
+                                <Link
+                                    href={offer.ctaHref}
+                                    className="btn-secondary w-full min-h-[40px] text-xs inline-flex items-center justify-center"
+                                >
+                                    {offer.ctaLabel}
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ interface KitFormButtonProps {
 }
 
 export default function KitFormButton({
-    label = "Get the Playbook",
+    label = "Join the Waitlist",
     className,
 }: KitFormButtonProps) {
     const [open, setOpen] = useState(false);
@@ -77,7 +77,7 @@ export default function KitFormButton({
                         className="fixed inset-0 z-[300] flex items-center justify-center p-4"
                         role="dialog"
                         aria-modal="true"
-                        aria-label="Get the Playbook"
+                        aria-label="Join the Waitlist"
                     >
                         {/* Backdrop */}
                         <div
@@ -91,7 +91,7 @@ export default function KitFormButton({
                             <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 px-6 py-4">
                                 <div>
                                     <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-tight">
-                                        Get the AI Operator Playbook
+                                        Get the AI Automation Playbook
                                     </h3>
                                     <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">
                                         Free frameworks &amp; systems delivered to your inbox.

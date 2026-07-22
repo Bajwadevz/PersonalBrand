@@ -3,28 +3,40 @@ import { Metadata } from "next";
 import { TrendingUp, Zap, BookOpen, Check, MessageSquare, Hammer, Rocket } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Work With Me | Bajwa Dev",
-    description: "Work with Shahzeb Bajwa to automate your revenue pipeline, operations workflows, or get the DIY playbook. Fixed price, tool-agnostic, 5–7 day delivery.",
+    title: "Work With Me",
+    description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+    alternates: {
+        canonical: "https://bajwaa.dev/work-with-me",
+    },
+    openGraph: {
+        title: "Work With Me | Bajwaa Dev",
+        description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+        url: "https://bajwaa.dev/work-with-me",
+    },
+    twitter: {
+        title: "Work With Me | Bajwaa Dev",
+        description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+    },
 };
 
 const offers = [
     {
-        title: "Revenue Pipeline Automation",
-        tagline: "Leads in. Revenue out. Nothing manual in between.",
+        title: "AI Lead Response & Pipeline Automation",
+        tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
         description:
-            "I map your sales process and build the automation layer on top of whatever CRM or outreach stack you use. Lead intake, qualification, follow-up sequences, routing — all running without manual work.",
+            "The average B2B team takes hours to respond to an inbound lead — and most of that lead's context never makes it into the CRM. I build the layer that closes both gaps: AI qualification on every form fill and inbound reply, routing to the right owner, and automatic writeback with full conversation context. Built on your existing CRM in 5 days.",
         deliverables: [
-            "CRM pipeline setup & architecture",
-            "AI-powered follow-up sequences",
-            "Lead routing & qualification logic",
-            "Loom walkthrough + 30-day async support",
+            "Inbound capture, AI scoring & routing logic",
+            "AI-drafted first response + follow-up sequence",
+            "Automatic CRM enrichment and writeback",
+            "Loom walkthrough + 30 days async support",
         ],
-        price: "$750 — Founding client rate",
-        priceNote: "Testimonial rate — limited spots",
-        ctaLabel: "Book a Workflow Audit",
+        price: "From $1,500",
+        priceNote: "Founding client rate — 2 spots",
+        ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary" as const,
-        badge: "Most Popular",
+        badge: "Start Here",
         flagship: true,
         Icon: TrendingUp,
     },
@@ -32,14 +44,14 @@ const offers = [
         title: "Operations Workflow Build",
         tagline: "Eliminate your biggest manual bottleneck.",
         description:
-            "For teams drowning in repetitive ops — reporting, data routing, onboarding, internal alerts. I design and build the n8n or Make workflow that makes it disappear. Scoped per project.",
+            "For teams already handling inbound well. Reporting, data routing, onboarding, internal alerts — designed and built on n8n or Make, scoped per project.",
         deliverables: [
             "Process mapping & bottleneck audit",
             "n8n / Make / Zapier workflow build",
             "Multi-tool integration & data sync",
             "Full documentation + handoff",
         ],
-        price: "From $1,500",
+        price: "From $3,000",
         priceNote: "Custom scope, fixed quote",
         ctaLabel: "Scope My Workflow",
         ctaHref: "/contact",
@@ -48,18 +60,18 @@ const offers = [
     },
     {
         title: "The AI Automation Playbook",
-        tagline: "Build it yourself. With the exact framework I use.",
+        tagline: "Build it yourself, with the frameworks I use.",
         description:
-            "A step-by-step playbook for founders and operators who want to automate their own workflows without hiring anyone. Templates, n8n blueprints, and AI prompt systems included.",
+            "For founders and operators who want to automate their own workflows without hiring anyone.",
         deliverables: [
             "Workflow automation blueprints",
             "AI prompt systems for sales & ops",
             "CRM setup templates",
             "Step-by-step implementation guides",
         ],
-        price: "Self-paced",
-        priceNote: "No budget required",
-        ctaLabel: "Get the Playbook",
+        price: "Free",
+        priceNote: "Waitlist open",
+        ctaLabel: "Join the Waitlist",
         ctaHref: "/product",
         ctaStyle: "secondary" as const,
         Icon: BookOpen,
@@ -94,10 +106,10 @@ export default function WorkWithMePage() {
                         WORK WITH ME
                     </div>
                     <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">
-                        Work With Me
+                        Three Ways to Work Together
                     </h1>
                     <p className="mx-auto mt-4 max-w-2xl text-lg muted-copy">
-                        Tool-agnostic AI automation for growing businesses. Pick the path that fits where you are.
+                        One flagship build, plus two other ways in.
                     </p>
 
                     {/* LOOM EMBED PLACEHOLDER — replace REPLACE_WITH_LOOM_ID with real ID */}
@@ -118,53 +130,85 @@ export default function WorkWithMePage() {
 
             {/* Offer Cards */}
             <section className="container-shell mt-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
-                    {offers.map((offer) => {
-                        const ringClass = offer.flagship
-                            ? "ring-2 ring-[var(--color-ocean)] md:scale-[1.02]"
-                            : "";
-                        return (
-                            <div
-                                key={offer.title}
-                                className={`glass-card card-hover relative flex flex-col rounded-2xl p-6 md:p-8 overflow-hidden ${ringClass}`}
-                            >
-                                <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl bg-gradient-to-r from-transparent via-[#2D6A8F] to-transparent opacity-60" />
-                                {offer.badge && (
-                                    <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-[var(--color-ocean)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm">
-                                        {offer.badge}
-                                    </span>
-                                )}
-                                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[rgba(45,106,143,0.1)] mb-4">
-                                    <offer.Icon className="h-5 w-5 text-[var(--color-ocean)]" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-2 pr-24">{offer.title}</h3>
-                                <p className="text-sm font-semibold text-[var(--color-ocean)] mb-3">{offer.tagline}</p>
-                                <p className="text-sm leading-relaxed muted-copy mb-6">{offer.description}</p>
-                                <ul className="space-y-3 mb-6">
-                                    {offer.deliverables.map((item) => (
-                                        <li key={item} className="flex items-start text-sm muted-copy leading-relaxed">
-                                            <Check className="h-4 w-4 text-[var(--color-ocean)] mr-2 mt-0.5 shrink-0" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="mt-auto">
-                                    <div className="pt-4 mb-5 border-t border-[var(--color-site-border)]">
-                                        <p className="text-base font-bold">{offer.price}</p>
-                                        <p className="text-xs muted-copy mt-1">{offer.priceNote}</p>
-                                    </div>
-                                    <Link
-                                        href={offer.ctaHref}
-                                        className={`${
-                                            offer.ctaStyle === "primary" ? "btn-primary pulse-glow" : "btn-secondary"
-                                        } w-full min-h-[48px] text-sm inline-flex items-center justify-center`}
-                                    >
-                                        {offer.ctaLabel}
-                                    </Link>
-                                </div>
+                {/* Flagship — visually dominant, first position */}
+                {(() => {
+                    const offer = offers[0];
+                    return (
+                        <div
+                            key={offer.title}
+                            className="glass-card card-hover relative flex flex-col rounded-2xl p-8 md:p-12 overflow-hidden border-2 border-[var(--color-ocean)] bg-[rgba(45,106,143,0.04)]"
+                        >
+                            <div className="absolute inset-x-0 top-0 h-[3px] rounded-t-2xl bg-[var(--color-ocean)]" />
+                            {offer.badge && (
+                                <span className="absolute right-6 top-6 inline-flex items-center rounded-full bg-[var(--color-ocean)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm">
+                                    {offer.badge}
+                                </span>
+                            )}
+                            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(45,106,143,0.12)] mb-5">
+                                <offer.Icon className="h-6 w-6 text-[var(--color-ocean)]" />
                             </div>
-                        );
-                    })}
+                            <h3 className="text-2xl md:text-3xl font-bold mb-2 pr-28">{offer.title}</h3>
+                            <p className="text-base font-semibold text-[var(--color-ocean)] mb-4">{offer.tagline}</p>
+                            <p className="text-base leading-relaxed muted-copy mb-6 max-w-2xl">{offer.description}</p>
+                            <ul className="grid gap-3 mb-8 sm:grid-cols-2">
+                                {offer.deliverables.map((item) => (
+                                    <li key={item} className="flex items-start text-sm muted-copy leading-relaxed">
+                                        <Check className="h-4 w-4 text-[var(--color-ocean)] mr-2 mt-0.5 shrink-0" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-[var(--color-site-border)]">
+                                <div>
+                                    <p className="text-2xl font-bold">{offer.price}</p>
+                                    <p className="text-sm muted-copy mt-1">{offer.priceNote}</p>
+                                </div>
+                                <Link
+                                    href={offer.ctaHref}
+                                    className="btn-primary pulse-glow min-h-[48px] px-8 text-sm inline-flex items-center justify-center w-full sm:w-auto"
+                                >
+                                    {offer.ctaLabel}
+                                </Link>
+                            </div>
+                        </div>
+                    );
+                })()}
+
+                {/* Secondary offers — lighter, smaller */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 items-stretch">
+                    {offers.slice(1).map((offer) => (
+                        <div
+                            key={offer.title}
+                            className="glass-card relative flex flex-col rounded-2xl p-5 md:p-6 overflow-hidden"
+                        >
+                            <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[rgba(45,106,143,0.08)] mb-3">
+                                <offer.Icon className="h-4 w-4 text-[var(--color-ocean)]" />
+                            </div>
+                            <h3 className="text-base font-bold mb-1">{offer.title}</h3>
+                            <p className="text-xs font-semibold text-[var(--color-ocean)] mb-2">{offer.tagline}</p>
+                            <p className="text-xs leading-relaxed muted-copy mb-4 line-clamp-2">{offer.description}</p>
+                            <ul className="space-y-1.5 mb-4">
+                                {offer.deliverables.map((item) => (
+                                    <li key={item} className="flex items-start text-xs muted-copy leading-relaxed">
+                                        <Check className="h-3 w-3 text-[var(--color-ocean)] mr-1.5 mt-0.5 shrink-0" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="mt-auto">
+                                <div className="pt-3 mb-4 border-t border-[var(--color-site-border)]">
+                                    <p className="text-sm font-bold">{offer.price}</p>
+                                    <p className="text-[11px] muted-copy mt-0.5">{offer.priceNote}</p>
+                                </div>
+                                <Link
+                                    href={offer.ctaHref}
+                                    className="btn-secondary w-full min-h-[40px] text-xs inline-flex items-center justify-center"
+                                >
+                                    {offer.ctaLabel}
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 

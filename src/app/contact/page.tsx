@@ -2,8 +2,20 @@ import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-    title: "Book a Workflow Audit Call | Bajwaa Dev",
-    description: "Tell me about your workflow, stack, and biggest manual bottleneck. I'll scope a solution and get back to you within 24 hours.",
+    title: "Book a Free Lead-Response Audit",
+    description: "Tell me where inbound leads are slipping. I'll map it, scope it, and send a fixed quote within 24 hours.",
+    alternates: {
+        canonical: "https://bajwaa.dev/contact",
+    },
+    openGraph: {
+        title: "Book a Free Lead-Response Audit | Bajwaa Dev",
+        description: "Tell me where inbound leads are slipping. I'll map it, scope it, and send a fixed quote within 24 hours.",
+        url: "https://bajwaa.dev/contact",
+    },
+    twitter: {
+        title: "Book a Free Lead-Response Audit | Bajwaa Dev",
+        description: "Tell me where inbound leads are slipping. I'll map it, scope it, and send a fixed quote within 24 hours.",
+    },
 };
 
 export default function ContactPage() {
@@ -16,10 +28,10 @@ export default function ContactPage() {
                     </svg>
                 </div>
                 <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.1] mb-6">
-                    Book a Workflow Audit Call
+                    Book a Free Lead-Response Audit
                 </h1>
                 <p className="text-lg sm:text-xl max-w-2xl mx-auto muted-copy font-medium leading-relaxed">
-                    Tell me what your team does manually that shouldn&apos;t be. I&apos;ll map it, scope it, and quote it — within 24 hours.
+                    Tell me where inbound leads are slipping — or what your team does manually that shouldn&apos;t be. I&apos;ll map it, scope it, and send a fixed quote within 24 hours.
                 </p>
             </section>
 
@@ -31,7 +43,7 @@ export default function ContactPage() {
                     </div>
                     <ul className="space-y-2 mt-6">
                         {[
-                            "30-minute scoping call — I learn your stack and bottlenecks",
+                            "20-minute audit call — I map your lead flow and where it breaks",
                             "Written scope + fixed price quote within 24hrs",
                             "5–7 day build on your existing tools",
                             "Loom handoff + 30 days of async support",

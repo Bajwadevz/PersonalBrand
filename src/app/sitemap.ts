@@ -36,6 +36,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: "weekly",
             priority: 0.9,
         },
+        {
+            url: `${BASE_URL}/contact`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/tools`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/workflows`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        ...[
+            "discovery-question-bank",
+            "email-openers",
+            "lead-enrichment-script",
+            "prompt-library",
+            "readiness-quiz",
+            "roi-calculator",
+            "routing-logic-builder",
+            "stack-builder",
+            "workflow-finder",
+        ].map((slug) => ({
+            url: `${BASE_URL}/tools/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+        })),
     ];
 
     // Dynamic Blog Routes

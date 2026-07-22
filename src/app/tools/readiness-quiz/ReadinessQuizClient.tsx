@@ -151,7 +151,7 @@ function getResult(score: number): Result {
         "Read the guide on designing AI workflows that actually ship — most operator automations break at deployment, not design.",
         "Book a discovery call. At your stage, a second set of eyes on your architecture will unlock the next level faster than more solo building.",
       ],
-      ctaLabel: "Get the Playbook →",
+      ctaLabel: "Join the Waitlist →",
       ctaHref: "/product",
     };
   }

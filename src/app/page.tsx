@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import { StackSlider } from "@/components/stack-slider";
-import DigitalProduct from "@/components/DigitalProduct";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import WorkWithMe from "@/components/sections/WorkWithMe";
 import FoundingClientCallout from "@/components/sections/FoundingClientCallout";
@@ -14,7 +13,6 @@ export default function Home() {
       <PortfolioGrid />
       <FoundingClientCallout />
       <WorkWithMe />
-      <DigitalProduct />
       <InlineOptIn />
     </div>
   );

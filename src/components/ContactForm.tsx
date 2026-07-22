@@ -128,10 +128,11 @@ export default function ContactForm() {
                         className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all text-[var(--color-site-text)] bg-transparent cursor-pointer appearance-none"
                     >
                         <option value="" disabled selected>Select a range...</option>
-                        <option value="$750">$750 (Founding Client — Revenue Pipeline Automation)</option>
-                        <option value="$1k - $3k">$1,000 - $3,000 (AI Automation / MVP)</option>
-                        <option value="$3k - $5k">$3,000 - $5,000 (Custom AI System Build)</option>
-                        <option value="$5k+">$5,000+ (Advanced Systems / Long-Term)</option>
+                        <option value="Under $1,500">Under $1,500</option>
+                        <option value="$1,500 - $3,000">$1,500 - $3,000</option>
+                        <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                        <option value="$5,000+">$5,000+</option>
+                        <option value="Not sure yet">Not sure yet</option>
                     </select>
                 </div>
             </div>

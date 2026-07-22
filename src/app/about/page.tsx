@@ -1,51 +1,43 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Briefcase, Target, Workflow, Zap, Cpu } from "lucide-react";
+import { Workflow, Zap, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "About Shahzeb Bajwa | AI Workflow Automation Specialist",
-    description: "Shahzeb Bajwa is an AI workflow automation specialist and former B2B AE with 6 years of quota-carrying sales experience. He builds the systems he wished existed when he was selling.",
-    keywords: ["AI workflow automation", "business process automation", "n8n freelancer", "Make automation", "sales automation", "CRM automation", "AI automation specialist"],
+    title: { absolute: "About Shahzeb Bajwa | AI Automation for Sales Teams" },
+    description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+    alternates: {
+        canonical: "https://bajwaa.dev/about",
+    },
+    openGraph: {
+        title: "About Shahzeb Bajwa | AI Automation for Sales Teams",
+        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+        url: "https://bajwaa.dev/about",
+    },
+    twitter: {
+        title: "About Shahzeb Bajwa | AI Automation for Sales Teams",
+        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+    },
 };
 
 export default function AboutPage() {
     return (
         <div className="section-shell relative w-full overflow-hidden">
-            <section className="container-shell max-w-5xl text-center">
-                <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">Shahzeb Bajwa</h1>
-                <p className="mt-2 text-lg muted-copy">AI Workflow Automation Specialist</p>
-                <p className="mx-auto mt-8 max-w-3xl muted-copy">
-                    I build AI-powered workflows for small and mid-sized businesses. Before this, I spent 6 years as a quota-carrying B2B sales rep — which means I understand the business problem behind every automation request, not just the technical workflow. I don&apos;t just connect APIs. I build systems that actually change how a team operates.
-                </p>
-            </section>
-            <section className="container-shell mt-16 grid gap-6 md:grid-cols-3">
-                {[
-                    ["Revenue Automation", "Sales pipelines, lead routing, and follow-up sequences that run without manual work."],
-                    ["Ops Workflow Builds", "Reporting, onboarding, data sync, internal alerts — automated on your existing stack."],
-                    ["AI Integration", "Claude, ChatGPT, and AI agents wired into your tools to eliminate repetitive decision-making."]
-                ].map(([title, copy]) => (
-                    <article key={title} className="glass-card card-hover rounded-2xl p-6">
-                        <h2 className="text-xl font-bold">{title}</h2>
-                        <p className="mt-2 text-sm muted-copy">{copy}</p>
-                    </article>
-                ))}
-            </section>
-            <section className="container-shell mt-14">
-                <h3 className="mb-6 text-2xl font-bold">Who I Build For</h3>
-                <div className="grid gap-6 sm:grid-cols-2">
-                    {[
-                        { title: "Founders", icon: Target, copy: "You're wearing too many hats. Let's automate the ones that don't need you." },
-                        { title: "Heads of Sales", icon: Briefcase, copy: "Your reps should be selling, not updating CRMs. Let's fix that." },
-                        { title: "Ops Leads", icon: Workflow, copy: "You know exactly what's broken. I build the fix." },
-                        { title: "Bootstrapped Teams", icon: Zap, copy: "No budget for a 10-person ops team? Build the systems instead." }
-                    ].map(({ title, icon: Icon, copy }) => (
-                        <article key={title} className="glass-card card-hover rounded-2xl p-6">
-                            <Icon className="h-5 w-5 text-[var(--color-ocean)]" />
-                            <h4 className="mt-3 text-lg font-bold">{title}</h4>
-                            <p className="mt-2 text-sm muted-copy">{copy}</p>
-                        </article>
-                    ))}
+            <section className="container-shell max-w-3xl text-center">
+                <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">About Shahzeb Bajwa</h1>
+                <div className="mx-auto mt-8 max-w-2xl space-y-6 text-left muted-copy">
+                    <p>
+                        I spent 6+ years in B2B SaaS sales — currently as an Account Executive at Motive — before I started building the systems I kept wishing existed while I was selling.
+                    </p>
+                    <p>
+                        Every sales team I&apos;ve worked in had the same two leaks: inbound leads went cold waiting for a human, and the context that mattered never made it into the CRM. Most people who can fix that technically have never carried a number. Most people who&apos;ve carried a number can&apos;t build.
+                    </p>
+                    <p>
+                        I do both. I&apos;m also completing a CS degree, and I build on n8n, Make, HubSpot, and the Claude and OpenAI APIs.
+                    </p>
+                    <p>
+                        I work with a small number of clients at a time so builds actually ship in days, not quarters.
+                    </p>
                 </div>
                 <div className="mt-10">
                     <Link href="/contact" className="btn-primary inline-flex min-h-[48px] items-center px-8">Book a Workflow Audit</Link>

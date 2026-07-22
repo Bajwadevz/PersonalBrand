@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Bajwaa Dev',
         short_name: 'Bajwaa Dev',
-        description: 'AI education platform focused on vibe coding and AI-first development.',
+        description: 'AI lead response and workflow automation for B2B sales and ops teams.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

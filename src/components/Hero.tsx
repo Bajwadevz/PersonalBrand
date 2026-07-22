@@ -67,9 +67,10 @@ export default function Hero() {
 
             {/* ── Main hero content ── */}
             <div className="container-shell relative z-10 flex min-h-[70vh] flex-col items-center justify-center text-center">
+                <h1 className="sr-only">AI Lead Response and Workflow Automation for B2B Teams</h1>
                 <HeroShutterText text="YOUR BUSINESS. AUTOMATED." />
                 <p className="mt-8 max-w-2xl text-center text-base md:text-lg muted-copy">
-                    I build AI-powered workflows that eliminate manual work, connect your tools, and help growing teams operate like a company twice their size.
+                    Most inbound leads wait hours for a reply. I build the system that answers, qualifies, and logs every one into your CRM within minutes — on the stack you already use, in 5 days.
                 </p>
                 <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
                     <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
@@ -81,7 +82,7 @@ export default function Hero() {
                 </div>
                 <div className="mt-6">
                     <a href="#portfolio" className="text-xs muted-copy hover:underline transition-colors">
-                        ↓ See real workflows I&apos;ve built
+                        ↓ See what I build
                     </a>
                 </div>
             </div>

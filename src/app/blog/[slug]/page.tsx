@@ -23,7 +23,6 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     return {
         title: post.title,
         description: post.excerpt,
-        keywords: post.keywords ? post.keywords.split(',').map(k => k.trim()) : [],
         openGraph: {
             title: post.title,
             description: post.excerpt,
@@ -73,7 +72,7 @@ export default async function BlogPost(props: Props) {
         headline: post.title,
         author: {
             "@type": "Person",
-            name: "Shahzaib Bajwa",
+            name: "Shahzeb Bajwa",
             url: "https://bajwaa.dev/about"
         },
         publisher: {

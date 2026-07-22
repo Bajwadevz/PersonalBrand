@@ -4,9 +4,21 @@ import { BlogWithFilter } from "./BlogClient";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "AI Automation Blog for Operators | bajwaa.dev",
+    title: "Blog",
     description:
-        "Practical guides on AI workflow automation, no-code systems, and operator leverage. Built for founders, sales pros, and operators who want to move fast.",
+        "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+    alternates: {
+        canonical: "https://bajwaa.dev/blog",
+    },
+    openGraph: {
+        title: "Blog | Bajwaa Dev",
+        description: "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+        url: "https://bajwaa.dev/blog",
+    },
+    twitter: {
+        title: "Blog | Bajwaa Dev",
+        description: "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+    },
 };
 
 export default function BlogPage() {
@@ -21,7 +33,7 @@ export default function BlogPage() {
                 </div>
                 <BlogWithFilter posts={posts} />
                 <div className="mt-20 flex justify-center">
-                    <Link href="/product" className="btn-primary min-h-[48px] px-8">Get the Playbook</Link>
+                    <Link href="/product" className="btn-primary min-h-[48px] px-8">Join the Waitlist</Link>
                 </div>
             </div>
         </div>

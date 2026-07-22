@@ -135,4 +135,4 @@ The question isn't whether the ROI is there. For most manual tasks in most teams
 
 ---
 
-*Want the exact workflow templates I use to automate lead research, reporting, and outreach? Get the AI Operator Playbook — free.*
+*Want the exact workflow templates I use to automate lead research, reporting, and outreach? Get the AI Automation Playbook — free.*

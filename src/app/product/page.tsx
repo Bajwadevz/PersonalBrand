@@ -3,8 +3,20 @@ import GlassPanel from "@/components/GlassPanel";
 import KitEmbedForm from "@/components/KitEmbedForm";
 
 export const metadata: Metadata = {
-    title: "AI Systems Playbook | Bajwaa Dev",
-    description: "A comprehensive playbook and system for execution-focused professionals and operators. Launching soon.",
+    title: "The AI Automation Playbook — Coming Soon",
+    description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
+    alternates: {
+        canonical: "https://bajwaa.dev/product",
+    },
+    openGraph: {
+        title: "The AI Automation Playbook — Coming Soon | Bajwaa Dev",
+        description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
+        url: "https://bajwaa.dev/product",
+    },
+    twitter: {
+        title: "The AI Automation Playbook — Coming Soon | Bajwaa Dev",
+        description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
+    },
 };
 
 export default function ProductPage() {
@@ -25,7 +37,7 @@ export default function ProductPage() {
                     <div className="w-full max-w-md mx-auto flex flex-col gap-3 relative z-20">
                         <KitEmbedForm />
                         <p className="mt-4 text-xs font-medium text-gray-500/80">
-                            Join 1,000+ top operators waiting. No spam. Unsubscribe anytime.
+                            Join the waitlist. No spam, unsubscribe anytime.
                         </p>
                     </div>
 
@@ -55,11 +67,12 @@ export default function ProductPage() {
                                 {/* Fake Sidebar */}
                                 <div className="w-full md:w-1/3 flex flex-col gap-3">
                                     <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Modules</div>
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className={`h-10 w-full rounded-md flex items-center px-4 text-sm font-medium ${i === 1 ? 'bg-white shadow-sm border border-gray-200 text-[#0F172A]' : 'text-gray-500 hover:bg-gray-100'}`}>
-                                            {i === 1 ? "1. Ground Truth Architecture" : `Module 0${i}`}
-                                        </div>
-                                    ))}
+                                    <div className="h-10 w-full rounded-md flex items-center px-4 text-sm font-medium bg-white shadow-sm border border-gray-200 text-[#0F172A]">
+                                        1. Ground Truth Architecture
+                                    </div>
+                                    <div className="h-10 w-full rounded-md flex items-center px-4 text-sm font-medium text-gray-400">
+                                        Full curriculum coming soon.
+                                    </div>
                                 </div>
 
                                 {/* Fake Editor View */}

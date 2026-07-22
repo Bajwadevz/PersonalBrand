@@ -26,35 +26,25 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bajwaa.dev"),
   title: {
-    default: "Shahzeb Bajwa | AI Workflow Automation for Growing Businesses",
+    default: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
     template: "%s | Bajwaa Dev",
   },
-  description: "Shahzeb Bajwa builds AI-powered workflows that eliminate manual work for small and mid-sized businesses. Tool-agnostic. Fixed price. 5–7 day delivery.",
-  keywords: "AI workflow automation, business process automation, automate business operations, n8n freelancer, Make automation specialist, sales automation consultant, AI automation for small business, workflow automation SMB, CRM automation, eliminate manual work",
+  description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
   alternates: {
     canonical: "https://bajwaa.dev",
   },
   openGraph: {
-    title: "Shahzeb Bajwa | AI Workflow Automation for Growing Businesses",
-    description: "Shahzeb Bajwa builds AI-powered workflows that eliminate manual work for small and mid-sized businesses. Tool-agnostic. Fixed price. 5–7 day delivery.",
+    title: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
+    description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
     url: "https://bajwaa.dev",
     siteName: "Bajwaa Dev",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Shahzeb Bajwa — AI Workflow Automation",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shahzeb Bajwa | AI Workflow Automation for Growing Businesses",
-    description: "Shahzeb Bajwa builds AI-powered workflows that eliminate manual work for small and mid-sized businesses. Tool-agnostic. Fixed price. 5–7 day delivery.",
-    images: ["/og-image.png"],
+    title: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
+    description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
   },
 };
 
@@ -71,7 +61,7 @@ const jsonLd = [
     "name": "Shahzeb Bajwa",
     "url": "https://bajwaa.dev",
     "jobTitle": "AI Workflow Automation Specialist",
-    "description": "Builds AI-powered workflows for small and mid-sized businesses. Former B2B AE with 6 years of sales experience.",
+    "description": "Builds AI systems that automate inbound lead response and CRM workflows for B2B sales and ops teams. 6+ years of B2B SaaS sales experience.",
     "sameAs": [
       "https://www.linkedin.com/in/shahzeb-bajwa/",
       "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",
@@ -87,9 +77,9 @@ const jsonLd = [
       "name": "Shahzeb Bajwa",
       "url": "https://bajwaa.dev"
     },
-    "description": "Custom AI-powered workflow automation for growing businesses. Revenue pipeline automation, operations workflow builds, and CRM automation. Fixed price, 5–7 day delivery.",
+    "description": "AI lead response automation, operations workflow builds, and CRM automation for B2B sales and ops teams. Fixed price, 5-day delivery.",
     "areaServed": "United States",
-    "priceRange": "$750–$2000",
+    "priceRange": "$1,500–$5,000+",
     "url": "https://bajwaa.dev/work-with-me"
   },
   {
@@ -97,9 +87,9 @@ const jsonLd = [
     "@type": "Organization",
     "name": "Bajwaa Dev",
     "url": "https://bajwaa.dev",
-    "logo": "https://bajwaa.dev/icons/wave-icon.png",
+    "logo": "https://bajwaa.dev/wave-logo.png",
     "founder": { "@type": "Person", "name": "Shahzeb Bajwa" },
-    "description": "AI workflow automation for small and mid-sized businesses.",
+    "description": "AI lead response and workflow automation for B2B sales and ops teams.",
     "sameAs": [
       "https://www.linkedin.com/in/shahzeb-bajwa/",
       "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",

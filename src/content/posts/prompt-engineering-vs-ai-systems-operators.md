@@ -95,4 +95,4 @@ Build the infrastructure. The outputs will follow.
 
 ---
 
-*Want the exact system architectures I use to automate research, reporting, and outbound? Get the AI Operator Playbook — free.*
+*Want the exact system architectures I use to automate research, reporting, and outbound? Get the AI Automation Playbook — free.*
