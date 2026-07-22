@@ -51,7 +51,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] md:w-auto">
+            <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] lg:w-auto">
                 <div
                     className={`mx-auto flex h-14 items-center justify-between gap-4 rounded-full border px-4 md:px-6 transition-all duration-300 ${
                         scrolled ? "shadow-[0_14px_32px_rgba(0,0,0,0.12)]" : "shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
@@ -64,14 +64,14 @@ export default function Header() {
                 >
                     <Logo />
 
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center gap-8 shrink-0">
                         {navItems.map(({ href, label }) => {
                             const isActive = pathname === href || pathname.startsWith(href + "/");
                             return (
                                 <Link
                                     key={href}
                                     href={href}
-                                    className={`group relative text-sm font-medium transition-opacity duration-300 ${
+                                    className={`group relative whitespace-nowrap shrink-0 text-sm font-medium transition-opacity duration-300 ${
                                         isActive ? "text-[var(--color-site-text)]" : "text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)]"
                                     }`}
                                 >
@@ -86,17 +86,17 @@ export default function Header() {
                         <button
                             type="button"
                             onClick={toggleTheme}
-                            className="hidden md:inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded-full border border-[var(--color-card-border)] text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)] transition-colors"
+                            className="hidden lg:inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded-full border border-[var(--color-card-border)] text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)] transition-colors"
                             aria-label="Toggle theme"
                         >
                             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                         </button>
-                        <Link href="/contact" className="hidden md:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A]">Book a Call</Link>
+                        <Link href="/contact" className="hidden lg:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A] whitespace-nowrap">Book a Call</Link>
 
                         <button
                             type="button"
                             onClick={() => setMobileOpen(!mobileOpen)}
-                            className="md:hidden p-2 -mr-1 text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)] transition-colors"
+                            className="lg:hidden p-2 -mr-1 text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)] transition-colors"
                             aria-expanded={mobileOpen}
                             aria-label={mobileOpen ? "Close menu" : "Open menu"}
                         >
@@ -112,7 +112,7 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        className="fixed inset-x-0 top-0 z-40 md:hidden overflow-hidden border-b px-6 pt-28 pb-12"
+                        className="fixed inset-x-0 top-0 z-40 lg:hidden overflow-hidden border-b px-6 pt-28 pb-12"
                         style={{
                             background: "var(--color-glass-bg)",
                             borderColor: "var(--color-card-border)",
