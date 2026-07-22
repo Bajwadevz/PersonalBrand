@@ -1,7 +1,7 @@
 ---
 title: "How to Automate Sales Outreach with AI: A Step-by-Step Playbook"
 date: "2025-02-05"
-description: "A step-by-step playbook for automating personalized sales outreach using AI. From lead scraping to personalized email generation to send — all without code."
+description: "A step-by-step playbook for automating personalized sales outreach using AI. From lead scraping to personalized email generation to send, all without code."
 keywords: "automate sales outreach with AI, AI cold email automation, GPT sales outreach, personalized outreach at scale"
 tags: ["Sales", "Automation", "AI Tools", "Outreach"]
 readingTime: "8 min read"
@@ -9,7 +9,7 @@ author: Shahzaib Bajwa
 ogImage: /og-automate-sales-outreach-ai-playbook.png
 ---
 
-Generic outreach doesn't work anymore. Buyers spot copy-paste in seconds. **Automate sales outreach with AI** the right way: use AI to research and write personalized lines at scale, then send through a human-reviewed layer. This playbook walks you through a five-step workflow—scrape, enrich, research, write, send—without code.
+Generic outreach doesn't work anymore. Buyers spot copy-paste in seconds. **Automate sales outreach with AI** the right way: use AI to research and write personalized lines at scale, then send through a human-reviewed layer. This playbook walks you through a five-step workflow: scrape, enrich, research, write, send, all without code.
 
 ## The Problem: Generic Outreach Doesn't Work
 
@@ -17,15 +17,15 @@ Spray-and-pray cold email gets ignored or flagged. Personalization is the only l
 
 ## What AI-Personalized Outreach Looks Like
 
-Each prospect gets: a relevant hook (recent news, role, or pain), a clear reason you're reaching out, and a low-friction ask. The body reads like you wrote it for them—because the AI drafted it from real signals. You review, tweak, and send. The system handles lead sourcing, enrichment, and draft generation; you handle the final touch and relationship.
+Each prospect gets: a relevant hook (recent news, role, or pain), a clear reason you're reaching out, and a low-friction ask. The body reads like you wrote it for them, because the AI drafted it from real signals. You review, tweak, and send. The system handles lead sourcing, enrichment, and draft generation; you handle the final touch and relationship.
 
 ## The 5-Step Workflow
 
-1. **Source leads** — Apollo, LinkedIn, Clay, or your CRM.
-2. **Enrich with AI** — Company and contact data plus research.
-3. **Write personalized lines** — GPT-4o with a strict prompt and structured input.
-4. **Review layer** — Optional human checkpoint before send.
-5. **Send** — Instantly, Smartlead, or your email tool.
+1. **Source leads**: Apollo, LinkedIn, Clay, or your CRM.
+2. **Enrich with AI**: Company and contact data plus research.
+3. **Write personalized lines**: GPT-4o with a strict prompt and structured input.
+4. **Review layer**: Optional human checkpoint before send.
+5. **Send**: Instantly, Smartlead, or your email tool.
 
 ## Step 1: Source Leads (Apollo, LinkedIn, Clay)
 
@@ -92,7 +92,7 @@ Start with review. Once prompt quality and data are stable, you can auto-send fo
 
 ### What if I don't use Apollo or Clay?
 
-Any source of leads with company + contact + email works. Spreadsheet, CRM export, or API—the workflow is the same: enrich, then write, then send.
+Any source of leads with company + contact + email works. Spreadsheet, CRM export, or API; the workflow is the same: enrich, then write, then send.
 
 ### How do I avoid AI slop or obvious templates?
 

@@ -8,7 +8,7 @@ const FLOAT_CHIPS = [
     { text: "Manual work eliminated", top: "12%", left: "3%", delay: "0s", dot: true },
     { text: "Any CRM. Any stack.", top: "10%", right: "4%", delay: "1.2s", dot: false },
     { text: "5–7 day delivery", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
-    { text: "6 years selling B2B — I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
+    { text: "6 years selling B2B: I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
     { text: "Fixed price. No surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
 ] as const;
 
@@ -70,7 +70,7 @@ export default function Hero() {
                 <h1 className="sr-only">AI Lead Response and Workflow Automation for B2B Teams</h1>
                 <HeroShutterText text="YOUR BUSINESS. AUTOMATED." />
                 <p className="mt-8 max-w-2xl text-center text-base md:text-lg muted-copy">
-                    Most inbound leads wait hours for a reply. I build the system that answers, qualifies, and logs every one into your CRM within minutes — on the stack you already use, in 5 days.
+                    Most inbound leads wait hours for a reply. I build the system that answers, qualifies, and logs every one into your CRM within minutes, on the stack you already use, in 5 days.
                 </p>
                 <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
                     <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
@@ -93,7 +93,7 @@ export default function Hero() {
                     <div className="space-y-4">
                         <p className="text-xs font-semibold uppercase tracking-[0.25em] muted-copy">How It Works</p>
                         <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">From bottleneck to automated in days</h2>
-                        <p className="max-w-xl muted-copy">I scope it, build it, and hand it off — with documentation so it keeps running.</p>
+                        <p className="max-w-xl muted-copy">I scope it, build it, and hand it off, with documentation so it keeps running.</p>
                     </div>
                     <div className="grid gap-4">
                         {[

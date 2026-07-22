@@ -27,13 +27,13 @@ export default function AboutPage() {
                 <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight">About Shahzeb Bajwa</h1>
                 <div className="mx-auto mt-8 max-w-2xl space-y-6 text-left muted-copy">
                     <p>
-                        I spent 6+ years in B2B SaaS sales — currently as an Account Executive at Motive — before I started building the systems I kept wishing existed while I was selling.
+                        I spent 6+ years in B2B SaaS sales, currently as an Account Executive at Motive, before I started building the systems I kept wishing existed while I was selling.
                     </p>
                     <p>
                         Every sales team I&apos;ve worked in had the same two leaks: inbound leads went cold waiting for a human, and the context that mattered never made it into the CRM. Most people who can fix that technically have never carried a number. Most people who&apos;ve carried a number can&apos;t build.
                     </p>
                     <p>
-                        I do both. I&apos;m also completing a CS degree, and I build on n8n, Make, HubSpot, and the Claude and OpenAI APIs.
+                        I do both. I hold a CS degree, and I build on n8n, Make, HubSpot, and the Claude and OpenAI APIs.
                     </p>
                     <p>
                         I work with a small number of clients at a time so builds actually ship in days, not quarters.
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Decorative floating icons — purely visual, hidden on mobile */}
+            {/* Decorative floating icons (purely visual, hidden on mobile) */}
             <div aria-hidden="true" className="pointer-events-none select-none absolute top-20 right-10 opacity-[0.06] subtle-float hidden md:block" style={{ animationDelay: "0s" }}>
                 <Cpu className="w-16 h-16" />
             </div>

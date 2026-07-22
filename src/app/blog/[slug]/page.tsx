@@ -112,7 +112,7 @@ export default async function BlogPost(props: Props) {
                     "name": "Which is easier: Zapier or Make?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Zapier is easier for simple 2-step automations. Make is more capable for multi-step workflows with filters, iterators, and error handling — and significantly cheaper at scale."
+                        "text": "Zapier is easier for simple 2-step automations. Make is more capable for multi-step workflows with filters, iterators, and error handling, and it's significantly cheaper at scale."
                     }
                 }
             ]
@@ -135,7 +135,7 @@ export default async function BlogPost(props: Props) {
                     "name": "Can I automate workflows without coding?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. Tools like Make.com, n8n, and Zapier allow full workflow automation without writing code. Most AI integrations — including GPT-4 and Claude — are available as native modules in these platforms."
+                        "text": "Yes. Tools like Make.com, n8n, and Zapier allow full workflow automation without writing code. Most AI integrations, including GPT-4 and Claude, are available as native modules in these platforms."
                     }
                 }
             ]
@@ -150,7 +150,7 @@ export default async function BlogPost(props: Props) {
                     "name": "How long does it take to build an AI workflow?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "A simple AI workflow — like automated lead research or report generation — takes 2–4 hours to build in Make.com or n8n with no prior experience. More complex multi-step workflows with error handling typically take 1–2 days."
+                        "text": "A simple AI workflow, like automated lead research or report generation, takes 2–4 hours to build in Make.com or n8n with no prior experience. More complex multi-step workflows with error handling typically take 1–2 days."
                     }
                 },
                 {

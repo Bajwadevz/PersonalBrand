@@ -7,7 +7,7 @@ keywords: 'internal AI tools, AI systems for teams'
 
 # Building Internal AI Tools for Small Teams
 
-Internal AI tools are systems your team uses daily—briefings, triage, drafting, research—not customer-facing products. This guide covers when to build them, a lightweight architecture approach, security and data considerations, and how to scale without adding complexity.
+Internal AI tools are systems your team uses daily (briefings, triage, drafting, research), not customer-facing products. This guide covers when to build them, a lightweight architecture approach, security and data considerations, and how to scale without adding complexity.
 
 ## When to Build Internal AI Tools
 
@@ -64,6 +64,6 @@ Scaling internal AI tools means more workflows and more users, not necessarily b
 
 **Cap complexity per workflow.** If a single workflow becomes hard to follow (e.g., 20+ steps, many branches), split it into smaller workflows or simplify. Prefer two clear workflows over one "flexible" monster. See [why most AI automations fail](/blog/why-ai-automations-fail) for common failure modes.
 
-Scaling well means more of the same kind of thing—clear, owned, documented—not a single giant system. Internal AI tools should feel like a set of reliable utilities, not a second full-time platform to maintain.
+Scaling well means more of the same kind of thing: clear, owned, documented, not a single giant system. Internal AI tools should feel like a set of reliable utilities, not a second full-time platform to maintain.
 
 > For frameworks that take you from first workflow to a scalable set of internal tools, [get the Playbook](/product).

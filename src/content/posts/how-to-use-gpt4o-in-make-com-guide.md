@@ -13,7 +13,7 @@ ogImage: /og-how-to-use-gpt4o-in-make-com-guide.png
 
 ## Why Make + GPT-4o Is the Best Combo for Operators
 
-Make gives you triggers, branching, and 400+ integrations; GPT-4o gives you reasoning and language. Together you get: lead research, draft generation, summarization, and classification inside one visual scenario. No servers, no custom code—just scenario design and an API key.
+Make gives you triggers, branching, and 400+ integrations; GPT-4o gives you reasoning and language. Together you get: lead research, draft generation, summarization, and classification inside one visual scenario. No servers, no custom code, just scenario design and an API key.
 
 ## Prerequisites: API Key and Make Account
 
@@ -53,7 +53,7 @@ Example system message for [lead research](/blog/ai-lead-research-system-make-op
 
 ## Handling Outputs: JSON Parsing, Text Splitting
 
-- **JSON:** If you asked for JSON, add a **JSON – Parse JSON** module after OpenAI. Map the AI output into the "JSON string" field. Then map parsed fields into CRM, Airtable, etc.
+- **JSON:** If you asked for JSON, add a **JSON: Parse JSON** module after OpenAI. Map the AI output into the "JSON string" field. Then map parsed fields into CRM, Airtable, etc.
 - **Plain text:** Use **Text Parser** or **Set variable** if you need to extract a specific part (e.g. first paragraph).
 - **Errors:** Add error handling: if OpenAI or the parser fails, route to a Slack alert or a "manual review" path.
 

@@ -208,7 +208,7 @@ export default function ROICalculatorClient() {
             <section className="py-24 px-6 max-w-4xl mx-auto w-full prose prose-lg prose-gray relative z-10">
                 <h2 className="text-2xl font-bold mb-6 text-[#0F172A]">What is AI workflow automation ROI?</h2>
                 <p className="mb-6 leading-relaxed text-gray-600">
-                    AI workflow automation ROI measures the value recovered from replacing manual, repetitive tasks with automated systems. For most operators and small teams, the biggest gains come from processes that involve data movement, decision routing, and repetitive communication — think lead research, CRM updates, report generation, and outbound follow-ups.
+                    AI workflow automation ROI measures the value recovered from replacing manual, repetitive tasks with automated systems. For most operators and small teams, the biggest gains come from processes that involve data movement, decision routing, and repetitive communication: think lead research, CRM updates, report generation, and outbound follow-ups.
                 </p>
                 <p className="mb-6 leading-relaxed text-gray-600">
                     This calculator uses your team size, hourly rate, and hours spent on manual tasks to estimate the dollar value of time your team would recover. The automation efficiency percentage is based on real-world observations across Make.com, n8n, and OpenAI-powered workflows. Most teams save 55–80% of the time they currently spend on automatable tasks.

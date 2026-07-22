@@ -4,7 +4,7 @@ export default function About() {
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8">About Bajwa Dev</h2>
             <div className="space-y-4 text-lg leading-relaxed text-gray-600 max-w-[720px]">
                 <p>
-                    I&apos;m Shahzaib (Bajwa Dev), a computer science student and SaaS operator building toward AI-first engineering.
+                    I&apos;m Shahzaib (Bajwa Dev), a computer science graduate and SaaS operator building toward AI-first engineering.
                 </p>
                 <p>
                     My focus is systems: how software is structured, deployed, monetized, and scaled.

@@ -3,18 +3,18 @@ import GlassPanel from "@/components/GlassPanel";
 import KitEmbedForm from "@/components/KitEmbedForm";
 
 export const metadata: Metadata = {
-    title: "The AI Automation Playbook — Coming Soon",
+    title: "The AI Automation Playbook: Coming Soon",
     description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
     alternates: {
         canonical: "https://bajwaa.dev/product",
     },
     openGraph: {
-        title: "The AI Automation Playbook — Coming Soon | Bajwaa Dev",
+        title: "The AI Automation Playbook: Coming Soon | Bajwaa Dev",
         description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
         url: "https://bajwaa.dev/product",
     },
     twitter: {
-        title: "The AI Automation Playbook — Coming Soon | Bajwaa Dev",
+        title: "The AI Automation Playbook: Coming Soon | Bajwaa Dev",
         description: "A self-serve playbook of the automation frameworks I use in production. Join the waitlist for early access.",
     },
 };

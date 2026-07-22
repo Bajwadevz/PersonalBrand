@@ -11,7 +11,7 @@ AI automations fail for predictable reasons: structural design mistakes, lack of
 
 ## Structural Design Mistakes
 
-The most common failure is not the model or the API—it is the shape of the workflow.
+The most common failure is not the model or the API; it is the shape of the workflow.
 
 **No clear trigger.** The workflow is supposed to run "when something happens," but the trigger is vague (e.g., "when we get a lead"). In production, "something" never fires consistently, or it fires too often. Fix: Define the trigger precisely. Webhook from which system? Schedule at what time? Manual run by whom? Document it and build to that.
 
@@ -61,8 +61,8 @@ When an automation is already broken, fix it in order.
 
 **5. Re-validate.** Confirm that the process is still worth automating. If the business process has changed, [audit your workflow](/blog/how-to-audit-your-workflow-for-ai-automation) again and adjust the design. Then redeploy with clear ownership and feedback loops.
 
-Fixing broken automation is often faster than building from scratch—if you simplify, observe, and assign ownership. The goal is not a perfect workflow; it is one that runs reliably and improves over time.
+Fixing broken automation is often faster than building from scratch, if you simplify, observe, and assign ownership. The goal is not a perfect workflow; it is one that runs reliably and improves over time.
 
-Most AI automations fail because of structure, feedback, or ownership—not because of the model. Fix those three, and you go from "automation that kind of works" to [systems that actually ship](/blog/designing-ai-workflows-that-actually-ship) and stay healthy.
+Most AI automations fail because of structure, feedback, or ownership, not because of the model. Fix those three, and you go from "automation that kind of works" to [systems that actually ship](/blog/designing-ai-workflows-that-actually-ship) and stay healthy.
 
 > For step-by-step frameworks to audit, design, and fix automations, [get the Playbook](/product).

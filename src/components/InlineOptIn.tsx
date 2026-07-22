@@ -62,7 +62,7 @@ export default function InlineOptIn() {
         <div className={`my-8 bg-[#E8F1F8] border border-[#D1E4F0] rounded-lg px-7 py-6 w-full ${syne.variable} ${dmSans.variable} font-sans`}>
             <div className="flex flex-col gap-2 mb-5">
                 <h3 className="text-[16px] font-bold text-[#0D1B2A] font-syne leading-tight m-0">
-                    Get the AI Automation Playbook — free
+                    Get the AI Automation Playbook, free
                 </h3>
                 <p className="text-[13px] text-[#0D1B2A]/60 font-sans leading-relaxed m-0">
                     The exact frameworks, prompt chains, and system architectures I use to automate sales research, reporting, and outbound. Delivered to your inbox.

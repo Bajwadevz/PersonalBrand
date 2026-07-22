@@ -9,7 +9,7 @@ author: Shahzaib Bajwa
 ogImage: /og-ai-lead-research-system-make-openai.png
 ---
 
-Manual lead research is killing your sales velocity. If you're still spending 20 minutes per prospect digging through LinkedIn, company blogs, and news alerts before every call, you're leaving pipeline on the table. **AI lead research automation** changes that. This guide walks you through building a no-code system that automatically enriches every new CRM lead with company intel, pain points, and recent news—before you pick up the phone.
+Manual lead research is killing your sales velocity. If you're still spending 20 minutes per prospect digging through LinkedIn, company blogs, and news alerts before every call, you're leaving pipeline on the table. **AI lead research automation** changes that. This guide walks you through building a no-code system that automatically enriches every new CRM lead with company intel, pain points, and recent news, before you pick up the phone.
 
 ## Why Manual Lead Research Is Killing Your Sales Velocity
 
@@ -50,7 +50,7 @@ Map the fields you need for enrichment: at minimum, **company domain** (or compa
 
 ### 2. HTTP Module: Call OpenAI With Enrichment Prompt
 
-Add an "HTTP – Make a Request" module:
+Add an "HTTP: Make a Request" module:
 
 - **URL:** `https://api.openai.com/v1/chat/completions`
 - **Method:** POST
@@ -67,7 +67,7 @@ In the user message, pass the company name or domain from the trigger (e.g. `{{1
 
 ### 3. Parser: Extract Company Size, News, Pain Points
 
-OpenAI returns a JSON object inside the response. Add a "JSON – Parse JSON" module (or "Tools – Set Variable" with a JSON path). Map:
+OpenAI returns a JSON object inside the response. Add a "JSON: Parse JSON" module (or "Tools: Set Variable" with a JSON path). Map:
 
 - `companySize` → from parsed response
 - `recentNews` → from parsed response
@@ -78,7 +78,7 @@ Handle errors: if the AI returns invalid JSON, add an error handler route that l
 
 ### 4. Updater: Push Dossier Back to CRM Record
 
-Add your CRM's "Update a Record" module. Select the same record using the record ID from the trigger. Map the parsed fields to the correct CRM properties (e.g. "Research – Company Size", "Research – Recent News", "Research – Pain Points", "Research – Hook"). Run the scenario once with a test lead and confirm the record updates.
+Add your CRM's "Update a Record" module. Select the same record using the record ID from the trigger. Map the parsed fields to the correct CRM properties (e.g. "Research: Company Size", "Research: Recent News", "Research: Pain Points", "Research: Hook"). Run the scenario once with a test lead and confirm the record updates.
 
 ## The Exact System Prompt to Use
 

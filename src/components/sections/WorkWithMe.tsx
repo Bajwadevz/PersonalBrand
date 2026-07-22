@@ -19,7 +19,7 @@ const offers: Offer[] = [
         title: "AI Lead Response & Pipeline Automation",
         tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
         price: "From $1,500",
-        priceNote: "Founding client rate — 2 spots",
+        priceNote: "Founding client rate (2 spots)",
         ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary",

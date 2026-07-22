@@ -13,7 +13,7 @@ const questions: Question[] = [
   // Current State
   { text: "Take me back to when you first bought [Current System]. What was the original goal, and where is it falling short today?", stage: "Current State", persona: "Operations" },
   { text: "When [Process] breaks down right now, who gets the frantic Slack message?", stage: "Current State", persona: "Manager" },
-  { text: "Walk me through how your team currently handles [Task]—from the moment the data enters the system to the final report.", stage: "Current State", persona: "End User" },
+  { text: "Walk me through how your team currently handles [Task], from the moment the data enters the system to the final report.", stage: "Current State", persona: "End User" },
   { text: "On a scale of 1-10, how confident are you in the accuracy of the data your team uses to make decisions?", stage: "Current State", persona: "Executive" },
   { text: "What is the most manual, copy-paste heavy part of your day right now?", stage: "Current State", persona: "End User" },
 

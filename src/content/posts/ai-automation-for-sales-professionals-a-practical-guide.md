@@ -22,7 +22,7 @@ In sales, time is the literal currency of your pipeline. To understand the gravi
 - Drafting custom outreach strings and context-heavy follow-ups: 2 hours/week.
 - Updating CRM fields, logging call resolutions, and triaging inbound leads: 1.5 hours/week.
 
-That is a minimum of 5 hours a week wasted on tasks that do not require elite negotiation skills. Over the course of a quarter, that is 60 hours—a week and a half of pure selling time—lost to data entry. 
+That is a minimum of 5 hours a week wasted on tasks that do not require elite negotiation skills. Over the course of a quarter, that is 60 hours (a week and a half of pure selling time) lost to data entry. 
 
 Executing AI automation for sales professionals isn’t about replacing the salesperson; it is about building a digital assistant that handles the friction before the phone is dialed. When you reclaim this time, you instantly increase the volume of prospect interactions without sacrificing personalization.
 

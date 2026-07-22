@@ -14,7 +14,7 @@ const openers: Opener[] = [
   // C-Suite / Founders
   { text: "Noticed [Company]'s recent push into [New Market]. Given the shift, are you prioritizing [Specific Outcome] this quarter?", role: "C-Suite / Founder", tactic: "Recent Event", offerType: "Strategic Consulting" },
   { text: "Usually when companies hit [Milestone, e.g., Series B], the biggest drag on growth is [Pain Point]. Is that on your radar right now?", role: "C-Suite / Founder", tactic: "Milestone", offerType: "Software / System" },
-  { text: "I'll keep this brief — [Competitor X] recently implemented [Strategy] to cut [Cost] by [X]%. Curious if you're exploring similar efficiency plays?", role: "C-Suite / Founder", tactic: "Competitor Mention", offerType: "Cost Reduction" },
+  { text: "I'll keep this brief: [Competitor X] recently implemented [Strategy] to cut [Cost] by [X]%. Curious if you're exploring similar efficiency plays?", role: "C-Suite / Founder", tactic: "Competitor Mention", offerType: "Cost Reduction" },
   { text: "Saw your post on LinkedIn about [Topic]. Agree completely, especially regarding [Specific Point]. It made me wonder how you handle [Related Problem] at [Company]?", role: "C-Suite / Founder", tactic: "Content Reference", offerType: "Targeted Solution" },
   { text: "Most founders I speak to in [Industry] are struggling to balance [Priority A] and [Priority B] right now. How is [Company] navigating that trade-off?", role: "C-Suite / Founder", tactic: "Industry Trend", offerType: "Strategic Tool" },
   
@@ -23,7 +23,7 @@ const openers: Opener[] = [
   { text: "Just read the [Company] 10-K/quarterly update. With the focus on [Goal, e.g., upmarket expansion], how are your AEs adjusting their outbound motion?", role: "Sales Leadership", tactic: "Company Strategy", offerType: "Training / Strategy" },
   { text: "Most VP Sales in [Industry] are telling me win rates dropped [X]% this quarter due to [Reason]. Is your team feeling that same pressure?", role: "Sales Leadership", tactic: "Industry Pain", offerType: "Process Improvement" },
   { text: "Noticed you're using [Competitor Tool / Legacy Tool] for [Task]. Are your reps actually adopting it, or is it mostly shelfware?", role: "Sales Leadership", tactic: "Tech Stack", offerType: "Software Replacement" },
-  { text: "Quick question — if your reps could eliminate [Manual Task], how much more pipeline could they generate this quarter?", role: "Sales Leadership", tactic: "Hypothetical Scenario", offerType: "Automation" },
+  { text: "Quick question: if your reps could eliminate [Manual Task], how much more pipeline could they generate this quarter?", role: "Sales Leadership", tactic: "Hypothetical Scenario", offerType: "Automation" },
   
   // Marketing Leadership
   { text: "Loved the recent campaign for [Product/Feature]. But noticed your inbound routing seems to be sending leads to [Incorrect Place/Delay]. Is that intentional?", role: "Marketing Leadership", tactic: "Observation / Critique", offerType: "Ops / Optimization" },
@@ -37,7 +37,7 @@ const openers: Opener[] = [
   { text: "With the upcoming compliance changes for [Regulation], how confident are you in your current [System Type] setup?", role: "Operations / IT", tactic: "Compliance / Risk", offerType: "Security / Compliance Tool" },
   { text: "Most Ops teams spend [X] hours a week just manually reconciling [Data Point]. Is that a bottleneck for your team currently?", role: "Operations / IT", tactic: "Process Inefficiency", offerType: "Automation" },
   { text: "Saw you recently implemented [Major System, e.g., Salesforce]. Are you getting the expected ROI, or is user adoption still a struggle?", role: "Operations / IT", tactic: "Recent Implementation", offerType: "Consulting / Optimization" },
-  { text: "Quick question on your infrastructure — are you planning to migrate [Legacy System] this year, or maintaining the status quo?", role: "Operations / IT", tactic: "Direct Inquiry", offerType: "Migration Services" },
+  { text: "Quick question on your infrastructure: are you planning to migrate [Legacy System] this year, or maintaining the status quo?", role: "Operations / IT", tactic: "Direct Inquiry", offerType: "Migration Services" },
 
   // HR / Recruiting
   { text: "Noticed [Company] has [X] open roles for [Hard to Fill Position]. How is the current talent shortage impacting your time-to-hire?", role: "HR / Recruiting", tactic: "Job Openings", offerType: "Recruiting Service" },

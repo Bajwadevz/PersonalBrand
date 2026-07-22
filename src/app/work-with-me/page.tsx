@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { TrendingUp, Zap, BookOpen, Check, MessageSquare, Hammer, Rocket } from "lucide-react";
+import LoomEmbed from "@/components/LoomEmbed";
 
 export const metadata: Metadata = {
     title: "Work With Me",
@@ -24,7 +25,7 @@ const offers = [
         title: "AI Lead Response & Pipeline Automation",
         tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
         description:
-            "The average B2B team takes hours to respond to an inbound lead — and most of that lead's context never makes it into the CRM. I build the layer that closes both gaps: AI qualification on every form fill and inbound reply, routing to the right owner, and automatic writeback with full conversation context. Built on your existing CRM in 5 days.",
+            "The average B2B team takes hours to respond to an inbound lead, and most of that lead's context never makes it into the CRM. I build the layer that closes both gaps: AI qualification on every form fill and inbound reply, routing to the right owner, and automatic writeback with full conversation context. Built on your existing CRM in 5 days.",
         deliverables: [
             "Inbound capture, AI scoring & routing logic",
             "AI-drafted first response + follow-up sequence",
@@ -32,7 +33,7 @@ const offers = [
             "Loom walkthrough + 30 days async support",
         ],
         price: "From $1,500",
-        priceNote: "Founding client rate — 2 spots",
+        priceNote: "Founding client rate, 2 spots",
         ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary" as const,
@@ -44,7 +45,7 @@ const offers = [
         title: "Operations Workflow Build",
         tagline: "Eliminate your biggest manual bottleneck.",
         description:
-            "For teams already handling inbound well. Reporting, data routing, onboarding, internal alerts — designed and built on n8n or Make, scoped per project.",
+            "For teams already handling inbound well. Reporting, data routing, onboarding, internal alerts, designed and built on n8n or Make, scoped per project.",
         deliverables: [
             "Process mapping & bottleneck audit",
             "n8n / Make / Zapier workflow build",
@@ -111,26 +112,12 @@ export default function WorkWithMePage() {
                     <p className="mx-auto mt-4 max-w-2xl text-lg muted-copy">
                         One flagship build, plus two other ways in.
                     </p>
-
-                    {/* LOOM EMBED PLACEHOLDER — replace REPLACE_WITH_LOOM_ID with real ID */}
-                    <div
-                        className="relative mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl glass-card"
-                        style={{ aspectRatio: "16 / 9" }}
-                    >
-                        <iframe
-                            src="https://www.loom.com/embed/REPLACE_WITH_LOOM_ID"
-                            allow="fullscreen"
-                            allowFullScreen
-                            className="absolute inset-0 h-full w-full"
-                            title="Work With Me — 90 second overview"
-                        />
-                    </div>
                 </div>
             </section>
 
             {/* Offer Cards */}
             <section className="container-shell mt-4">
-                {/* Flagship — visually dominant, first position */}
+                {/* Flagship: visually dominant, first position */}
                 {(() => {
                     const offer = offers[0];
                     return (
@@ -174,7 +161,14 @@ export default function WorkWithMePage() {
                     );
                 })()}
 
-                {/* Secondary offers — lighter, smaller */}
+                <div className="mt-10">
+                    <LoomEmbed
+                        eyebrow="WHAT YOU'RE BUYING"
+                        heading="A 2-minute walkthrough of the build"
+                    />
+                </div>
+
+                {/* Secondary offers, lighter and smaller */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 items-stretch">
                     {offers.slice(1).map((offer) => (
                         <div

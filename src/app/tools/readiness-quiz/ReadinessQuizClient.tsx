@@ -69,7 +69,7 @@ const questions = [
     id: 7,
     question: "How much budget could you allocate to automation tools monthly?",
     options: [
-      { label: "$0 — must be free", score: 1 },
+      { label: "$0, must be free", score: 1 },
       { label: "$20–50/month", score: 2 },
       { label: "$50–200/month", score: 3 },
       { label: "$200+/month", score: 4 },
@@ -99,10 +99,10 @@ const questions = [
     id: 10,
     question: "Who owns automation decisions in your organization?",
     options: [
-      { label: "No one — it's unclear", score: 1 },
+      { label: "No one, it's unclear", score: 1 },
       { label: "IT or an external vendor", score: 2 },
       { label: "Ops or team lead", score: 3 },
-      { label: "Me — I make the call", score: 4 },
+      { label: "Me, I make the call", score: 4 },
     ],
   },
 ];
@@ -119,11 +119,11 @@ function getResult(score: number): Result {
   if (score <= 15) {
     return {
       label: "Automation Beginner",
-      description: "You are in the early exploration phase. Your processes are not fully defined yet — which is actually the right time to start, before bad habits scale.",
+      description: "You are in the early exploration phase. Your processes are not fully defined yet, which is actually the right time to start, before bad habits scale.",
       nextSteps: [
         "Pick one high-frequency task you do manually every day. That is your first automation target. Do not start with anything else.",
         "Set up Make.com on the free tier. Connect two tools you already use and automate one handoff between them.",
-        "Read the Workflow Automation Audit Guide before building anything — it will save you from the most common mistakes.",
+        "Read the Workflow Automation Audit Guide before building anything, it will save you from the most common mistakes.",
       ],
       ctaLabel: "Read the Workflow Audit Guide →",
       ctaHref: "/blog/how-to-audit-your-workflow-for-ai-automation",
@@ -134,7 +134,7 @@ function getResult(score: number): Result {
       label: "Automation Ready",
       description: "You have the tools, the processes, and the awareness. What is missing is a system that connects them. You are 1–2 focused builds away from serious leverage.",
       nextSteps: [
-        "Map your top 3 manual workflows and rank by time cost per week. Work on number one only — do not split focus.",
+        "Map your top 3 manual workflows and rank by time cost per week. Work on number one only. Do not split focus.",
         "Choose n8n or Make as your primary automation layer and commit to one platform. Read the n8n vs Make comparison to decide.",
         "Use the Automation Stack Recommender to find the right tools for your exact situation before buying anything new.",
       ],
@@ -145,10 +145,10 @@ function getResult(score: number): Result {
   if (score <= 35) {
     return {
       label: "Automation Operator",
-      description: "You are already building. The gap now is architecture — making your automations resilient and compounding instead of brittle one-off fixes.",
+      description: "You are already building. The gap now is architecture: making your automations resilient and compounding instead of brittle one-off fixes.",
       nextSteps: [
         "Audit your existing automations for single points of failure. Add error handling and fallback logic to your top 3 workflows.",
-        "Read the guide on designing AI workflows that actually ship — most operator automations break at deployment, not design.",
+        "Read the guide on designing AI workflows that actually ship: most operator automations break at deployment, not design.",
         "Book a discovery call. At your stage, a second set of eyes on your architecture will unlock the next level faster than more solo building.",
       ],
       ctaLabel: "Join the Waitlist →",
@@ -157,10 +157,10 @@ function getResult(score: number): Result {
   }
   return {
     label: "Automation Architect",
-    description: "You think in systems. You are ready for compound automation — multi-step workflows that self-correct and run without you. This is where serious leverage lives.",
+    description: "You think in systems. You are ready for compound automation: multi-step workflows that self-correct and run without you. This is where serious leverage lives.",
     nextSteps: [
       "Map your current automations and identify every point where a human decision is still required. Those are your next AI nodes.",
-      "Implement a modular architecture in n8n using sub-workflows — this makes each piece reusable and your whole system maintainable.",
+      "Implement a modular architecture in n8n using sub-workflows, this makes each piece reusable and your whole system maintainable.",
       "Calculate the full annual ROI of your current stack. You likely have a strong case for investing in a custom-built internal tool.",
     ],
     ctaLabel: "Calculate your ROI →",
@@ -209,7 +209,7 @@ export default function ReadinessQuizClient() {
           Automation Readiness Quiz
         </h1>
         <p className="text-xl max-w-2xl text-gray-600 font-medium leading-relaxed">
-          Answer 10 questions. Get a readiness score and 3 personalized next steps based on where you actually are — not generic advice.
+          Answer 10 questions. Get a readiness score and 3 personalized next steps based on where you actually are, not generic advice.
         </p>
       </section>
 

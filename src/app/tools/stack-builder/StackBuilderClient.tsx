@@ -62,7 +62,7 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
 
   const stack: StackItem[] = [];
 
-  // Automation layer — always first
+  // Automation layer: always first
   if (isFree) {
     stack.push({
       tool: "n8n (self-hosted)",
@@ -85,7 +85,7 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
   stack.push({
     tool: "Airtable",
     role: "Structured data layer",
-    why: "Acts as your automation database — stores enriched leads, client records, and workflow outputs in a format both humans and automations can read and write. Free tier handles most solo/small team needs.",
+    why: "Acts as your automation database: stores enriched leads, client records, and workflow outputs in a format both humans and automations can read and write. Free tier handles most solo/small team needs.",
     cost: "Free–$20/month",
     tier: "essential",
   });
@@ -127,7 +127,7 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
     stack.push({
       tool: "Notion",
       role: "Internal knowledge and reporting hub",
-      why: "Automations write summaries, reports, and data outputs directly into Notion pages via API. Your team reads from Notion — your automations write to it. No manual compilation.",
+      why: "Automations write summaries, reports, and data outputs directly into Notion pages via API. Your team reads from Notion, your automations write to it. No manual compilation.",
       cost: "Free–$10/month",
       tier: "recommended",
     });
@@ -149,7 +149,7 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
     stack.push({
       tool: "Calendly",
       role: "Automated scheduling and onboarding triggers",
-      why: "When a client books, Calendly fires a webhook into Make or n8n — triggering automated onboarding sequences, CRM updates, and intake form assignments without manual work.",
+      why: "When a client books, Calendly fires a webhook into Make or n8n, triggering automated onboarding sequences, CRM updates, and intake form assignments without manual work.",
       cost: "Free–$12/month",
       tier: "recommended",
     });
@@ -169,12 +169,12 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
   // Build summaries
   const summaries: Record<string, string> = {
     "Solo Founder": "A lean, low-cost stack built for one operator to run like a team of five. The automation layer connects your data and handles the repetitive work so you focus on decisions only you can make.",
-    "Sales Team (2–10 reps)": "A sales-focused stack that eliminates manual research, CRM updates, and follow-up writing. Reps spend time selling — the system handles everything else.",
+    "Sales Team (2–10 reps)": "A sales-focused stack that eliminates manual research, CRM updates, and follow-up writing. Reps spend time selling. The system handles everything else.",
     "Marketing Team": "An automation stack that turns one piece of content into many, runs reporting automatically, and keeps your tools in sync without manual exports.",
     "Operations Lead": "A system-first stack for eliminating data entry, syncing tools, and delivering automated reports. Designed to give ops leverage without adding headcount.",
-    "Recruiting Team": "A recruiting stack that automates candidate sourcing, outreach sequencing, and pipeline updates so your team spends time on conversations — not admin.",
+    "Recruiting Team": "A recruiting stack that automates candidate sourcing, outreach sequencing, and pipeline updates so your team spends time on conversations, not admin.",
     "Agency / Consultant": "A client-delivery stack that automates onboarding, reporting, and communication so you can serve more clients without proportionally more time.",
-    "Product Team": "An ops stack for product teams — automated user feedback collection, reporting, and internal tool syncing so your team ships faster with better information.",
+    "Product Team": "An ops stack for product teams: automated user feedback collection, reporting, and internal tool syncing so your team ships faster with better information.",
     "Customer Success Team": "A CS stack that automates health scoring, follow-ups, and renewal tracking so your team stays proactive on every account without manual checking.",
   };
 
@@ -201,7 +201,7 @@ function buildStack(role: string, selectedGoals: string[], budget: string): Stac
   };
 
   return {
-    summary: summaries[role] ?? "A focused automation stack matched to your role and goals. Start with the essential tier — get that working before adding recommended tools.",
+    summary: summaries[role] ?? "A focused automation stack matched to your role and goals. Start with the essential tier. Get that working before adding recommended tools.",
     stack,
     firstBuild: firstBuilds[role] ?? "Start with the highest time-cost manual task you do every week. Build one automation that handles it end-to-end before touching anything else.",
     readMore: readMoreLinks[role] ?? { label: "Read the Automation Audit Guide →", href: "/blog/how-to-audit-your-workflow-for-ai-automation" },
@@ -244,7 +244,7 @@ export default function StackBuilderClient() {
           Automation Stack Recommender
         </h1>
         <p className="text-xl max-w-2xl text-gray-600 font-medium leading-relaxed">
-          Select your role, goals, and budget. Get a specific stack recommendation with justification for each tool — built for your exact situation.
+          Select your role, goals, and budget. Get a specific stack recommendation with justification for each tool, built for your exact situation.
         </p>
       </section>
 

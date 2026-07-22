@@ -13,7 +13,7 @@ Before this build, I was spending about three hours every Friday pulling numbers
 
 ## The Before: 3 Hours Every Friday Manually Compiling Reports
 
-Every Friday I’d open Notion databases, Airtable views, and a couple of Google Sheets. I’d copy metrics, paste them into a doc, and write a narrative. Same structure every week—revenue, pipeline, support tickets, top wins—but fully manual. It was the perfect candidate for [AI automation stack](/blog/ai-automation-stack-operators-2025) treatment: repeatable, structured, and time-consuming.
+Every Friday I’d open Notion databases, Airtable views, and a couple of Google Sheets. I’d copy metrics, paste them into a doc, and write a narrative. Same structure every week: revenue, pipeline, support tickets, top wins, but fully manual. It was the perfect candidate for [AI automation stack](/blog/ai-automation-stack-operators-2025) treatment: repeatable, structured, and time-consuming.
 
 ## The After: Zero-Touch Weekly Report in Your Inbox
 
@@ -31,14 +31,14 @@ Make has native modules for all three. I use "Search Records" or "List Records" 
 
 ## The Make Scenario (Step-by-Step)
 
-1. **Trigger:** "Schedule" — every Friday at 5 p.m. (or your preferred time).
-2. **Module 2 — Notion:** "Search Records" or "List Records" for your deals DB. Filter: updated or created in last 7 days. Map: deal name, stage, value, close date. Repeat for tasks if you use them. Output: one text block per source (e.g. "Deals this week: …").
-3. **Module 3 — (Optional) Airtable/Sheets:** Same idea—pull the views you care about, output a text summary of the numbers.
-4. **Module 4 — OpenAI:** One HTTP or native "OpenAI" module. System prompt (see below). User message: the concatenated text from steps 2–3.
-5. **Module 5 — Notion:** "Create a Page" in your Reports database (or a dedicated parent page). Title: "Weekly Report – [current date]". Body: the AI output (use "Build a string" if you need to add markdown).
-6. **Module 6 — Email or Slack:** Send yourself (and optionally team) the same summary. I use Gmail "Send an Email" with a fixed subject like "Weekly Report – [date]."
+1. **Trigger:** "Schedule", every Friday at 5 p.m. (or your preferred time).
+2. **Module 2, Notion:** "Search Records" or "List Records" for your deals DB. Filter: updated or created in last 7 days. Map: deal name, stage, value, close date. Repeat for tasks if you use them. Output: one text block per source (e.g. "Deals this week: …").
+3. **Module 3, (Optional) Airtable/Sheets:** Same idea: pull the views you care about, output a text summary of the numbers.
+4. **Module 4, OpenAI:** One HTTP or native "OpenAI" module. System prompt (see below). User message: the concatenated text from steps 2–3.
+5. **Module 5, Notion:** "Create a Page" in your Reports database (or a dedicated parent page). Title: "Weekly Report: [current date]". Body: the AI output (use "Build a string" if you need to add markdown).
+6. **Module 6, Email or Slack:** Send yourself (and optionally team) the same summary. I use Gmail "Send an Email" with a fixed subject like "Weekly Report: [date]."
 
-No routers required for a first version—one linear flow is enough.
+No routers required for a first version: one linear flow is enough.
 
 ## The AI Summarization Prompt
 
@@ -48,7 +48,7 @@ No routers required for a first version—one linear flow is enough.
 You are a concise business reporter. Given raw data from the past week (deals, tasks, metrics), write a short weekly report (under 300 words) with: 1) Headline and 2–3 bullet highlights, 2) Key numbers (revenue, pipeline, tasks), 3) One short paragraph of narrative and next-week focus. Use clear headings. No fluff. Output in markdown.
 ```
 
-**User message:** The concatenated text from your Notion/Airtable/Sheets steps. Example: "Deals this week: Deal A – Stage: Proposal – $5k. Deal B – Stage: Negotiation – $12k. Tasks completed: 14."
+**User message:** The concatenated text from your Notion/Airtable/Sheets steps. Example: "Deals this week: Deal A: Stage: Proposal, $5k. Deal B: Stage: Negotiation, $12k. Tasks completed: 14."
 
 The AI returns a formatted report; that string goes into the Notion page and the email body.
 
@@ -56,7 +56,7 @@ The AI returns a formatted report; that string goes into the Notion page and the
 
 - **Notion:** New page in your Reports DB (or under a "Reports" parent) with the full markdown. Easy to search and link.
 - **Email:** Same content in the body so you and stakeholders get it in inbox.
-- **Slack (optional):** Add a "Slack – Create a Message" step with a shortened version (e.g. first 2 bullets + link to Notion).
+- **Slack (optional):** Add a "Slack: Create a Message" step with a shortened version (e.g. first 2 bullets + link to Notion).
 
 ## Lessons Learned and Edge Cases
 

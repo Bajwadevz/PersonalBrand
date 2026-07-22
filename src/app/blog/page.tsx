@@ -6,18 +6,18 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Blog",
     description:
-        "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+        "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
     alternates: {
         canonical: "https://bajwaa.dev/blog",
     },
     openGraph: {
         title: "Blog | Bajwaa Dev",
-        description: "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+        description: "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
         url: "https://bajwaa.dev/blog",
     },
     twitter: {
         title: "Blog | Bajwaa Dev",
-        description: "Practical writing on AI workflow automation, CRM systems, and sales operations — from someone who builds and sells.",
+        description: "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
     },
 };
 

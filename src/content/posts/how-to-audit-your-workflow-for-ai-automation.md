@@ -42,7 +42,7 @@ These are tasks like data entry, copy-pasting formatting, downloading invoices, 
 These are tasks like drafting personalized enterprise sales emails, reviewing legal redlines, or writing technical documentation. An AI cannot (and should not) do this perfectly autonomously. However, an AI can confidently prepare a 90% accurate draft. You automate the preparation phase, and the human executing the task retains final editorial control.
 
 ### Q3: Low Frequency + Low Complexity (The Batch Zone)
-These are rote tasks that happen rarely—perhaps extracting data for a bi-weekly team sync. While easy to automate, the return on investment (time spent building the automation vs. time saved) is low. Batch these tasks together and execute them manually, or delegate them, until your Q1 and Q2 zones are entirely automated.
+These are rote tasks that happen rarely, perhaps extracting data for a bi-weekly team sync. While easy to automate, the return on investment (time spent building the automation vs. time saved) is low. Batch these tasks together and execute them manually, or delegate them, until your Q1 and Q2 zones are entirely automated.
 
 ### Q4: Low Frequency + High Complexity (The Human Zone)
 These are tasks like hiring executive talent, defining annual company strategy, or negotiating a massive partnership. AI has absolutely no business here. The time you save automating Q1 and Q2 must be viciously redirected here. 

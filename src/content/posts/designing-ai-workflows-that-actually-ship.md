@@ -1,7 +1,7 @@
 ---
 title: 'Designing AI Workflows That Actually Ship'
 date: '2026-03-10'
-description: 'Why most AI workflows never reach production—and a validation-to-deployment pipeline that ships. Tactical guide to avoiding overengineering.'
+description: 'Why most AI workflows never reach production, and a validation-to-deployment pipeline that ships. Tactical guide to avoiding overengineering.'
 keywords: 'AI workflows, AI automation systems, production AI systems'
 ---
 
@@ -19,7 +19,7 @@ Three patterns kill production readiness before a single API is called.
 
 **Design without constraints.** Workflows are specified in abstract terms: "When a lead comes in, we enrich it and notify sales." That leaves trigger, data source, error handling, and ownership undefined. In production, every one of those gaps becomes a failure mode. Design must be concrete: trigger (webhook? schedule? manual?), inputs (which fields from which system?), outputs (where does the result go?), and who owns monitoring.
 
-**No deployment path.** The workflow runs in a sandbox or on one person's machine. There is no handoff to "production"—no logging, no alerts, no runbook. When something breaks, nobody notices until a customer complains. Production means: runs in a stable environment, logs are visible, failures are visible, and someone is responsible.
+**No deployment path.** The workflow runs in a sandbox or on one person's machine. There is no handoff to "production": no logging, no alerts, no runbook. When something breaks, nobody notices until a customer complains. Production means: runs in a stable environment, logs are visible, failures are visible, and someone is responsible.
 
 ## The Validation → Design → Deployment Pipeline
 
@@ -33,7 +33,7 @@ Validate that the workflow is worth building.
 2. **Measure volume and variance.** How often does this run? How much do inputs and outputs vary? High frequency + low variance = strong candidate. Low frequency or high variance = defer or scope down.
 3. **Set a success metric.** "We will save X hours per week" or "We will reduce time-to-response to under Y minutes." If you cannot state the win, do not build.
 
-If validation fails—low impact, too fuzzy, or no owner—stop. Revisit after you've [audited your workflow](/blog/how-to-audit-your-workflow-for-ai-automation) and cleared higher-leverage work.
+If validation fails (low impact, too fuzzy, or no owner), stop. Revisit after you've [audited your workflow](/blog/how-to-audit-your-workflow-for-ai-automation) and cleared higher-leverage work.
 
 ### Phase 2: Design
 

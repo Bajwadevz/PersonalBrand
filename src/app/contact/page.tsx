@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import LoomEmbed from "@/components/LoomEmbed";
 
 export const metadata: Metadata = {
     title: "Book a Free Lead-Response Audit",
@@ -31,8 +32,15 @@ export default function ContactPage() {
                     Book a Free Lead-Response Audit
                 </h1>
                 <p className="text-lg sm:text-xl max-w-2xl mx-auto muted-copy font-medium leading-relaxed">
-                    Tell me where inbound leads are slipping — or what your team does manually that shouldn&apos;t be. I&apos;ll map it, scope it, and send a fixed quote within 24 hours.
+                    Tell me where inbound leads are slipping, or what your team does manually that shouldn&apos;t be. I&apos;ll map it, scope it, and send a fixed quote within 24 hours.
                 </p>
+            </section>
+
+            <section className="container-shell max-w-3xl w-full mb-4">
+                <LoomEmbed
+                    eyebrow="BEFORE YOU BOOK"
+                    heading="Here's what we'd build"
+                />
             </section>
 
             <section className="container-shell pb-20 max-w-5xl w-full grid gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -43,7 +51,7 @@ export default function ContactPage() {
                     </div>
                     <ul className="space-y-2 mt-6">
                         {[
-                            "20-minute audit call — I map your lead flow and where it breaks",
+                            "20-minute audit call: I map your lead flow and where it breaks",
                             "Written scope + fixed price quote within 24hrs",
                             "5–7 day build on your existing tools",
                             "Loom handoff + 30 days of async support",

@@ -63,11 +63,11 @@ Do not include any text outside the JSON object.`,
 Output format (use these exact headers):
 **Meeting summary** (3–4 sentences: what was discussed and decided)
 **Decisions made** (bullet list: each decision on its own line, starting with the outcome)
-**Action items** (bullet list: format as "Owner — Task — Deadline" for each item)
+**Action items** (bullet list: format as "Owner | Task | Deadline" for each item)
 **Open questions** (bullet list: unresolved questions that need follow-up)
 **Next meeting** (date/time if mentioned, otherwise "Not scheduled")
 
-Be precise. Do not paraphrase action items — use the exact commitment made. If a deadline was not set, write "No deadline set."`,
+Be precise. Do not paraphrase action items. Use the exact commitment made. If a deadline was not set, write "No deadline set."`,
   },
   {
     title: "Inbound Lead Qualifier",
@@ -87,7 +87,7 @@ Output format:
 Scoring criteria:
 - ICP fit: Consider company size, industry, role seniority, and stated use case
 - Buying intent: Consider urgency language, specific pain points mentioned, timeline stated, and budget signals
-- Be conservative — score 7+ only for leads with clear ICP fit AND explicit buying signals`,
+- Be conservative: score 7+ only for leads with clear ICP fit AND explicit buying signals`,
   },
   {
     title: "Weekly Report Generator",
@@ -115,10 +115,10 @@ Rules: Be specific with numbers. Do not write vague statements like "good progre
 
 Rules:
 - Subject line: specific to the conversation, not generic ("Following up" is not acceptable)
-- Opening: reference one specific thing from the conversation — not a generic opener
+- Opening: reference one specific thing from the conversation, not a generic opener
 - Body: 3–5 sentences maximum. Cover what was promised, next step, and one piece of value
 - CTA: one clear ask with a specific action (not "let me know your thoughts")
-- Tone: direct and professional — no filler phrases like "I hope this email finds you well"
+- Tone: direct and professional, no filler phrases like "I hope this email finds you well"
 - Length: under 150 words total
 
 Output format:
@@ -155,16 +155,16 @@ Priority rules: Urgent = data loss, security issue, or complete product failure.
 
 Output format:
 **Target keyword**: [keyword]
-**Search intent**: [Informational / Commercial / Transactional / Navigational] — [1 sentence explanation]
+**Search intent**: [Informational / Commercial / Transactional / Navigational], [1 sentence explanation]
 **Target audience**: [who is searching this and why]
-**Recommended title**: [H1 — specific, keyword-forward, under 60 characters]
+**Recommended title**: [H1: specific, keyword-forward, under 60 characters]
 **Meta description**: [under 160 characters, includes keyword, clear value proposition]
 **Content outline**:
   H2: [section heading]
-  — Key point to cover
-  — Key point to cover
+  - Key point to cover
+  - Key point to cover
   H2: [section heading]
-  — Key point to cover
+  - Key point to cover
   [Continue for all major sections]
 **Word count target**: [number] words
 **Internal link opportunities**: [2–3 existing content pieces to link to]
@@ -204,7 +204,7 @@ export default function PromptLibraryClient() {
           AI System Prompt Library
         </h1>
         <p className="text-xl max-w-2xl text-gray-600 font-medium leading-relaxed">
-          Production-ready system prompts organized by role and task. Copy directly into your n8n or Make AI node — no editing required.
+          Production-ready system prompts organized by role and task. Copy directly into your n8n or Make AI node, no editing required.
         </p>
       </section>
 

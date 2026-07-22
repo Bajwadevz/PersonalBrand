@@ -36,7 +36,7 @@ const workflows = [
         Icon: BarChart3,
         category: "Reporting",
         title: "Automated Data Synthesis",
-        description: "Weekly reports from Notion, Airtable, or dashboards — summarized and formatted automatically.",
+        description: "Weekly reports from Notion, Airtable, or dashboards, summarized and formatted automatically.",
     },
     {
         Icon: Mail,
