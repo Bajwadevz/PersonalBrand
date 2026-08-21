@@ -4,19 +4,19 @@ import Image from "next/image";
 import { Workflow, Zap, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: { absolute: "About Shahzeb Bajwa | AI Automation for Sales Teams" },
-    description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+    title: { absolute: "About Shahzeb Bajwa | AI Lead Response for Service Businesses" },
+    description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building AI lead response and booking systems for service businesses.",
     alternates: {
         canonical: "https://bajwaa.dev/about",
     },
     openGraph: {
-        title: "About Shahzeb Bajwa | AI Automation for Sales Teams",
-        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+        title: "About Shahzeb Bajwa | AI Lead Response for Service Businesses",
+        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building AI lead response and booking systems for service businesses.",
         url: "https://bajwaa.dev/about",
     },
     twitter: {
-        title: "About Shahzeb Bajwa | AI Automation for Sales Teams",
-        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building automation systems. He builds the tools he wished existed while selling.",
+        title: "About Shahzeb Bajwa | AI Lead Response for Service Businesses",
+        description: "Shahzeb Bajwa spent 6+ years in B2B SaaS sales before building AI lead response and booking systems for service businesses.",
     },
 };
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
                     </p>
                 </div>
                 <div className="mt-10">
-                    <Link href="/contact" className="btn-primary inline-flex min-h-[48px] items-center px-8">Book a Workflow Audit</Link>
+                    <Link href="/contact" className="btn-primary inline-flex min-h-[48px] items-center px-8">Book a Free Lead-Response Audit</Link>
                 </div>
             </section>
 

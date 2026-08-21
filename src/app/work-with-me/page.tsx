@@ -5,35 +5,35 @@ import LoomEmbed from "@/components/LoomEmbed";
 
 export const metadata: Metadata = {
     title: "Work With Me",
-    description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+    description: "AI lead response and booking systems for service businesses, an ongoing retainer, or the self-serve playbook. Fixed scope, fixed price, live in 10 business days.",
     alternates: {
         canonical: "https://bajwaa.dev/work-with-me",
     },
     openGraph: {
         title: "Work With Me | Bajwaa Dev",
-        description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+        description: "AI lead response and booking systems for service businesses, an ongoing retainer, or the self-serve playbook. Fixed scope, fixed price, live in 10 business days.",
         url: "https://bajwaa.dev/work-with-me",
     },
     twitter: {
         title: "Work With Me | Bajwaa Dev",
-        description: "AI lead response automation, custom operations workflow builds, or the self-serve playbook. Fixed scope, fixed price, delivered in days.",
+        description: "AI lead response and booking systems for service businesses, an ongoing retainer, or the self-serve playbook. Fixed scope, fixed price, live in 10 business days.",
     },
 };
 
 const offers = [
     {
-        title: "AI Lead Response & Pipeline Automation",
-        tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
+        title: "AI Lead Response & Booking System",
+        tagline: "Every inbound lead answered in under 60 seconds, qualified, and booked to your calendar.",
         description:
-            "The average B2B team takes hours to respond to an inbound lead, and most of that lead's context never makes it into the CRM. I build the layer that closes both gaps: AI qualification on every form fill and inbound reply, routing to the right owner, and automatic writeback with full conversation context. Built on your existing CRM in 5 days.",
+            "Most service businesses lose the job in the gap between the form fill and the callback. I build the system that closes that gap: every form fill, missed call, and after-hours inquiry gets a response in under 60 seconds, gets qualified, and gets booked straight to your calendar. Nights and weekends included. Built on your existing forms, phone, and calendar in 10 business days.",
         deliverables: [
-            "Inbound capture, AI scoring & routing logic",
-            "AI-drafted first response + follow-up sequence",
-            "Automatic CRM enrichment and writeback",
-            "Loom walkthrough + 30 days async support",
+            "Instant text-back on every form fill and missed call",
+            "AI qualification + automatic booking to your calendar",
+            "Follow-up chase for leads that go quiet",
+            "Loom walkthrough + 30 days of support",
         ],
-        price: "From $1,500",
-        priceNote: "Founding client rate, 2 spots",
+        price: "$3,000–$6,000",
+        priceNote: "Fixed quote after your audit",
         ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary" as const,
@@ -42,19 +42,19 @@ const offers = [
         Icon: TrendingUp,
     },
     {
-        title: "Operations Workflow Build",
-        tagline: "Eliminate your biggest manual bottleneck.",
+        title: "Response System Retainer",
+        tagline: "Ongoing monitoring, monthly reporting, and new automations as you grow.",
         description:
-            "For teams already handling inbound well. Reporting, data routing, onboarding, internal alerts, designed and built on n8n or Make, scoped per project.",
+            "For businesses running the system who want it improved every month: ongoing monitoring, a monthly performance report, and new automations added as your needs change.",
         deliverables: [
-            "Process mapping & bottleneck audit",
-            "n8n / Make / Zapier workflow build",
-            "Multi-tool integration & data sync",
-            "Full documentation + handoff",
+            "Ongoing monitoring & fixes",
+            "Monthly performance report",
+            "1-3 new automations per month",
+            "Priority support",
         ],
-        price: "From $3,000",
-        priceNote: "Custom scope, fixed quote",
-        ctaLabel: "Scope My Workflow",
+        price: "$750/mo",
+        priceNote: "After your build",
+        ctaLabel: "Ask About Retainers",
         ctaHref: "/contact",
         ctaStyle: "secondary" as const,
         Icon: Zap,
@@ -81,18 +81,18 @@ const offers = [
 
 const steps = [
     {
-        title: "Workflow Audit Call",
-        desc: "30 minutes. I map your biggest manual bottleneck and scope a system to eliminate it.",
+        title: "Lead-Response Audit",
+        desc: "I test your real intake flow, form, phone, after-hours, and follow-up, then record exactly where leads are leaking. Free for qualified businesses.",
         Icon: MessageSquare,
     },
     {
-        title: "Rapid Build",
-        desc: "I build your automation in 5–7 days on your existing stack. Daily updates. No disappearing.",
+        title: "10-Day Build",
+        desc: "I build your response and booking system in 10 business days on your existing forms, phone, and calendar. Daily updates. No disappearing.",
         Icon: Hammer,
     },
     {
         title: "Handoff & Support",
-        desc: "Full Loom walkthrough, documentation, and 30 days of async support so it actually sticks.",
+        desc: "Full Loom walkthrough, documentation, and 30 days of support so it actually sticks and keeps booking.",
         Icon: Rocket,
     },
 ];
@@ -110,7 +110,7 @@ export default function WorkWithMePage() {
                         Three Ways to Work Together
                     </h1>
                     <p className="mx-auto mt-4 max-w-2xl text-lg muted-copy">
-                        One flagship build, plus two other ways in.
+                        One flagship build, plus two ways in.
                     </p>
                 </div>
             </section>
@@ -164,7 +164,7 @@ export default function WorkWithMePage() {
                 <div className="mt-10">
                     <LoomEmbed
                         eyebrow="WHAT YOU'RE BUYING"
-                        heading="A 2-minute walkthrough of the build"
+                        heading="A 90-second walkthrough of the build"
                     />
                 </div>
 
@@ -214,7 +214,7 @@ export default function WorkWithMePage() {
                             HOW IT WORKS
                         </div>
                         <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight">
-                            From bottleneck to automated in days
+                            From missed leads to booked jobs in 10 days
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -238,10 +238,10 @@ export default function WorkWithMePage() {
             {/* CTA */}
             <section className="container-shell pb-20 text-center">
                 <div className="glass-card rounded-3xl p-12 md:p-16 flex flex-col items-center">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to eliminate manual work?</h2>
-                    <p className="mt-3 mb-8 muted-copy">Tell me about your workflow and I&apos;ll respond within 24 hours.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to stop losing leads?</h2>
+                    <p className="mt-3 mb-8 muted-copy">Tell me how leads currently come in and I&apos;ll respond within 24 hours.</p>
                     <Link href="/contact" className="btn-primary min-h-[52px] px-10 text-base pulse-glow inline-flex items-center justify-center">
-                        Book a Workflow Audit Call
+                        Book a Free Lead-Response Audit
                     </Link>
                 </div>
             </section>

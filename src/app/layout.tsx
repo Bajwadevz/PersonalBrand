@@ -60,8 +60,8 @@ const jsonLd = [
     "@type": "Person",
     "name": "Shahzeb Bajwa",
     "url": "https://bajwaa.dev",
-    "jobTitle": "AI Workflow Automation Specialist",
-    "description": "Builds AI systems that automate inbound lead response and CRM workflows for B2B sales and ops teams. 6+ years of B2B SaaS sales experience.",
+    "jobTitle": "AI Lead Response & Booking Systems Specialist",
+    "description": "Builds AI systems that answer, qualify, and book inbound leads for service businesses. 6+ years of B2B SaaS sales experience.",
     "sameAs": [
       "https://www.linkedin.com/in/shahzeb-bajwa/",
       "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",
@@ -71,15 +71,15 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AI Workflow Automation for Small Businesses",
+    "name": "AI Lead Response & Booking Systems for Service Businesses",
     "provider": {
       "@type": "Person",
       "name": "Shahzeb Bajwa",
       "url": "https://bajwaa.dev"
     },
-    "description": "AI lead response automation, operations workflow builds, and CRM automation for B2B sales and ops teams. Fixed price, 5-day delivery.",
+    "description": "AI lead response and booking systems for service businesses. Fixed price, live in 10 business days.",
     "areaServed": "United States",
-    "priceRange": "$1,500–$5,000+",
+    "priceRange": "$750–$6,000",
     "url": "https://bajwaa.dev/work-with-me"
   },
   {
@@ -89,7 +89,7 @@ const jsonLd = [
     "url": "https://bajwaa.dev",
     "logo": "https://bajwaa.dev/wave-logo.png",
     "founder": { "@type": "Person", "name": "Shahzeb Bajwa" },
-    "description": "AI lead response and workflow automation for B2B sales and ops teams.",
+    "description": "AI lead response and booking systems for service businesses.",
     "sameAs": [
       "https://www.linkedin.com/in/shahzeb-bajwa/",
       "https://www.upwork.com/freelancers/bajwaadev?viewMode=1",

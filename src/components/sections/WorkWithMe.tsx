@@ -30,7 +30,7 @@ const offers: Offer[] = [
     {
         title: "Response System Retainer",
         tagline: "Ongoing monitoring, monthly reporting, and new automations as you grow. For businesses running the system who want it improved every month.",
-        price: "$1,500–$3,000/mo",
+        price: "$750/mo",
         priceNote: "After your build",
         ctaLabel: "Ask About Retainers",
         ctaHref: "/contact",

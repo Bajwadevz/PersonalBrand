@@ -128,10 +128,10 @@ export default function ContactForm() {
                         className="px-4 py-3 rounded-xl border border-[var(--color-site-border)] focus:border-[#2D6A8F] focus:ring-1 focus:ring-[#2D6A8F] outline-none transition-all text-[var(--color-site-text)] bg-transparent cursor-pointer appearance-none"
                     >
                         <option value="" disabled selected>Select a range...</option>
-                        <option value="Under $1,500">Under $1,500</option>
-                        <option value="$1,500 - $3,000">$1,500 - $3,000</option>
-                        <option value="$3,000 - $5,000">$3,000 - $5,000</option>
-                        <option value="$5,000+">$5,000+</option>
+                        <option value="Under $3,000">Under $3,000</option>
+                        <option value="$3,000 - $6,000">$3,000 - $6,000</option>
+                        <option value="$6,000 - $10,000">$6,000 - $10,000</option>
+                        <option value="$10,000+">$10,000+</option>
                         <option value="Not sure yet">Not sure yet</option>
                     </select>
                 </div>
