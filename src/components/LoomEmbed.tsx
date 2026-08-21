@@ -23,9 +23,9 @@ export default function LoomEmbed({ eyebrow, heading, className = '' }: Props) {
                 className="glass-card relative h-0 overflow-hidden rounded-2xl"
                 style={{ paddingBottom: '62.7178%' }}
             >
-                {/* TODO: swap PLACEHOLDER_HVAC_DEMO_ID for the real HVAC demo Loom ID */}
+                {/* TODO: swap for the real HVAC demo Loom ID once recorded */}
                 <iframe
-                    src="https://www.loom.com/embed/PLACEHOLDER_HVAC_DEMO_ID"
+                    src="https://www.loom.com/embed/812342319423449b8acaa9c77b7e1ca3"
                     title="AI Lead Response and Booking Systems: 90 second walkthrough"
                     loading="lazy"
                     allowFullScreen
