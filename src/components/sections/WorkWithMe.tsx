@@ -16,10 +16,10 @@ type Offer = {
 
 const offers: Offer[] = [
     {
-        title: "AI Lead Response & Pipeline Automation",
-        tagline: "Every inbound lead answered, qualified, and in your CRM within minutes.",
-        price: "From $1,500",
-        priceNote: "Founding client rate (2 spots)",
+        title: "AI Lead Response & Booking System",
+        tagline: "Every inbound lead answered in under 60 seconds, qualified, and booked to your calendar. Nights and weekends included. Live in 10 business days.",
+        price: "$3,000–$6,000",
+        priceNote: "Fixed quote after your audit",
         ctaLabel: "Book a Free Lead-Response Audit",
         ctaHref: "/contact",
         ctaStyle: "primary",
@@ -28,11 +28,11 @@ const offers: Offer[] = [
         Icon: TrendingUp,
     },
     {
-        title: "Operations Workflow Build",
-        tagline: "Eliminate your biggest manual bottleneck.",
-        price: "From $3,000",
-        priceNote: "Custom scope, fixed quote",
-        ctaLabel: "Scope My Workflow",
+        title: "Response System Retainer",
+        tagline: "Ongoing monitoring, monthly reporting, and new automations as you grow. For businesses running the system who want it improved every month.",
+        price: "$1,500–$3,000/mo",
+        priceNote: "After your build",
+        ctaLabel: "Ask About Retainers",
         ctaHref: "/contact",
         ctaStyle: "secondary",
         Icon: Zap,
@@ -63,7 +63,7 @@ export default function WorkWithMe() {
                         Three Ways to Work Together
                     </h2>
                     <p className="max-w-2xl text-base muted-copy">
-                        One flagship build, plus two other ways in.
+                        One flagship build, plus two ways in.
                     </p>
                 </div>
 

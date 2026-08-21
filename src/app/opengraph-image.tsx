@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Shahzeb Bajwa: AI Workflow Automation.";
+export const alt = "Shahzeb Bajwa: AI Lead Response Systems for Service Businesses.";
 export const size = {
     width: 1200,
     height: 630,
@@ -67,7 +67,7 @@ export default async function Image() {
                         fontFamily: "system-ui, sans-serif"
                     }}
                 >
-                    AI Workflow Automation for B2B Teams
+                    AI Lead Response & Booking Systems for Service Businesses
                 </div>
             </div>
         ),

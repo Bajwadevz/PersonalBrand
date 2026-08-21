@@ -3,18 +3,18 @@ import { Zap, GitBranch, BarChart3 } from "lucide-react";
 export default function PortfolioGrid() {
     const caseStudies = [
         {
-            title: "Inbound Lead Response",
-            description: "Inbound leads sit in an inbox while a rep gets to them. This system scores each lead on arrival, drafts a first response, routes it to the right owner, and writes the whole thread into the CRM.",
+            title: "Instant Lead Response",
+            description: "Every form fill, missed call, and after-hours inquiry gets a text back in under 60 seconds. It asks the questions your best CSR would ask, then hands off to a person the moment one is free.",
             Icon: Zap,
         },
         {
-            title: "CRM That Updates Itself",
-            description: "Call notes never make it into the pipeline. This connects your call tool to your CRM with an AI layer that extracts commitments, next steps, and deal fields, then updates records automatically.",
+            title: "Automatic Booking",
+            description: "The system qualifies the job, offers your next open slot, and books it straight onto your schedule. Emergencies route to your on-call phone instead of sitting in an inbox until morning.",
             Icon: GitBranch,
         },
         {
-            title: "Reporting Without the Friday Scramble",
-            description: "Pulling numbers from four tools every week is a job nobody wants. This pipeline collects, formats, and delivers the report on schedule, to Slack or email.",
+            title: "Follow-Up That Doesn't Quit",
+            description: "Most leads with weak follow-up never convert. Every lead that goes quiet gets chased automatically across text and email, and the whole thread logs into your CRM or a simple sheet.",
             Icon: BarChart3,
         }
     ];

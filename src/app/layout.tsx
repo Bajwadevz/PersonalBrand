@@ -26,16 +26,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bajwaa.dev"),
   title: {
-    default: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
+    default: "AI Lead Response & Booking Systems for Service Businesses | Shahzeb Bajwa",
     template: "%s | Bajwaa Dev",
   },
-  description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
+  description: "I build AI systems that answer, qualify, and book every inbound lead in under 60 seconds, day or night, on the tools you already use. Live in 10 business days. For HVAC, home services, and appointment-led businesses.",
   alternates: {
     canonical: "https://bajwaa.dev",
   },
   openGraph: {
-    title: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
-    description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
+    title: "AI Lead Response & Booking Systems for Service Businesses | Shahzeb Bajwa",
+    description: "I build AI systems that answer, qualify, and book every inbound lead in under 60 seconds, day or night, on the tools you already use. Live in 10 business days. For HVAC, home services, and appointment-led businesses.",
     url: "https://bajwaa.dev",
     siteName: "Bajwaa Dev",
     locale: "en_US",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Lead Response & Workflow Automation | Shahzeb Bajwa",
-    description: "I build AI systems that answer, qualify, and log every inbound lead into your CRM within minutes. B2B sales and ops automation on your existing stack. Fixed price, 5-day delivery.",
+    title: "AI Lead Response & Booking Systems for Service Businesses | Shahzeb Bajwa",
+    description: "I build AI systems that answer, qualify, and book every inbound lead in under 60 seconds, day or night, on the tools you already use. Live in 10 business days. For HVAC, home services, and appointment-led businesses.",
   },
 };
 

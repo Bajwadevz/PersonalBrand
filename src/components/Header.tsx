@@ -91,7 +91,7 @@ export default function Header() {
                         >
                             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                         </button>
-                        <Link href="/contact" className="hidden lg:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A] whitespace-nowrap">Book a Call</Link>
+                        <Link href="/contact" className="hidden lg:inline-flex min-h-[40px] items-center rounded-full bg-[#2D6A8F] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245A7A] whitespace-nowrap">Book an Audit</Link>
 
                         <button
                             type="button"
@@ -143,7 +143,7 @@ export default function Header() {
                             >
                                 {isDark ? "Switch to Light" : "Switch to Dark"}
                             </button>
-                            <Link href="/contact" onClick={() => setMobileOpen(false)} className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#2D6A8F] px-6 text-base font-semibold text-white">Book a Call</Link>
+                            <Link href="/contact" onClick={() => setMobileOpen(false)} className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#2D6A8F] px-6 text-base font-semibold text-white">Book an Audit</Link>
                         </nav>
                     </motion.div>
                 )}

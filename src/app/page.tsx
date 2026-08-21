@@ -13,7 +13,7 @@ export default function Home() {
       <section className="py-16">
         <div className="container-shell">
           <LoomEmbed
-            eyebrow="2 MINUTE WALKTHROUGH"
+            eyebrow="90-SECOND WALKTHROUGH"
             heading="See how it works"
           />
         </div>

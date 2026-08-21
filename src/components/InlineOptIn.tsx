@@ -65,7 +65,7 @@ export default function InlineOptIn() {
                     Get the AI Automation Playbook, free
                 </h3>
                 <p className="text-[13px] text-[#0D1B2A]/60 font-sans leading-relaxed m-0">
-                    The exact frameworks, prompt chains, and system architectures I use to automate sales research, reporting, and outbound. Delivered to your inbox.
+                    The exact frameworks, response templates, and system architecture I use to set up lead response and booking for service businesses. Delivered to your inbox.
                 </p>
             </div>
 

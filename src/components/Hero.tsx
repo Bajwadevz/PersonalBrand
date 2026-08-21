@@ -7,7 +7,7 @@ import { MessageSquare, Hammer, Rocket } from "lucide-react";
 const FLOAT_CHIPS = [
     { text: "Manual work eliminated", top: "12%", left: "3%", delay: "0s", dot: true },
     { text: "Any CRM. Any stack.", top: "10%", right: "4%", delay: "1.2s", dot: false },
-    { text: "5–7 day delivery", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
+    { text: "10-day delivery", top: "42%", left: "1.5%", delay: "2.1s", dot: false },
     { text: "6 years selling B2B: I speak founder", bottom: "28%", left: "2%", delay: "3.5s", dot: false },
     { text: "Fixed price. No surprises.", top: "55%", right: "2%", delay: "0.8s", dot: false },
 ] as const;
@@ -67,14 +67,14 @@ export default function Hero() {
 
             {/* ── Main hero content ── */}
             <div className="container-shell relative z-10 flex min-h-[70vh] flex-col items-center justify-center text-center">
-                <h1 className="sr-only">AI Lead Response and Workflow Automation for B2B Teams</h1>
+                <h1 className="sr-only">AI Lead Response and Booking Systems for Service Businesses</h1>
                 <HeroShutterText text="YOUR BUSINESS. AUTOMATED." />
                 <p className="mt-8 max-w-2xl text-center text-base md:text-lg muted-copy">
-                    Most inbound leads wait hours for a reply. I build the system that answers, qualifies, and logs every one into your CRM within minutes, on the stack you already use, in 5 days.
+                    78% of buyers go with the first company that responds. I build the system that texts back every lead in under 60 seconds, qualifies it, and books the job straight to your calendar. Nights and weekends included. Live in 10 business days.
                 </p>
                 <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
                     <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 text-center">
-                        Book a Discovery Call
+                        Book a Free Lead-Response Audit
                     </Link>
                     <Link href="/#work-with-me" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
                         See How It Works
@@ -92,24 +92,24 @@ export default function Hero() {
                 <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-start">
                     <div className="space-y-4">
                         <p className="text-xs font-semibold uppercase tracking-[0.25em] muted-copy">How It Works</p>
-                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">From bottleneck to automated in days</h2>
-                        <p className="max-w-xl muted-copy">I scope it, build it, and hand it off, with documentation so it keeps running.</p>
+                        <h2 className="text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight">From missed leads to booked jobs in 10 days</h2>
+                        <p className="max-w-xl muted-copy">I scope it, build it on your existing tools, and hand it off with docs so it keeps running.</p>
                     </div>
                     <div className="grid gap-4">
                         {[
                             {
-                                title: "Workflow Audit Call",
-                                desc: "30 minutes. I map your biggest manual bottleneck and scope a system to eliminate it.",
+                                title: "Lead-Response Audit",
+                                desc: "I test your real intake flow, form, phone, after-hours, and follow-up, then record exactly where leads are leaking. Free for qualified businesses.",
                                 Icon: MessageSquare,
                             },
                             {
-                                title: "Rapid Build",
-                                desc: "I build your automation in 5–7 days on your existing stack. Daily updates. No disappearing.",
+                                title: "10-Day Build",
+                                desc: "I build your response and booking system in 10 business days on your existing forms, phone, and calendar. Daily updates. No disappearing.",
                                 Icon: Hammer,
                             },
                             {
                                 title: "Handoff & Support",
-                                desc: "Full Loom walkthrough, documentation, and 30 days of async support so it actually sticks.",
+                                desc: "Full Loom walkthrough, documentation, and 30 days of support so it actually sticks and keeps booking.",
                                 Icon: Rocket,
                             },
                         ].map((item) => (
