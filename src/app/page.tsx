@@ -3,7 +3,7 @@ import { StackSlider } from "@/components/stack-slider";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import WorkWithMe from "@/components/sections/WorkWithMe";
 import FoundingClientCallout from "@/components/sections/FoundingClientCallout";
-import InlineOptIn from "@/components/InlineOptIn";
+import DemoShowcase from "@/components/DemoShowcase";
 import LoomEmbed from "@/components/LoomEmbed";
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
       </section>
       <StackSlider />
       <PortfolioGrid />
+      <DemoShowcase />
       <FoundingClientCallout />
       <WorkWithMe />
-      <InlineOptIn />
     </div>
   );
 }

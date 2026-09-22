@@ -91,10 +91,10 @@ export default function KitFormButton({
                             <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 px-6 py-4">
                                 <div>
                                     <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-tight">
-                                        Get the AI Automation Playbook
+                                        Join AI Implementation OS Waitlist
                                     </h3>
                                     <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">
-                                        Free frameworks &amp; systems delivered to your inbox.
+                                        50% founding access ($100) delivered to your inbox.
                                     </p>
                                 </div>
                                 <button
