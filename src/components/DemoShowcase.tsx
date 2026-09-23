@@ -20,7 +20,7 @@ export default function DemoShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Plumbing Card */}
-          <div className="glass-card card-hover relative flex flex-col rounded-3xl overflow-hidden border border-[var(--color-card-border)] group shadow-xl">
+          <div className="glass-card card-hover demo-hairline relative flex flex-col rounded-3xl overflow-hidden group shadow-xl">
             {/* Browser Top Bar */}
             <div className="flex items-center justify-between px-5 py-3.5 bg-slate-900 border-b border-slate-800 text-slate-300">
               <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ export default function DemoShowcase() {
           </div>
 
           {/* HVAC Card */}
-          <div className="glass-card card-hover relative flex flex-col rounded-3xl overflow-hidden border border-[var(--color-card-border)] group shadow-xl">
+          <div className="glass-card card-hover demo-hairline relative flex flex-col rounded-3xl overflow-hidden group shadow-xl">
             {/* Browser Top Bar */}
             <div className="flex items-center justify-between px-5 py-3.5 bg-slate-900 border-b border-slate-800 text-slate-300">
               <div className="flex items-center gap-2">

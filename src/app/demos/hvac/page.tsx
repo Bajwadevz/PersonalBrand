@@ -138,7 +138,7 @@ export default function HVACDemoPage() {
       </header>
 
       {/* 4. Luxury Hero Section with Seasonal Mode Toggle */}
-      <section className="relative py-20 md:py-28 px-6 overflow-hidden">
+      <section className="demo-noise relative py-20 md:py-28 px-6 overflow-hidden">
         {/* Ambient Glow */}
         <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] blur-[130px] rounded-full pointer-events-none transition-colors duration-700 ${
           activeMode === "cooling" ? "bg-sky-500/15" : "bg-amber-500/15"
@@ -146,7 +146,7 @@ export default function HVACDemoPage() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Mode Switcher Pills */}
-          <div className="inline-flex p-1.5 rounded-2xl bg-slate-900 border border-slate-800 mb-8">
+          <div className="demo-hairline inline-flex p-1.5 rounded-2xl bg-slate-900 mb-8">
             <button
               type="button"
               onClick={() => {
@@ -177,7 +177,7 @@ export default function HVACDemoPage() {
             </button>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-[1.08] mb-6 text-white">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-[1.08] mb-6 text-white text-balance">
             {activeMode === "cooling" ? (
               <>
                 AC Not Cooling Your Home? <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300">Same-Day Diagnostics</span>
@@ -206,7 +206,7 @@ export default function HVACDemoPage() {
             </a>
             <a
               href="tel:5550189942"
-              className="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-slate-200 px-7 py-4 rounded-2xl text-sm font-bold text-center transition-all flex items-center justify-center gap-2"
+              className="demo-hairline w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-200 px-7 py-4 rounded-2xl text-sm font-bold text-center transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5"
             >
               <PhoneCall className="h-4 w-4 text-amber-400" /> (555) 018-9942
             </a>
@@ -217,8 +217,8 @@ export default function HVACDemoPage() {
       {/* 5. Trust Bar */}
       <section className="bg-slate-900/50 border-y border-slate-800/80 py-10 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0 ring-1 ring-amber-500/20">
               <Clock className="h-6 w-6" />
             </div>
             <div>
@@ -227,8 +227,8 @@ export default function HVACDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0 ring-1 ring-amber-500/20">
               <Shield className="h-6 w-6" />
             </div>
             <div>
@@ -237,8 +237,8 @@ export default function HVACDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0 ring-1 ring-amber-500/20">
               <CheckCircle2 className="h-6 w-6" />
             </div>
             <div>
@@ -247,8 +247,8 @@ export default function HVACDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0 ring-1 ring-amber-500/20">
               <Zap className="h-6 w-6" />
             </div>
             <div>
@@ -354,7 +354,7 @@ export default function HVACDemoPage() {
 
       {/* 8. Appointment Time Slot Selector & Form Prototype */}
       <section id="hvac-form" className="py-20 px-6 max-w-3xl mx-auto w-full">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+        <div className="demo-hairline bg-slate-900/90 rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/40 backdrop-blur-xl relative overflow-hidden">
           <div className="text-center mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
               APPOINTMENT DISPATCH PROTOTYPE

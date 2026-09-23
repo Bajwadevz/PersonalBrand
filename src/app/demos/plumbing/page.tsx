@@ -105,34 +105,35 @@ export default function PlumbingDemoPage() {
       </header>
 
       {/* 4. Luxury Hero Section */}
-      <section className="relative py-20 md:py-28 px-6 overflow-hidden">
+      <section className="demo-noise relative py-20 md:py-28 px-6 overflow-hidden">
         {/* Ambient Glow Effects */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-10 right-[8%] w-64 h-64 bg-sky-400/10 blur-[100px] rounded-full pointer-events-none"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-slate-900/90 border border-blue-500/30 text-blue-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 shadow-inner">
+          <div className="demo-hairline inline-flex items-center gap-2 bg-slate-900/90 text-blue-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 shadow-[0_0_0_1px_rgba(59,130,246,0.15),0_8px_24px_-8px_rgba(59,130,246,0.35)]">
             <Sparkles className="h-3.5 w-3.5 text-blue-400" />
             <span>Under-60-Second Automated Dispatch Confirmation</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-[1.08] mb-6 text-white">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-[1.08] mb-6 text-white text-balance">
             Emergency Water Leaks & Drain Clearing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-blue-200">Done Upfront</span>
           </h1>
 
-          <p className="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+          <p className="text-slate-300/90 text-base sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
             No hidden dispatch surcharges. No waiting on hold. ClearFlow connects active emergency leaks or routine service requests directly to duty technicians in real time.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
             <a
               href="#request-form"
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white px-8 py-4 rounded-2xl font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white px-8 py-4 rounded-2xl font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
             >
               Dispatch Service Online <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="tel:5550192834"
-              className="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-slate-200 px-7 py-4 rounded-2xl text-sm font-bold text-center transition-all flex items-center justify-center gap-2"
+              className="demo-hairline w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-200 px-7 py-4 rounded-2xl text-sm font-bold text-center transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5"
             >
               <PhoneCall className="h-4 w-4 text-blue-400" /> (555) 019-2834
             </a>
@@ -143,8 +144,8 @@ export default function PlumbingDemoPage() {
       {/* 5. Process-Based Trust Grid */}
       <section className="bg-slate-900/50 border-y border-slate-800/80 py-10 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0 ring-1 ring-blue-500/20">
               <Clock className="h-6 w-6" />
             </div>
             <div>
@@ -153,8 +154,8 @@ export default function PlumbingDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0 ring-1 ring-blue-500/20">
               <Shield className="h-6 w-6" />
             </div>
             <div>
@@ -163,8 +164,8 @@ export default function PlumbingDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0 ring-1 ring-blue-500/20">
               <CheckCircle2 className="h-6 w-6" />
             </div>
             <div>
@@ -173,8 +174,8 @@ export default function PlumbingDemoPage() {
             </div>
           </div>
 
-          <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
+          <div className="demo-hairline demo-card-lift bg-slate-900/80 p-5 rounded-2xl flex items-start gap-4">
+            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 shrink-0 ring-1 ring-blue-500/20">
               <Wrench className="h-6 w-6" />
             </div>
             <div>
@@ -309,7 +310,7 @@ export default function PlumbingDemoPage() {
 
       {/* 8. High-End Request Form Prototype */}
       <section id="request-form" className="py-20 px-6 max-w-3xl mx-auto w-full">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+        <div className="demo-hairline bg-slate-900/90 rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/40 relative overflow-hidden backdrop-blur-xl">
           <div className="text-center mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
               DISPATCH PROTOTYPE
