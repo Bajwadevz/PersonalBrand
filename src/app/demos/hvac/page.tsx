@@ -11,8 +11,6 @@ import {
   AlertTriangle,
   ArrowRight,
   PhoneCall,
-  Sparkles,
-  Calendar,
   Zap,
 } from "lucide-react";
 

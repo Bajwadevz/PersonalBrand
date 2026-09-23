@@ -13,67 +13,69 @@
   --color-ocean-hover: #245A7A;
 }
 
-html {
-  scroll-behavior: smooth;
-  min-height: 100%;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+  }
 
-body {
-  background-color: var(--color-site-bg);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.7;
-  min-height: 100%;
-  color: var(--color-site-text);
-}
+  body {
+    background-color: var(--color-site-bg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+    min-height: 100%;
+    color: var(--color-site-text);
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  color: var(--color-site-text);
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-site-text);
+  }
 
-h1 {
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
+  h1 {
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-muted-foreground);
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
 
-/* Interaction polish: focus and link consistency */
-a:focus-visible,
-button:focus-visible {
-  outline: none;
-}
+  /* Interaction polish: focus and link consistency */
+  a:focus-visible,
+  button:focus-visible {
+    outline: none;
+  }
 
-a:focus-visible {
-  outline: 2px solid rgba(45, 106, 143, 0.35);
-  outline-offset: 2px;
-}
+  a:focus-visible {
+    outline: 2px solid rgba(45, 106, 143, 0.35);
+    outline-offset: 2px;
+  }
 
-button:focus-visible {
-  outline: 2px solid rgba(45, 106, 143, 0.35);
-  outline-offset: 2px;
+  button:focus-visible {
+    outline: 2px solid rgba(45, 106, 143, 0.35);
+    outline-offset: 2px;
+  }
 }
 
 @theme inline {

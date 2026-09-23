@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SiteChrome from "@/components/SiteChrome";
 import GlobalGridBackground from "@/components/GlobalGridBackground";
 import ClientAnalytics from "./ClientAnalytics";
 
@@ -117,11 +116,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to main content
         </a>
         <GlobalGridBackground />
-        <Header />
-        <main id="main-content" className="flex-grow flex flex-col w-full relative z-10" role="main">
-          {children}
-        </main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
         <ClientAnalytics />
       </body>
     </html>

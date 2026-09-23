@@ -21,6 +21,10 @@ export default function Footer() {
           <ul className="space-y-2 muted-copy">
             <li><Link href="/demos/plumbing" className="hover:text-[var(--color-ocean)]">ClearFlow Plumbing Demo</Link></li>
             <li><Link href="/demos/hvac" className="hover:text-[var(--color-ocean)]">Northstar HVAC Demo</Link></li>
+            <li><Link href="/demos/law-firm" className="hover:text-[var(--color-ocean)]">Ashford & Cole Law Demo</Link></li>
+            <li><Link href="/demos/aesthetic-clinic" className="hover:text-[var(--color-ocean)]">Lumière Clinic Demo</Link></li>
+            <li><Link href="/demos/consulting" className="hover:text-[var(--color-ocean)]">Meridian Consulting Demo</Link></li>
+            <li><Link href="/demos/renovation" className="hover:text-[var(--color-ocean)]">Foster & Stone Demo</Link></li>
           </ul>
         </div>
         <div>
