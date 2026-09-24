@@ -19,12 +19,13 @@ export default function Footer() {
         <div>
           <h4 className="font-bold uppercase tracking-wider text-[var(--color-site-text)] mb-3">Concept Demos</h4>
           <ul className="space-y-2 muted-copy">
-            <li><Link href="/demos/plumbing" className="hover:text-[var(--color-ocean)]">ClearFlow Plumbing Demo</Link></li>
-            <li><Link href="/demos/hvac" className="hover:text-[var(--color-ocean)]">Northstar HVAC Demo</Link></li>
-            <li><Link href="/demos/law-firm" className="hover:text-[var(--color-ocean)]">Ashford & Cole Law Demo</Link></li>
-            <li><Link href="/demos/aesthetic-clinic" className="hover:text-[var(--color-ocean)]">Lumière Clinic Demo</Link></li>
-            <li><Link href="/demos/consulting" className="hover:text-[var(--color-ocean)]">Meridian Consulting Demo</Link></li>
-            <li><Link href="/demos/renovation" className="hover:text-[var(--color-ocean)]">Foster & Stone Demo</Link></li>
+            <li><Link href="/demos/hvac" className="hover:text-[var(--color-ocean)]">Northline Air (HVAC)</Link></li>
+            <li><Link href="/demos/construction" className="hover:text-[var(--color-ocean)]">Ridgeform Builders</Link></li>
+            <li><Link href="/demos/consulting" className="hover:text-[var(--color-ocean)]">Halden Advisory</Link></li>
+            <li><Link href="/demos/plumbing" className="hover:text-[var(--color-ocean)]">ClearFlow Plumbing</Link></li>
+            <li><Link href="/demos/law-firm" className="hover:text-[var(--color-ocean)]">Ashford &amp; Cole</Link></li>
+            <li><Link href="/demos/aesthetic-clinic" className="hover:text-[var(--color-ocean)]">Lumière Clinic</Link></li>
+            <li><Link href="/demos/renovation" className="hover:text-[var(--color-ocean)]">Foster &amp; Stone</Link></li>
           </ul>
         </div>
         <div>
