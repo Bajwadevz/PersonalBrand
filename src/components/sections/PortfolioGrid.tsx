@@ -1,4 +1,6 @@
-import { Zap, GitBranch, BarChart3 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Zap, GitBranch, BarChart3, ArrowUpRight } from "lucide-react";
 
 export default function PortfolioGrid() {
     const caseStudies = [
@@ -47,6 +49,19 @@ export default function PortfolioGrid() {
                         </div>
                     ))}
                 </div>
+
+                <Link href="/work/small-business-sales-os" className="glass-card card-hover mt-8 grid overflow-hidden rounded-2xl lg:grid-cols-[0.9fr_1.1fr]">
+                    <div className="flex flex-col justify-center p-6 md:p-8">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-ocean)]">Featured product build · Notion CRM</p>
+                        <h3 className="mt-4 text-2xl font-bold tracking-tight">Small Business Sales OS</h3>
+                        <p className="mt-3 text-sm leading-relaxed muted-copy">A next step for every open deal. Contacts, pipeline, follow-ups and quote recovery in one practical sales workspace.</p>
+                        <p className="mt-4 text-xs muted-copy">Built by bajwaa.dev · internal product with fictional demo data</p>
+                        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-ocean)]">Explore the build <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></span>
+                    </div>
+                    <div className="flex items-center bg-[#191919]">
+                        <Image src="/work/sales-os/command-center.jpg" alt="Small Business Sales OS command center with overdue follow-ups and connected contacts" width={1512} height={805} sizes="(max-width: 1024px) 100vw, 640px" className="h-auto w-full" />
+                    </div>
+                </Link>
             </div>
         </section>
     );
