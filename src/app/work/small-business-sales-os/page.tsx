@@ -4,10 +4,11 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Check, Clock3, Inbox, Layers3, ReceiptText, Users } from "lucide-react";
 
 const CUSTOM_BUILD_URL = "/contact?offer=operations-workflow-build&demo=small-business-sales-os";
+const GUMROAD_URL = "https://shahzo.gumroad.com/l/small-business-sales-os";
 
 export const metadata: Metadata = {
-  title: "Small Business Sales OS — a Notion CRM product build",
-  description: "Inside a bajwaa.dev product build: a Notion sales system that connects leads, opportunities and follow-ups. Explore the design or discuss a custom CRM for your business.",
+  title: "Small Business Sales OS: $59 Notion CRM template",
+  description: "A Notion CRM for small service businesses. Track every lead, quote and follow-up, and see which deals have no next step. Works on Notion Free. $59 on Gumroad.",
   alternates: { canonical: "https://bajwaa.dev/work/small-business-sales-os" },
   openGraph: {
     title: "Small Business Sales OS | bajwaa.dev",
@@ -44,8 +45,8 @@ export default function SalesOsCaseStudy() {
             <p className="mt-6 text-xl font-semibold md:text-2xl">A next step for every open deal.</p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed muted-copy">A practical sales workspace for owners juggling spreadsheets, messages and memory. Built around the leads, follow-ups and quotes that are easiest to lose track of.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href={CUSTOM_BUILD_URL} className="btn-primary inline-flex min-h-12 items-center justify-center gap-2 text-sm">Discuss a custom build <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
-              <a href="#inside-the-build" className="btn-secondary inline-flex min-h-12 items-center justify-center text-sm">Explore the system</a>
+              <a href={GUMROAD_URL} className="btn-primary inline-flex min-h-12 items-center justify-center gap-2 text-sm">Get the template, $59 <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+              <Link href={CUSTOM_BUILD_URL} className="btn-secondary inline-flex min-h-12 items-center justify-center text-sm">Discuss a custom build</Link>
             </div>
           </div>
           <aside className="glass-card rounded-2xl p-6 md:p-8" aria-label="Project details">
@@ -137,12 +138,16 @@ export default function SalesOsCaseStudy() {
             <Link href={CUSTOM_BUILD_URL} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#16394e] transition-colors hover:bg-[#e5f2fa]">Discuss your sales workflow <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
           <aside className="glass-card rounded-3xl p-8 md:p-10" aria-labelledby="template-heading">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-ocean)]">Template release</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-ocean)]">The template</p>
             <h2 id="template-heading" className="mt-4 text-2xl font-bold">Prefer to set it up yourself?</h2>
-            <div className="mt-6 flex items-baseline gap-2"><span className="text-4xl font-bold">$59</span><span className="text-sm muted-copy">USD · planned launch price</span></div>
-            <p className="mt-5 text-sm leading-relaxed muted-copy">The Small Business Sales OS Notion template is being prepared for Gumroad. Checkout is not open yet.</p>
-            <p className="mt-4 text-sm leading-relaxed muted-copy">This page previews the product build. Custom setup, migration and integrations are separate services.</p>
-            <Link href="/contact?demo=small-business-sales-os" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-[var(--color-ocean)] hover:underline">Ask about the template <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <div className="mt-6 flex items-baseline gap-2"><span className="text-4xl font-bold">$59</span><span className="text-sm muted-copy">USD · one-time</span></div>
+            <ul className="mt-5 space-y-2 text-sm muted-copy">
+              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-ocean)]" aria-hidden="true" />Works on Notion Free. Paid Notion AI and automation are optional.</li>
+              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-ocean)]" aria-hidden="true" />3 databases, 8 working pages and 4 guides</li>
+              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-ocean)]" aria-hidden="true" />Quickstart PDF and 3 example CSVs</li>
+            </ul>
+            <a href={GUMROAD_URL} className="btn-primary mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 text-sm">Get the template <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+            <p className="mt-4 text-xs leading-relaxed muted-copy">Custom setup, migration and integrations are separate services.</p>
           </aside>
         </div>
       </section>
