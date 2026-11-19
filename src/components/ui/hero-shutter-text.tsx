@@ -13,8 +13,7 @@ export default function HeroShutterText({
   className = "",
 }: HeroShutterTextProps) {
   // Split by word so words never break across lines
-  const words = text.split(" ");
-  let globalCharIndex = 0;
+  const words = Array.from(text.matchAll(/[^ ]+/g));
 
   return (
     <div className={cn("relative flex flex-col items-center justify-center w-full", className)}>
@@ -24,9 +23,8 @@ export default function HeroShutterText({
           className="flex flex-wrap justify-center items-center w-full gap-x-[clamp(0.65rem,1.875vw,1.75rem)] gap-y-0"
         >
           {words.map((word, wi) => {
-            const wordChars = word.split("");
-            const wordStartIndex = globalCharIndex;
-            globalCharIndex += word.length + 1; // +1 for the space
+            const wordChars = word[0].split("");
+            const wordStartIndex = word.index;
 
             return (
               /* Each word is non-breaking — wrap happens between words only */

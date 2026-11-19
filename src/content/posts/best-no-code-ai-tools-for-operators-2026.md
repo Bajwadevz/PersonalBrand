@@ -97,4 +97,4 @@ If I were to build a lean, aggressive startup's technology stack from zero today
 
 This trifecta provides the fastest time-to-value while maintaining the structural integrity required to scale to millions of dollars in revenue without adding headcount.
 
-> If you want step-by-step implementation frameworks for these precise tools, [get the Playbook](/product).
+> If you want step-by-step implementation frameworks for these precise tools, [get the Playbook](/ai-implementation-os).

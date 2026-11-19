@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import LeadEnrichmentClient from "./LeadEnrichmentClient";
 
-export const metadata: Metadata = {
-  title: "Lead Enrichment Script Generator",
-  description: "Generate custom JavaScript/Python snippets for formatting lead data in n8n or Make before pushing to your CRM.",
-  alternates: { canonical: "https://bajwaa.dev/tools/lead-enrichment-script" },
-};
+export const metadata = pageMetadata(
+  "/tools/lead-enrichment-script",
+  "Lead Enrichment Script Generator",
+  "Generate JavaScript or Python examples for formatting lead data before sending it to a CRM through n8n or Make.",
+);
 
 export default function LeadEnrichmentPage() {
   return <LeadEnrichmentClient />;

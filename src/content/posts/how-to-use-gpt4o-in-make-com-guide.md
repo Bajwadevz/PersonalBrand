@@ -76,7 +76,7 @@ Swap triggers and actions to fit your stack; the pattern is the same.
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

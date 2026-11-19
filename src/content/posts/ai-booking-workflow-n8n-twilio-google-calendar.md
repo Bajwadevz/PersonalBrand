@@ -54,4 +54,4 @@ A Sheet for logging and Gmail for any manual follow-ups is genuinely enough to l
 
 Run at least 15 to 20 real or simulated conversations through the workflow before pointing your live business number at it. Specifically test: a routine booking request, an emergency request, someone who goes silent mid-conversation, someone who asks a pricing question, and someone who tries to book a slot that just got taken by someone else. If all five behave the way you expect, you are ready to go live.
 
-> Want this built for your business instead of building it yourself? [Book a free lead-response audit](/contact) and I'll scope the exact build for your calendar and phone setup.
+> See how the [AI operations audit](/ai-operations-audit) maps the current process, exceptions and practical next steps before implementation.

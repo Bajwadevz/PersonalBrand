@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import EmailOpenersClient from "./EmailOpenersClient";
 
-export const metadata: Metadata = {
-  title: "Outbound Email Opener Templates",
-  description: "Stop writing generic 'hope you are doing well' emails. 30+ field-tested cold email hook frameworks categorized by prospect role and tactic.",
-  alternates: { canonical: "https://bajwaa.dev/tools/email-openers" },
-};
+export const metadata = pageMetadata(
+  "/tools/email-openers",
+  "Outbound Email Opener Templates",
+  "Explore outbound email openers by recipient role and outreach approach, with examples you can adapt for your own message.",
+);
 
 export default function EmailOpenersPage() {
   return <EmailOpenersClient />;

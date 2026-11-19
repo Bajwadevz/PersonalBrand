@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import ReadinessQuizClient from "./ReadinessQuizClient";
 
-export const metadata: Metadata = {
-  title: "Workflow Automation Readiness Quiz: Free Tool",
-  description: "10 questions that score how ready your business is for AI workflow automation. Get a readiness score and 3 personalized next steps. Free, no sign-up.",
-  alternates: { canonical: "https://bajwaa.dev/tools/readiness-quiz" },
-};
+export const metadata = pageMetadata(
+  "/tools/readiness-quiz",
+  "Workflow Automation Readiness Quiz: Free Tool",
+  "Answer ten questions about your workflow and review practical next steps for assessing its readiness for automation.",
+);
 
 export default function ReadinessQuizPage() {
   return <ReadinessQuizClient />;

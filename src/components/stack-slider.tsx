@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,7 @@ function LogoItem({ name, src, invert }: { name: string; src: string; invert: bo
         "flex items-center justify-center rounded-2xl border border-[var(--color-card-border)] bg-white dark:bg-zinc-800/60 shadow-sm transition-all duration-300 h-14 w-14 p-2.5",
         "group-hover:-translate-y-1 group-hover:shadow-md group-hover:border-[rgba(45,106,143,0.35)]"
       )}>
-        <img
+        <Image
           src={src}
           alt={name}
           width={40}

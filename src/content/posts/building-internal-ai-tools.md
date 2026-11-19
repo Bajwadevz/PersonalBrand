@@ -66,4 +66,4 @@ Scaling internal AI tools means more workflows and more users, not necessarily b
 
 Scaling well means more of the same kind of thing: clear, owned, documented, not a single giant system. Internal AI tools should feel like a set of reliable utilities, not a second full-time platform to maintain.
 
-> For frameworks that take you from first workflow to a scalable set of internal tools, [get the Playbook](/product).
+> For frameworks that take you from first workflow to a scalable set of internal tools, [get the Playbook](/ai-implementation-os).

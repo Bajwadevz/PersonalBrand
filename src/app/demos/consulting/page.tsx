@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import localFont from "next/font/local";
 import Halden from "./Client";
 
-const sans = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--f-inst-sans" });
-const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--f-inst-serif" });
+const sans = localFont({
+  variable: "--f-inst-sans",
+  preload: false,
+  src: [
+    { path: "../../../fonts/instrument-sans-normal-400-600.woff2", weight: "400 600", style: "normal" },
+  ],
+});
+const serif = localFont({
+  variable: "--f-inst-serif",
+  preload: false,
+  src: [
+    { path: "../../../fonts/instrument-serif-italic-400.woff2", weight: "400", style: "italic" },
+    { path: "../../../fonts/instrument-serif-normal-400.woff2", weight: "400", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Halden Advisory — Consulting Concept Demo",

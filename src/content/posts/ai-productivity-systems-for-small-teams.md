@@ -70,4 +70,4 @@ If you want to understand how this scales to external revenue, review the guide 
 
 The operators who master system architecture today will inherit the markets of tomorrow. 
 
-> If you want step-by-step implementation frameworks, [get the Playbook](/product).
+> If you want step-by-step implementation frameworks, [get the Playbook](/ai-implementation-os).

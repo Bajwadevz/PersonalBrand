@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+import localFont from "next/font/local";
 import NorthlineAir from "./Client";
 
-const archivo = Archivo({ subsets: ["latin"], weight: ["400", "600", "700", "800"], variable: "--f-archivo" });
+const archivo = localFont({
+  variable: "--f-archivo",
+  preload: false,
+  src: [
+    { path: "../../../fonts/archivo-normal-400-800.woff2", weight: "400 800", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Northline Air — HVAC Concept Demo",

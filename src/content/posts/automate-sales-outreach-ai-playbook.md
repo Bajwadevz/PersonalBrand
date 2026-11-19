@@ -81,7 +81,7 @@ Teams that **automate sales outreach with AI** with this structure typically see
 
 ---
 **Want the exact workflows and system prompts?**
-[Work With Me →](/work-with-me)
+[Explore AI implementation](/ai-implementation)
 ---
 
 ## FAQ

@@ -24,12 +24,13 @@ export function BlogPostList({ posts }: { posts: Post[] }) {
                     <Link
                         key={post.slug}
                         href={`/blog/${post.slug}`}
-                        className="group glass-card card-hover block rounded-2xl p-6 md:p-8"
+                        className="group insights-card block rounded-2xl border p-6 md:p-8"
                     >
                         <article>
                             <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm muted-copy">
                                 <time dateTime={post.date}>
-                                    {new Date(post.date).toLocaleDateString("en-US", {
+                                    {new Date(post.date).toLocaleDateString("en-AU", {
+                                        timeZone: "UTC",
                                         year: "numeric",
                                         month: "long",
                                         day: "numeric",
@@ -42,9 +43,9 @@ export function BlogPostList({ posts }: { posts: Post[] }) {
                                     </>
                                 )}
                             </div>
-                            <h2 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-bold tracking-tight">
+                            <h3 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-bold tracking-tight">
                                 {post.title}
-                            </h2>
+                            </h3>
                             <p className="text-base leading-relaxed muted-copy line-clamp-1">
                                 {post.excerpt}
                             </p>
@@ -64,13 +65,12 @@ export function BlogTagFilter({
     onTagChange: (tag: string) => void;
 }) {
     return (
-        <div className="mb-10 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Filter by topic">
+        <div className="insight-topic-filter mb-10 flex gap-2 pb-2" role="group" aria-label="Filter by topic">
             {BLOG_FILTER_TAGS.map((tag) => (
                 <button
                     key={tag}
                     type="button"
-                    role="tab"
-                    aria-selected={activeTag === tag}
+                    aria-pressed={activeTag === tag}
                     onClick={() => onTagChange(tag)}
                     className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                         activeTag === tag

@@ -1,41 +1,45 @@
-import type { Metadata } from "next";
-import { getAllPosts } from "@/lib/api";
-import { BlogWithFilter } from "./BlogClient";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/page-metadata";
+import { getAllPosts } from "@/lib/api";
+import { insightGuides } from "@/lib/insight-guides";
+import { BlogWithFilter } from "./BlogClient";
 
-export const metadata: Metadata = {
-    title: "Blog",
-    description:
-        "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
-    alternates: {
-        canonical: "https://bajwaa.dev/blog",
-    },
-    openGraph: {
-        title: "Blog | Bajwaa Dev",
-        description: "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
-        url: "https://bajwaa.dev/blog",
-    },
-    twitter: {
-        title: "Blog | Bajwaa Dev",
-        description: "Practical writing on AI workflow automation, CRM systems, and sales operations, from someone who builds and sells.",
-    },
-};
+export const metadata = pageMetadata(
+  "/blog",
+  "Insights on AI Implementation and Automation",
+  "Guides for Australian teams on AI implementation pricing, CRM automation, workflow audits and choosing between rules and AI agents.",
+);
 
 export default function BlogPage() {
-    const posts = getAllPosts();
+  const posts = getAllPosts().map(({ slug, title, date, excerpt, tags, readingTime }) => ({
+    slug, title, date, excerpt, tags, readingTime,
+  }));
 
-    return (
-        <div className="section-shell flex w-full flex-col">
-            <div className="container-shell w-full">
-                <div className="mb-12 max-w-3xl">
-                    <h1 className="text-[clamp(2.25rem,5vw,4rem)] font-bold tracking-tight">AI Automation Guides</h1>
-                    <p className="mt-4 text-lg muted-copy">Practical guides for operators building durable AI systems.</p>
-                </div>
-                <BlogWithFilter posts={posts} />
-                <div className="mt-20 flex justify-center">
-                    <Link href="/product" className="btn-primary min-h-[48px] px-8">Join the Waitlist</Link>
-                </div>
-            </div>
+  return (
+    <article className="agency insights-index">
+      <section className="agency-intro">
+        <div className="agency-wrap">
+          <p className="kicker">Insights</p>
+          <h1>AI implementation guides.</h1>
+          <p className="lead">Plan your first workflow, understand the cost and see what to check before you automate.</p>
         </div>
-    );
+      </section>
+      <section className="agency-wrap agency-section" aria-labelledby="featured-insights">
+        <h2 className="insight-subtitle" id="featured-insights">Start here</h2>
+        <div className="scenario-grid">
+          {insightGuides.map(guide => (
+            <Link className="insight-guide" key={guide.slug} href={`/blog/${guide.slug}`}>
+              <span>{guide.label}</span>
+              <h3>{guide.shortTitle}</h3>
+              <span aria-hidden="true">↗</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="agency-wrap agency-section" aria-labelledby="all-insights">
+        <h2 className="insight-subtitle" id="all-insights">All {posts.length} articles</h2>
+        <BlogWithFilter posts={posts} />
+      </section>
+    </article>
+  );
 }

@@ -55,7 +55,7 @@ Choose n8n when you've outgrown Make's limits or need everything inside your own
 ## How to Choose (Decision Flow)
 
 - **Just starting, need simple AI + CRM?** → Zapier.
-- **Building real AI workflows (research, outreach, reporting), want one tool?** → [Make](/product).
+- **Building real AI workflows (research, outreach, reporting), want one tool?** → [Make](https://www.make.com/).
 - **Need self-hosted or heavy custom logic/code?** → n8n.
 - **Budget-first, technical team?** → n8n self-hosted.
 - **Non-technical team, need to ship fast?** → Make.
@@ -66,7 +66,7 @@ I use **Make** as the primary orchestration layer for client workflows and for m
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

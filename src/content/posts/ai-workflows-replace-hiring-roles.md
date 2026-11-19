@@ -69,7 +69,7 @@ Pick the one that currently costs you the most hours per week or creates the mos
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

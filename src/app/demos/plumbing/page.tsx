@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import ClearFlow from "./Client";
 
-const grotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--f-grotesk" });
+const grotesk = localFont({
+  variable: "--f-grotesk",
+  preload: false,
+  src: [
+    { path: "../../../fonts/space-grotesk-normal-400-700.woff2", weight: "400 700", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "ClearFlow Plumbing — Plumbing Concept Demo",

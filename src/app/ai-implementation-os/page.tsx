@@ -1,28 +1,14 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { Check, BookOpen, ArrowRight, ShieldCheck, HelpCircle } from "lucide-react";
 import KitEmbedForm from "@/components/KitEmbedForm";
 import GlassPanel from "@/components/GlassPanel";
 import { getDisplayedPrice, commercialConfig } from "@/lib/commercialConfig";
 
-export const metadata: Metadata = {
-  title: "AI Implementation OS for Small Business | 30-Day Practical Implementation",
-  description:
-    "Implement one useful AI workflow in 30 days—without hiring a developer or drowning in tools. Step-by-step small business system.",
-  alternates: {
-    canonical: "https://bajwaa.dev/ai-implementation-os",
-  },
-  openGraph: {
-    title: "AI Implementation OS for Small Business | Bajwaa Dev",
-    description:
-      "Implement one useful AI workflow in 30 days—without hiring a developer or drowning in tools. Step-by-step small business system.",
-    url: "https://bajwaa.dev/ai-implementation-os",
-  },
-  twitter: {
-    title: "AI Implementation OS for Small Business | Bajwaa Dev",
-    description:
-      "Implement one useful AI workflow in 30 days—without hiring a developer or drowning in tools. Step-by-step small business system.",
-  },
-};
+export const metadata = pageMetadata(
+  "/ai-implementation-os",
+  "AI Implementation OS for Small Business",
+  "A 30-day learning programme for scoping, building, testing and maintaining one small business AI workflow.",
+);
 
 const curriculum = [
   {

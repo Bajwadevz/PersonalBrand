@@ -39,7 +39,7 @@ For our first build, we will create an **Inbound Lead Classifier and Responder**
 
 **The Solution:** We will build a system that intercepts every incoming email, sends the text to an AI to determine the quality of the lead, and automatically drafts an appropriate, highly personalized response in your drafts folder.
 
-> Ready to build your first AI system? [Get the Playbook](/product) →
+> Ready to build your first AI system? [Get the Playbook](/ai-implementation-os) →
 
 ## Step 3: Setting the Trigger 
 
@@ -110,4 +110,4 @@ Instead of routing to Gmail drafts, what if you routed Tier 1 leads directly to 
 
 The combinations are functionally infinite. The barrier is no longer technical knowledge; it is entirely dependent on your operational creativity and your willingness to design better systems. 
 
-> If you want step-by-step implementation frameworks, [get the Playbook](/product).
+> If you want step-by-step implementation frameworks, [get the Playbook](/ai-implementation-os).

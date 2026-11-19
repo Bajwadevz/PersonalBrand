@@ -1,0 +1,45 @@
+import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
+
+const detail: Detail = {
+  "path": "/solutions/crm-automation",
+  "title": "CRM Automation for Australian Businesses",
+  "description": "Connect enquiries to your CRM, prevent duplicate records and assign follow-up. See how Australian teams can automate CRM updates with human review.",
+  "label": "CRM & customer workflows",
+  "heading": "Give every enquiry an owner and a next step.",
+  "lead": "We design CRM workflows around the way your team qualifies, assigns and follows up customer requests. The starting point is the CRM you already use.",
+  "sections": [
+    [
+      "Find the missing handoff",
+      "Trace an enquiry from inbox or form to contact, company and open deal. Check where people copy details, assign owners or lose the original source."
+    ],
+    [
+      "Keep the record trustworthy",
+      "Match contacts using agreed identifiers, preserve the first source and send ambiguous matches to a reviewer. A repeat submission should update the right record without creating another open deal."
+    ],
+    [
+      "Give staff a recovery path",
+      "Define what happens when an owner is missing or the CRM is offline. Agree how to queue exceptions, who can resolve them and when to retry the update."
+    ]
+  ],
+  "links": [
+    ["Read the CRM handoff guide", "/blog/reduce-manual-crm-updates"],
+    [
+      "Watch the implementation walkthrough",
+      "/work"
+    ],
+    [
+      "AI implementation",
+      "/ai-implementation"
+    ],
+    [
+      "AI Operations Audit",
+      "/ai-operations-audit"
+    ]
+  ]
+};
+
+export const metadata = agencyMeta(detail.path, detail.title, detail.description);
+
+export default function Page() {
+  return <DetailPage detail={detail}/>;
+}

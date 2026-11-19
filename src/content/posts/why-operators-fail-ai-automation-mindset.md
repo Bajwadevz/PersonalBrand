@@ -43,7 +43,7 @@ Don’t add another tool until that one workflow is running and owned.
 
 ---
 **Want the exact workflows and system prompts?**
-[Work With Me →](/work-with-me)
+[Explore AI implementation](/ai-implementation)
 ---
 
 ## FAQ

@@ -1,23 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { Search, GitBranch, BarChart3, Mail, Bot, FileText } from "lucide-react";
 
-export const metadata: Metadata = {
-    title: "Workflows",
-    description: "Automation workflows and system architectures for sales and operations teams, built on n8n, Make, and HubSpot.",
-    alternates: {
-        canonical: "https://bajwaa.dev/workflows",
-    },
-    openGraph: {
-        title: "Workflows | Bajwaa Dev",
-        description: "Automation workflows and system architectures for sales and operations teams, built on n8n, Make, and HubSpot.",
-        url: "https://bajwaa.dev/workflows",
-    },
-    twitter: {
-        title: "Workflows | Bajwaa Dev",
-        description: "Automation workflows and system architectures for sales and operations teams, built on n8n, Make, and HubSpot.",
-    },
-};
+export const metadata = pageMetadata(
+  "/workflows",
+  "Business Workflow Examples",
+  "Explore examples of reporting, lead routing and customer triage workflows, then discuss how to adapt a process for your team.",
+);
 
 const workflows = [
     {
@@ -97,14 +86,14 @@ export default function WorkflowsPage() {
                         Want one of these built for your business?
                     </h2>
                     <p className="muted-copy max-w-xl mx-auto mb-10">
-                        Get the exact frameworks and system architectures, or work directly with me to implement them.
+                        Talk through the tools, people and handovers involved in your workflow.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link href="/product" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 pulse-glow">
-                            Join the Waitlist
+                        <Link href="/contact" className="btn-primary min-h-[48px] w-full sm:w-auto px-8 pulse-glow">
+                            Book a Free Discovery Call
                         </Link>
-                        <Link href="/work-with-me" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
-                            Work With Me →
+                        <Link href="/ai-implementation" className="btn-secondary min-h-[48px] w-full sm:w-auto px-8 text-center">
+                            Explore AI implementation
                         </Link>
                     </div>
                 </div>

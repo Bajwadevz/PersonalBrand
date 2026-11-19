@@ -14,16 +14,13 @@ export default function KitFormButton({
     className,
 }: KitFormButtonProps) {
     const [open, setOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-    const scriptInjected = useRef(false);
+
+
+
 
     useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (!open || scriptInjected.current) return;
+        if (!open) return;
 
         const timer = setTimeout(() => {
             const container = containerRef.current;
@@ -34,7 +31,6 @@ export default function KitFormButton({
             script.setAttribute("data-uid", "83fb0dd633");
             script.src = "https://bajwaa-dev.kit.com/83fb0dd633/index.js";
             container.appendChild(script);
-            scriptInjected.current = true;
         }, 80);
 
         return () => clearTimeout(timer);
@@ -56,14 +52,6 @@ export default function KitFormButton({
     const handleClose = useCallback(() => setOpen(false), []);
 
     const btnClass = className ?? "btn-primary min-h-[48px] min-w-[220px]";
-
-    if (!mounted) {
-        return (
-            <button type="button" className={btnClass}>
-                {label}
-            </button>
-        );
-    }
 
     return (
         <>

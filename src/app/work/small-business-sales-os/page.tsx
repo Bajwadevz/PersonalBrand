@@ -35,8 +35,8 @@ export default function SalesOsCaseStudy() {
   return (
     <article className="w-full pb-20 pt-12 md:pt-20">
       <header className="container-shell">
-        <Link href="/#portfolio" className="inline-flex items-center gap-2 text-sm muted-copy hover:underline">
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to the portfolio
+        <Link href="/work" className="inline-flex items-center gap-2 text-sm muted-copy hover:underline">
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to work
         </Link>
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
           <div>

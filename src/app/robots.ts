@@ -1,11 +1,11 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-        },
-        sitemap: "https://bajwaa.dev/sitemap.xml",
-    };
+  if (process.env.VERCEL_ENV === "preview") {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
+  return {
+    rules: { userAgent: "*", allow: "/", disallow: "/api/" },
+    sitemap: "https://bajwaa.dev/sitemap.xml",
+  };
 }

@@ -42,7 +42,7 @@ Instead of spending 20 minutes manually compiling this data per prospect, you mu
 
 By the time you sit down to begin your outreach block, your sales pipeline spreadsheet is filled with pre-digested context on every single lead.
 
-> Ready to build your first AI system? [Get the Playbook](/product) →
+> Ready to build your first AI system? [Get the Playbook](/ai-implementation-os) →
 
 ## Phase 2: Outreach Prep & Draft Generation
 
@@ -119,4 +119,4 @@ Systematizing your outreach is a mandate for surviving in an AI-accelerated mark
 
 To return to the core philosophy of operational leverage, visit the [homepage](/). Adopt the mindset of an operator who commands digital leverage, and stop accepting administrative friction as an unchangeable reality of your profession.
 
-> If you want step-by-step implementation frameworks, [get the Playbook](/product).
+> If you want step-by-step implementation frameworks, [get the Playbook](/ai-implementation-os).

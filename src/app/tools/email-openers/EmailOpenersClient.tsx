@@ -78,7 +78,7 @@ export default function EmailOpenersClient() {
           Outbound Email Opener Templates
         </h1>
         <p className="text-xl max-w-2xl text-gray-600 font-medium leading-relaxed">
-          Stop writing generic "hope you are doing well" emails. Use these 30+ field-tested cold email hook frameworks categorized by prospect role and tactic.
+          Stop writing generic “hope you are doing well” emails. Use these 30+ field-tested cold email hook frameworks categorized by prospect role and tactic.
         </p>
       </section>
 
@@ -118,7 +118,7 @@ export default function EmailOpenersClient() {
         {filtered.map((o, i) => (
           <div key={i} className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 overflow-hidden flex flex-col sm:flex-row items-stretch">
             <div className="p-6 flex-grow flex flex-col justify-center">
-              <p className="text-[#0F172A] text-lg font-medium leading-relaxed mb-4">"{o.text}"</p>
+              <p className="text-[#0F172A] text-lg font-medium leading-relaxed mb-4">“{o.text}”</p>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 border border-gray-200/50">{o.role}</span>
                 <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 border border-gray-200/50">{o.tactic}</span>

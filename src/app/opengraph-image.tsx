@@ -1,8 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-
-export const alt = "Shahzeb Bajwa: AI Lead Response Systems for Service Businesses.";
+export const alt = "bajwaa.dev — AI implementation for Australian businesses";
 export const size = {
     width: 1200,
     height: 630,
@@ -55,7 +53,7 @@ export default async function Image() {
                             fontFamily: "system-ui, sans-serif"
                         }}
                     >
-                        Bajwaa Dev
+                        bajwaa.dev
                     </div>
                 </div>
                 <div
@@ -67,7 +65,7 @@ export default async function Image() {
                         fontFamily: "system-ui, sans-serif"
                     }}
                 >
-                    AI Lead Response & Booking Systems for Service Businesses
+                    AI implementation for Australian businesses
                 </div>
             </div>
         ),

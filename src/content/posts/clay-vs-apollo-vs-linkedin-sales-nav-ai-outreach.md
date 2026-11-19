@@ -55,7 +55,7 @@ Sales Nav is unmatched for "who’s active, who changed jobs, who’s engaging."
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

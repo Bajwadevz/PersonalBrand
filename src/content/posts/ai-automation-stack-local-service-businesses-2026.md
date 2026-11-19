@@ -81,4 +81,4 @@ You do not need to buy every tool in this stack before you launch. A realistic s
 
 That combination handles missed-call recovery, qualification, booking, and follow-up for well under $50 a month in software costs, before you add a trade-specific platform. The upgrade path exists when you outgrow it. Most businesses do not need to start there.
 
-> Want the exact stack scoped for your business instead of piecing it together yourself? [Book a free lead-response audit](/contact) and I'll show you what to build first.
+> See how the [AI operations audit](/ai-operations-audit) maps the current process, exceptions and practical next steps before implementation.

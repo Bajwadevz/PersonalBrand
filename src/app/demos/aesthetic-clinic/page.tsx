@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Jost } from "next/font/google";
+import localFont from "next/font/local";
 import Lumiere from "./Client";
 
-const bodoni = Bodoni_Moda({ subsets: ["latin"], weight: ["400", "500"], style: ["normal", "italic"], variable: "--f-bodoni" });
-const jost = Jost({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--f-jost" });
+const bodoni = localFont({
+  variable: "--f-bodoni",
+  preload: false,
+  src: [
+    { path: "../../../fonts/bodoni-moda-italic-400-500.woff2", weight: "400 500", style: "italic" },
+    { path: "../../../fonts/bodoni-moda-normal-400-500.woff2", weight: "400 500", style: "normal" },
+  ],
+});
+const jost = localFont({
+  variable: "--f-jost",
+  preload: false,
+  src: [
+    { path: "../../../fonts/jost-normal-300-500.woff2", weight: "300 500", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Lumière — Aesthetic Clinic Concept Demo",

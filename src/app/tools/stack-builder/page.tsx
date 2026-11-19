@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import StackBuilderClient from "./StackBuilderClient";
 
-export const metadata: Metadata = {
-  title: "Automation Stack Recommender: Free Tool",
-  description: "Select your role, goals, and budget. Get a specific recommended automation stack with tool justifications, no generic advice. Free, no sign-up.",
-  alternates: { canonical: "https://bajwaa.dev/tools/stack-builder" },
-};
+export const metadata = pageMetadata(
+  "/tools/stack-builder",
+  "Automation Stack Recommender: Free Tool",
+  "Explore automation tools for your role, goals and budget to build a shortlist for evaluation.",
+);
 
 export default function StackBuilderPage() {
   return <StackBuilderClient />;

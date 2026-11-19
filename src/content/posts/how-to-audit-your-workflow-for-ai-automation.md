@@ -70,4 +70,4 @@ You start asking, *"Why is a human being still touching this process?"*
 
 When you systematically eliminate Q1 tasks, you unlock a terrifying amount of leverage. You can process 10x the volume of transactions, client support tickets, or data analytics without adding a single dollar to payroll overhead. This is the definition of operational scaling.
 
-> If you want step-by-step implementation frameworks to execute on your audit, [get the Playbook](/product).
+> If you want step-by-step implementation frameworks to execute on your audit, [get the Playbook](/ai-implementation-os).

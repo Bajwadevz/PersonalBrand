@@ -74,4 +74,4 @@ Track these four numbers every week, not just once at launch:
 
 If you are not tracking booked jobs, you have no way to know if this system is paying for itself, even though for most home-service businesses it is one of the fastest-paying-for-itself workflows they will ever build.
 
-> Ready to stop losing jobs to missed calls? [Book a free lead-response audit](/contact) and I will map exactly how many leads you're losing this way before we build anything.
+> See how the [AI operations audit](/ai-operations-audit) maps the current process, exceptions and practical next steps before implementation.

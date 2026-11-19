@@ -67,7 +67,7 @@ The AI returns a formatted report; that string goes into the Notion page and the
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

@@ -71,4 +71,4 @@ If you cannot answer "who owns this?" or "what happens when it fails?", do not a
 
 Choosing an AI stack is not a one-time decision. Revisit when you add a new use case, when cost or complexity spikes, or when [building internal AI tools](/blog/building-internal-ai-tools) scales beyond a few workflows. The goal is a minimal, maintainable stack that matches your team’s capacity and your workload’s shape.
 
-> For implementation frameworks that align stack choices with execution, [get the Playbook](/product).
+> For implementation frameworks that align stack choices with execution, [get the Playbook](/ai-implementation-os).

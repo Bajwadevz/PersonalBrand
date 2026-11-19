@@ -31,7 +31,7 @@ export function WavePath({
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<SVGSVGElement>) => {
-      if (!svgRef.current) return;
+      if (!svgRef.current || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       const rect = svgRef.current.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       const y = (e.clientY - rect.top) / rect.height;

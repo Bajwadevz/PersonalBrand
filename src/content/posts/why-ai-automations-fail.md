@@ -65,4 +65,4 @@ Fixing broken automation is often faster than building from scratch, if you simp
 
 Most AI automations fail because of structure, feedback, or ownership, not because of the model. Fix those three, and you go from "automation that kind of works" to [systems that actually ship](/blog/designing-ai-workflows-that-actually-ship) and stay healthy.
 
-> For step-by-step frameworks to audit, design, and fix automations, [get the Playbook](/product).
+> For step-by-step frameworks to audit, design, and fix automations, [get the Playbook](/ai-implementation-os).

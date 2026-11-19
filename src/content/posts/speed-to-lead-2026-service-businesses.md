@@ -55,4 +55,4 @@ You do not need a call center or a night shift to fix this. You need a system th
 
 The businesses that fix this first in their market tend to keep the advantage, because most competitors never measure their own response time in the first place. This is not a technology advantage. It is an operations advantage that happens to be built with AI.
 
-> Curious how fast your business actually responds to leads right now? [Book a free lead-response audit](/contact) and I will show you the real numbers before we talk about fixing anything.
+> See how the [AI operations audit](/ai-operations-audit) maps the current process, exceptions and practical next steps before implementation.

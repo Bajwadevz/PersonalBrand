@@ -78,7 +78,7 @@ Use them as inputs or enrichment steps inside your main orchestration (Make/n8n)
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

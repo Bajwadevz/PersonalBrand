@@ -1,0 +1,518 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "title": "AI Implementation for Australian Businesses",
+      "description": "Reduce repetitive admin, improve CRM workflows and connect the tools your team already uses. Book a free discovery call with bajwaa.dev.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/"
+      ],
+      "headings": [
+        "Your business,without the busywork."
+      ],
+      "ogTitle": "AI Implementation for Australian Businesses | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/ai-implementation",
+      "title": "AI Implementation Services for Australian Businesses | bajwaa.dev",
+      "description": "Connect existing tools, reduce repetitive admin and improve CRM handoffs with scoped AI implementation services for Australian businesses.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/ai-implementation"
+      ],
+      "headings": [
+        "Make your existing systems work together."
+      ],
+      "ogTitle": "AI Implementation Services for Australian Businesses | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/ai-implementation",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/ai-operations-audit",
+      "title": "AI Operations Audit for Australian Businesses | bajwaa.dev",
+      "description": "Explore a fixed-scope A$750 workflow audit for one operating team, including integration checks, a written roadmap and a review meeting. See the scope and deliverables.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/ai-operations-audit"
+      ],
+      "headings": [
+        "Know where AI will help before you pay for a build."
+      ],
+      "ogTitle": "AI Operations Audit for Australian Businesses | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/ai-operations-audit",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/how-it-works",
+      "title": "How Our AI Implementation Works | bajwaa.dev",
+      "description": "Explore the free discovery call, A$750 operations audit, scoped implementation and optional managed support. See pricing and deliverables at each stage.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/how-it-works"
+      ],
+      "headings": [
+        "A clear path from bottleneck to build."
+      ],
+      "ogTitle": "How Our AI Implementation Works | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/how-it-works",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/work",
+      "title": "AI Implementation Examples & Work | bajwaa.dev",
+      "description": "Watch the bajwaa.dev lead response and booking walkthrough, then explore a sales workspace and practical automation scenarios.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/work"
+      ],
+      "headings": [
+        "See what we build."
+      ],
+      "ogTitle": "AI Implementation Examples & Work | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/work",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/about",
+      "title": "About Shahzeb Bajwa and bajwaa.dev | bajwaa.dev",
+      "description": "Meet Shahzeb Bajwa, the founder of bajwaa.dev, and learn how his software sales and computer science background informs AI implementation for Australian teams.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/about"
+      ],
+      "headings": [
+        "Built by someone who has carried the pipeline."
+      ],
+      "ogTitle": "About Shahzeb Bajwa and bajwaa.dev | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/about",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/contact",
+      "title": "Book a Free AI Implementation Discovery Call | bajwaa.dev",
+      "description": "Arrange a free 20-minute discovery call about a recurring admin task, CRM workflow or integration for your Australian business.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/contact"
+      ],
+      "headings": [
+        "Bring us one recurring task."
+      ],
+      "ogTitle": "Book a Free AI Implementation Discovery Call | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/contact",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/ai-implementation-perth",
+      "title": "AI Implementation for Perth and Western Australian Businesses | bajwaa.dev",
+      "description": "Remote AI implementation for Perth and Western Australian businesses. Review CRM, job management and accounting handoffs and arrange discovery in AWST.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/ai-implementation-perth"
+      ],
+      "headings": [
+        "AI implementation for Perth businesses, delivered remotely."
+      ],
+      "ogTitle": "AI Implementation for Perth and Western Australian Businesses | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/ai-implementation-perth",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/solutions/crm-automation",
+      "title": "CRM Automation for Australian Businesses | bajwaa.dev",
+      "description": "Connect enquiries to your CRM, prevent duplicate records and assign follow-up. See how Australian teams can automate CRM updates with human review.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/solutions/crm-automation"
+      ],
+      "headings": [
+        "Give every enquiry an owner and a next step."
+      ],
+      "ogTitle": "CRM Automation for Australian Businesses | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/solutions/crm-automation",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/solutions/business-process-automation",
+      "title": "Business Process Automation for Australian Teams | bajwaa.dev",
+      "description": "Assess repetitive reporting, document intake and handovers. Explore rules, AI-assisted classification and approval controls for Australian operations teams.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/solutions/business-process-automation"
+      ],
+      "headings": [
+        "Move recurring work out of the copy-and-paste queue."
+      ],
+      "ogTitle": "Business Process Automation for Australian Teams | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/solutions/business-process-automation",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/blog",
+      "title": "Insights on AI Implementation and Automation | bajwaa.dev",
+      "description": "Guides for Australian teams on AI implementation pricing, CRM automation, workflow audits and choosing between rules and AI agents.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/blog"
+      ],
+      "headings": [
+        "AI implementation guides."
+      ],
+      "ogTitle": "Insights on AI Implementation and Automation | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/blog",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/privacy",
+      "title": "Privacy Notice | bajwaa.dev",
+      "description": "How bajwaa.dev handles discovery enquiries, contact details, booking information and website analytics.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/privacy"
+      ],
+      "headings": [
+        "Privacy notice"
+      ],
+      "ogTitle": "Privacy Notice | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/privacy",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    },
+    {
+      "route": "/terms",
+      "title": "Website and Discovery Call Terms | bajwaa.dev",
+      "description": "How discovery calls, paid audits, implementation quotes and demonstrations work at bajwaa.dev.",
+      "canonicalUrls": [
+        "https://bajwaa.dev/terms"
+      ],
+      "headings": [
+        "Terms of use"
+      ],
+      "ogTitle": "Website and Discovery Call Terms | bajwaa.dev",
+      "ogImage": "https://bajwaa.dev/opengraph-image",
+      "ogUrl": "https://bajwaa.dev/terms",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://bajwaa.dev/opengraph-image"
+    }
+  ],
+  "screenshots": [
+    "after-1440.png",
+    "after-process-1440.png",
+    "after-768.png",
+    "after-390.png",
+    "after-dark-1440.png",
+    "after-dark-768.png",
+    "after-dark-390.png",
+    "after-dark-320.png"
+  ],
+  "links": 46,
+  "journey": [
+    {
+      "route": "/",
+      "stages": [
+        "Discover",
+        "Audit",
+        "Implement",
+        "Support"
+      ],
+      "prices": [
+        "Free",
+        "A$750",
+        "From A$3,500",
+        "From A$490/month"
+      ]
+    },
+    {
+      "route": "/how-it-works",
+      "stages": [
+        "Discover",
+        "Audit",
+        "Implement",
+        "Support"
+      ],
+      "prices": [
+        "Free",
+        "A$750",
+        "From A$3,500",
+        "From A$490/month"
+      ]
+    },
+    {
+      "route": "/work",
+      "video": "Loom embeds on demand and has a direct link"
+    }
+  ],
+  "errors": [],
+  "mobileMenu": "Opened with Enter, closed with Escape, restored focus and navigated to What We Do",
+  "brand": {
+    "darkThemePersists": true,
+    "viewports": [
+      {
+        "width": 1440,
+        "documentWidth": 1440,
+        "headingWidth": 994,
+        "headingBox": 994
+      },
+      {
+        "width": 768,
+        "documentWidth": 768,
+        "headingWidth": 536,
+        "headingBox": 536
+      },
+      {
+        "width": 390,
+        "documentWidth": 390,
+        "headingWidth": 351,
+        "headingBox": 351
+      },
+      {
+        "width": 320,
+        "documentWidth": 320,
+        "headingWidth": 288,
+        "headingBox": 288
+      }
+    ]
+  },
+  "insights": {
+    "articles": 31,
+    "filter": "Passed"
+  },
+  "contact": "Visible email fallback, empty-form validation, simulated delivery failure and successful retry. Synthetic data intercepted locally.",
+  "accessibility": [
+    {
+      "route": "/",
+      "width": 1440,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/ai-implementation",
+      "width": 1440,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/work",
+      "width": 1440,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/blog",
+      "width": 1440,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/ai-implementation",
+      "width": 390,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/work",
+      "width": 390,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/blog",
+      "width": 390,
+      "theme": "light",
+      "styling": {
+        "ink": "#111111",
+        "navColor": "rgb(17, 17, 17)",
+        "footerColor": "rgb(17, 17, 17)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/ai-implementation",
+      "width": 1440,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/work",
+      "width": 1440,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/blog",
+      "width": 1440,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/ai-implementation",
+      "width": 390,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/work",
+      "width": 390,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    },
+    {
+      "route": "/blog",
+      "width": 390,
+      "theme": "dark",
+      "styling": {
+        "ink": "#f5f7fa",
+        "navColor": "rgb(245, 247, 250)",
+        "footerColor": "rgb(245, 247, 250)"
+      },
+      "violations": []
+    }
+  ],
+  "nativeContact": "Homepage CTA and native confirmation worked with JavaScript disabled. Synthetic POST intercepted locally."
+}

@@ -1,16 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { Syne, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
-const syne = Syne({
-    subsets: ["latin"],
+const syne = localFont({
+    src: "../fonts/syne-normal-400-800.woff2",
+    weight: "400 800",
+    preload: false,
     variable: "--font-syne",
     display: "swap",
 });
 
-const dmSans = DM_Sans({
-    subsets: ["latin"],
+const dmSans = localFont({
+    src: "../fonts/dm-sans-normal-100-1000.woff2",
+    weight: "100 1000",
+    preload: false,
     variable: "--font-dm-sans",
     display: "swap",
 });

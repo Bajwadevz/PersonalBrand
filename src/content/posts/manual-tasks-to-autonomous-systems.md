@@ -67,4 +67,4 @@ A practical sequence for moving from manual to autonomous:
 
 Resist the urge to automate five processes at once. One process running reliably beats five half-built automations. Once one is stable, replicate the pattern for the next.
 
-> For frameworks that take you from audit to deployed automation, [get the Playbook](/product).
+> For frameworks that take you from audit to deployed automation, [get the Playbook](/ai-implementation-os).

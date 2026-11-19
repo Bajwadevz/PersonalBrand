@@ -70,7 +70,7 @@ export default function DiscoveryQuestionClient() {
           Sales Discovery Question Bank
         </h1>
         <p className="text-xl max-w-2xl text-gray-600 font-medium leading-relaxed">
-          Stop asking "what keeps you up at night". Use these hard-hitting discovery questions organized by sales stage and buyer persona to uncover real pain.
+          Stop asking “what keeps you up at night”. Use these hard-hitting discovery questions organized by sales stage and buyer persona to uncover real pain.
         </p>
       </section>
 
@@ -110,7 +110,7 @@ export default function DiscoveryQuestionClient() {
         {filtered.map((q, i) => (
           <div key={i} className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 p-6 flex items-start justify-between gap-4">
             <div className="flex-grow">
-              <p className="text-[#0F172A] text-lg font-medium leading-relaxed mb-4">"{q.text}"</p>
+              <p className="text-[#0F172A] text-lg font-medium leading-relaxed mb-4">“{q.text}”</p>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 border border-gray-200/50">{q.stage}</span>
                 <span className="inline-flex items-center rounded-full bg-[#F8FAFC] px-3 py-1 text-xs font-medium text-[#0B2545] border border-gray-200/50">{q.persona}</span>

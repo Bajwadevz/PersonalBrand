@@ -1,22 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-    title: "Tools",
-    description: "The automation and AI tools I use in production builds, with honest notes on where each one actually fits.",
-    alternates: {
-        canonical: "https://bajwaa.dev/tools",
-    },
-    openGraph: {
-        title: "Tools | Bajwaa Dev",
-        description: "The automation and AI tools I use in production builds, with honest notes on where each one actually fits.",
-        url: "https://bajwaa.dev/tools",
-    },
-    twitter: {
-        title: "Tools | Bajwaa Dev",
-        description: "The automation and AI tools I use in production builds, with honest notes on where each one actually fits.",
-    },
-};
+export const metadata = pageMetadata(
+  "/tools",
+  "Free AI and Workflow Automation Tools",
+  "Explore calculators, workflow planners and CRM resources for evaluating and designing business automation.",
+);
 
 const tools = [
     {
@@ -172,7 +161,7 @@ export default function ToolsPage() {
             </section>
             <section className="container-shell mt-20 text-center">
                 <p className="mb-5 text-lg font-semibold">Need a custom tool built?</p>
-                <Link href="/product" className="btn-primary inline-flex min-h-[48px] items-center">Join the Waitlist</Link>
+                <Link href="/contact" className="btn-primary inline-flex min-h-[48px] items-center">Book a Free Discovery Call</Link>
             </section>
         </div>
     );

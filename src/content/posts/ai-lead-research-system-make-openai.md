@@ -110,7 +110,7 @@ Scale the scenario to run on every new lead; add a filter if you only want to en
 
 ---
 **Want the exact workflows and system prompts?**
-[Get the Playbook →](/product)
+[Get the Playbook →](/ai-implementation-os)
 ---
 
 ## FAQ

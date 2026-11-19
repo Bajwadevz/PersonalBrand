@@ -56,4 +56,4 @@ If you do nothing else from this guide, do this: install missed-call text-back t
 
 Most service businesses do not need a bigger marketing budget. They need to stop losing the leads they are already paying for.
 
-> Want this built for your business? [Book a free lead-response audit](/contact) and I will show you exactly where your leads are leaking before we build anything.
+> See how the [AI operations audit](/ai-operations-audit) maps the current process, exceptions and practical next steps before implementation.

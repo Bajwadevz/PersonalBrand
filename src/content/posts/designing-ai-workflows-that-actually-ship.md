@@ -83,4 +83,4 @@ Use this as a checklist for each new workflow.
 
 If you skip validation or deployment, you will accumulate workflows that "almost" ship but never fully do. If you skip simplicity, you will accumulate unmaintainable flows. The operators who win are the ones who ship fewer, clearer workflows that actually run.
 
-> Ready to turn your audit into shipped workflows? [Get the Playbook](/product) for step-by-step implementation frameworks.
+> Ready to turn your audit into shipped workflows? [Get the Playbook](/ai-implementation-os) for step-by-step implementation frameworks.

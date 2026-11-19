@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { DM_Sans, Syne } from "next/font/google";
+import localFont from "next/font/local";
 import FosterStone from "./Client";
 
-const syne = Syne({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--f-syne" });
-const dm = DM_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--f-dm" });
+const syne = localFont({
+  variable: "--f-syne",
+  preload: false,
+  src: [
+    { path: "../../../fonts/syne-normal-400-800.woff2", weight: "400 800", style: "normal" },
+  ],
+});
+const dm = localFont({
+  variable: "--f-dm",
+  preload: false,
+  src: [
+    { path: "../../../fonts/dm-sans-normal-100-1000.woff2", weight: "100 1000", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Foster & Stone — Architecture & Interiors Concept Demo",

@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'img.logo.dev', pathname: '/**' },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/work-with-me', destination: '/ai-implementation', permanent: true },
+      { source: '/services/lead-response', destination: '/solutions/crm-automation', permanent: true },
+      { source: '/services/automations', destination: '/solutions/business-process-automation', permanent: true },
+      { source: '/services/system-care', destination: '/how-it-works', permanent: true },
+      { source: '/product', destination: '/ai-implementation-os', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
