@@ -41,3 +41,9 @@ United States 277, India 89, United Kingdom 29, Bangladesh 26, Philippines 23, B
 1. In Search Console → Sitemaps, resubmit `https://bajwaa.dev/sitemap.xml` (it will list 61 URLs).
 2. Use URL Inspection → Request indexing for `/`, `/ai-implementation`, `/ai-operations-audit`, `/ai-implementation-perth`, `/work` and the three `/work/<case-study>` pages.
 3. Recheck coverage and enhancements (Breadcrumbs, Articles) after 7 days.
+
+## Launch log, 20 Nov 2026
+- `main` was fast-forwarded to `agency-australia` (7ea40c8). The Vercel production build is live, and all 12 checked commercial pages return 200 with self-canonicals and no noindex.
+- The sitemap was resubmitted in Search Console (61 URLs).
+- Indexing was requested for `/` (already indexed), `/ai-implementation`, `/ai-operations-audit`, `/ai-implementation-perth`, `/work`, `/work/ai-lead-research-pipeline`, `/work/outbound-automation-crm-sync` and `/work/salesforce-crm-hygiene-agent`. Before the request, each new page was "Discovered – currently not indexed" or "URL is unknown to Google".
+- Not requested, because of the daily quota: `/solutions/*`, `/how-it-works` and the two new guides. Google will reach them through the sitemap, or request them after 21 Nov.
