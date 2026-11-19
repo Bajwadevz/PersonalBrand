@@ -22,6 +22,7 @@ const detail: Detail = {
     ]
   ],
   "links": [
+    ["Client case studies", "/work"], 
     ["AI implementation for Perth and WA", "/ai-implementation-perth"],
     [
       "CRM & customer workflows",

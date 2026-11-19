@@ -59,3 +59,12 @@ The [release crawl](release-crawl.csv) verified 55 sitemap URLs. Every URL retur
 | Rebuilt local production site, desktop | 100 | 0.2 s | 0 ms | 0 |
 
 These are individual lab runs. The local build avoids the network conditions of a production deployment. Field INP and Core Web Vitals remain pending.
+
+## 20 November 2026 update (Claude)
+
+- **Sitemap:** adds `lastModified` and priority, the three `/work/<case-study>` pages and dated blog posts. `/services/websites` and `/ai-implementation-os` are no longer listed (off-positioning per the PRD). Both URLs still resolve and were not redirected or set to noindex, so no existing value is removed. Revisit with Search Console data.
+- **Structured data:** Organisation gains `description`, `knowsAbout`, `sameAs` (GitHub `Bajwadevz`, LinkedIn `shahzeb-bajwa`) and a sales `contactPoint` with no address. Person gains `jobTitle`, `worksFor` and `sameAs`. The audit `Service` carries an A$750 `Offer`, and implementation carries a minimum-price A$3,500 offer. Case studies use `Article` + `BreadcrumbList`. Blog posts by the founder link to the Person entity. No `LocalBusiness`, rating or review markup.
+- **Metadata:** titles, descriptions and H1s follow `docs/seo/keyword-map.md`. Every checked title is ≤60 characters with the suffix, and descriptions are ≤155. The home H1 contains the keyword eyebrow.
+- **Social images:** per-case-study Open Graph images.
+- **Search Console:** the `bajwaa.dev` domain property exists in the founder's Google account but is **not verified**. Verify it with a DNS TXT record, or use a URL-prefix property with `GOOGLE_SITE_VERIFICATION` set in Vercel, then submit `https://bajwaa.dev/sitemap.xml`.
+- **Social profiles:** two unused components disagree. `FloatingSocialBar` links `Bajwadevz` and `shahzeb-bajwa`, and `ui/magnetic-dock` links `shahzo` and `shahzaibahmad`. Neither is rendered. Schema uses the first pair, so confirm those are the founder's current profiles.

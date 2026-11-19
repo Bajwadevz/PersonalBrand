@@ -83,12 +83,14 @@ export default async function BlogPost(props: Props) {
         url,
         inLanguage: "en-AU",
         author: post.author && post.author !== "bajwaa.dev"
-            ? { "@type": "Person", name: post.author }
+            ? (post.author === "Shahzeb Bajwa" ? { "@type": "Person", "@id": "https://bajwaa.dev/about#founder", name: post.author } : { "@type": "Person", name: post.author })
             : { "@type": "Organization", "@id": "https://bajwaa.dev/#organisation", name: "bajwaa.dev" },
         publisher: {
             "@id": "https://bajwaa.dev/#organisation"
         },
         datePublished: post.date,
+        dateModified: post.date,
+        image: "https://bajwaa.dev/opengraph-image",
         description: post.excerpt
     };
 

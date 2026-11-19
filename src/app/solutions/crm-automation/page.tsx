@@ -22,6 +22,8 @@ const detail: Detail = {
     ]
   ],
   "links": [
+    ["HubSpot and Xero integration guide", "/blog/hubspot-xero-integration-guide"], 
+    ["Case study: Salesforce CRM hygiene assistant", "/work/salesforce-crm-hygiene-agent"], ["Case study: outbound engine with HubSpot sync", "/work/outbound-automation-crm-sync"], 
     ["Read the CRM handoff guide", "/blog/reduce-manual-crm-updates"],
     [
       "Watch the implementation walkthrough",

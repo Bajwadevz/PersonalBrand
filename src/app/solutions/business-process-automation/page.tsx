@@ -22,6 +22,7 @@ const detail: Detail = {
     ]
   ],
   "links": [
+    ["Case study: AI lead research pipeline", "/work/ai-lead-research-pipeline"], ["Example workflows", "/work#examples-heading"], 
     ["Compare automation and AI agents", "/blog/business-process-automation-vs-ai-agents"],
     [
       "AI Operations Audit",

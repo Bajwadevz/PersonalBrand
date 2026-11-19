@@ -30,6 +30,8 @@ const detail: Detail = {
     ]
   ],
   "links": [
+    ["AI help for WA small businesses", "/blog/ai-for-wa-small-businesses"], 
+    ["Client case studies", "/work"], 
     ["Compare Australian implementation costs", "/blog/ai-implementation-cost-australia"],
     ["See how to match quotes to CRM records", "/blog/reduce-manual-crm-updates"],
     [
