@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ClipboardList, Headphones, MessagesSquare, Workflow } from "lucide-react";
 import { CallLink } from "./Agency";
+import ScrollProgress from "./motion/ScrollProgress";
 
 const phases = [
   {
@@ -42,11 +43,12 @@ export default function ImplementationProcess({ detailed = false }: { detailed?:
     <section className="blueprint-band process-band" id="implementation-process" aria-labelledby="process-heading">
       <div className="agency-wrap agency-section">
         <p className="kicker">How it works</p>
-        <h2 id="process-heading">From first call to working system.</h2>
+        <h2 id="process-heading" data-reveal>From first call to working system.</h2>
         <p className="section-lead">Start with one process. See the scope and price at each step before you decide to proceed.</p>
-        <ol className="process-grid" role="list">
+        <ol className="process-grid" role="list" data-progress-root>
+          <li className="process-track" aria-hidden="true"><span /><ScrollProgress steps={phases.length} /></li>
           {phases.map(({ title, price, scope, Icon, summary, outcomes }, index) => (
-            <li className="process-step" key={title}>
+            <li className="process-step glass-blueprint" key={title}>
               <div className="process-step-marker"><Icon size={21} aria-hidden="true" /><span>Step {index + 1}</span></div>
               <h3>{title}</h3>
               <p className="process-price">{price}</p>
@@ -56,7 +58,7 @@ export default function ImplementationProcess({ detailed = false }: { detailed?:
             </li>
           ))}
         </ol>
-        <div className="process-next">
+        <div className="process-next" data-reveal>
           <div>
             <h3>What happens on the first call?</h3>
             <p>Bring one task that slows your team down. We’ll talk through it and agree on a next step.</p>

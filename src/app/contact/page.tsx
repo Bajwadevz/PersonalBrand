@@ -5,7 +5,7 @@ import { agencyEmail } from "@/lib/discovery";
 import { calendarLink } from "@/lib/lead-intake";
 import "./contact.css";
 
-const title = "Book a Free AI Implementation Discovery Call";
+const title = "Book a Free 20-Minute AI Discovery Call";
 const description = "Arrange a free 20-minute discovery call about a recurring admin task, CRM workflow or integration for your Australian business.";
 export const metadata = pageMetadata("/contact", title, description);
 

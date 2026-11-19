@@ -4,8 +4,8 @@ import ImplementationProcess from "@/components/ImplementationProcess";
 
 export const metadata = agencyMeta(
   "/how-it-works",
-  "How Our AI Implementation Works",
-  "Explore the free discovery call, A$750 operations audit, scoped implementation and optional managed support. See pricing and deliverables at each stage.",
+  "How AI Implementation Works, Step by Step",
+  "From a free 20-minute call to a A$750 audit, a scoped build from A$3,500 and optional support from A$490/month. See each step and what you receive.",
 );
 
 export default function HowItWorks() {
@@ -14,7 +14,7 @@ export default function HowItWorks() {
       <section className="agency-intro">
         <div className="agency-wrap">
           <p className="kicker">How it works</p>
-          <h1>A clear path from bottleneck to build.</h1>
+          <h1>How our AI implementation process works.</h1>
           <p className="lead">Bring us one recurring task. We’ll help you decide if it’s worth automating, what needs to change and who should own the system after handover.</p>
           <div className="inline-actions">
             <CallLink />

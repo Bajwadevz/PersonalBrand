@@ -1,6 +1,8 @@
 "use client";
 
 import "@/app/agency.css";
+import "@/app/agency-motion.css";
+import MotionRuntime from "./motion/MotionRuntime";
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -22,6 +24,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         {children}
       </main>
       {!isDemo && <Footer />}
+      <MotionRuntime />
     </>
   );
 }

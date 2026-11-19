@@ -79,6 +79,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-AU" suppressHydrationWarning>
       <head>
         <script
+          dangerouslySetInnerHTML={{ __html: "(function(){try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){var r=document.documentElement;r.classList.add('motion-ok');setTimeout(function(){if(!window.__motionReady){r.classList.remove('motion-ok')}},4000)}}catch(e){}})();" }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
         />

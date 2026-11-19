@@ -2,10 +2,10 @@ import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
 
 const detail: Detail = {
   "path": "/solutions/crm-automation",
-  "title": "CRM Automation for Australian Businesses",
-  "description": "Connect enquiries to your CRM, prevent duplicate records and assign follow-up. See how Australian teams can automate CRM updates with human review.",
+  "title": "CRM Automation for HubSpot & Small Teams",
+  "description": "Stop retyping leads and deal updates. We automate HubSpot and other CRMs: enquiry capture, de-duplication, owner assignment, follow-ups and Xero handoffs.",
   "label": "CRM & customer workflows",
-  "heading": "Give every enquiry an owner and a next step.",
+  "heading": "CRM automation that gives every enquiry an owner and a next step.",
   "lead": "We design CRM workflows around the way your team qualifies, assigns and follows up customer requests. The starting point is the CRM you already use.",
   "sections": [
     [

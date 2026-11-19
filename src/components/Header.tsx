@@ -15,6 +15,14 @@ const navigation = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", localStorage.getItem("theme") === "dark");
@@ -26,7 +34,7 @@ export default function Header() {
   }
 
   return (
-    <header className="agency-header" onKeyDown={(event) => {
+    <header className={scrolled ? "agency-header is-scrolled" : "agency-header"} onKeyDown={(event) => {
       if (event.key === "Escape" && open) {
         setOpen(false);
         event.currentTarget.querySelector<HTMLButtonElement>(".nav-toggle")?.focus();

@@ -2,11 +2,11 @@ import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
 
 const detail: Detail = {
   "path": "/ai-implementation",
-  "title": "AI Implementation Services for Australian Businesses",
-  "description": "Connect existing tools, reduce repetitive admin and improve CRM handoffs with scoped AI implementation services for Australian businesses.",
+  "title": "AI Implementation & Integration Services",
+  "description": "AI implementation from A$3,500. We scope, build and test automations inside the software you already use, then hand over the accounts and documentation.",
   "label": "AI implementation",
-  "heading": "Make your existing systems work together.",
-  "lead": "We build around the process your team actually uses. That may mean connecting a form to a CRM, routing a document for review or preparing a report from several systems.",
+  "heading": "AI implementation services for Australian businesses.",
+  "lead": "Make your existing systems work together. We map, build and test the workflow with your team, whether it routes enquiries into a CRM, sends documents for review or prepares a report from several tools.",
   "sections": [
     [
       "Start with a handoff",
@@ -22,6 +22,7 @@ const detail: Detail = {
     ]
   ],
   "links": [
+    ["AI implementation for Perth and WA", "/ai-implementation-perth"],
     [
       "CRM & customer workflows",
       "/solutions/crm-automation"

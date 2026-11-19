@@ -2,10 +2,10 @@ import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
 
 const detail: Detail = {
   "path": "/solutions/business-process-automation",
-  "title": "Business Process Automation for Australian Teams",
-  "description": "Assess repetitive reporting, document intake and handovers. Explore rules, AI-assisted classification and approval controls for Australian operations teams.",
+  "title": "Business Process Automation Australia",
+  "description": "Automate the admin your team repeats every week — forms, inboxes, quotes, invoices and job updates across Xero, MYOB and your job-management software.",
   "label": "Admin & operations",
-  "heading": "Move recurring work out of the copy-and-paste queue.",
+  "heading": "Business process automation that takes recurring work out of copy-and-paste.",
   "lead": "We help operations teams automate repeatable steps in reporting, document intake and handovers while keeping judgement calls with the people responsible.",
   "sections": [
     [
