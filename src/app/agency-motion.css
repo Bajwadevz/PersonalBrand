@@ -416,3 +416,83 @@ html.dark .workflow-demo { --ok: #45d39b; --warn: #f2b84b; --err: #ff7a6e; }
 
 /* Keyword eyebrow lives inside the H1 for search; styled as the kicker. */
 .agency-hero h1 .h1-kicker { display: block; margin: 0 auto 18px; font-family: var(--font-mono); font-size: .72rem; font-weight: 600; letter-spacing: .09em; line-height: 1.6; text-transform: uppercase; color: var(--accent-text); }
+
+/* ======================================================================
+   Shared page frame (v2): every page hero sits under the floating header
+   with the perspective grid behind it, like the homepage.
+   ====================================================================== */
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  margin-top: -80px;
+  padding: calc(80px + clamp(40px, 6vw, 88px)) 0 clamp(48px, 6vw, 92px);
+  background: radial-gradient(ellipse at 70% 60%, rgb(45 106 143 / 9%), transparent 65%), var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.dark .page-hero { background: radial-gradient(ellipse at 70% 70%, #193a57, transparent 72%), var(--paper); }
+.page-hero .perspective-grid { opacity: .75; }
+.page-hero-inner { position: relative; display: grid; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.page-hero-split .page-hero-inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+.page-hero h1 { font-size: clamp(2.6rem, 5.6vw, 5.2rem); }
+.page-hero .lead { margin-bottom: 30px; }
+.page-hero-visual { position: relative; min-width: 0; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.hero-secondary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--accent-text); font-weight: 650; }
+.hero-secondary span { display: inline-block; transition: translate .2s var(--ease-snap); }
+.hero-secondary:hover span { translate: 4px 0; }
+.agency-button-light { background: #fff; color: #0e2a47; box-shadow: 0 6px 20px rgb(0 0 0 / 18%); }
+.agency-button-light:hover { background: #e8f4fb; }
+.motion-ok .page-hero .hero-seq > .kicker { animation: hero-fade .35s var(--ease-out) both; }
+.motion-ok .page-hero .hero-seq > h1 { animation: hero-rise .9s var(--ease-out) .08s both; }
+.motion-ok .page-hero .hero-seq > .lead { animation: hero-rise .8s var(--ease-out) .3s both; }
+.motion-ok .page-hero .hero-seq > .hero-actions { animation: hero-rise .8s var(--ease-out) .45s both; }
+.motion-ok .page-hero .hero-seq > :nth-child(n+5) { animation: hero-fade .8s var(--ease-out) .6s both; }
+@media (max-width: 860px) {
+  .page-hero-split .page-hero-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .page-hero { margin-top: -72px; padding-top: calc(72px + 40px); }
+}
+
+/* Offer path: the same four steps wherever the offer is explained. */
+.offer-path { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; counter-reset: offer; }
+.offer-path a {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  height: 100%;
+  padding: 16px 16px 18px;
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  transition: border-color .24s var(--ease-snap), translate .24s var(--ease-snap);
+}
+.offer-path a:hover { border-color: var(--accent-text); translate: 0 -2px; text-decoration: none; }
+.offer-path li + li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 10px;
+  height: 1px;
+  background: var(--accent-text);
+}
+.offer-step { color: var(--accent-text); font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; }
+.offer-price { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: -.03em; color: var(--ink); }
+.offer-label { color: var(--muted); font-size: .86rem; line-height: 1.35; }
+.offer-path-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.offer-path-compact li + li a::before { display: none; }
+@media (max-width: 760px) {
+  .offer-path { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .offer-path li + li a::before { display: none; }
+}
+
+/* Closing band: grid background + offer path beside the final CTA. */
+.agency-close { position: relative; isolation: isolate; overflow: clip; }
+.agency-close .perspective-grid { opacity: .55; }
+.close-inner { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+.close-inner .kicker { margin-bottom: 14px; }
+@media (max-width: 860px) { .close-inner { grid-template-columns: 1fr; } }

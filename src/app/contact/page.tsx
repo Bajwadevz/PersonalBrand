@@ -15,7 +15,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
   const successRequested = status === "saved" || status === "duplicate";
   const formState = successRequested && receipt !== status ? undefined : status;
   const calendar = calendarLink();
-  return <div className="agency"><div className="agency-wrap discovery-layout">
+  return <div className="agency"><div className="agency-wrap discovery-layout" id="book">
     <div className="discovery-copy">
       <p className="kicker">Free discovery call</p><h1>Bring us one recurring task.</h1>
       <p>In 20 minutes, we’ll talk through who does the work, which systems it touches and where it slows down. You’ll leave knowing whether a paid AI Operations Audit makes sense.</p>
