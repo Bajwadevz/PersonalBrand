@@ -47,3 +47,4 @@ United States 277, India 89, United Kingdom 29, Bangladesh 26, Philippines 23, B
 - The sitemap was resubmitted in Search Console (61 URLs).
 - Indexing was requested for `/` (already indexed), `/ai-implementation`, `/ai-operations-audit`, `/ai-implementation-perth`, `/work`, `/work/ai-lead-research-pipeline`, `/work/outbound-automation-crm-sync` and `/work/salesforce-crm-hygiene-agent`. Before the request, each new page was "Discovered – currently not indexed" or "URL is unknown to Google".
 - Not requested, because of the daily quota: `/solutions/*`, `/how-it-works` and the two new guides. Google will reach them through the sitemap, or request them after 21 Nov.
+- 20 Nov, after the per-page redesign deploy (00179df): indexing was requested for `/solutions/crm-automation`. Search Console then returned "Quota Exceeded". `/solutions/business-process-automation`, `/how-it-works` and the two new guides are still pending. The 27 Nov scheduled check-in will request them.
