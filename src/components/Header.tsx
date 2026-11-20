@@ -50,7 +50,7 @@ export default function Header() {
             <Moon className="theme-light" size={17} aria-hidden="true" />
             <Sun className="theme-dark" size={17} aria-hidden="true" />
           </button>
-          <Link href="/contact" className="agency-button nav-book" onClick={() => setOpen(false)}>Book a Free Discovery Call <span aria-hidden="true">↗</span></Link>
+          <Link href="/contact#book" data-cta="header" className="agency-button nav-book" onClick={() => setOpen(false)}>Book a Free Discovery Call <span aria-hidden="true">↗</span></Link>
           <button type="button" className="nav-toggle" aria-label={open ? "Close menu" : "Menu"} aria-expanded={open} aria-controls="agency-nav" onClick={() => setOpen(!open)}>
             {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>

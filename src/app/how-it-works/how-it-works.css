@@ -1,0 +1,112 @@
+/* /how-it-works — definitive process page. All classes prefixed hiw-. */
+
+.hiw-tag {
+  display: inline-flex; align-items: center; padding: 2px 8px; border: 1px solid var(--line); border-radius: 99px;
+  font-family: var(--font-mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+
+/* ---------- Hero Gantt ---------- */
+.hiw-gantt { margin: 0; padding: clamp(18px, 2.4vw, 28px); border-radius: 20px; }
+.hiw-gantt-cap { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; font-family: var(--font-mono); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); }
+.hiw-gantt-axis, .hiw-gantt-rows li { display: grid; grid-template-columns: 26px 84px 1fr; align-items: center; gap: 10px; }
+.hiw-gantt-axis { grid-template-columns: 130px repeat(8, 1fr); gap: 0; margin-bottom: 8px; font-family: var(--font-mono); font-size: .6rem; color: var(--muted); }
+.hiw-gantt-axis::before { content: ""; }
+.hiw-gantt-axis span { padding-left: 4px; border-left: 1px dashed var(--line); }
+.hiw-gantt-rows { display: grid; gap: 10px; }
+.hiw-gantt-n { font-family: var(--font-mono); font-size: .7rem; color: var(--accent-text); }
+.hiw-gantt-label { font-size: .88rem; font-weight: 650; }
+.hiw-gantt-lane { position: relative; height: 30px; border-radius: 8px; background: repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 1px), var(--line) calc(12.5% - 1px) 12.5%); background-color: color-mix(in srgb, var(--surface) 70%, transparent); }
+.hiw-gantt-bar { position: absolute; top: 4px; bottom: 4px; display: flex; align-items: center; min-width: 10px; border-radius: 6px; background: linear-gradient(90deg, var(--ocean), var(--cyan)); transform-origin: left center; }
+.hiw-gantt-bar em { position: absolute; left: calc(100% + 6px); white-space: nowrap; font-style: normal; font-family: var(--font-mono); font-size: .62rem; color: var(--muted); }
+.hiw-gantt-bar.is-bar.is-wide em { left: 10px; color: #fff; }
+.hiw-gantt-bar.is-dot { width: 12px !important; border-radius: 50%; top: 9px; bottom: 9px; }
+.hiw-gantt-bar.is-open { background: repeating-linear-gradient(90deg, var(--cyan) 0 6px, transparent 6px 10px); opacity: .85; }
+.hiw-gantt-bar.is-open em { left: auto; right: calc(100% + 6px); }
+.hiw-gantt-foot { margin-top: 16px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
+@keyframes hiw-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes hiw-fade { from { opacity: 0; } to { opacity: 1; } }
+.motion-ok .hiw-gantt-bar { animation: hiw-grow .8s var(--ease-inout) both; animation-delay: calc(500ms + var(--i, 0) * 220ms); }
+.motion-ok .hiw-gantt-bar em { animation: hiw-fade .5s var(--ease-out) both; animation-delay: calc(1100ms + var(--i, 0) * 220ms); }
+
+/* ---------- Timeline ---------- */
+.hiw-intro { max-width: 760px; }
+.hiw-timeline { position: relative; display: grid; gap: clamp(28px, 4vw, 48px); margin-top: clamp(32px, 4vw, 56px); --rail-x: 27px; --progress: 1; }
+.hiw-rail { position: absolute; top: 28px; bottom: 28px; left: var(--rail-x); width: 2px; background: var(--line); border-radius: 2px; }
+.hiw-rail > span:first-child { position: absolute; inset: 0; background: linear-gradient(180deg, var(--ocean), var(--cyan)); transform-origin: top; transform: scaleY(var(--progress)); border-radius: inherit; }
+.hiw-step { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: clamp(16px, 3vw, 36px); scroll-margin-top: 110px; }
+.hiw-node { position: relative; z-index: 1; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 0 0 6px var(--paper); transition: border-color .5s var(--ease-out), box-shadow .5s var(--ease-out); }
+.hiw-node span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent-text); font-family: var(--font-mono); font-size: .78rem; font-weight: 700; color: var(--accent-text); transition: background .4s var(--ease-out), color .4s var(--ease-out); }
+.hiw-step-body { padding: clamp(20px, 2.6vw, 32px); border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(160deg, var(--surface), var(--paper)); transition: border-color .5s var(--ease-out), box-shadow .5s var(--ease-out), opacity .5s var(--ease-out); }
+.hiw-step-n { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .09em; text-transform: uppercase; color: var(--accent-text); }
+.hiw-step-head h3 { margin-top: 4px; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.hiw-step-summary { margin-top: 8px; max-width: 60ch; color: var(--muted); }
+.hiw-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 22px; }
+.hiw-meta > div { display: grid; gap: 2px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.hiw-meta dt { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.hiw-meta dd { font-weight: 700; font-size: .95rem; }
+.hiw-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.hiw-cols h4 { font-family: var(--font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 10px; }
+.hiw-cols ul { display: grid; gap: 8px; }
+.hiw-cols li { position: relative; padding-left: 16px; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+.hiw-cols li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-text); opacity: .6; }
+.hiw-step-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 12px; color: var(--accent-text); font-weight: 650; }
+
+/* Scroll states — only when the driver is running under motion-ok. */
+.motion-ok .hiw-timeline[data-driven] .hiw-step[data-state="next"] .hiw-step-body { opacity: .55; }
+.motion-ok .hiw-timeline[data-driven] .hiw-step[data-state="active"] .hiw-step-body { border-color: color-mix(in srgb, var(--accent-text) 55%, var(--line)); box-shadow: 0 18px 48px rgb(14 42 71 / 10%); }
+.motion-ok .hiw-timeline[data-driven] .hiw-step[data-state="active"] .hiw-node { border-color: var(--accent-text); box-shadow: 0 0 0 6px var(--paper), 0 0 0 10px color-mix(in srgb, var(--cyan) 22%, transparent); }
+.hiw-timeline[data-driven] .hiw-step[data-state="done"] .hiw-node span,
+.hiw-timeline[data-driven] .hiw-step[data-state="active"] .hiw-node span { background: var(--accent-text); color: var(--paper); }
+
+/* ---------- Indicative timeline (blueprint) ---------- */
+.hiw-plan { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+.hiw-plan-list { display: grid; border-top: 1px solid var(--line); border-color: rgb(120 170 210 / 28%); }
+.hiw-plan-list li { display: grid; grid-template-columns: 36px 1fr auto; column-gap: 14px; row-gap: 2px; padding: 16px 0; border-bottom: 1px solid rgb(120 170 210 / 28%); }
+.hiw-plan-n { grid-row: span 2; font-family: var(--font-mono); font-size: .72rem; color: var(--cyan); padding-top: 3px; }
+.hiw-plan-stage { font-weight: 700; }
+.hiw-plan-range { font-family: var(--font-mono); font-size: .8rem; color: var(--cyan); text-align: right; white-space: nowrap; }
+.hiw-plan-note { grid-column: 2 / -1; color: var(--muted); font-size: .9rem; }
+
+/* ---------- Acceptance ---------- */
+.hiw-accept { display: grid; gap: 32px; }
+.hiw-accept > div { max-width: 760px; }
+.hiw-accept-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.hiw-accept-grid li { padding: 22px; border-radius: 16px; }
+.hiw-accept-grid span { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-bottom: 14px; border-radius: 8px; border: 1px solid var(--accent-text); font-family: var(--font-mono); font-size: .75rem; color: var(--accent-text); }
+.hiw-accept-grid p { margin-top: 6px; color: var(--muted); font-size: .92rem; }
+
+/* ---------- Support ---------- */
+.hiw-support-band { background: var(--surface); border-block: 1px solid var(--line); scroll-margin-top: 90px; }
+.hiw-support-head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
+.hiw-support-price { display: grid; padding: 22px 28px; border-radius: 18px; font-family: var(--font-heading); font-size: clamp(2.4rem, 4.5vw, 3.6rem); font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--accent-text); }
+.hiw-support-price span { font-family: var(--font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.hiw-support-price small { font-size: .9rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.hiw-support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 18px; }
+.hiw-support-grid section { padding: clamp(20px, 2.6vw, 30px); border-radius: 18px; }
+.hiw-support-grid h3 { margin-bottom: 16px; }
+.hiw-support-note { color: var(--muted); font-size: .9rem; margin-bottom: 22px; }
+
+@media (max-width: 960px) {
+  .hiw-accept-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hiw-plan { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .hiw-cols { grid-template-columns: 1fr; gap: 16px; }
+  .hiw-support-head, .hiw-support-grid { grid-template-columns: 1fr; }
+  .hiw-support-price { justify-self: start; }
+}
+@media (max-width: 560px) {
+  .hiw-timeline { --rail-x: 17px; }
+  .hiw-step { grid-template-columns: 36px minmax(0, 1fr); gap: 12px; }
+  .hiw-node { width: 36px; height: 36px; box-shadow: 0 0 0 4px var(--paper); }
+  .hiw-node span { width: 28px; height: 28px; font-size: .64rem; border-width: 1.5px; }
+  .hiw-rail { top: 18px; }
+  .hiw-step-body { padding: 18px; }
+  .hiw-accept-grid { grid-template-columns: 1fr; }
+  .hiw-gantt-axis { grid-template-columns: 102px repeat(8, 1fr); font-size: .52rem; }
+  .hiw-gantt-rows li { grid-template-columns: 20px 62px 1fr; gap: 10px; }
+  .hiw-gantt-label { font-size: .78rem; }
+  .hiw-gantt-axis span { padding-left: 2px; }
+  .hiw-plan-list li { grid-template-columns: 30px 1fr; }
+  .hiw-plan-range { grid-column: 2; text-align: left; }
+}

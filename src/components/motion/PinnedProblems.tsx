@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { SecondaryLink } from "@/components/Agency";
 
 const statements = [
-  ["Inbox", "An enquiry lands in the inbox. Someone copies it into the CRM — eventually."],
-  ["Quote → job → accounts", "A quote is approved. The same details are typed again into job management and Xero."],
-  ["Friday report", "Friday arrives. Someone rebuilds the weekly report from four different tabs."],
+  ["Inbox", "An enquiry lands in the inbox. Someone copies it into the CRM — eventually.", ["Inbox", "CRM"], "copied by hand"],
+  ["Quote → job → accounts", "A quote is approved. The same details are typed again into job management and Xero.", ["Quote", "Job system", "Xero"], "typed twice"],
+  ["Friday report", "Friday arrives. Someone rebuilds the weekly report from four different tabs.", ["4 tabs", "Weekly report"], "rebuilt weekly"],
 ] as const;
 
 /**
@@ -42,7 +43,7 @@ export default function PinnedProblems() {
   }, []);
 
   return (
-    <section ref={ref} className="pin-band" aria-labelledby="handoff-heading">
+    <section ref={ref} className="pin-band home-pin" aria-labelledby="handoff-heading">
       <div className="pin-sticky">
         <div className="agency-wrap pin-inner">
           <div>
@@ -50,12 +51,22 @@ export default function PinnedProblems() {
             <h2 id="handoff-heading">Too much work happens between your systems.</h2>
             <p className="section-lead">Each handoff is small. Together they add up — and when one breaks, nobody can see where.</p>
             <div className="pin-progress" aria-hidden="true"><span style={{ transform: `scaleX(${progress})` }} /></div>
+            <p className="home-pin-count" aria-hidden="true"><span>{String(active + 1).padStart(2, "0")}</span> / {String(statements.length).padStart(2, "0")}</p>
+            <div className="home-pin-cta"><SecondaryLink href="/contact#book">Recognise one? Talk it through on a free call</SecondaryLink></div>
           </div>
           <ol className="pin-statements">
-            {statements.map(([label, text], i) => (
+            {statements.map(([label, text, flow, note], i) => (
               <li key={label} className={i === active ? "is-active" : i < active ? "is-past" : undefined}>
                 <span className="pin-label">{String(i + 1).padStart(2, "0")} · {label}</span>
                 <p>{text}</p>
+                <span className="home-pin-flow" aria-hidden="true">
+                  {flow.map((chip, ci) => (
+                    <span key={chip} className="home-pin-step">
+                      {ci > 0 && <span className="home-pin-gap"><span className="home-pin-dash" />{ci === 1 && <span className="home-pin-note">{note}</span>}</span>}
+                      <span className="home-pin-chip">{chip}</span>
+                    </span>
+                  ))}
+                </span>
               </li>
             ))}
           </ol>

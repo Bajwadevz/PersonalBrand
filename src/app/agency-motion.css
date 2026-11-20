@@ -84,7 +84,7 @@ html.dark {
   transition: opacity .75s var(--ease-out) var(--d, 0ms), transform .75s var(--ease-out) var(--d, 0ms),
     translate .24s var(--ease-snap), box-shadow .24s var(--ease-snap), border-color .24s var(--ease-snap);
 }
-.motion-ok [data-reveal]:not(.is-in) { opacity: 0; transform: translateY(24px); }
+.motion-ok [data-reveal]:not([data-revealed]) { opacity: 0; transform: translateY(24px); }
 
 /* ---------- Hero sequence (load) ---------- */
 .agency-hero h1 .line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
@@ -240,14 +240,14 @@ html.dark {
 .flow-label { font-size: .84rem; font-weight: 600; line-height: 1.3; color: var(--ink); }
 .motion-ok .flow-diagram[data-reveal] { transform: none !important; opacity: 1 !important; }
 .motion-ok .flow-diagram::before { transform: scaleX(0); transition: transform 1.2s var(--ease-inout) .1s; }
-.motion-ok .flow-diagram.is-in::before { transform: scaleX(1); }
+.motion-ok .flow-diagram[data-revealed]::before { transform: scaleX(1); }
 .motion-ok .flow-diagram li { opacity: 0; transform: translateY(10px); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); transition-delay: calc(150ms + var(--i) * 190ms); }
-.motion-ok .flow-diagram.is-in li { opacity: 1; transform: none; }
+.motion-ok .flow-diagram[data-revealed] li { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   .flow-diagram { grid-template-columns: 1fr; gap: 14px; padding-left: 4px; }
   .flow-diagram::before { top: 9px; bottom: 9px; left: 12px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--accent-text), var(--cyan)); transform-origin: top; }
   .motion-ok .flow-diagram::before { transform: scaleY(0); }
-  .motion-ok .flow-diagram.is-in::before { transform: scaleY(1); }
+  .motion-ok .flow-diagram[data-revealed]::before { transform: scaleY(1); }
   .flow-diagram li { grid-template-columns: 18px 1fr; justify-items: start; text-align: left; align-items: center; gap: 14px; }
 }
 

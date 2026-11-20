@@ -1,6 +1,9 @@
 import { getPostBySlug, getAllPosts } from "@/lib/api";
 import { insightGuides } from "@/lib/insight-guides";
-import { CallLink } from "@/components/Agency";
+import { CallLink, SecondaryLink } from "@/components/Agency";
+import ReadingProgress from "@/components/pages/insights/ReadingProgress";
+import { extractToc, headingId, textOf } from "@/components/pages/insights/toc";
+import "../insights.css";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import type { Metadata } from "next";
@@ -94,49 +97,75 @@ export default async function BlogPost(props: Props) {
         description: post.excerpt
     };
 
+    const toc = extractToc(post.content);
+    const topic = post.tags?.[0] ?? guide?.label;
+    const dateLabel = post.date
+        ? new Date(post.date).toLocaleDateString("en-AU", { timeZone: "UTC", year: "numeric", month: "long", day: "numeric" })
+        : "";
+
     return (
-        <article className="agency insight-article">
+        <article className="agency insight-article ins-article" data-reading-root>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
             />
-            <header className="article-head">
+            <ReadingProgress />
+            <header className="article-head ins-article-head">
                 <Link className="work-link" href="/blog">← All insights</Link>
-                <h1>
-                    {post.title}
-                </h1>
-                <p className="mb-2">By {post.author || "bajwaa.dev"}</p>
-                <time className="text-muted-foreground text-base" dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString("en-AU", {
-                        timeZone: "UTC",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                    })}
-                </time>
+                {topic && <p className="kicker ins-article-kicker">{topic}</p>}
+                <h1>{post.title}</h1>
+                <p className="ins-article-meta">
+                    <span>By {post.author || "bajwaa.dev"}</span>
+                    {dateLabel && <time dateTime={post.date}>{dateLabel}</time>}
+                    {post.readingTime && <span>{post.readingTime}</span>}
+                </p>
             </header>
 
-            <div className="article-body">
+            <div className={`ins-article-layout${toc.length >= 3 ? " has-toc" : ""}`}>
+                {toc.length >= 3 && (
+                    <aside className="ins-toc" aria-label="On this page">
+                        <details open>
+                            <summary>On this page</summary>
+                            <ol>
+                                {toc.map(item => <li key={item.id}><a href={`#${item.id}`}>{item.text}</a></li>)}
+                            </ol>
+                        </details>
+                    </aside>
+                )}
+
+                <div className="article-body ins-article-body">
                     <div className="prose prose-neutral dark:prose-invert prose-lg max-w-[65ch] prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl prose-p:mb-5 prose-a:text-[var(--color-link)] prose-a:underline-offset-4 hover:prose-a:text-[var(--color-link-hover)] prose-a:transition-colors prose-a:duration-200 w-full text-foreground leading-relaxed">
                         <ReactMarkdown
                             components={{
-                                h1: (props) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
-                                h2: (props) => <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />,
-                                h3: (props) => <h3 className="text-xl font-semibold mt-8 mb-3 tracking-tight" {...props} />,
+                                h1: ({ node, ...props }) => (void node, <h2 className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />),
+                                h2: ({ node, ...props }) => (void node, <h2 id={headingId(textOf(props.children))} className="text-2xl font-semibold mt-12 mb-4 tracking-tight" {...props} />),
+                                h3: ({ node, ...props }) => (void node, <h3 className="text-xl font-semibold mt-8 mb-3 tracking-tight" {...props} />),
                             }}
                         >
                             {post.content}
                         </ReactMarkdown>
                     </div>
 
-                <nav className="article-related" aria-label="Related reading">
-                    <h2>Related reading</h2>
-                    <ul>
-                        {guide && <li><Link href={guide.service}>{guide.serviceLabel} →</Link></li>}
-                        {related.map(item => <li key={item.slug}><Link href={`/blog/${item.slug}`}>{item.shortTitle} →</Link></li>)}
-                    </ul>
-                </nav>
-                <CallLink />
+                    <section className="ins-cta glass" aria-labelledby="ins-article-cta">
+                        <div>
+                            <p className="kicker">Next step</p>
+                            <h2 id="ins-article-cta">Want this mapped for your business?</h2>
+                            <p>On a free 20-minute call we’ll look at one process and tell you honestly whether it’s worth automating.</p>
+                        </div>
+                        <div className="ins-cta-actions">
+                            <CallLink />
+                            <SecondaryLink href="/ai-operations-audit">What the A$750 audit includes</SecondaryLink>
+                        </div>
+                    </section>
+
+                    <nav className="article-related ins-related" aria-label="Related reading">
+                        <h2>Related reading</h2>
+                        <ul>
+                            {guide && <li><Link href={guide.service}>{guide.serviceLabel} →</Link></li>}
+                            {related.map(item => <li key={item.slug}><Link href={`/blog/${item.slug}`}>{item.shortTitle} →</Link></li>)}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </article>
     );

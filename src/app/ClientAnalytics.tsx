@@ -7,11 +7,16 @@ import { firstCampaign, funnelEvent } from "@/lib/funnel-events";
 export default function ClientAnalytics() {
   useEffect(() => {
     firstCampaign();
+    // One global listener: data-cta elements and calendar links. Only the CTA id
+    // and current path are sent, never form content or query strings.
     const click = (event: MouseEvent) => {
-      const anchor = event.target instanceof Element && event.target.closest("a");
-      if (!anchor) return;
-      if (anchor.hasAttribute("data-discovery-calendar")) funnelEvent("booking_link_open");
-      else if (anchor.origin === location.origin && anchor.pathname === "/contact") funnelEvent("cta_click");
+      if (!(event.target instanceof Element)) return;
+      const page = location.pathname;
+      if (event.target.closest("[data-discovery-calendar]")) return funnelEvent("booking_link_open", { page });
+      const cta = event.target.closest<HTMLElement>("[data-cta]");
+      if (cta) return funnelEvent("cta_click", { cta: cta.dataset.cta || "unknown", page });
+      const anchor = event.target.closest("a");
+      if (anchor && anchor.origin === location.origin && anchor.pathname === "/contact") funnelEvent("cta_click", { cta: "contact-link", page });
     };
     document.addEventListener("click", click);
     return () => document.removeEventListener("click", click);

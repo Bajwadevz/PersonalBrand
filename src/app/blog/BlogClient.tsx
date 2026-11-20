@@ -14,71 +14,60 @@ type Post = {
     readingTime?: string;
 };
 
+function formatDate(date: string) {
+    return new Date(date).toLocaleDateString("en-AU", {
+        timeZone: "UTC",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
+}
+
 export function BlogPostList({ posts }: { posts: Post[] }) {
+    if (posts.length === 0) return <p className="ins-empty">No posts found.</p>;
     return (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {posts.length === 0 ? (
-                <p className="text-muted-foreground">No posts found.</p>
-            ) : (
-                posts.map((post) => (
-                    <Link
-                        key={post.slug}
-                        href={`/blog/${post.slug}`}
-                        className="group insights-card block rounded-2xl border p-6 md:p-8"
-                    >
+        <ul className="ins-cards">
+            {posts.map((post) => (
+                <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="ins-card insights-card">
                         <article>
-                            <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm muted-copy">
-                                <time dateTime={post.date}>
-                                    {new Date(post.date).toLocaleDateString("en-AU", {
-                                        timeZone: "UTC",
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric",
-                                    })}
-                                </time>
-                                {post.readingTime && (
-                                    <>
-                                        <span aria-hidden>·</span>
-                                        <span>{post.readingTime}</span>
-                                    </>
-                                )}
+                            <div className="ins-card-meta">
+                                {post.tags?.[0] && <span className="ins-chip">{post.tags[0]}</span>}
+                                {post.date && <time dateTime={post.date}>{formatDate(post.date)}</time>}
+                                {post.readingTime && <span>{post.readingTime}</span>}
                             </div>
-                            <h3 className="mb-3 text-[clamp(1.2rem,2vw,1.5rem)] font-bold tracking-tight">
-                                {post.title}
-                            </h3>
-                            <p className="text-base leading-relaxed muted-copy line-clamp-1">
-                                {post.excerpt}
-                            </p>
+                            <h3>{post.title}</h3>
+                            <p>{post.excerpt}</p>
+                            <span className="ins-card-read">Read <span aria-hidden="true">→</span></span>
                         </article>
                     </Link>
-                ))
-            )}
-        </div>
+                </li>
+            ))}
+        </ul>
     );
 }
 
 export function BlogTagFilter({
     activeTag,
     onTagChange,
+    counts,
 }: {
     activeTag: string;
     onTagChange: (tag: string) => void;
+    counts?: Record<string, number>;
 }) {
     return (
-        <div className="insight-topic-filter mb-10 flex gap-2 pb-2" role="group" aria-label="Filter by topic">
+        <div className="insight-topic-filter ins-filter" role="group" aria-label="Filter by topic">
             {BLOG_FILTER_TAGS.map((tag) => (
                 <button
                     key={tag}
                     type="button"
                     aria-pressed={activeTag === tag}
                     onClick={() => onTagChange(tag)}
-                    className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                        activeTag === tag
-                            ? "bg-[#2D6A8F] text-white"
-                            : "border border-[var(--color-site-border)] bg-transparent text-[var(--color-site-text-secondary)] hover:text-[var(--color-site-text)]"
-                    }`}
+                    className="ins-filter-btn"
                 >
                     {tag}
+                    {counts && <span className="ins-filter-count">{counts[tag] ?? 0}</span>}
                 </button>
             ))}
         </div>
@@ -94,10 +83,14 @@ export function filterPostsByTag(posts: Post[], tag: string): Post[] {
 export function BlogWithFilter({ posts }: { posts: Post[] }) {
     const [activeTag, setActiveTag] = useState("All");
     const filtered = filterPostsByTag(posts, activeTag);
+    const counts = Object.fromEntries(BLOG_FILTER_TAGS.map((tag) => [tag, filterPostsByTag(posts, tag).length]));
 
     return (
         <>
-            <BlogTagFilter activeTag={activeTag} onTagChange={setActiveTag} />
+            <BlogTagFilter activeTag={activeTag} onTagChange={setActiveTag} counts={counts} />
+            <p className="ins-result-count" aria-live="polite">
+                {activeTag === "All" ? `Showing all ${filtered.length} articles` : `${filtered.length} ${filtered.length === 1 ? "article" : "articles"} in ${activeTag}`}
+            </p>
             <BlogPostList posts={filtered} />
         </>
     );

@@ -96,3 +96,7 @@ Make has a Claude connector. For others, use the **HTTP** module and call the pr
 ### How do I avoid rate limits?
 
 Space out runs (e.g. add a delay between iterations in a loop), use **gpt-4o-mini** where possible, and monitor usage in your OpenAI dashboard.
+
+## Next step
+
+Want this built inside your own systems instead of a tutorial? We implement workflows like this for Australian teams — see [CRM automation](/solutions/crm-automation), the [A$750 AI Operations Audit](/ai-operations-audit) or [client case studies](/work).

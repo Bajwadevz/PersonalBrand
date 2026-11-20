@@ -3,7 +3,7 @@ import { afterEach, beforeEach, test } from "node:test";
 import { POST } from "../../app/api/leads/route";
 
 const originalFetch = globalThis.fetch;
-const keys = ["LEAD_REDIS_REST_URL", "LEAD_REDIS_REST_TOKEN"] as const;
+const keys = ["LEAD_REDIS_REST_URL", "LEAD_REDIS_REST_TOKEN", "HUBSPOT_ACCESS_TOKEN"] as const;
 const original = keys.map(key => process.env[key]);
 beforeEach(() => { for (const key of keys) delete process.env[key]; });
 afterEach(() => {
@@ -13,11 +13,13 @@ afterEach(() => {
   });
 });
 
-function submit(visitor: string, fields: Record<string, string> = {}, headers: Record<string, string> = {}) {
+function submit(visitor: string, fields: Record<string, string> = {}, headers: Record<string, string> = {}, extra: [string, string][] = []) {
   const body = new URLSearchParams({
     name: "Example Contact", email: `${visitor}@example.test`, company: "Example Company", region: "WA",
-    teamSize: "2–10", problem: "We copy the same job details twice.", consent: "yes", ...fields,
+    teamSize: "2–10", problem: "We copy the same job details twice.", consent: "yes",
+    times: "tue-am", timezone: "Australia/Perth", ...fields,
   });
+  for (const [key, value] of extra) body.append(key, value);
   return POST(new Request("https://example.test/api/leads", { method: "POST", body,
     headers: { origin: "https://example.test", "x-vercel-forwarded-for": visitor, ...headers },
   }));
@@ -81,4 +83,41 @@ test("durable intake acknowledges storage despite a notification failure; store 
   assert.equal(destinations.length, 2);
   globalThis.fetch = async () => new Response(null, { status: 503 });
   assert.equal((await submit("outage")).status, 503);
+});
+test("call times, time zone and qualification fields are validated server-side", async () => {
+  globalThis.fetch = async () => { throw new Error("unexpected network call"); };
+  assert.equal((await submit("schedule", { times: "" })).status, 422);
+  assert.equal((await submit("schedule", { times: "sat-am" })).status, 422);
+  assert.equal((await submit("schedule", { timezone: "Europe/London" })).status, 422);
+  assert.equal((await submit("schedule", {}, {}, [["times", "wed-pm"], ["times", "thu-am"], ["times", "fri-mid"]])).status, 422);
+  assert.equal((await submit("schedule", {}, {}, [["times", "tue-am"]])).status, 422);
+  assert.equal((await submit("schedule", { frequency: "hourly" })).status, 422);
+  assert.equal((await submit("schedule", {}, {}, [["systems", "Fax machine"]])).status, 422);
+  let delivered = "";
+  globalThis.fetch = async (_input, init) => { delivered = String(init?.body); return Response.json({ ok: true }); };
+  const response = await submit("schedule-ok", { frequency: "weekly", timezone: "Other", timezoneOther: "Auckland" },
+    { accept: "text/html" }, [["times", "mon-pm"], ["systems", "Xero"], ["systems", "HubSpot"]]);
+  assert.equal(response.status, 303);
+  assert.match(response.headers.get("set-cookie") ?? "", /discovery-request=/);
+  const payload = JSON.parse(delivered);
+  assert.equal(payload.preferredTimes, "Monday afternoon (2–5pm); Tuesday morning (9am–12pm)");
+  assert.equal(payload.systems, "Xero, HubSpot");
+  assert.match(payload.callRequest, /Auckland time$/);
+});
+test("HubSpot hand-off upserts and notes the contact but never changes the outcome", async () => {
+  process.env.HUBSPOT_ACCESS_TOKEN = "fictional-hubspot-token";
+  const calls: string[] = [];
+  globalThis.fetch = async (input) => {
+    const url = String(input);
+    calls.push(url);
+    if (url.includes("formspree")) return Response.json({ ok: true });
+    if (url.endsWith("/batch/upsert")) return Response.json({ results: [{ id: "101" }] });
+    return Response.json({ id: "note-1" });
+  };
+  assert.equal((await (await submit("crm-ok")).json()).state, "saved");
+  assert.deepEqual(calls.map(url => new URL(url).pathname), ["/f/xlgprbwd", "/crm/v3/objects/contacts/batch/upsert", "/crm/v3/objects/notes"]);
+  globalThis.fetch = async (input) => String(input).includes("formspree") ? Response.json({ ok: true }) : new Response(null, { status: 401 });
+  const response = await submit("crm-down");
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).state, "saved");
 });

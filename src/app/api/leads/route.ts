@@ -1,6 +1,15 @@
-import { deliverLead, deliverOnce, intakeConfig, storeLead, validateLead } from "../../../lib/lead-intake";
+import { after } from "next/server";
+import { handOffToHubspot } from "../../../lib/crm-hubspot";
+import { deliverLead, deliverOnce, intakeConfig, storeLead, validateLead, type Lead } from "../../../lib/lead-intake";
+import { encodeCallReceipt } from "../../../lib/scheduling";
+
+/** Run work after the response where the platform supports it; otherwise await it. */
+async function afterResponse(task: () => Promise<void>) {
+  try { after(task); } catch { await task(); }
+}
 
 export async function POST(request: Request) {
+  let accepted: Lead | null = null;
   const reply = (status: number, state: string) => {
     const headers = new Headers({ "Cache-Control": "no-store" });
     if (status === 429) headers.set("Retry-After", "600");
@@ -8,7 +17,10 @@ export async function POST(request: Request) {
       headers.set("Location", `/contact?status=${state}#enquiry`);
       if (status === 200) {
         const secure = new URL(request.url).protocol === "https:" ? "; Secure" : "";
-        headers.set("Set-Cookie", `discovery-receipt=${state}; Path=/contact; Max-Age=120; HttpOnly; SameSite=Lax${secure}`);
+        const cookie = `; Path=/contact; Max-Age=120; HttpOnly; SameSite=Lax${secure}`;
+        headers.append("Set-Cookie", `discovery-receipt=${state}${cookie}`);
+        // Echo the requested times (no personal data) on the no-JavaScript success page.
+        if (accepted) headers.append("Set-Cookie", `discovery-request=${encodeCallReceipt({ times: accepted.preferredTimes, timezone: accepted.timezone, timezoneOther: "" })}${cookie}`);
       }
       return new Response(null, { status: 303, headers });
     }
@@ -35,6 +47,7 @@ export async function POST(request: Request) {
     for (const [key, value] of new URLSearchParams(Buffer.concat(chunks).toString("utf8"))) form.append(key, value);
     const lead = validateLead(form);
     if (!lead) return reply(422, "invalid");
+    accepted = lead;
     const config = intakeConfig();
     // Vercel overwrites this header at ingress. Other hosts share one fallback bucket.
     const visitor = request.headers.get("x-vercel-forwarded-for")?.split(",")[0].trim() || "direct";
@@ -43,6 +56,8 @@ export async function POST(request: Request) {
       // The enquiry is already durable. The Redis inbox remains the recovery path.
       try { await deliverLead(lead); } catch { console.warn("discovery_notification_unavailable"); }
     }
+    // Optional CRM hand-off: only for new requests, never blocks or changes the reply.
+    if (state === "saved") await afterResponse(() => handOffToHubspot(lead));
     return reply(state === "limited" ? 429 : 200, state);
   } catch {
     console.warn("discovery_intake_unavailable");

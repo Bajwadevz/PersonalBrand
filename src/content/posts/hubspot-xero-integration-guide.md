@@ -1,7 +1,7 @@
 ---
-title: "HubSpot Xero integration: a practical guide for Australian small businesses"
+title: "HubSpot–Xero integration: a practical AU guide"
 date: "2026-11-20"
-description: "What the native HubSpot–Xero sync covers, where Australian teams hit gaps with GST, contacts and invoices, and how to choose between the native app, middleware and a custom build."
+description: "What the native HubSpot–Xero sync covers, where Australian teams hit gaps with GST, contacts and invoices, and when to use middleware or a custom build."
 tags: ["Automation", "CRM", "Finance"]
 readingTime: "6 min read"
 author: "bajwaa.dev"

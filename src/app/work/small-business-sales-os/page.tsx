@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Check, Clock3, Inbox, Layers3, ReceiptText, Users } from "lucide-react";
+import { PageHero, SecondaryLink } from "@/components/Agency";
+import "../work.css";
+import { ArrowUpRight, Check, Clock3, Inbox, Layers3, ReceiptText, Users } from "lucide-react";
 
 const CUSTOM_BUILD_URL = "/contact?offer=operations-workflow-build&demo=small-business-sales-os";
 const GUMROAD_URL = "https://shahzo.gumroad.com/l/small-business-sales-os";
 
 export const metadata: Metadata = {
   title: "Small Business Sales OS: $59 Notion CRM template",
-  description: "A Notion CRM for small service businesses. Track every lead, quote and follow-up, and see which deals have no next step. Works on Notion Free. $59 on Gumroad.",
+  description: "A Notion CRM for small service businesses. Track every lead, quote and follow-up, and spot deals with no next step. Works on Notion Free. $59 on Gumroad.",
   alternates: { canonical: "https://bajwaa.dev/work/small-business-sales-os" },
   openGraph: {
     title: "Small Business Sales OS | bajwaa.dev",
@@ -33,37 +35,30 @@ const leaks = [
 
 export default function SalesOsCaseStudy() {
   return (
-    <article className="w-full pb-20 pt-12 md:pt-20">
-      <header className="container-shell">
-        <Link href="/work" className="inline-flex items-center gap-2 text-sm muted-copy hover:underline">
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to work
-        </Link>
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-ocean)]">Product build · Notion CRM · bajwaa.dev</p>
-            <h1 className="mt-5 max-w-3xl text-[clamp(2.6rem,6vw,4.8rem)] font-extrabold leading-[1.04] tracking-tight">Small Business<br />Sales OS</h1>
-            <p className="mt-6 text-xl font-semibold md:text-2xl">A next step for every open deal.</p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed muted-copy">A practical sales workspace for owners juggling spreadsheets, messages and memory. Built around the leads, follow-ups and quotes that are easiest to lose track of.</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={GUMROAD_URL} className="btn-primary inline-flex min-h-12 items-center justify-center gap-2 text-sm">Get the template, $59 <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
-              <Link href={CUSTOM_BUILD_URL} className="btn-secondary inline-flex min-h-12 items-center justify-center text-sm">Discuss a custom build</Link>
-            </div>
-          </div>
-          <aside className="glass-card rounded-2xl p-6 md:p-8" aria-label="Project details">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-ocean)]">The project</p>
-            <dl className="mt-5 space-y-4 text-sm">
-              <div className="flex justify-between gap-4 border-b border-[var(--color-site-border)] pb-4"><dt className="muted-copy">Built for</dt><dd className="text-right font-medium">Small service businesses</dd></div>
-              <div className="flex justify-between gap-4 border-b border-[var(--color-site-border)] pb-4"><dt className="muted-copy">My role</dt><dd className="text-right font-medium">System design &amp; implementation</dd></div>
-              <div className="flex justify-between gap-4"><dt className="muted-copy">Core setup</dt><dd className="text-right font-medium">3 databases · 12 pages</dd></div>
+    <article className="agency w-full pb-20 sales-os-page">
+      <PageHero
+        kicker={<><Link href="/work">Work</Link> · Demo · product build · fictional records</>}
+        title={<>Small Business Sales OS</>}
+        lead="A next step for every open deal. A practical Notion sales workspace for owners juggling spreadsheets, messages and memory — built around the leads, follow-ups and quotes that are easiest to lose track of."
+        actions={<><a href={GUMROAD_URL} className="agency-button">Get the template, $59 <span aria-hidden="true">↗</span></a><SecondaryLink href={CUSTOM_BUILD_URL}>Discuss a custom build</SecondaryLink></>}
+        visual={
+          <aside className="work-legend glass" aria-label="Project details">
+            <p className="work-legend-title">The project</p>
+            <dl className="work-sos-dl">
+              <div><dt>Built for</dt><dd>Small service businesses</dd></div>
+              <div><dt>Role</dt><dd>System design &amp; implementation</dd></div>
+              <div><dt>Core setup</dt><dd>3 databases · 12 pages</dd></div>
             </dl>
-            <p className="mt-6 rounded-xl bg-[rgba(45,106,143,0.07)] p-4 text-sm leading-relaxed muted-copy">An internal bajwaa.dev product build. All people, businesses and sales values shown are fictional demo data.</p>
+            <p className="work-honesty">An internal bajwaa.dev product build. All people, businesses and sales values shown are fictional demo data.</p>
           </aside>
-        </div>
+        }
+      />
+      <div className="container-shell">
         <figure className="mt-12 overflow-hidden rounded-2xl border border-[var(--color-site-border)] bg-[#191919] shadow-xl md:mt-16">
           <Image src="/work/sales-os/command-center.jpg" alt="Sales Command Center showing three overdue follow-ups linked to their contacts and opportunities" width={1512} height={805} sizes="(max-width: 1200px) 100vw, 1152px" priority className="h-auto w-full" />
           <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-relaxed text-white/70">Actual Notion workspace · fictional demo records. Start with overdue work, then set the next action for every open deal.</figcaption>
         </figure>
-      </header>
+      </div>
 
       <section id="inside-the-build" className="container-shell scroll-mt-28 py-20 md:py-28">
         <div className="max-w-2xl">

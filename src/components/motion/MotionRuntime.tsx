@@ -14,6 +14,9 @@ declare global {
  * component reveals `[data-reveal]` elements as they enter the viewport
  * and pauses `[data-ambient]` loops while they are off screen.
  *
+ * Revealed state is a `data-revealed` attribute rather than a class, so it
+ * never conflicts with React hydration of className.
+ *
  * The observers live for the whole session. Next.js keeps visited routes
  * mounted in the background, so on every route change we re-observe every
  * element that hasn't been revealed yet (observe() is idempotent) instead of
@@ -27,7 +30,7 @@ export default function MotionRuntime() {
   useEffect(() => {
     window.__motionReady = true;
     const root = document.documentElement;
-    const revealAll = () => document.querySelectorAll("[data-reveal]").forEach(el => el.classList.add("is-in"));
+    const revealAll = () => document.querySelectorAll("[data-reveal]").forEach(el => el.setAttribute("data-revealed", ""));
     if (!root.classList.contains("motion-ok") || !("IntersectionObserver" in window)) {
       revealAll();
       const mo = new MutationObserver(revealAll);
@@ -39,7 +42,7 @@ export default function MotionRuntime() {
     const reveal = new IntersectionObserver(entries => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
+          entry.target.setAttribute("data-revealed", "");
           reveal.unobserve(entry.target);
         }
       }
@@ -54,15 +57,16 @@ export default function MotionRuntime() {
     let queued = 0;
     const scan = () => {
       queued = 0;
-      document.querySelectorAll("[data-reveal]:not(.is-in)").forEach(el => {
+      document.querySelectorAll("[data-reveal]:not([data-revealed])").forEach(el => {
         const r = el.getBoundingClientRect();
         // Anything already on screen (e.g. after a route change) shows immediately.
-        if (r.top < window.innerHeight && r.bottom > 0 && r.height > 0) el.classList.add("is-in");
+        if (r.top < window.innerHeight && r.bottom > 0 && r.height > 0) el.setAttribute("data-revealed", "");
         else reveal.observe(el);
       });
       document.querySelectorAll("[data-ambient]").forEach(el => ambient.observe(el));
     };
-    const schedule = () => { if (!queued) queued = window.requestAnimationFrame(scan); };
+    // A timer, not rAF: rAF is paused in background tabs, which would leave new route content unobserved.
+    const schedule = () => { if (!queued) queued = window.setTimeout(scan, 16); };
     scanRef.current = schedule;
     scan();
 
@@ -70,15 +74,15 @@ export default function MotionRuntime() {
     mutations.observe(document.body, { childList: true, subtree: true });
     // Safety net: never leave content hidden for long.
     const failsafe = window.setTimeout(() => {
-      document.querySelectorAll("[data-reveal]:not(.is-in)").forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-in");
+      document.querySelectorAll("[data-reveal]:not([data-revealed])").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.setAttribute("data-revealed", "");
       });
     }, 2500);
 
     return () => {
       reveal.disconnect(); ambient.disconnect(); mutations.disconnect();
       window.clearTimeout(failsafe);
-      if (queued) cancelAnimationFrame(queued);
+      if (queued) window.clearTimeout(queued);
     };
   }, []);
 

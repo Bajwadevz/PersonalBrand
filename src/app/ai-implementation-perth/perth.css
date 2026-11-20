@@ -1,0 +1,75 @@
+/* /ai-implementation-perth. Classes prefixed perth-. */
+
+/* ---------- Clock + overlap ---------- */
+.perth-clock { max-width: 500px; margin-inline: auto; padding: clamp(20px, 3vw, 30px); border-radius: 22px; }
+.perth-clock-label { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-text); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.perth-live { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.perth-live.is-open { background: #22b07d; box-shadow: 0 0 0 0 rgb(34 176 125 / 50%); }
+.motion-ok .perth-live.is-open { animation: perth-pulse 2.2s var(--ease-out) infinite; }
+@keyframes perth-pulse { 0% { box-shadow: 0 0 0 0 rgb(34 176 125 / 50%); } 100% { box-shadow: 0 0 0 10px rgb(34 176 125 / 0%); } }
+.perth-clock-time { margin-top: 10px; font-family: var(--font-heading); font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.perth-clock-day { margin-top: 8px; color: var(--muted); font-size: .92rem; }
+
+.perth-overlap { position: relative; margin: 26px 0 0; padding-top: 22px; border-top: 1px solid var(--line); }
+.perth-axis { position: relative; height: 18px; margin-left: 92px; }
+.perth-axis span { position: absolute; transform: translateX(-50%); color: var(--muted); font-family: var(--font-mono); font-size: .62rem; white-space: nowrap; }
+.perth-row { display: grid; grid-template-columns: 82px 1fr; gap: 10px; align-items: center; margin-top: 10px; }
+.perth-row-name { color: var(--muted); font-size: .8rem; font-weight: 600; }
+.perth-row-overlap .perth-row-name { color: var(--ink); }
+.perth-track { position: relative; height: 14px; border-radius: 99px; background: color-mix(in srgb, var(--line) 55%, transparent); }
+.perth-bar { position: absolute; top: 0; bottom: 0; border-radius: 99px; transform-origin: left center; }
+.perth-bar-wa { background: var(--ocean); }
+.perth-bar-east { background: color-mix(in srgb, var(--accent-text) 45%, transparent); }
+.perth-bar-both { background: linear-gradient(90deg, var(--ocean), var(--cyan)); box-shadow: 0 0 14px rgb(63 208 255 / 35%); }
+.motion-ok .perth-bar { animation: perth-grow .9s var(--ease-out) both; }
+.motion-ok .perth-row:nth-of-type(2) .perth-bar { animation-delay: .5s; }
+.motion-ok .perth-row:nth-of-type(3) .perth-bar { animation-delay: .65s; }
+.motion-ok .perth-row:nth-of-type(4) .perth-bar { animation-delay: .8s; }
+@keyframes perth-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.perth-rows { position: relative; }
+.perth-now-layer { position: absolute; top: -4px; bottom: -4px; left: 92px; right: 0; pointer-events: none; }
+.perth-now { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1.5px dashed var(--accent-text); }
+.perth-now span { position: absolute; bottom: -16px; left: 4px; color: var(--accent-text); font-family: var(--font-mono); font-size: .6rem; }
+.perth-overlap figcaption { margin-top: 24px; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.perth-overlap figcaption strong { color: var(--ink); }
+
+/* ---------- Honest strip ---------- */
+.perth-honest { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+.perth-honest .section-lead { margin-bottom: 0; }
+.perth-honest-list { display: grid; gap: 10px; }
+.perth-honest-list li { position: relative; padding: 16px 18px 16px 48px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.perth-honest-list li::before { content: "✓"; position: absolute; left: 18px; top: 15px; color: var(--accent-text); font-weight: 800; }
+
+/* ---------- Stacks ---------- */
+.perth-stacks-band { border-block: 1px solid var(--line); background: var(--surface); }
+.perth-stacks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
+.perth-stack { padding: 24px; border-radius: 16px; }
+.perth-stack h3 { color: var(--accent-text); font-family: var(--font-mono); font-size: .74rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.perth-stack ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.perth-stack li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--paper); font-family: var(--font-heading); font-weight: 700; letter-spacing: -.02em; }
+.perth-stack p { color: var(--muted); font-size: .95rem; }
+.perth-note { margin-top: 18px; max-width: 70ch; color: var(--muted); font-size: .88rem; }
+
+/* ---------- Examples ---------- */
+.perth-examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
+.perth-examples li { padding: 24px; border: 1px dashed color-mix(in srgb, var(--accent-text) 45%, var(--line)); border-radius: 16px; }
+.perth-tag { display: inline-block; padding: 3px 9px; border-radius: 99px; background: color-mix(in srgb, var(--accent-text) 12%, transparent); color: var(--accent-text); font-family: var(--font-mono); font-size: .64rem; letter-spacing: .06em; text-transform: uppercase; }
+.perth-examples h3 { margin-top: 14px; }
+.perth-examples p { margin-top: 8px; color: var(--muted); font-size: .95rem; }
+
+.perth-guide { display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; align-items: center; margin-top: 34px; padding: 24px clamp(20px, 3vw, 32px); border-radius: 18px; color: var(--ink); }
+.agency .perth-guide:hover { text-decoration: none; border-color: var(--accent-text); }
+.perth-guide .kicker { grid-column: 1; margin: 0; }
+.perth-guide-title { grid-column: 1; font-family: var(--font-heading); font-size: clamp(1.15rem, 2vw, 1.45rem); font-weight: 750; letter-spacing: -.03em; line-height: 1.3; }
+.perth-guide-arrow { grid-column: 2; grid-row: 1 / span 2; color: var(--accent-text); font-size: 1.5rem; transition: translate .24s var(--ease-snap); }
+.perth-guide:hover .perth-guide-arrow { translate: 6px 0; }
+
+@media (max-width: 860px) {
+  .perth-honest, .perth-stacks, .perth-examples { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .perth-row { grid-template-columns: 64px 1fr; }
+  .perth-axis { margin-left: 74px; }
+  .perth-now-layer { left: 74px; }
+  .perth-row-name { font-size: .72rem; }
+}

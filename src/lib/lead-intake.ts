@@ -1,5 +1,6 @@
 import { createHmac } from "node:crypto";
 import { campaignKeys, campaignValue, teamSizes } from "./discovery";
+import { callTimeLabel, callTimeValues, callTimeZones, frequencies, maxCallTimes, systemOptions, timeZoneLabel } from "./scheduling";
 
 export function intakeConfig() {
   const url = process.env.LEAD_REDIS_REST_URL;
@@ -18,6 +19,26 @@ export function calendarLink() {
   }
 }
 
+/**
+ * Inline embeds are limited to scheduler hosts that are designed to be framed.
+ * Anything else is offered as a plain link only.
+ */
+export function calendarEmbed(link: string | null) {
+  if (!link) return null;
+  const url = new URL(link);
+  const host = url.hostname.replace(/^www\./, "");
+  if (host === "cal.com" || host === "app.cal.com") {
+    url.searchParams.set("embed", "true");
+    return url.href;
+  }
+  if (host === "calendly.com") {
+    url.searchParams.set("hide_gdpr_banner", "1");
+    return url.href;
+  }
+  if (host === "calendar.google.com" && url.pathname.includes("/appointments/")) return url.href;
+  return null;
+}
+
 export function validateLead(data: FormData) {
   const read = (name: string) => String(data.get(name) ?? "").trim();
   const name = read("name");
@@ -28,7 +49,18 @@ export function validateLead(data: FormData) {
   const teamSize = read("teamSize");
   const problem = read("problem");
   const website = read("website");
-  const invalid = !name || name.length > 100 || !company || company.length > 150 ||
+  const all = (name: string) => data.getAll(name).map(value => String(value).trim()).filter(Boolean);
+  const times = all("times");
+  const timezone = read("timezone");
+  const timezoneOther = read("timezoneOther");
+  const systems = all("systems");
+  const frequency = read("frequency");
+  const invalidSchedule = times.length < 1 || times.length > maxCallTimes || new Set(times).size !== times.length ||
+    !times.every(time => callTimeValues.includes(time)) || !callTimeZones.some(([key]) => key === timezone) ||
+    timezoneOther.length > 60 || systems.length > systemOptions.length || new Set(systems).size !== systems.length ||
+    !systems.every(system => systemOptions.some(option => option === system)) ||
+    (frequency !== "" && !frequencies.some(([key]) => key === frequency));
+  const invalid = invalidSchedule || !name || name.length > 100 || !company || company.length > 150 ||
     !region || region.length > 100 || software.length > 240 || website.length > 500 ||
     email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     !teamSizes.some(size => size === teamSize) || problem.length < 10 || problem.length > 2000 ||
@@ -41,10 +73,23 @@ export function validateLead(data: FormData) {
     } catch { return null; }
   }
   const campaign = Object.fromEntries(campaignKeys.map(key => [key, campaignValue(read(key))]));
-  return { name, email, company, region, software, teamSize, problem, website, campaign, consent: "enquiry-v1" };
+  // Store requested times in week order, whatever order they were ticked in.
+  const preferredTimes = callTimeValues.filter(time => times.includes(time));
+  return {
+    name, email, company, region, software, teamSize, problem, website,
+    preferredTimes, timezone, timezoneOther: timezone === "Other" ? timezoneOther : "", systems, frequency,
+    campaign, consent: "enquiry-v2",
+  };
 }
 
-type Lead = NonNullable<ReturnType<typeof validateLead>>;
+export type Lead = NonNullable<ReturnType<typeof validateLead>>;
+
+/** Human-readable call request, used in notifications and the CRM note. */
+export function describeCallRequest(lead: Pick<Lead, "preferredTimes" | "timezone" | "timezoneOther">) {
+  const zone = lead.timezone === "Other" ? (lead.timezoneOther || "Other (not specified)") : timeZoneLabel(lead.timezone);
+  return `${lead.preferredTimes.map(callTimeLabel).join("; ")} — ${zone} time`;
+}
+
 type Config = NonNullable<ReturnType<typeof intakeConfig>>;
 
 // The first enquiry keeps its original campaign. A changed enquiry from the same
@@ -67,7 +112,7 @@ export async function storeLead(config: Config, lead: Lead, visitor: string) {
   const hash = (value: string) => createHmac("sha256", process.env.LEAD_HASH_SECRET || config.token).update(value).digest("hex");
   const companyKey = lead.company.replace(/\s+/g, " ").toLowerCase();
   const record = `discovery:v1:contact:${hash(JSON.stringify([lead.email, companyKey]))}`;
-  const fingerprint = hash(JSON.stringify([lead.name, lead.region, lead.teamSize, lead.problem, lead.software, lead.website]));
+  const fingerprint = hash(JSON.stringify([lead.name, lead.region, lead.teamSize, lead.problem, lead.software, lead.website, lead.preferredTimes, lead.timezone, lead.timezoneOther, lead.systems, lead.frequency]));
   const receivedAt = new Date();
   const response = await fetch(config.url, {
     method: "POST", headers: { Authorization: `Bearer ${config.token}`, "Content-Type": "application/json" },
@@ -87,7 +132,11 @@ export async function deliverLead(lead: Lead) {
   if (!/^[a-z0-9]+$/i.test(formId)) throw new Error("Invalid form configuration");
   const response = await fetch(`https://formspree.io/f/${formId}`, {
     method: "POST", headers: { Accept: "application/json", "Content-Type": "application/json" },
-    body: JSON.stringify({ ...lead, campaign: undefined, ...lead.campaign, subject: "Discovery call enquiry" }),
+    body: JSON.stringify({
+      ...lead, campaign: undefined, ...lead.campaign,
+      preferredTimes: lead.preferredTimes.map(callTimeLabel).join("; "), callRequest: describeCallRequest(lead),
+      systems: lead.systems.join(", "), subject: `Discovery call request: ${lead.company}`,
+    }),
     signal: AbortSignal.timeout(8000), cache: "no-store", redirect: "error",
   });
   if (!response.ok) throw new Error("Enquiry delivery unavailable");
@@ -117,7 +166,7 @@ export async function deliverOnce(lead: Lead, visitor: string) {
     visits.set(visitorKey, visit);
   }
   if (++visit.count > 10 || recent.size >= 4096) return "limited";
-  const key = digest(JSON.stringify([lead.email, lead.company.toLowerCase().replace(/\s+/g, " "), lead.name, lead.region, lead.software, lead.teamSize, lead.website, lead.problem]));
+  const key = digest(JSON.stringify([lead.email, lead.company.toLowerCase().replace(/\s+/g, " "), lead.name, lead.region, lead.software, lead.teamSize, lead.website, lead.problem, lead.preferredTimes, lead.timezone, lead.timezoneOther, lead.systems, lead.frequency]));
   const existing = recent.get(key);
   if (existing) { await existing.delivery; return "duplicate"; }
   const delivery = deliverLead(lead);

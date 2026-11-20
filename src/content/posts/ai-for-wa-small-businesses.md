@@ -1,7 +1,7 @@
 ---
-title: "AI for Perth and WA small businesses: free help, grants and when to hire support"
+title: "AI help for Perth and WA small businesses"
 date: "2026-11-20"
-description: "An honest guide for Western Australian owners: the free and low-cost AI help that exists, what grants actually cover, a DIY-first path and what to ask before paying a provider."
+description: "A guide for WA owners: free and low-cost AI help, what grants actually cover, a DIY-first path and what to ask before paying a provider."
 tags: ["Strategy", "Automation"]
 readingTime: "6 min read"
 author: "bajwaa.dev"

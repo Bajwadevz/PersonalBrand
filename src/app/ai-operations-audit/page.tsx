@@ -1,5 +1,8 @@
 import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
+import Link from "next/link";
 import FlowDiagram from "@/components/FlowDiagram";
+import SampleReport from "@/components/pages/process/SampleReport";
+import "./audit.css";
 
 const detail: Detail = {
   "path": "/ai-operations-audit",
@@ -56,8 +59,47 @@ const deliverables = [
 ] as const;
 const steps = ["Free 20-minute fit call", "Agree the boundary and invoice", "Information intake and access", "Analysis and stakeholder sessions", "Written report and readout", "Optional implementation quote"];
 
+const compareRows = ["Cost", "Your time", "Looks at your real workflows", "Checks integrations", "What you end up with", "Good when"] as const;
+const compare = [
+  { name: "Free readiness quiz", href: "/tools/readiness-quiz", link: "Take the quiz", cells: ["Free", "About 5 minutes", "No — general questions", "No", "A general readiness score", "You’re curious where to start"] },
+  { name: "DIY checklist or template", href: "/blog/ai-operations-audit-checklist-australia", link: "Read the checklist", cells: ["Free", "Several hours of your team’s time", "Yes, if you map them yourselves", "Only if someone in-house knows how", "Your own notes and estimates", "You have time and technical skills in-house"] },
+  { name: "AI Operations Audit", featured: true, cells: ["A$750 fixed", "Intake plus two stakeholder sessions", "Yes — traced with your process owner", "Yes — APIs, limits and approval points", "Written report, maps, roadmap and first-build scope", "You want a decision before paying for a build"] },
+];
+
+const faqs = [
+  ["How do I pay?", "By invoice, paid before work starts. We agree the boundary in writing first, so you know exactly what the A$750 covers."],
+  ["Is tax included?", "Any applicable tax is confirmed with you before the invoice is issued, so the total payable is clear upfront."],
+  ["How long does it take?", "Our target is five business days after payment, the intake form and system access are complete. We then schedule the readout at a time that suits your team."],
+  ["What if automation isn’t worth it?", "Then the report says so plainly. Sometimes the better answer is a native feature, a process change or leaving it alone. You still keep the workflow maps, bottleneck register and roadmap."],
+  ["Do I have to build with you afterwards?", "No. The plan is yours to use with us, your own team or another provider. If you’d like a build, we quote it separately."],
+  ["What access do you need?", "We agree it during intake. Where possible we start with walkthroughs and example records, and only request the access the agreed workflows need."],
+  ["Is it all remote?", "Yes. Stakeholder sessions and the readout happen over video, so location within Australia doesn’t matter."],
+] as const;
+
 export default function Page() {
-  return <DetailPage detail={detail}>
+  return <DetailPage detail={detail} visual={<SampleReport />} after={<>
+    <section className="agency-wrap agency-section audit-compare" aria-labelledby="audit-compare-heading">
+      <p className="kicker">How this compares</p>
+      <h2 id="audit-compare-heading" data-reveal>Free quiz, DIY template or a paid audit?</h2>
+      <p className="section-lead">A quiz or checklist is a fine place to start. The audit is for when you need someone to trace the real work and check what your systems can do.</p>
+      <div className="audit-compare-grid">
+        {compare.map((c, i) => (
+          <section key={c.name} className={`audit-compare-col glass${c.featured ? " is-featured" : ""}`} data-reveal style={{["--d" as string]: `${i * 80}ms`}} aria-labelledby={`cmp-${i}`}>
+            <h3 id={`cmp-${i}`}>{c.name}</h3>
+            <dl>{compareRows.map((row, r) => <div key={row}><dt>{row}</dt><dd>{c.cells[r]}</dd></div>)}</dl>
+            {c.href ? <Link href={c.href} className="audit-compare-link">{c.link} <span aria-hidden="true">→</span></Link> : <a href="#audit-faq-heading" className="audit-compare-link">Questions about the audit <span aria-hidden="true">↓</span></a>}
+          </section>
+        ))}
+      </div>
+    </section>
+    <section className="agency-wrap agency-section audit-faq" aria-labelledby="audit-faq-heading">
+      <p className="kicker">Audit FAQ</p>
+      <h2 id="audit-faq-heading" data-reveal>Common questions.</h2>
+      <div className="agency-faq">
+        {faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}
+      </div>
+    </section>
+  </>}>
     <section className="agency-wrap agency-section audit-overview ambient-zone">
       <div className="audit-price glass" data-reveal>
         <p className="kicker">Fixed-scope audit</p>

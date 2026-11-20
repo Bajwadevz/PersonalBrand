@@ -75,3 +75,7 @@ Export from Sales Nav (or use a connector if available), or use Clay/Phantom Bus
 ### Which tool is best for GDPR/compliance?
 
 All three handle data differently; review their DPA and data residency. In general, limit export and enrichment to what you need, and use tools that let you suppress or delete on request.
+
+## Next step
+
+Choosing tools is the easy part; connecting them to your CRM is where teams get stuck. See how we built an [AI lead research pipeline](/work/ai-lead-research-pipeline) and an [outbound engine with HubSpot sync](/work/outbound-automation-crm-sync), or read about [CRM automation](/solutions/crm-automation).

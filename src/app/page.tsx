@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { GitBranch, Layers3, ListChecks } from "lucide-react";
-import { agencyMeta, CallLink, Closing } from "@/components/Agency";
+import { agencyMeta, CallLink, Closing, SecondaryLink } from "@/components/Agency";
 import { insightGuides } from "@/lib/insight-guides";
 import GlobalGridBackground from "@/components/GlobalGridBackground";
-import ImplementationProcess from "@/components/ImplementationProcess";
+import HeroSystemMap from "@/components/pages/home/HeroSystemMap";
+import ToolsStrip from "@/components/pages/home/ToolsStrip";
+import SpotlightGroup from "@/components/pages/home/SpotlightGroup";
+import BeforeAfter from "@/components/pages/home/BeforeAfter";
+import "./home.css";
 import PinnedProblems from "@/components/motion/PinnedProblems";
 import WorkflowDemo from "@/components/WorkflowDemo";
 import CaseStudyCards from "@/components/CaseStudyCards";
@@ -11,9 +15,9 @@ import { ClipboardCheck, FileText, KeyRound, LifeBuoy, LockKeyhole, Activity } f
 
 export const metadata = { ...agencyMeta("/", "AI Implementation Agency for Australian SMEs", "Done-for-you AI implementation for Australian small businesses. Cut repetitive admin, fix CRM workflows and connect HubSpot, Xero and MYOB, remotely."), title: { absolute: "AI Implementation Agency for Australian SMEs | bajwaa.dev" } };
 const problems = [
-  ["Admin & operations", "Someone rebuilds the weekly report by hand. We trace the source data and automate the repeatable steps.", "/solutions/business-process-automation", Layers3],
-  ["CRM & customer workflows", "An enquiry lands in the inbox and waits for an owner. We connect intake, validation and follow-up.", "/solutions/crm-automation", GitBranch],
-  ["Connected business systems", "Staff enter the same job twice. We map the handoff and connect the systems that need the update.", "/ai-implementation", ListChecks],
+  ["Admin & operations", "Someone rebuilds the weekly report by hand. We trace the source data and automate the repeatable steps.", "/solutions/business-process-automation", Layers3, ["Recurring reports", "Data entry", "Document prep"]],
+  ["CRM & customer workflows", "An enquiry lands in the inbox and waits for an owner. We connect intake, validation and follow-up.", "/solutions/crm-automation", GitBranch, ["Enquiry intake", "Lead routing", "Follow-ups"]],
+  ["Connected business systems", "Staff enter the same job twice. We map the handoff and connect the systems that need the update.", "/ai-implementation", ListChecks, ["Quote → job", "Job → invoice", "Sync checks"]],
 ] as const;
 const faq=[
   ["What does AI implementation mean?", "We connect the software your team uses and build workflows around a specific process, such as routing customer enquiries or preparing a recurring report."],
@@ -41,20 +45,24 @@ export default function Home() {
         <p className="lead">We implement AI-powered workflows that reduce repetitive admin, improve your CRM and help your existing systems work together.</p>
         <div className="hero-cta"><CallLink /></div>
         <p className="hero-note">Built around the tools you already use. Scoped, tested and handed over clearly.</p>
-        <Link className="hero-process-link" href="#implementation-process">See how it works <span aria-hidden="true">↓</span></Link>
+        <Link className="hero-process-link" href="#how-engagements-work">See how it works <span aria-hidden="true">↓</span></Link>
       </div>
+      <HeroSystemMap />
     </section>
+    <ToolsStrip />
     <PinnedProblems />
     <section className="agency-wrap agency-section capability-section ambient-zone">
       <p className="kicker">What we do</p>
       <h2 data-reveal>We find the bottleneck. Then we build the fix.</h2>
-      <div className="cap-grid">{problems.map(([title,copy,url,Icon],i)=><Link key={url} href={url} className="glass" data-reveal style={{["--d" as string]:`${i*90}ms`}}><Icon size={28}/><h3>{title}</h3><p>{copy}</p><span aria-hidden="true">↗</span></Link>)}</div></section>
-    <ImplementationProcess />
-    <section className="agency-wrap agency-section" aria-labelledby="demo-heading">
+      <SpotlightGroup className="cap-grid home-spot">{problems.map(([title,copy,url,Icon,tags],i)=><Link key={url} href={url} className="glass" data-spot data-reveal style={{["--d" as string]:`${i*90}ms`}}><span className="home-cap-index" aria-hidden="true">{String(i+1).padStart(2,"0")}</span><Icon size={28} aria-hidden="true"/><h3>{title}</h3><p>{copy}</p><ul className="home-cap-tags">{tags.map(t=><li key={t}>{t}</li>)}</ul><span aria-hidden="true">↗</span></Link>)}</SpotlightGroup>
+      <div className="home-section-cta"><SecondaryLink href="/contact#book">Not sure which fits? Bring it to a free discovery call</SecondaryLink></div></section>
+    <BeforeAfter />
+    <section className="agency-wrap agency-section" id="see-it-working" aria-labelledby="demo-heading">
       <p className="kicker">See it working</p>
       <h2 id="demo-heading" data-reveal>See what a working workflow looks like.</h2>
       <p className="section-lead" data-reveal>Run a fictional enquiry through intake, validation, human review and a CRM update — including what happens when the data is wrong or the CRM goes down.</p>
       <WorkflowDemo />
+      <div className="home-section-cta"><SecondaryLink href="/contact#book">Want this for your enquiries? Book a free call</SecondaryLink></div>
     </section>
     <section className="agency-wrap agency-section ambient-zone" aria-labelledby="work-heading">
       <p className="kicker">Selected work</p>
@@ -66,7 +74,7 @@ export default function Home() {
     <section className="agency-wrap agency-section" aria-labelledby="trust-heading">
       <p className="kicker">How we build</p>
       <h2 id="trust-heading" data-reveal>Built for real operations, not impressive demos.</h2>
-      <div className="trust-grid">{trust.map(([Icon,title,copy],i)=><section key={title} className="trust-item glass" data-reveal style={{["--d" as string]:`${(i%3)*80}ms`}}><Icon size={22} aria-hidden="true"/><h3>{title}</h3><p>{copy}</p></section>)}</div>
+      <div className="trust-grid home-trust">{trust.map(([Icon,title,copy],i)=><section key={title} className="trust-item" data-reveal style={{["--d" as string]:`${(i%3)*80}ms`}}><Icon size={22} aria-hidden="true"/><h3>{title}</h3><p>{copy}</p></section>)}</div>
       <Link className="work-link" href="/how-it-works">See the delivery process <span aria-hidden="true">↗</span></Link>
     </section>
     <section className="agency-wrap detail-list">
@@ -89,6 +97,7 @@ export default function Home() {
       </div>
       <Link className="work-link" href="/blog">Browse all insights <span aria-hidden="true">↗</span></Link>
     </section>
-    <section className="agency-wrap agency-section"><p className="kicker">Common questions</p><h2 data-reveal>Before we talk.</h2><div className="agency-faq">{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section><Closing/>
+    <section className="agency-wrap agency-section"><p className="kicker">Common questions</p><h2 data-reveal>Before we talk.</h2><div className="agency-faq home-faq">{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
+      <div className="home-section-cta"><p>Question not here?</p><SecondaryLink href="/contact#book">Ask it on the free call</SecondaryLink></div></section><Closing/>
   </article>;
 }
