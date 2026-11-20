@@ -1,5 +1,6 @@
 ---
 title: "AI Lead Response for Service Businesses: The 10-Day Build That Stops Lead Leakage"
+seoTitle: "AI Lead Response for Service Businesses"
 date: "2026-08-20"
 description: "A tactical guide to building AI lead response for service businesses using missed-call text-back, qualification, routing, and booking workflows."
 keywords: "AI lead response for service businesses, speed to lead, missed call text back, service business automation, HVAC lead response"

@@ -1,5 +1,6 @@
 ---
 title: "How to Build an AI Lead Research System with Make and OpenAI (No Code)"
+seoTitle: "AI Lead Research with Make and OpenAI"
 date: "2025-01-10"
 description: "Learn how to build an AI-powered lead research system using Make and OpenAI that auto-fills your CRM with company intel before every sales call. No code required."
 keywords: "AI lead research automation, Make.com AI workflow, OpenAI CRM automation, no-code lead enrichment"

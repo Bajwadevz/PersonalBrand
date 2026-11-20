@@ -1,5 +1,6 @@
 ---
 title: "How I Built an Automated Weekly Report System in Under 2 Hours"
+seoTitle: "Automated Weekly Reports with Make + Notion"
 date: "2025-02-23"
 description: "I built a fully automated weekly business report system using Make, Notion, and OpenAI in under 2 hours. Here's the exact workflow, prompts, and setup."
 keywords: "automated weekly report system, Make Notion automation, auto-generate reports AI, operator reporting automation"

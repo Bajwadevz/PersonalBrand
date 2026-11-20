@@ -1,5 +1,6 @@
 ---
 title: 'AI Automation for Sales Professionals: A Practical Guide'
+seoTitle: "AI Automation for Sales Teams: Practical Guide"
 date: '2026-03-02'
 description: 'A deeply tactical guide explaining how AI automation for sales professionals eliminates data entry, scales outreach, and reclaims pure selling hours.'
 keywords: 'AI automation for sales professionals, sales workflows, AI outreach, sales systems'

@@ -27,7 +27,7 @@ const phases: Phase[] = [
   {
     id: "audit",
     title: "Audit",
-    price: "A$750 fixed",
+    price: "A$1,000 fixed",
     timing: "Target 5 business days after payment, intake and access",
     summary: "A fixed-scope investigation of one team and up to two workflows, ending in a written plan.",
     you: ["Approve the boundary and pay the invoice", "Share examples and arrange two stakeholder sessions"],

@@ -1,5 +1,6 @@
 ---
 title: "How to Automate Sales Outreach with AI: A Step-by-Step Playbook"
+seoTitle: "Automate Sales Outreach with AI: Playbook"
 date: "2025-02-05"
 description: "A step-by-step playbook for automating personalized sales outreach using AI. From lead scraping to personalized email generation to send, all without code."
 keywords: "automate sales outreach with AI, AI cold email automation, GPT sales outreach, personalized outreach at scale"

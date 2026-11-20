@@ -18,7 +18,7 @@ export default function RequestReceived({ duplicate = false, request, calendar }
       <li>We aim to reply within one business day (AEST/AWST) to confirm one of your times with a video-call link, or suggest another time if none work.</li>
       <li>On the 20-minute call we look at the task together. If a paid audit makes sense, we’ll say so; if not, we’ll tell you that too.</li>
     </ol>
-    <p>Curious what comes after the call? <Link href="/ai-operations-audit">See what the A$750 AI Operations Audit includes</Link>.</p>
+    <p>Curious what comes after the call? <Link href="/ai-operations-audit">See what the A$1,000 AI Operations Audit includes</Link>.</p>
     {calendar && <p>Prefer to lock in a time now? <a href={calendar} data-discovery-calendar target="_blank" rel="noopener noreferrer">Pick a time on the calendar</a>.</p>}
     <p>No reply after a business day, or need to change something? Email <a href={`mailto:${agencyEmail}?subject=Discovery%20call%20request`}>{agencyEmail}</a>.</p>
   </div>;

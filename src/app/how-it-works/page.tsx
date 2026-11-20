@@ -7,7 +7,7 @@ import "./how-it-works.css";
 export const metadata = agencyMeta(
   "/how-it-works",
   "How AI Implementation Works, Step by Step",
-  "From a free 20-minute call to a A$750 audit, a scoped build from A$3,500 and optional support from A$490/month. See each step and what you receive.",
+  "From a free 20-minute call to an A$1,000 audit, a scoped build from A$3,500 and optional support from A$490/month. See each step and what you receive.",
 );
 
 const timeline = [
@@ -109,7 +109,7 @@ export default function HowItWorks() {
           <p className="hiw-support-note">Exact coverage, response times and covered workflows are written into your support agreement.</p>
           <div className="hero-actions">
             <CallLink />
-            <Link className="hero-secondary" href="/ai-operations-audit">Start with the A$750 audit <span aria-hidden="true">→</span></Link>
+            <Link className="hero-secondary" href="/ai-operations-audit">Start with the A$1,000 audit <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

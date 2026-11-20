@@ -48,7 +48,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .motion-ok .home-map { animation: hero-rise .9s var(--ease-out) 1s both; }
   .motion-ok .home-map-wire { stroke-dasharray: 100; animation: home-wire-draw 1.1s var(--ease-inout) 1.2s both; }
-  .motion-ok .home-map-beam-in { animation: home-beam-in 4.4s linear 2.4s infinite; }
+  .motion-ok .home-map-beam-in { animation: home-beam-in 4.4s linear infinite; }
   .motion-ok .home-map-beam-out { animation: home-beam-out 4.4s linear 2.4s infinite; }
   .motion-ok .home-map-hub rect { animation: home-hub-glow 4.4s var(--ease-inout) 2.4s infinite; }
   .motion-ok .home-map-dest rect { animation: home-dest-flash 4.4s linear 2.4s infinite; }
@@ -242,3 +242,29 @@
 .home-faq details { padding-block: 8px; }
 .home-faq summary { min-height: 44px; align-items: center; }
 .home-ba-before { font-size: .98rem; }
+
+/* Generic AI implementation map: team node + support link */
+.home-map-team rect { stroke: var(--accent-text); stroke-dasharray: 4 4; stroke-opacity: .6; fill: color-mix(in srgb, var(--accent-text) 6%, var(--glass-bg)); }
+.home-map-support { stroke-dasharray: 3 5 !important; animation: none !important; }
+.home-map-beam-in { animation-delay: calc(2.4s + var(--i, 0) * .25s) !important; }
+
+/* Problem band v2: universal problems + how we help */
+.home-pin-fix { display: block; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: .98rem; line-height: 1.55; }
+.home-pin-fix-label { display: block; margin-bottom: 4px; color: var(--accent-text); font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+@media (min-width: 821px) {
+  .motion-ok .home-pin .pin-statements { min-height: 330px; }
+  .motion-ok .home-pin.pin-band { height: 280vh; }
+}
+
+/* Keep the background grid from running through the hero map. */
+.home-map { position: relative; isolation: isolate; }
+.home-map::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -24px -4% -8px;
+  background: radial-gradient(ellipse 62% 70% at 50% 46%, var(--paper) 58%, color-mix(in srgb, var(--paper) 70%, transparent) 76%, transparent 96%);
+  pointer-events: none;
+}
+.home-map-node rect { fill: color-mix(in srgb, var(--paper) 94%, var(--accent-text)); }
+.home-map-support { stroke-opacity: .6 !important; stroke-width: 1.5 !important; }

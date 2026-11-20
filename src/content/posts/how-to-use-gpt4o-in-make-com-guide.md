@@ -1,5 +1,6 @@
 ---
 title: "How to Use OpenAI's GPT-4o in Make.com: A Beginner's Complete Guide"
+seoTitle: "How to Use GPT-4o in Make.com"
 date: "2025-03-22"
 description: "A complete beginner's guide to connecting GPT-4o inside Make.com. Includes setup, module config, prompt tips, token management, and 3 starter workflow templates."
 keywords: "how to use GPT-4o in Make.com, Make.com OpenAI module, connect OpenAI to Make, GPT automation no-code"
@@ -99,4 +100,4 @@ Space out runs (e.g. add a delay between iterations in a loop), use **gpt-4o-min
 
 ## Next step
 
-Want this built inside your own systems instead of a tutorial? We implement workflows like this for Australian teams — see [CRM automation](/solutions/crm-automation), the [A$750 AI Operations Audit](/ai-operations-audit) or [client case studies](/work).
+Want this built inside your own systems instead of a tutorial? We implement workflows like this for Australian teams — see [CRM automation](/solutions/crm-automation), the [A$1,000 AI Operations Audit](/ai-operations-audit) or [client case studies](/work).

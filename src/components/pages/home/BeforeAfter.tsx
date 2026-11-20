@@ -28,7 +28,7 @@ export default function BeforeAfter() {
           ))}
         </div>
         <div className="home-ba-foot" data-reveal>
-          <p>Every engagement starts the same way: a free 20-minute call, then a fixed-scope A$750 audit before any build is quoted.</p>
+          <p>Every engagement starts the same way: a free 20-minute call, then a fixed-scope A$1,000 audit before any build is quoted.</p>
           <div className="hero-actions"><CallLink variant="light" /><SecondaryLink href="/how-it-works">See how it works</SecondaryLink></div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 ---
 title: 'Designing AI Workflows That Actually Ship'
+seoTitle: "Designing AI Workflows That Ship"
 date: '2026-03-10'
 description: 'Why most AI workflows never reach production, and a validation-to-deployment pipeline that ships. Tactical guide to avoiding overengineering.'
 keywords: 'AI workflows, AI automation systems, production AI systems'

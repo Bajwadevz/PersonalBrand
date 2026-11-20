@@ -496,3 +496,20 @@ html.dark .workflow-demo { --ok: #45d39b; --warn: #f2b84b; --err: #ff7a6e; }
 .close-inner { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
 .close-inner .kicker { margin-bottom: 14px; }
 @media (max-width: 860px) { .close-inner { grid-template-columns: 1fr; } }
+
+/* Grid alignment: inner-page heroes keep the grid behind the header like the
+   homepage, but fade it under the headline column so lines never fight the copy. */
+.page-hero .perspective-grid {
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(90deg, rgb(0 0 0 / 22%) 0%, rgb(0 0 0 / 28%) 42%, #000 62%);
+  mask-image: linear-gradient(90deg, rgb(0 0 0 / 22%) 0%, rgb(0 0 0 / 28%) 42%, #000 62%);
+}
+.page-hero:not(.page-hero-split) .perspective-grid {
+  -webkit-mask-image: linear-gradient(180deg, rgb(0 0 0 / 25%) 0%, rgb(0 0 0 / 35%) 45%, #000 85%);
+  mask-image: linear-gradient(180deg, rgb(0 0 0 / 25%) 0%, rgb(0 0 0 / 35%) 45%, #000 85%);
+}
+.agency-close .perspective-grid {
+  -webkit-mask-image: linear-gradient(90deg, rgb(0 0 0 / 20%) 0%, rgb(0 0 0 / 25%) 50%, #000 72%);
+  mask-image: linear-gradient(90deg, rgb(0 0 0 / 20%) 0%, rgb(0 0 0 / 25%) 50%, #000 72%);
+}
+.agency-intro .perspective-grid { display: none; }

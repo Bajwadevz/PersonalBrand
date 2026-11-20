@@ -14,7 +14,7 @@ const phases = [
   },
   {
     title: "Audit",
-    price: "A$750",
+    price: "A$1,000",
     scope: "Fixed scope",
     Icon: ClipboardList,
     summary: "We map up to two workflows across three systems and check where automation is feasible.",

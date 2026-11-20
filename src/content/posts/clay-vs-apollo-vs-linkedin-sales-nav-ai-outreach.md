@@ -1,5 +1,6 @@
 ---
 title: "Clay vs Apollo vs LinkedIn Sales Nav: Which Data Tool Wins for AI Outreach?"
+seoTitle: "Clay vs Apollo vs Sales Navigator"
 date: "2025-03-04"
 description: "Comparing Clay, Apollo, and LinkedIn Sales Navigator for AI-powered outreach in 2025. Which gives the cleanest data for GPT personalization? Honest breakdown."
 keywords: "Clay vs Apollo for sales outreach, best lead data tool 2025, Clay.com review, Apollo.io review, AI-powered prospecting"

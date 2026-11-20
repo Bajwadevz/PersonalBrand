@@ -1,5 +1,6 @@
 ---
 title: "The AI Automation Stack for Local Service Businesses in 2026"
+seoTitle: "AI Automation Stack for Service Businesses"
 date: "2026-08-15"
 description: "The practical AI automation stack for local service businesses in 2026: forms, phone, SMS, workflows, calendar, CRM, reviews, and follow-up."
 keywords: "AI automation stack for service businesses, HVAC automation tools, home services tech stack, local service business AI stack 2026"

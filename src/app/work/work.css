@@ -182,3 +182,16 @@
 .work-sos-dl dt { color: var(--muted); }
 .work-sos-dl dd { margin: 0; font-weight: 600; text-align: right; }
 .sales-os-page .page-hero .kicker a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Example builds (illustrative, not client work) */
+.work-designed { display: grid; gap: 10px; margin: 6px 0 4px; }
+.work-designed li { position: relative; padding-left: 26px; color: var(--ink); font-weight: 600; line-height: 1.45; }
+.work-designed li::before { content: "→"; position: absolute; left: 0; color: var(--accent-text); }
+.example-build .work-result { justify-content: center; min-height: 96px; }
+.example-build .work-result-label { color: var(--ink); font-weight: 600; font-size: .98rem; }
+.work-examples-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+.work-example-card { display: grid; gap: 8px; align-content: start; padding: clamp(20px, 2.6vw, 28px); border-radius: 20px; color: var(--ink); transition: translate .24s var(--ease-snap), border-color .24s var(--ease-snap); }
+.work-example-card:hover { translate: 0 -3px; border-color: var(--accent-text); text-decoration: none; }
+.work-example-card h3 { font-size: 1.3rem; margin-top: 6px; }
+.work-example-card p { color: var(--muted); }
+@media (max-width: 760px) { .work-examples-grid { grid-template-columns: 1fr; } }

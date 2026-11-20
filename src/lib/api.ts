@@ -13,6 +13,7 @@ export type Post = {
     content: string;
     keywords?: string;
     og_image?: string;
+    seoTitle?: string;
     tags?: string[];
     readingTime?: string;
     author?: string;
@@ -57,6 +58,7 @@ export function getPostBySlug(slug: string): Post | null {
     return {
         slug: realSlug,
         title: data.title || "Untitled",
+        seoTitle: data.seoTitle || data.seo_title || undefined,
         date,
         description: data.description || "",
         excerpt,

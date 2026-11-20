@@ -1,5 +1,6 @@
 ---
 title: 'The Operator’s Guide to AI Stack Selection'
+seoTitle: "How to Choose Your AI Stack"
 date: '2026-03-12'
 description: 'Model selection, no-code vs custom, cost vs control, and a decision matrix for choosing your AI stack without tool sprawl.'
 keywords: 'AI stack, AI tools comparison, AI infrastructure'

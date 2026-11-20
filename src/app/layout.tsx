@@ -64,7 +64,7 @@ const graph = {
     {
       "@type": "Person",
       "@id": "https://bajwaa.dev/about#founder",
-      name: "Shahzeb Bajwa",
+      name: "Shahzaib Bajwa",
       url: "https://bajwaa.dev/about",
       jobTitle: "Founder",
       worksFor: { "@id": "https://bajwaa.dev/#organisation" },

@@ -21,10 +21,11 @@ const detail: Detail = {
     ],
     [
       "Start with one workflow",
-      "The free discovery call establishes fit. A paid A$750 audit produces a written plan and a separately scoped implementation proposal if the opportunity is worthwhile."
+      "The free discovery call establishes fit. A paid A$1,000 audit produces a written plan and a separately scoped implementation proposal if the opportunity is worthwhile."
     ]
   ],
   "links": [
+    ["Example build: construction CRM", "/work/construction-custom-crm-perth"], ["Example build: HVAC enquiry response", "/work/hvac-enquiry-response-system"], 
     ["AI help for WA small businesses", "/blog/ai-for-wa-small-businesses"],
     ["Client case studies", "/work"],
     ["Compare Australian implementation costs", "/blog/ai-implementation-cost-australia"],

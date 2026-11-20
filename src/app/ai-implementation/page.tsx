@@ -122,7 +122,7 @@ export default function Page() {
                 <span className="impl-next-go" aria-hidden="true">→</span>
               </Link>
               <Link href="/ai-operations-audit" className="glass" data-reveal style={{ ["--d" as string]: "80ms" }}>
-                <span className="impl-tag">A$750 audit</span>
+                <span className="impl-tag">A$1,000 audit</span>
                 <h3>Get a written plan and first-build scope before you pay for a build</h3>
                 <span className="impl-next-go" aria-hidden="true">→</span>
               </Link>

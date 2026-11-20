@@ -1,5 +1,6 @@
 ---
 title: 'Building Internal AI Tools for Small Teams'
+seoTitle: "Building Internal AI Tools for Small Teams"
 date: '2026-03-13'
 description: 'When to build internal AI tools, lightweight architecture, security and data handling, and scaling without complexity. Tactical guide.'
 keywords: 'internal AI tools, AI systems for teams'

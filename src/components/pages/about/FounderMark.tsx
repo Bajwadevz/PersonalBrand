@@ -6,13 +6,13 @@ const PATH = ["Sales call", "Inbox", "CRM", "Workflow"] as const;
 
 export default function FounderMark() {
   return (
-    <figure className="about-mark glass" aria-label="Shahzeb Bajwa, founder of bajwaa.dev">
+    <figure className="about-mark glass" aria-label="Shahzaib Bajwa, founder of bajwaa.dev">
       <div className="about-mark-top">
         <span className="about-monogram" aria-hidden="true">
           <span>S</span><span>B</span>
         </span>
         <figcaption>
-          <strong>Shahzeb Bajwa</strong>
+          <strong>Shahzaib Bajwa</strong>
           <span>Founder, bajwaa.dev</span>
         </figcaption>
       </div>

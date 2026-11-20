@@ -1,5 +1,6 @@
 ---
 title: "How to Calculate the Real ROI of AI Workflow Automation (With Examples)"
+seoTitle: "How to Calculate AI Automation ROI"
 date: "2026-03-10"
 description: "Most operators don't know if their AI automations are actually worth it. Here's a simple framework for calculating real ROI: time saved, cost reduction, and compounding leverage."
 keywords: "AI workflow ROI, automate business processes AI, AI automation cost savings, AI productivity ROI, measure AI automation, no-code automation ROI"

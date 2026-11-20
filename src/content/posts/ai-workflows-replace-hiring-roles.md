@@ -1,5 +1,6 @@
 ---
 title: "5 AI Workflows That Replace Entire Hiring Categories (And How to Build Them)"
+seoTitle: "5 AI Workflows That Cover Whole Roles"
 date: "2025-03-13"
 description: "5 real AI workflows that replace roles operators typically hire for: from research to reporting to customer comms. Build them in Make or n8n with no code."
 keywords: "AI workflows to replace hiring, AI replacing jobs automation, no-code AI business workflows, reduce headcount with AI"

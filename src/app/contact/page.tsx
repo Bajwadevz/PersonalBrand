@@ -16,7 +16,7 @@ const agenda = [
   ["Your process", "Who does the task today, how often, and which systems it touches."],
   ["Where it slows down", "The retyping, chasing and checking that eats the time."],
   ["Is AI worth it here?", "An honest view on whether automation or an AI step would help — or not."],
-  ["The next step", "If it fits, what the A$750 fixed-scope audit would cover. No obligation."],
+  ["The next step", "If it fits, what the A$1,000 fixed-scope audit would cover. No obligation."],
 ] as const;
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ status?: string }> }) {

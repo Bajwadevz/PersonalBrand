@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { CallLink, Closing, PageHero, SecondaryLink } from "@/components/Agency";
 import FlowDiagram from "@/components/FlowDiagram";
 import CountUp from "@/components/motion/CountUp";
-import { caseStudies, getCaseStudy } from "@/lib/case-studies";
+import { caseStudies, exampleBuilds, getCaseStudy, getExampleBuild } from "@/lib/case-studies";
+import ExampleBuildPage from "@/components/pages/work/ExampleBuildPage";
 import { pageMetadata } from "@/lib/page-metadata";
 import "../work.css";
 
@@ -11,17 +12,23 @@ type Params = { params: Promise<{ slug: string }> };
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return caseStudies.map(({ slug }) => ({ slug }));
+  return [...caseStudies, ...exampleBuilds].map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Params) {
-  const study = getCaseStudy((await params).slug);
+  const slug = (await params).slug;
+  const example = getExampleBuild(slug);
+  if (example) return pageMetadata(`/work/${example.slug}`, example.slug.startsWith("construction") ? "Construction CRM Example for Perth Builders" : "HVAC Enquiry Response System Example", example.description);
+  const study = getCaseStudy(slug);
   if (!study) return {};
   return pageMetadata(`/work/${study.slug}`, `Case Study: ${study.shortTitle}`, study.description);
 }
 
 export default async function CaseStudyPage({ params }: Params) {
-  const study = getCaseStudy((await params).slug);
+  const slug = (await params).slug;
+  const example = getExampleBuild(slug);
+  if (example) return <ExampleBuildPage build={example} />;
+  const study = getCaseStudy(slug);
   if (!study) notFound();
   const origin = "https://bajwaa.dev";
   const url = `${origin}/work/${study.slug}`;

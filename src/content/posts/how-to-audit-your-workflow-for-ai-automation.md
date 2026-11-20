@@ -1,5 +1,6 @@
 ---
 title: 'How to Audit Your Workflow for AI Automation'
+seoTitle: "How to Audit a Workflow for AI Automation"
 date: '2026-03-04'
 description: 'A structural framework explaining exactly how to audit your workflow for automation, identifying high-leverage bottlenecks, and prioritizing system builds.'
 keywords: 'audit your workflow for automation, workflow analysis, AI implementation'

@@ -1,5 +1,6 @@
 ---
 title: "What Is Agentic AI? A Plain-English Explanation for Non-Technical Operators"
+seoTitle: "What Is Agentic AI? A Plain-English Guide"
 date: "2025-02-14"
 description: "Agentic AI explained in plain English for operators and founders. No PhD required: just what it means for your business and how to start using it today."
 keywords: "what is agentic AI, AI agents explained, autonomous AI workflows, agentic automation for business"

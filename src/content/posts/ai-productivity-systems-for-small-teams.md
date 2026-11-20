@@ -1,5 +1,6 @@
 ---
 title: 'AI Productivity Systems for Small Teams'
+seoTitle: "AI Productivity Systems for Small Teams"
 date: '2026-03-05'
 description: 'A tactical blueprint for building robust AI productivity systems for small teams, focusing on internal operations, sync elimination, and high-impact async routing.'
 keywords: 'AI productivity systems for small teams, operator workflows, internal ops'

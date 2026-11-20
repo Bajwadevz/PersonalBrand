@@ -6,11 +6,11 @@ import "./about.css";
 
 const detail: Detail = {
   path: "/about",
-  title: "About Shahzeb Bajwa and bajwaa.dev",
-  description: "Meet Shahzeb Bajwa, founder of bajwaa.dev, and how a software sales and computer science background shapes AI implementation for Australian teams.",
+  title: "About Shahzaib Bajwa and bajwaa.dev",
+  description: "Meet Shahzaib Bajwa, founder of bajwaa.dev, and how a software sales and computer science background shapes AI implementation for Australian teams.",
   label: "About the founder",
   heading: "Built by someone who has carried the pipeline.",
-  lead: "I’m Shahzeb Bajwa. My background is in computer science and B2B software sales. I started building workflows after seeing how often a good customer conversation disappeared between an inbox and the CRM.",
+  lead: "I’m Shahzaib Bajwa. My background is in computer science and B2B software sales. I started building workflows after seeing how often a good customer conversation disappeared between an inbox and the CRM.",
   sections: [],
   links: [],
 };
@@ -122,7 +122,7 @@ export default function Page() {
           <Link href="/how-it-works" className="about-next-card glass" data-reveal style={{ ["--d" as string]: "90ms" }}>
             <span className="kicker">The method</span>
             <h3>How an engagement works</h3>
-            <p>Free call, A$750 fixed-scope audit, then implementation from A$3,500 if it’s worthwhile.</p>
+            <p>Free call, A$1,000 fixed-scope audit, then implementation from A$3,500 if it’s worthwhile.</p>
             <span className="about-next-arrow" aria-hidden="true">→</span>
           </Link>
         </div>

@@ -132,7 +132,7 @@ export default function Page() {
             </Link>
             <Link href="/ai-operations-audit" className="sol-next-card glass" data-reveal style={{ ["--d" as string]: "80ms" }}>
               <span className="sol-tag">Fixed scope</span>
-              <span className="sol-related-metric">A$750</span>
+              <span className="sol-related-metric">A$1,000</span>
               <span className="sol-related-label">up to two workflows mapped, with native, rules and AI options compared</span>
               <h3>AI Operations Audit</h3>
               <span className="sol-related-go">See what the audit includes <span aria-hidden="true">→</span></span>

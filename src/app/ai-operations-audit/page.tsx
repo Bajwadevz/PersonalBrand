@@ -6,11 +6,11 @@ import "./audit.css";
 
 const detail: Detail = {
   "path": "/ai-operations-audit",
-  "title": "AI Readiness & Operations Audit, A$750",
-  "description": "A fixed-price A$750 AI operations audit for Australian businesses. We map your recurring admin, rank automation options and deliver a written, costed plan.",
+  "title": "AI Readiness & Operations Audit, A$1,000",
+  "description": "A fixed-price A$1,000 AI operations audit for Australian businesses. We map your recurring admin, rank automation options and deliver a written, costed plan.",
   "label": "AI Operations Audit",
   "heading": "Know where AI will help before you pay for a build.",
-  "lead": "The A$750 fixed-scope audit covers one operating team and up to two agreed workflows and gives you a written implementation plan you can keep, whether you build with us or take it to your own team.",
+  "lead": "The A$1,000 fixed-scope audit covers one operating team and up to two agreed workflows and gives you a written implementation plan you can keep, whether you build with us or take it to your own team.",
   "sections": [
     [
       "Agree the boundary",
@@ -63,11 +63,11 @@ const compareRows = ["Cost", "Your time", "Looks at your real workflows", "Check
 const compare = [
   { name: "Free readiness quiz", href: "/tools/readiness-quiz", link: "Take the quiz", cells: ["Free", "About 5 minutes", "No — general questions", "No", "A general readiness score", "You’re curious where to start"] },
   { name: "DIY checklist or template", href: "/blog/ai-operations-audit-checklist-australia", link: "Read the checklist", cells: ["Free", "Several hours of your team’s time", "Yes, if you map them yourselves", "Only if someone in-house knows how", "Your own notes and estimates", "You have time and technical skills in-house"] },
-  { name: "AI Operations Audit", featured: true, cells: ["A$750 fixed", "Intake plus two stakeholder sessions", "Yes — traced with your process owner", "Yes — APIs, limits and approval points", "Written report, maps, roadmap and first-build scope", "You want a decision before paying for a build"] },
+  { name: "AI Operations Audit", featured: true, cells: ["A$1,000 fixed", "Intake plus two stakeholder sessions", "Yes — traced with your process owner", "Yes — APIs, limits and approval points", "Written report, maps, roadmap and first-build scope", "You want a decision before paying for a build"] },
 ];
 
 const faqs = [
-  ["How do I pay?", "By invoice, paid before work starts. We agree the boundary in writing first, so you know exactly what the A$750 covers."],
+  ["How do I pay?", "By invoice, paid before work starts. We agree the boundary in writing first, so you know exactly what the A$1,000 covers."],
   ["Is tax included?", "Any applicable tax is confirmed with you before the invoice is issued, so the total payable is clear upfront."],
   ["How long does it take?", "Our target is five business days after payment, the intake form and system access are complete. We then schedule the readout at a time that suits your team."],
   ["What if automation isn’t worth it?", "Then the report says so plainly. Sometimes the better answer is a native feature, a process change or leaving it alone. You still keep the workflow maps, bottleneck register and roadmap."],
@@ -103,7 +103,7 @@ export default function Page() {
     <section className="agency-wrap agency-section audit-overview ambient-zone">
       <div className="audit-price glass" data-reveal>
         <p className="kicker">Fixed-scope audit</p>
-        <p className="audit-amount">A$750</p>
+        <p className="audit-amount">A$1,000</p>
         <p>One team · up to two workflows · up to three systems · two stakeholder sessions · written report and readout.</p>
         <p className="audit-fineprint">Paid before work starts, by invoice. Any applicable tax is confirmed before invoicing. Target turnaround is five business days after payment, intake and access.</p>
       </div>

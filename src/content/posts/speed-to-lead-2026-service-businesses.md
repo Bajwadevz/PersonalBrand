@@ -1,5 +1,6 @@
 ---
 title: "Speed to Lead in 2026: Why Most Service Businesses Lose the Job Before They Even Reply"
+seoTitle: "Speed to Lead for Service Businesses (2026)"
 date: "2026-08-18"
 description: "Speed-to-lead is still one of the biggest conversion levers in local services. Here's what operators should know and how to respond faster without overpromising."
 keywords: "speed to lead, lead response time, service business conversion, AI lead response, response time statistics"

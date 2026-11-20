@@ -1,5 +1,6 @@
 ---
 title: "Business process automation vs AI agents for Australian small businesses"
+seoTitle: "Process Automation vs AI Agents: Which Fits?"
 date: "2026-11-19"
 description: "Compare rules, AI-assisted workflows and agents using an operations example. Decide which tasks to automate and where a person should approve the result."
 tags: ["Automation", "AI Systems", "Strategy"]

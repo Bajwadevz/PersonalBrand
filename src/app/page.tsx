@@ -9,7 +9,6 @@ import SpotlightGroup from "@/components/pages/home/SpotlightGroup";
 import BeforeAfter from "@/components/pages/home/BeforeAfter";
 import "./home.css";
 import PinnedProblems from "@/components/motion/PinnedProblems";
-import WorkflowDemo from "@/components/WorkflowDemo";
 import CaseStudyCards from "@/components/CaseStudyCards";
 import { ClipboardCheck, FileText, KeyRound, LifeBuoy, LockKeyhole, Activity } from "lucide-react";
 
@@ -23,7 +22,7 @@ const faq=[
   ["What does AI implementation mean?", "We connect the software your team uses and build workflows around a specific process, such as routing customer enquiries or preparing a recurring report."],
   ["Do we need to replace our CRM?","Usually, we can start with the tools you already use. The audit checks your plan, permissions and integration options before we recommend changes."],
   ["Does every workflow need AI?","No. Rules often handle routing and validation well. We use AI where interpreting unstructured input adds value, with human review for ambiguous cases."],
-  ["What’s included in the free call?","A 20-minute conversation about one process, the systems involved and whether a paid audit makes sense. The A$750 audit includes the detailed investigation and written plan."],
+  ["What’s included in the free call?","A 20-minute conversation about one process, the systems involved and whether a paid audit makes sense. The A$1,000 audit includes the detailed investigation and written plan."],
   ["How much does a build cost?", "Implementation starts from A$3,500. The quote depends on your integrations, exception handling, approval controls and testing."],
   ["Do you work across Australia?", "Yes. We deliver remotely across Australia and arrange discovery calls around a mutually agreed time."],
   ["Who owns the system after handover?","We favour client-owned accounts. Your proposal sets out access, ownership, documentation and any optional support before the build begins."],
@@ -32,7 +31,7 @@ const trust = [
   [ClipboardCheck, "You approve what matters", "Sensitive, financial or irreversible actions wait for a named person. Low-confidence AI output goes to review, not straight into your systems."],
   [LockKeyhole, "Data handled deliberately", "We map what data moves where, use the minimum access needed and agree where AI processing happens before anything goes live."],
   [KeyRound, "Your accounts, your system", "We build in client-owned accounts wherever possible, so you keep access, history and control if we stop working together."],
-  [FileText, "Documented handover", "You get workflow maps, run notes and a recovery path your team can follow, plus a recorded handover for anyone who missed it."],
+  [FileText, "Your team, trained to run it", "We train your people, leave playbooks and documentation, and hand over ownership, so you can run and extend the system without depending on us."],
   [Activity, "Monitored, with logs", "Each run is logged. Failed steps retry safely and anything that still fails lands in a queue with an alert, not in silence."],
   [LifeBuoy, "Clear support boundaries", "A defect window after launch, then optional support with defined hours and response times. New features are always quoted separately."],
 ] as const;
@@ -44,7 +43,7 @@ export default function Home() {
         <h1><span className="kicker h1-kicker"><span className="signal-dot" aria-hidden="true" /> AI implementation for Australian businesses</span><span className="sr-only">: </span><span className="line"><span>Your business,</span></span> <span className="line"><span>without the <em>busywork.</em></span></span></h1>
         <p className="lead">We implement AI-powered workflows that reduce repetitive admin, improve your CRM and help your existing systems work together.</p>
         <div className="hero-cta"><CallLink /></div>
-        <p className="hero-note">Built around the tools you already use. Scoped, tested and handed over clearly.</p>
+        <p className="hero-note">Built around the tools you already use. Scoped, tested and handed over with training, so your team can run it.</p>
         <Link className="hero-process-link" href="#how-engagements-work">See how it works <span aria-hidden="true">↓</span></Link>
       </div>
       <HeroSystemMap />
@@ -57,13 +56,6 @@ export default function Home() {
       <SpotlightGroup className="cap-grid home-spot">{problems.map(([title,copy,url,Icon,tags],i)=><Link key={url} href={url} className="glass" data-spot data-reveal style={{["--d" as string]:`${i*90}ms`}}><span className="home-cap-index" aria-hidden="true">{String(i+1).padStart(2,"0")}</span><Icon size={28} aria-hidden="true"/><h3>{title}</h3><p>{copy}</p><ul className="home-cap-tags">{tags.map(t=><li key={t}>{t}</li>)}</ul><span aria-hidden="true">↗</span></Link>)}</SpotlightGroup>
       <div className="home-section-cta"><SecondaryLink href="/contact#book">Not sure which fits? Bring it to a free discovery call</SecondaryLink></div></section>
     <BeforeAfter />
-    <section className="agency-wrap agency-section" id="see-it-working" aria-labelledby="demo-heading">
-      <p className="kicker">See it working</p>
-      <h2 id="demo-heading" data-reveal>See what a working workflow looks like.</h2>
-      <p className="section-lead" data-reveal>Run a fictional enquiry through intake, validation, human review and a CRM update — including what happens when the data is wrong or the CRM goes down.</p>
-      <WorkflowDemo />
-      <div className="home-section-cta"><SecondaryLink href="/contact#book">Want this for your enquiries? Book a free call</SecondaryLink></div>
-    </section>
     <section className="agency-wrap agency-section ambient-zone" aria-labelledby="work-heading">
       <p className="kicker">Selected work</p>
       <h2 id="work-heading" data-reveal>Results our clients reported.</h2>

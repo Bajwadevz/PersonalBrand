@@ -1,5 +1,6 @@
 ---
 title: "What does AI implementation cost for an Australian small business?"
+seoTitle: "AI Implementation Cost in Australia (2026)"
 date: "2026-11-19"
 description: "Understand bajwaa.dev’s Australian-dollar audit, build and support pricing, what changes a quote and how to estimate whether a workflow is worth automating."
 tags: ["Strategy", "Automation"]
@@ -11,7 +12,7 @@ A useful quote starts with a task someone can demonstrate. “Connect the enquir
 
 ## What our prices cover
 
-The free 20-minute discovery call establishes whether there is a process worth investigating. Our fixed-scope [AI Operations Audit](/ai-operations-audit) costs A$750 and covers one team, up to two workflows and up to three systems. You receive workflow maps, a feasibility assessment and a written plan. You can use that plan with your own team.
+The free 20-minute discovery call establishes whether there is a process worth investigating. Our fixed-scope [AI Operations Audit](/ai-operations-audit) costs A$1,000 and covers one team, up to two workflows and up to three systems. You receive workflow maps, a feasibility assessment and a written plan. You can use that plan with your own team.
 
 Implementation starts from A$3,500. A quote names the workflow, integrations, test cases and handover. Optional support starts from A$490 per month. Third-party subscriptions and usage can add recurring costs. We confirm the total payable and applicable tax in writing before work starts. These are bajwaa.dev’s proposed engagement prices. An Australian market average would require separate evidence.
 

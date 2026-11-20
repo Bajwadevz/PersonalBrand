@@ -1,5 +1,6 @@
 ---
 title: "How to Build an AI Booking Workflow with n8n, Twilio, and Google Calendar"
+seoTitle: "AI Booking Workflow: n8n, Twilio, Calendar"
 date: "2026-08-17"
 description: "A practical step-by-step guide to building a simple AI booking workflow with n8n, Twilio, and Google Calendar for service businesses."
 keywords: "AI booking workflow, n8n Twilio Google Calendar, automated scheduling, service business booking system, n8n booking automation"

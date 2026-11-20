@@ -1,5 +1,6 @@
 ---
 title: "AI operations audit checklist for Australian small businesses"
+seoTitle: "AI Audit Checklist for Australian Businesses"
 date: "2026-11-19"
 description: "Prepare redacted process examples, workflow volume, system ownership and exception rules for a useful AI operations audit."
 tags: ["Strategy", "Automation"]

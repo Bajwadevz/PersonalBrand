@@ -1,5 +1,6 @@
 ---
 title: 'From Manual Tasks to Autonomous Systems'
+seoTitle: "From Manual Tasks to Autonomous Systems"
 date: '2026-03-11'
 description: 'Identify high-leverage repetitive work, climb the 4-stage automation ladder, and implement workflow automation for small teams. Practical blueprint.'
 keywords: 'AI automation for small teams, workflow automation, AI systems'

@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/api";
-import { caseStudies } from "@/lib/case-studies";
+import { caseStudies, exampleBuilds } from "@/lib/case-studies";
 
 const origin = "https://bajwaa.dev";
 // Date of the last substantive content change for the commercial pages.
-const updated = "2026-11-20";
+const updated = "2026-11-21";
 
 const pages: [string, number][] = [
   ["/", 1], ["/ai-implementation", 0.9], ["/ai-operations-audit", 0.9], ["/how-it-works", 0.8],
@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...pages.map(([path, priority]) => ({ url: origin + path, lastModified: updated, priority })),
     ...caseStudies.map(c => ({ url: `${origin}/work/${c.slug}`, lastModified: updated, priority: 0.7 })),
+    ...exampleBuilds.map(e => ({ url: `${origin}/work/${e.slug}`, lastModified: "2026-11-21", priority: 0.6 })),
     ...tools.map(slug => ({ url: `${origin}/tools/${slug}`, priority: 0.3 })),
     ...getAllPosts().map(post => ({ url: `${origin}/blog/${post.slug}`, lastModified: post.date || undefined, priority: 0.6 })),
   ];

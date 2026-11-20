@@ -6,7 +6,7 @@ import LoomEmbed from "@/components/LoomEmbed";
 import WorkflowDemo from "@/components/WorkflowDemo";
 import FeaturedCases from "@/components/pages/work/FeaturedCases";
 import WorkFilter from "@/components/pages/work/WorkFilter";
-import { caseStudies, exampleWorkflows } from "@/lib/case-studies";
+import { caseStudies, exampleBuilds, exampleWorkflows } from "@/lib/case-studies";
 import "./work.css";
 
 export const metadata = agencyMeta(
@@ -18,7 +18,7 @@ export const metadata = agencyMeta(
 const legend = [
   ["Client work", `${caseStudies.length} case studies`, "Real builds, client names withheld. Figures are client-reported."],
   ["Demo", "3 builds", "Runs on fictional data: an interactive demo, a product build and a recorded walkthrough."],
-  ["Example workflow", `${exampleWorkflows.length} patterns`, "Illustrative handoffs we automate often. Not client results."],
+  ["Example workflow", `${exampleBuilds.length} builds · ${exampleWorkflows.length} patterns`, "Illustrative Perth-style builds and handoffs we automate often. Not client results."],
 ] as const;
 
 function Legend() {
@@ -50,12 +50,29 @@ export default function Work() {
         visual={<Legend />}
       />
 
-      <WorkFilter counts={{ client: caseStudies.length, demo: 3, example: exampleWorkflows.length }}>
+      <WorkFilter counts={{ client: caseStudies.length, demo: 3, example: exampleWorkflows.length + exampleBuilds.length }}>
         <section className="agency-wrap agency-section ambient-zone work-kind" data-kind="client" id="case-studies" aria-labelledby="cases-heading">
           <p className="kicker">Case studies</p>
           <h2 id="cases-heading" data-reveal>Client work, anonymised.</h2>
           <p className="section-lead" data-reveal>Each case study names the problem, what we built and the results the client reported. Client names are withheld; figures are not independently audited.</p>
           <FeaturedCases />
+        </section>
+
+        <section className="agency-wrap agency-section work-kind" data-kind="example" id="example-builds" aria-labelledby="builds-heading">
+          <p className="kicker">Example builds · Perth &amp; WA businesses</p>
+          <h2 id="builds-heading" data-reveal>Systems we design for common Perth businesses.</h2>
+          <p className="section-lead" data-reveal>Illustrative builds, not client projects: how we would scope a system for two business types we see often in WA. No invented clients or results.</p>
+          <div className="work-examples-grid">
+            {exampleBuilds.map((b, i) => (
+              <Link key={b.slug} href={`/work/${b.slug}`} className="work-example-card glass" data-reveal style={{ ["--d" as string]: `${i * 90}ms` }}>
+                <span className="work-tag">Example build · illustrative</span>
+                <h3>{b.title}</h3>
+                <p>{b.businessType.replace(/^Illustrative: /, "")}</p>
+                <ul className="work-designed">{b.designedTo.slice(0, 3).map(d => <li key={d}>{d}</li>)}</ul>
+                <span className="work-case-go">See the build <span aria-hidden="true">↗</span></span>
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section className="blueprint-band work-kind" data-kind="demo" id="demo" aria-labelledby="demo-heading">

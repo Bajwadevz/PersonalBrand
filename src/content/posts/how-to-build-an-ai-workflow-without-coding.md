@@ -1,5 +1,6 @@
 ---
 title: 'How to Build an AI Workflow Without Coding (Step-by-Step)'
+seoTitle: "Build an AI Workflow Without Coding"
 date: '2026-03-01'
 description: 'A deeply tactical, step-by-step framework for operators to build their first functional AI workflow without coding, using Make, Zapier, and LLMs.'
 keywords: 'how to build an ai workflow without coding, no-code AI systems, AI automation guide'

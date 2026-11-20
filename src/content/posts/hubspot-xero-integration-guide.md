@@ -1,5 +1,6 @@
 ---
 title: "HubSpot–Xero integration: a practical AU guide"
+seoTitle: "HubSpot Xero Integration: Practical AU Guide"
 date: "2026-11-20"
 description: "What the native HubSpot–Xero sync covers, where Australian teams hit gaps with GST, contacts and invoices, and when to use middleware or a custom build."
 tags: ["Automation", "CRM", "Finance"]
@@ -74,6 +75,6 @@ Every step has an owner and a stopping point. That matters more than which tool 
 
 Do it yourself if your data is clean, your invoice direction is simple and the native app's rules fit how you work. Ask for help when invoices regularly need judgement, when duplicate contacts run into the hundreds or when your bookkeeper is uneasy about tax mappings. Get help too when a failed sync would leave sales and accounts disagreeing about what a customer owes.
 
-Our [CRM automation](/solutions/crm-automation) and [business process automation](/solutions/business-process-automation) pages explain how we scope integrations like this. Our [cost guide](/blog/ai-implementation-cost-australia) explains how exceptions and integrations affect a quote. For a written plan before any build, the [A$750 AI Operations Audit](/ai-operations-audit) maps the workflow and checks feasibility. Implementation starts from A$3,500, with optional support from A$490 per month.
+Our [CRM automation](/solutions/crm-automation) and [business process automation](/solutions/business-process-automation) pages explain how we scope integrations like this. Our [cost guide](/blog/ai-implementation-cost-australia) explains how exceptions and integrations affect a quote. For a written plan before any build, the [A$1,000 AI Operations Audit](/ai-operations-audit) maps the workflow and checks feasibility. Implementation starts from A$3,500, with optional support from A$490 per month.
 
 If your team is still retyping deals into Xero, bring one redacted deal and its matching invoice to a free 20-minute [discovery call](/contact). We will help you work out whether the native sync is enough or whether you need a different approach.

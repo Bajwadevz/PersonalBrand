@@ -20,8 +20,8 @@ export function SecondaryLink({ href, children }: { href: string; children: Reac
 export function OfferPath({ compact = false }: { compact?: boolean }) {
   const steps = [
     ["Free", "20-min discovery call", "/contact#book"],
-    ["A$750", "Fixed-scope audit", "/ai-operations-audit"],
-    ["From A$3,500", "Implementation", "/ai-implementation"],
+    ["A$1,000", "Fixed-scope audit", "/ai-operations-audit"],
+    ["From A$3,500", "Build · priced to your systems", "/ai-implementation"],
     ["Optional", "Support from A$490/mo", "/how-it-works#support"],
   ] as const;
   return (
@@ -73,7 +73,7 @@ export function Closing({ title = "Know a process that’s taking too much time?
           <p className="kicker">Next step</p>
           <h2 data-reveal>{title}</h2>
           <p data-reveal>{copy}</p>
-          <div className="hero-actions"><CallLink /><SecondaryLink href="/ai-operations-audit">See what the A$750 audit includes</SecondaryLink></div>
+          <div className="hero-actions"><CallLink /><SecondaryLink href="/ai-operations-audit">See what the A$1,000 audit includes</SecondaryLink></div>
         </div>
         <OfferPath compact />
       </div>
@@ -85,7 +85,7 @@ export type Detail = {path:string;title:string;description:string;label:string;h
 export function detailJsonLd(d: Detail) {
   const origin="https://bajwaa.dev";
   const graph:object[]=[{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:origin},{"@type":"ListItem",position:2,name:d.label,item:origin+d.path}]}];
-  if(d.path.includes("implementation") || d.path.includes("audit") || d.path.startsWith("/solutions/")) graph.push({"@type":"Service",name:d.title,description:d.description,url:origin+d.path,provider:{"@id":origin+"/#organisation"},areaServed:d.path.endsWith("perth")?{"@type":"State",name:"Western Australia"}:{"@type":"Country",name:"Australia"},serviceType:"AI implementation",...(d.path==="/ai-operations-audit"?{offers:{"@type":"Offer",price:"750",priceCurrency:"AUD",url:origin+d.path,description:"Fixed-scope AI Operations Audit"}}:d.path==="/ai-implementation"?{offers:{"@type":"Offer",priceSpecification:{"@type":"PriceSpecification",minPrice:"3500",priceCurrency:"AUD"},url:origin+d.path}}:{})});
+  if(d.path.includes("implementation") || d.path.includes("audit") || d.path.startsWith("/solutions/")) graph.push({"@type":"Service",name:d.title,description:d.description,url:origin+d.path,provider:{"@id":origin+"/#organisation"},areaServed:d.path.endsWith("perth")?{"@type":"State",name:"Western Australia"}:{"@type":"Country",name:"Australia"},serviceType:"AI implementation",...(d.path==="/ai-operations-audit"?{offers:{"@type":"Offer",price:"1000",priceCurrency:"AUD",url:origin+d.path,description:"Fixed-scope AI Operations Audit"}}:d.path==="/ai-implementation"?{offers:{"@type":"Offer",priceSpecification:{"@type":"PriceSpecification",minPrice:"3500",priceCurrency:"AUD"},url:origin+d.path}}:{})});
   return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":graph}).replace(/</g,"\\u003c")}}/>;
 }
 export function DetailPage({detail:d,children,visual,after}:{detail:Detail;children?:ReactNode;visual?:ReactNode;after?:ReactNode}) {

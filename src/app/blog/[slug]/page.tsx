@@ -30,10 +30,10 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         : "https://bajwaa.dev/opengraph-image";
 
     return {
-        title: post.title,
+        title: post.seoTitle || post.title,
         description: post.excerpt,
         openGraph: {
-            title: post.title,
+            title: post.seoTitle || post.title,
             description: post.excerpt,
             url: `https://bajwaa.dev/blog/${post.slug}`,
             type: "article",
@@ -49,7 +49,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         },
         twitter: {
             card: "summary_large_image",
-            title: post.title,
+            title: post.seoTitle || post.title,
             description: post.excerpt,
             images: [socialImage],
         },
@@ -86,7 +86,7 @@ export default async function BlogPost(props: Props) {
         url,
         inLanguage: "en-AU",
         author: post.author && post.author !== "bajwaa.dev"
-            ? (post.author === "Shahzeb Bajwa" ? { "@type": "Person", "@id": "https://bajwaa.dev/about#founder", name: post.author } : { "@type": "Person", name: post.author })
+            ? (post.author === "Shahzaib Bajwa" ? { "@type": "Person", "@id": "https://bajwaa.dev/about#founder", name: post.author } : { "@type": "Person", name: post.author })
             : { "@type": "Organization", "@id": "https://bajwaa.dev/#organisation", name: "bajwaa.dev" },
         publisher: {
             "@id": "https://bajwaa.dev/#organisation"
@@ -154,7 +154,7 @@ export default async function BlogPost(props: Props) {
                         </div>
                         <div className="ins-cta-actions">
                             <CallLink />
-                            <SecondaryLink href="/ai-operations-audit">What the A$750 audit includes</SecondaryLink>
+                            <SecondaryLink href="/ai-operations-audit">What the A$1,000 audit includes</SecondaryLink>
                         </div>
                     </section>
 

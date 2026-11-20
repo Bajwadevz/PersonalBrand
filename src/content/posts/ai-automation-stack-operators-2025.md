@@ -1,5 +1,6 @@
 ---
 title: "The AI Automation Stack Every Operator Needs in 2025"
+seoTitle: "The AI Automation Stack for Operators"
 date: "2025-01-27"
 description: "The exact AI automation stack I recommend for operators in 2025: from workflow builders to LLMs to data layers. Build leverage without writing a line of code."
 keywords: "AI automation stack for operators, no-code AI tools 2025, operator AI toolkit, AI productivity stack"
