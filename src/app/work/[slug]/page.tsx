@@ -59,6 +59,8 @@ export default async function CaseStudyPage({ params }: Params) {
   const next = caseStudies[(idx + 1) % caseStudies.length];
   const [key, ...more] = study.metrics;
   const nm = next.metrics[0];
+  const hasFigures = Boolean(key);
+  const outcomes = study.outcomes ?? [];
 
   return (
     <article className="agency case-study">
@@ -67,8 +69,8 @@ export default async function CaseStudyPage({ params }: Params) {
         kicker={<><Link href="/work">Work</Link> · Client work · anonymised</>}
         title={study.title}
         lead={study.summary}
-        actions={<><CallLink /><SecondaryLink href="#results">See the results</SecondaryLink></>}
-        visual={
+        actions={<><CallLink /><SecondaryLink href="#results">{hasFigures ? "See the results" : "See what changed"}</SecondaryLink></>}
+        visual={hasFigures ? (
           <div className="work-keymetric glass">
             <span className="work-tag">Key result · client-reported</span>
             <span className="work-keymetric-value"><CountUp value={key.value} prefix={key.prefix} suffix={key.suffix} decimals={key.decimals} /></span>
@@ -78,7 +80,13 @@ export default async function CaseStudyPage({ params }: Params) {
             </ul>
             <span className="work-keymetric-note">{study.client} · {study.sector}</span>
           </div>
-        }
+        ) : (
+          <div className="work-keymetric glass">
+            <span className="work-tag">What changed</span>
+            <ul className="work-designed">{outcomes.map(o => <li key={o}>{o}</li>)}</ul>
+            <span className="work-keymetric-note">{study.client} · {study.sector}</span>
+          </div>
+        )}
       />
 
       <div className="agency-wrap work-cs-layout">
@@ -90,7 +98,7 @@ export default async function CaseStudyPage({ params }: Params) {
               <div><dt>Sector</dt><dd>{study.sector}</dd></div>
               <div><dt>Client name</dt><dd>Withheld</dd></div>
               <div><dt>Stack</dt><dd><ul className="work-stack">{study.stack.map(s => <li key={s}>{s}</li>)}</ul></dd></div>
-              <div><dt>Results</dt><dd>Client-reported, not audited</dd></div>
+              <div><dt>Results</dt><dd>{hasFigures ? "Client-reported, not audited" : "Described in words; figures not published"}</dd></div>
             </dl>
             <CallLink className="work-cs-cta" />
           </div>
@@ -130,16 +138,29 @@ export default async function CaseStudyPage({ params }: Params) {
           </section>
 
           <section className="work-cs-block" id="results" aria-labelledby="cs-results">
-            <h2 id="cs-results" data-reveal>Results</h2>
-            <div className="work-results">
-              {[key, ...more].map((m, i) => (
-                <div key={m.label} className="work-result glass" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
-                  <span className="work-result-value"><CountUp value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} /></span>
-                  <span className="work-result-label">{m.label}</span>
-                </div>
-              ))}
-            </div>
-            <p className="work-honesty"><strong>Honesty note.</strong> Results reported by the client for the period described. Client name withheld. Figures are not independently audited and aren’t a promise of results for another business.</p>
+            <h2 id="cs-results" data-reveal>{hasFigures ? "Results" : "What changed"}</h2>
+            {hasFigures ? (
+              <div className="work-results">
+                {[key, ...more].map((m, i) => (
+                  <div key={m.label} className="work-result glass" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+                    <span className="work-result-value"><CountUp value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} /></span>
+                    <span className="work-result-label">{m.label}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="work-results work-results-outcomes">
+                {outcomes.map((o, i) => (
+                  <div key={o} className="work-result glass" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+                    <span className="work-result-check" aria-hidden="true">✓</span>
+                    <span className="work-result-label">{o}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            <p className="work-honesty"><strong>Honesty note.</strong> {hasFigures
+              ? "Results reported by the client for the period described. Client name withheld. Figures are not independently audited and aren’t a promise of results for another business."
+              : "Client name withheld. We describe what changed rather than publish figures the client hasn’t confirmed. Outcomes depend on each business and aren’t a promise of results for another."}</p>
           </section>
 
           <section className="work-cs-block" aria-labelledby="cs-applies">
@@ -151,7 +172,7 @@ export default async function CaseStudyPage({ params }: Params) {
           <nav className="work-next" aria-label="More case studies">
             <Link href={`/work/${next.slug}`} className="work-next-card glass">
               <span className="work-tag">Next case study</span>
-              <span className="work-next-metric">{nm.prefix}{nm.value.toFixed(nm.decimals ?? 0)}{nm.suffix} <small>{nm.label}</small></span>
+              {nm ? <span className="work-next-metric">{nm.prefix}{nm.value.toFixed(nm.decimals ?? 0)}{nm.suffix} <small>{nm.label}</small></span> : <span className="work-next-metric"><small>{next.outcomes?.[0]}</small></span>}
               <strong>{next.shortTitle}</strong>
               <span className="work-case-go">Read it <span aria-hidden="true">↗</span></span>
             </Link>

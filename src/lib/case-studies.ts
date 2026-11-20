@@ -10,7 +10,10 @@ export type CaseStudy = {
   challenge: string;
   built: [string, string][];
   flow: string[];
+  /** Client-reported figures. Empty when the client has not shared figures yet. */
   metrics: Metric[];
+  /** What changed, in words. Used when there are no figures to show. */
+  outcomes?: string[];
   impact: string;
   stack: string[];
   applies: string;
@@ -103,6 +106,93 @@ export const caseStudies: CaseStudy[] = [
     stack: ["Salesforce", "Salesforce API", "Python", "OpenAI API", "Claude"],
     applies: "Most Australian teams we speak with have the same problem in HubSpot, Pipedrive or Salesforce: the CRM is only as good as the updates people remember to make. Suggest-and-confirm keeps a person in control while removing the retyping.",
   },
+  {
+    slug: "construction-crm",
+    title: "A custom CRM for a construction business, from enquiry to handover",
+    shortTitle: "Construction CRM to job handover",
+    client: "Construction business · anonymised",
+    sector: "Construction & renovation",
+    description: "Client case study: a custom CRM for a construction business that tracks every enquiry, site visit, quote and follow-up through to a clean job handover.",
+    summary: "Work was being lost between the first phone call and the signed contract. We built a CRM around how this construction business actually sells — enquiry, site visit, quote, follow-up, contract — and connected it to the handover into the job.",
+    challenge: "Enquiries came in by phone, website, email and referral and lived in different places. Site visits sat in individual calendars, quotes in spreadsheets, and follow-ups depended on memory. When a job was won, client and site details were typed again for the job, and there was no single view of what was in the pipeline.",
+    built: [
+      ["One intake for every channel", "Website forms, the shared inbox and logged phone calls create or update a single contact and opportunity, with duplicate checks so the same client isn’t entered twice."],
+      ["A pipeline built for construction", "Stages that mirror how the business sells — new enquiry, site visit booked, quoting, quote sent, contract, won or lost — with the details each stage needs before a job moves on."],
+      ["Site visit scheduling", "Booking a site visit attaches the address, access notes and the client’s brief to the calendar event and sets the follow-up date automatically."],
+      ["Quote follow-ups", "Sent quotes trigger follow-up reminders at agreed intervals, so no quote goes quiet without someone deciding to let it."],
+      ["Won-job handover", "Marking a job won carries the client, site and accepted quote into the job set-up from the same record, instead of re-typing it."],
+      ["Pipeline view", "The owner sees every open opportunity by stage and value without rebuilding a spreadsheet each week."],
+    ],
+    flow: ["Enquiry", "Site visit", "Quote", "Follow-up", "Won → job handover"],
+    metrics: [],
+    outcomes: [
+      "Every enquiry has an owner, a stage and a next step",
+      "Quotes are followed up on schedule instead of from memory",
+      "Client and site details are entered once and carried to the job",
+      "The owner can see the whole pipeline in one place",
+    ],
+    impact: "The business moved from scattered notes, calendars and spreadsheets to one CRM that matches how it wins work. Enquiries no longer sit unowned, quote follow-ups happen on time, and winning a job no longer means typing the same details again.",
+    stack: ["Custom CRM", "Website forms", "Shared inbox", "Calendar", "Automation layer"],
+    applies: "Builders, renovators and trades that quote before they work usually lose the most between first contact and contract. The same pattern — one intake, construction-shaped stages, automatic follow-ups and a clean handover — fits most Australian construction businesses.",
+  },
+  {
+    slug: "hvac-enquiry-response-system",
+    title: "An enquiry response system for an HVAC service business",
+    shortTitle: "HVAC enquiry response system",
+    client: "HVAC service business · anonymised",
+    sector: "Trades & home services",
+    description: "Client case study: an enquiry response system for an HVAC business that acknowledges every call and form fast, sorts urgent jobs and gets them booked.",
+    summary: "Technicians on jobs meant missed calls and enquiries that waited until evening. We built a response system that acknowledges every enquiry quickly, separates urgent breakdowns from routine quotes and turns enquiries into bookings.",
+    challenge: "Calls went to voicemail while technicians were on roofs and in ceilings. Web forms and messages waited until someone checked the inbox after hours, and urgent no-cooling jobs sat in the same queue as routine install quotes. Quote follow-ups and service reminders depended on whoever remembered.",
+    built: [
+      ["Missed-call and form capture", "Missed calls, website forms and messages create one enquiry record, and the customer gets an immediate acknowledgement explaining what happens next."],
+      ["Urgency triage", "Enquiries are sorted into breakdowns, faults, install quotes and servicing from the customer’s own words. Anything unclear goes to the office to decide."],
+      ["Booking requests", "Qualified enquiries become booking requests with the address, unit details and photos attached, and the office confirms the time slot."],
+      ["Quote follow-up", "Install quotes get follow-ups at set intervals that stop automatically once the customer accepts or declines."],
+      ["Service reminders", "Completed installs get service reminders for customers who agreed to receive them."],
+      ["Daily summary", "The owner starts each day with new enquiries by type, anything unanswered and quotes awaiting a decision."],
+    ],
+    flow: ["Call, form or message", "Instant acknowledgement", "Triage urgency", "Office confirms", "Booked"],
+    metrics: [],
+    outcomes: [
+      "Every call, form and message gets a fast acknowledgement",
+      "Urgent breakdowns are separated from routine quotes",
+      "Enquiries become booking requests with the details attached",
+      "Quote follow-ups and service reminders run on their own",
+    ],
+    impact: "Customers no longer wait in silence while the team is on the tools. Urgent jobs are visible straight away, routine quotes are followed up on schedule, and the office works from one queue instead of voicemail, inboxes and memory.",
+    stack: ["Telephony / SMS", "Website forms", "Job management system", "Automation layer"],
+    applies: "Any service business where the team is out on jobs — plumbing, electrical, solar, pools — loses work to slow replies. Acknowledging fast, triaging honestly and letting a person confirm price and timing is the same pattern.",
+  },
+  {
+    slug: "clinic-call-tracking-crm",
+    title: "A custom CRM for a clinic to track calls and follow-ups",
+    shortTitle: "Clinic call-tracking CRM",
+    client: "Clinic · anonymised",
+    sector: "Health & clinics",
+    description: "Client case study: a custom CRM for a clinic that tracks every call, gives the assistant a daily call list and makes sure follow-ups never slip.",
+    summary: "The clinic’s assistant was juggling calls, callbacks and follow-ups across notes and memory. We built a custom CRM that tracks every call, tells the assistant who to call next, and keeps follow-ups on schedule.",
+    challenge: "Calls in and out weren’t recorded in one place, so it was hard to know who had been contacted, what was said and who still needed a callback. Follow-ups relied on sticky notes and memory, and the owner had no view of how many enquiries turned into appointments.",
+    built: [
+      ["Call tracking", "Every inbound and outbound call is logged against the person, with the outcome and notes, so anyone can see the full history before picking up the phone."],
+      ["The assistant’s call list", "A daily list shows exactly who to call — new enquiries, callbacks and follow-ups due — in priority order."],
+      ["Outbound calling workflow", "The assistant works through calls from the CRM and records the outcome in a couple of clicks, which sets the next step automatically."],
+      ["Follow-up system", "Follow-ups are scheduled from each call’s outcome and reappear on the list when due, so nobody falls through the cracks."],
+      ["Enquiry-to-appointment tracking", "Each enquiry moves through clear stages through to a booked appointment, so the clinic can see what is converting."],
+      ["Owner reporting", "A simple view of calls made, follow-ups due and enquiries converted, without counting by hand."],
+    ],
+    flow: ["Call in or out", "Logged to the person", "Outcome recorded", "Follow-up scheduled", "Appointment booked"],
+    metrics: [],
+    outcomes: [
+      "Every call is recorded against the right person",
+      "The assistant starts each day with a clear call list",
+      "Follow-ups are scheduled automatically from each call’s outcome",
+      "The owner can see enquiries turning into appointments",
+    ],
+    impact: "The assistant now works from one list instead of notes and memory, every call has a recorded outcome, and follow-ups come back automatically when they are due. The clinic has a clear view of its enquiries for the first time.",
+    stack: ["Custom CRM", "Phone / call logging", "Calendar", "Automation layer"],
+    applies: "Clinics and appointment-based practices often run on a busy front desk and phone. Tracking calls, giving the team a daily call list and automating follow-ups is a practical, low-risk first step.",
+  },
 ];
 
 export const exampleWorkflows = [
@@ -151,83 +241,6 @@ export type ExampleBuild = {
   applies: string;
 };
 
-export const exampleBuilds: ExampleBuild[] = [
-  {
-    slug: "construction-custom-crm-perth",
-    title: "A custom CRM for a Perth construction business",
-    shortTitle: "Construction CRM, enquiry to handover",
-    sector: "Construction & renovation",
-    businessType: "Illustrative: a residential builder or renovation firm with 10–40 staff",
-    description: "Example build: a custom CRM for a Perth construction business tracking every enquiry, site visit, estimate and variation through to handover and Xero.",
-    summary: "Builders lose work between the first phone call and the signed contract. This example shows a CRM shaped around how a construction business actually sells: enquiry, site visit, estimate, follow-up, contract, then a clean handover to the job.",
-    problem: "Enquiries arrive by phone, website, email and referral. Site visits live in someone’s calendar, estimates sit in spreadsheets or a separate estimating tool, and follow-ups depend on memory. When a job is won, the same client and site details are typed again into job management and Xero — and variations later in the job are hard to trace back to what was agreed.",
-    designedTo: [
-      "Give every enquiry an owner, a stage and a dated next step",
-      "Stop re-typing client and site details at handover",
-      "Make quote follow-up automatic but still personal",
-      "Show the pipeline value by stage without a weekly spreadsheet",
-    ],
-    built: [
-      ["One intake for every channel", "Website forms, the shared inbox and logged phone calls create or update one contact and one opportunity, with duplicates checked by phone and email."],
-      ["Construction pipeline stages", "New enquiry → site visit booked → estimate in progress → quote sent → contract → won/lost, each with required fields so nothing moves forward half-filled."],
-      ["Site visit scheduling", "Booking a site visit creates a calendar event with the address, access notes and the client’s brief attached, and sets the follow-up date automatically."],
-      ["Estimate and quote follow-up", "When a quote is sent, follow-ups are drafted at agreed intervals. AI summarises the brief and suggests the next message; the estimator approves before anything is sent."],
-      ["Won job handover", "Marking a job won creates the job in the job-management tool and the client in Xero from the same record, with the accepted quote attached. Unclear addresses or scopes stop for a coordinator."],
-      ["Variations log", "Variations are logged against the job with who requested and approved them, so the final invoice matches what was agreed."],
-    ],
-    flow: ["Enquiry", "Site visit", "Estimate & quote", "Approve follow-up", "Won → job + Xero"],
-    checks: [
-      "The estimator approves every outgoing quote follow-up",
-      "Handover pauses for a coordinator if the site address or scope is unclear",
-      "Variations need a named approver before they reach the invoice",
-    ],
-    measures: [
-      "Time from enquiry to first response",
-      "Quotes sent vs quotes followed up within the agreed window",
-      "Win rate by lead source",
-      "Re-keying at handover (target: none)",
-    ],
-    stack: ["HubSpot or Pipedrive", "Make or n8n", "Xero", "Buildxact, ServiceM8 or similar job tool", "Google or Microsoft 365 calendar"],
-    applies: "Most Perth builders and renovators already pay for a job tool and Xero. The gap is usually the sales side before the job exists. An audit maps your current stages and tools first, then the build connects them rather than replacing them.",
-  },
-  {
-    slug: "hvac-enquiry-response-system",
-    title: "An enquiry response system for an HVAC service business",
-    shortTitle: "HVAC enquiry response system",
-    sector: "Trades & home services",
-    businessType: "Illustrative: an air-conditioning install and service business with 5–25 technicians",
-    description: "Example build: a fast enquiry response system for an HVAC business — every call, form and message acknowledged, triaged by urgency and turned into a booked job.",
-    summary: "In a Perth summer, a broken air conditioner is urgent and customers call the next business if nobody answers. This example shows a response system that acknowledges every enquiry, sorts urgent breakdowns from routine quotes and gets the right ones booked.",
-    problem: "Technicians are on roofs and in ceilings, so calls go to voicemail. Web forms and Facebook messages wait until someone checks the inbox at night. Urgent no-cooling jobs and routine install quotes sit in the same queue, and quote follow-ups and annual service reminders depend on whoever remembers.",
-    designedTo: [
-      "Acknowledge every enquiry within minutes, day or night",
-      "Separate urgent breakdowns from routine quotes",
-      "Turn enquiries into booking requests in the job system",
-      "Follow up quotes and service reminders without manual chasing",
-    ],
-    built: [
-      ["Missed-call and form capture", "Missed calls, web forms and messages create one enquiry record. The customer gets an immediate acknowledgement by SMS or email confirming what happens next."],
-      ["Urgency triage", "Rules and AI classify each enquiry — no cooling, fault, install quote or service — using the customer’s own words. Low-confidence or sensitive cases go to the office for a decision."],
-      ["Booking request into the job tool", "Qualified enquiries create a draft job or booking request in ServiceM8 or simPRO with the address, unit details and photos attached. The office confirms the slot."],
-      ["Quote follow-up", "Install quotes get follow-ups at set intervals, drafted for the office to approve, and stop automatically when the quote is accepted or declined."],
-      ["Service reminders", "Completed installs schedule annual service reminders for customers who agreed to receive them."],
-      ["Daily summary", "Each morning the owner gets new enquiries by type, unanswered items and quotes awaiting a decision."],
-    ],
-    flow: ["Call, form or message", "Instant acknowledgement", "Triage urgency", "Office confirms", "Booked in job tool"],
-    checks: [
-      "Pricing, emergency call-out fees and exact arrival times are confirmed by a person",
-      "Unclear or sensitive messages go to the office instead of an automated reply",
-      "Marketing reminders only go to customers who consented (Spam Act 2003)",
-    ],
-    measures: [
-      "Time to first response, in and out of business hours",
-      "Share of missed calls that receive a reply",
-      "Enquiry-to-booking rate by enquiry type",
-      "Quotes followed up on time",
-    ],
-    stack: ["ServiceM8 or simPRO", "Twilio or the job tool’s SMS", "Make or n8n", "Website forms and Facebook messages", "Xero"],
-    applies: "The same pattern fits plumbers, electricians, solar and pool services: acknowledge fast, triage honestly, and let a person confirm anything involving price or timing. An audit checks your phone system, job tool and current response times before anything is built.",
-  },
-];
+export const exampleBuilds: ExampleBuild[] = [];
 
 export const getExampleBuild = (slug: string) => exampleBuilds.find(e => e.slug === slug);

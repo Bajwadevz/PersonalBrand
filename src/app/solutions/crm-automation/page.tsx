@@ -1,6 +1,6 @@
+import CaseHeadline from "@/components/CaseHeadline";
 import Link from "next/link";
 import { agencyMeta, DetailPage, type Detail } from "@/components/Agency";
-import CountUp from "@/components/motion/CountUp";
 import CrmRecordCompare from "@/components/pages/solutions/CrmRecordCompare";
 import EnquiryBeam from "@/components/pages/solutions/EnquiryBeam";
 import { getCaseStudy } from "@/lib/case-studies";
@@ -66,7 +66,7 @@ const includes = [
   ["Exception queue & handover", "Failed updates are queued and retried, with a written runbook for your team."],
 ] as const;
 
-const related = ["salesforce-crm-hygiene-agent", "outbound-automation-crm-sync"].map(s => getCaseStudy(s)!).filter(Boolean);
+const related = ["salesforce-crm-hygiene-agent", "construction-crm", "clinic-call-tracking-crm"].map(s => getCaseStudy(s)!).filter(Boolean);
 
 export default function Page() {
   return (
@@ -98,12 +98,10 @@ export default function Page() {
             <p className="section-lead" data-reveal>Anonymised client work. Results were reported by each client and are not a promise for another business.</p>
             <div className="sol-related">
               {related.map(c => {
-                const m = c.metrics[0];
                 return (
                   <Link key={c.slug} href={`/work/${c.slug}`} className="sol-related-card glass-blueprint" data-reveal>
                     <span className="sol-tag">Client work · anonymised</span>
-                    <span className="sol-related-metric"><CountUp value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} /></span>
-                    <span className="sol-related-label">{m.label}</span>
+                    <CaseHeadline study={c} valueClass="sol-related-metric" labelClass="sol-related-label" />
                     <h3>{c.shortTitle}</h3>
                     <span className="sol-related-go">Read the case study <span aria-hidden="true">↗</span></span>
                   </Link>

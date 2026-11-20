@@ -16,9 +16,9 @@ export const metadata = agencyMeta(
 );
 
 const legend = [
-  ["Client work", `${caseStudies.length} case studies`, "Real builds, client names withheld. Figures are client-reported."],
+  ["Client work", `${caseStudies.length} case studies`, "Real builds, client names withheld. Figures, where shown, are client-reported."],
   ["Demo", "3 builds", "Runs on fictional data: an interactive demo, a product build and a recorded walkthrough."],
-  ["Example workflow", `${exampleBuilds.length} builds · ${exampleWorkflows.length} patterns`, "Illustrative Perth-style builds and handoffs we automate often. Not client results."],
+  ["Example workflow", `${exampleWorkflows.length} patterns`, "Illustrative handoffs we automate often. Not client results."],
 ] as const;
 
 function Legend() {
@@ -54,11 +54,11 @@ export default function Work() {
         <section className="agency-wrap agency-section ambient-zone work-kind" data-kind="client" id="case-studies" aria-labelledby="cases-heading">
           <p className="kicker">Case studies</p>
           <h2 id="cases-heading" data-reveal>Client work, anonymised.</h2>
-          <p className="section-lead" data-reveal>Each case study names the problem, what we built and the results the client reported. Client names are withheld; figures are not independently audited.</p>
+          <p className="section-lead" data-reveal>Each case study names the problem, what we built and what changed — with client-reported figures where the client shared them. Client names are withheld; figures are not independently audited.</p>
           <FeaturedCases />
         </section>
 
-        <section className="agency-wrap agency-section work-kind" data-kind="example" id="example-builds" aria-labelledby="builds-heading">
+        {exampleBuilds.length > 0 && <section className="agency-wrap agency-section work-kind" data-kind="example" id="example-builds" aria-labelledby="builds-heading">
           <p className="kicker">Example builds · Perth &amp; WA businesses</p>
           <h2 id="builds-heading" data-reveal>Systems we design for common Perth businesses.</h2>
           <p className="section-lead" data-reveal>Illustrative builds, not client projects: how we would scope a system for two business types we see often in WA. No invented clients or results.</p>
@@ -73,7 +73,7 @@ export default function Work() {
               </Link>
             ))}
           </div>
-        </section>
+        </section>}
 
         <section className="blueprint-band work-kind" data-kind="demo" id="demo" aria-labelledby="demo-heading">
           <div className="agency-wrap agency-section">

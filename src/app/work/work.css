@@ -195,3 +195,8 @@
 .work-example-card h3 { font-size: 1.3rem; margin-top: 6px; }
 .work-example-card p { color: var(--muted); }
 @media (max-width: 760px) { .work-examples-grid { grid-template-columns: 1fr; } }
+
+/* Case studies without published figures: outcomes instead of numbers */
+.work-results-outcomes .work-result { display: flex; align-items: flex-start; gap: 12px; }
+.work-result-check { display: grid; place-items: center; flex: none; width: 26px; height: 26px; border-radius: 50%; background: color-mix(in srgb, var(--accent-text) 15%, transparent); color: var(--accent-text); font-weight: 800; font-size: .85rem; }
+.work-results-outcomes .work-result-label { color: var(--ink); font-weight: 600; }

@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       { source: '/services/automations', destination: '/solutions/business-process-automation', permanent: true },
       { source: '/services/system-care', destination: '/how-it-works', permanent: true },
       { source: '/product', destination: '/ai-implementation-os', permanent: true },
+      { source: '/work/construction-custom-crm-perth', destination: '/work/construction-crm', permanent: true },
     ];
   },
   async headers() {

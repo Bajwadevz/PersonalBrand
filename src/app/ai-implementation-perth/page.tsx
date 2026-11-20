@@ -25,7 +25,7 @@ const detail: Detail = {
     ]
   ],
   "links": [
-    ["Example build: construction CRM", "/work/construction-custom-crm-perth"], ["Example build: HVAC enquiry response", "/work/hvac-enquiry-response-system"], 
+    ["Case study: construction CRM", "/work/construction-crm"], ["Case study: HVAC enquiry response", "/work/hvac-enquiry-response-system"], ["Case study: clinic call-tracking CRM", "/work/clinic-call-tracking-crm"], 
     ["AI help for WA small businesses", "/blog/ai-for-wa-small-businesses"],
     ["Client case studies", "/work"],
     ["Compare Australian implementation costs", "/blog/ai-implementation-cost-australia"],

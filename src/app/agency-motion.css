@@ -513,3 +513,6 @@ html.dark .workflow-demo { --ok: #45d39b; --warn: #f2b84b; --err: #ff7a6e; }
   mask-image: linear-gradient(90deg, rgb(0 0 0 / 20%) 0%, rgb(0 0 0 / 25%) 50%, #000 72%);
 }
 .agency-intro .perspective-grid { display: none; }
+
+/* Case card headline when a client has not published figures */
+.case-outcome-line { display: block; margin-top: 2px; color: var(--ink) !important; font-family: var(--font-heading); font-size: clamp(1.05rem, 1.6vw, 1.25rem) !important; font-weight: 750; letter-spacing: -.02em; line-height: 1.3 !important; }

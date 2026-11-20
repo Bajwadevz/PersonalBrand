@@ -23,6 +23,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         <div style={{ display: "flex", flexDirection: "column" }}>
           {metric && <div style={{ display: "flex", fontSize: 120, fontWeight: 800, color: "#85CCEF", lineHeight: 1 }}>{`${metric.value}${metric.suffix ?? ""}`}</div>}
           {metric && <div style={{ display: "flex", fontSize: 32, color: "#ACC7DD", marginTop: 12 }}>{metric.label}</div>}
+          {!metric && study?.outcomes?.[0] && <div style={{ display: "flex", fontSize: 40, color: "#85CCEF", maxWidth: 1000 }}>{study.outcomes[0]}</div>}
           <div style={{ display: "flex", fontSize: 54, fontWeight: 800, marginTop: 36, lineHeight: 1.1, maxWidth: 1000 }}>{heading}</div>
         </div>
         <div style={{ display: "flex", fontSize: 30, color: "#ACC7DD" }}>bajwaa.dev · AI implementation for Australian businesses</div>

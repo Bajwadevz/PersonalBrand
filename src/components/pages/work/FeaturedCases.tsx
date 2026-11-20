@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FlowDiagram from "@/components/FlowDiagram";
 import CountUp from "@/components/motion/CountUp";
+import CaseHeadline from "@/components/CaseHeadline";
 import { caseStudies } from "@/lib/case-studies";
 
 /** Featured case study (large) followed by the remaining ones as compact cards. */
@@ -29,12 +30,10 @@ export default function FeaturedCases() {
         <span className="work-case-go">Read the case study <span aria-hidden="true">↗</span></span>
       </Link>
       {rest.map((c, i) => {
-        const cm = c.metrics[0];
         return (
           <Link key={c.slug} href={`/work/${c.slug}`} className="work-case glass" data-reveal style={{ ["--d" as string]: `${(i + 1) * 90}ms` }}>
             <span className="work-tag">Client work · anonymised</span>
-            <span className="work-case-metric"><CountUp value={cm.value} prefix={cm.prefix} suffix={cm.suffix} decimals={cm.decimals} /></span>
-            <span className="work-case-label">{cm.label}</span>
+            <CaseHeadline study={c} valueClass="work-case-metric" labelClass="work-case-label" />
             <h3>{c.shortTitle}</h3>
             <span className="work-case-client">{c.client}</span>
             <span className="work-case-go">Read the case study <span aria-hidden="true">↗</span></span>
